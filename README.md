@@ -1,23 +1,27 @@
 # grupo_4_digitalbirra
-
 Digital Birra, cervecería gourmet. 
-Ofrecemos una amplia variedad de cervezas artesanales con entrega a domicilio o take-away en nuestro local en Colegiales. 
-Apuntamos a un público de entre 18 a 40 años
+Ofrecemos una amplia variedad de cervezas artesanales, a través nuestro de e-commerce de venta minorista.
+Apuntamos a un público de entre 18 a 40 años.
+Ajusttaremos nuestra oferta a ese público a través de un diseño gráfico moderno, y con la mayor fluidez posible en la navegación hasta llegar a la compra del producto.
 
-Bocetos:
-https://www.figma.com/file/JT9414EV77VZ2uRvhV59jm/BarCerveza?node-id=0%3A1
+El equipo de desarrollo de DigitalBirra esta compuesto por:
+
+Juan Ignacio de San Martin:
+Juan José Moreno: Técnico de sonido de shows de música, en vivo y en estudio de grabación. También con experiencia, entre otras cosas, en producción de conciertos, y campañas de search/youtube en google ads.
+Rodrigo:
 
 
-Referencias funcionales: 
+https://cervelar.com.ar/delivery/combo
+De esta página de Cervelar, sacamos la idea de marca, y la funcionalidad del sitio, como es presentada inmediatamente al entrar.
 
 https://www.craftsociety.com.ar/collections/all-beers
+De Craftsociety, la idea de productos destacados al inicio para facilitar la compra y, al mismo tiempo, poder buscar productos desde la página de inicio.
+
 https://www.redh.co.uk/english-beers.html
-https://www.cerveceriaymalteriaquilmes.com/productos/
+De Redh tomamos los filtros del home presentes en su versión mobile.
+
 https://www.cervezapatagonia.com.ar/
-https://cervezaantares.mercadoshops.com.ar/
-https://www.beerhawk.co.uk/browse-beers/browse-by-country/british-beers (está muy bien)
+De la página web de Patagonia el diseño preciso y ágil.
 
-
-Referencias gráficas:
-https://www.behance.net/gallery/100187593/MONOCROMATICO-Young-Lions-Film-2020?tracking_source=search_projects_recommended%7Ccerveza
-https://www.behance.net/gallery/100287031/Hermanos-Brewing-Co-Branding?tracking_source=search_projects_recommended%7Cbeer
+https://www.beerhawk.co.uk/browse-beers/browse-by-country/british-beers
+De Beerhawk sacamos la idea de poder elejir la cantidad, y el botón de agregar al carrito, debajo de cada producto.
