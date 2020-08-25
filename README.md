@@ -6,7 +6,7 @@ Apuntamos a un público de entre 18 a 40 años.
 Ajusttaremos nuestra oferta a ese público a través de un diseño gráfico moderno, y con la mayor fluidez posible en la navegación hasta llegar a la compra del producto.
 
 
-## El equipo de desarrollo de DigitalBirra está compuesto por:
+### El equipo de desarrollo de DigitalBirra está compuesto por:
 
 Juan Ignacio de San Martin:
 
