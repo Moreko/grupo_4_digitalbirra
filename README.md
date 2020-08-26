@@ -8,7 +8,7 @@ Ajustaremos nuestra oferta a ese público a través de un diseño gráfico moder
 
 ### El equipo de desarrollo de DigitalBirra está compuesto por:
 
-Juan Ignacio de San Martin: Realizador audiovisual, camarografo, fotografo y editor. Barthender y gran conocedor de vinos y cervezas.
+Juan Ignacio de San Martin: Realizador audiovisual, camarógrafo, fotógrafo y editor. Bartender y gran conocedor de vinos y cervezas.
 
 Juan José Moreno: Técnico de sonido de shows de música, en vivo y en estudio de grabación. También con experiencia, entre otras cosas, en producción de conciertos, y campañas de search/youtube en google ads.
 
