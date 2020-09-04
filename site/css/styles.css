@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border: solid 1px black;
+}
+
+.navBar {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-between;
+}
+
+.n
+
+.navBar__menu {
+ flex: 1;
+}
+
+.navbar__logo {
+flex: 3;
+}
+
+.navBar__faq {
+flex: 1;
+}
+
+.navbar__carrito {
+flex:1;
+}
