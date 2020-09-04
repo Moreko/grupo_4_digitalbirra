@@ -14,6 +14,14 @@ html {
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
 
+.contenedorBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .navBar {
     display: flex;
     width: 100%;
@@ -62,15 +70,52 @@ flex:1;
 }
 
 .buscador__formulario {
-    
+     
 }
 
+/* MENU */
+
+.menuH{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    width: 10vh;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #222629;
+    cursor: pointer;
+}
+
+.barrita1, .barrita2, .barrita3{
+    width: 70%;
+    height: 6%;
+    background-color: honeydew;
+    margin: 1vh;
+    transition: 1s all;
+}
+
+.menuH:hover .barrita1{
+    margin: 0.1vh;
+}
+.menuH:hover .barrita3{
+    margin: 0.1vh;
+}
+/* 
+FIN DEL MENU */
 
     /* HASTA ACA ES EL header */
 
 .contenedorMain {
+    width: 100%;
     min-height: 80vh;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
