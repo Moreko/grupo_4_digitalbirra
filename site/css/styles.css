@@ -49,7 +49,10 @@ flex:1;
 
 .navBar__faq--carrito {
     display: flex;
-flex:1;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2%;
+    flex:1;
 }
 
 .navBar__faq {
@@ -110,7 +113,7 @@ FIN DEL MENU */
 
 .contenedorMain {
     width: 100%;
-    min-height: 80vh;
+    min-height: 70vh;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -126,7 +129,7 @@ FIN DEL MENU */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 15vh;
     font-size: 2rem;
     background-color:#222629;
     border-top: grey solid 1px;
@@ -139,5 +142,5 @@ FIN DEL MENU */
 
 .textoFooter {
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
