@@ -4,30 +4,95 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    border: solid 1px black;
+    color:whitesmoke;
+    font-family: 'Quicksand', sans-serif;
 }
+
+html {
+    font-size: 62%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
 
 .navBar {
     display: flex;
     width: 100%;
     height: 10vh;
     justify-content: space-between;
+    background-color: black;
 }
 
-.n
 
 .navBar__menu {
- flex: 1;
+flex:1;
 }
 
-.navbar__logo {
-flex: 3;
+.navBar__contenedor--logo {
+    width: 40%;
+    align-items: center;
+    flex:2;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-navBar {
+    align-items: center;
+}
+
+.navBar__faq--carrito {
+    display: flex;
+flex:1;
 }
 
 .navBar__faq {
-flex: 1;
+    flex:1;
 }
 
-.navbar__carrito {
-flex:1;
+.navBar__carrito {
+    flex:1;
+}
+
+.buscador {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    height: 5vh;
+    align-items: center;
+    background-color:#6B6E70;
+}
+
+.buscador__formulario {
+    
+}
+
+
+    /* HASTA ACA ES EL header */
+
+.contenedorMain {
+    min-height: 80vh;
+    background-color: black;
+}
+
+
+/* HASTA ACA ES EL MAIN */
+
+.pie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-size: 2rem;
+    background-color:#222629;
+    border-top: grey solid 1px;
+}
+
+.imagenFooter {
+    width: 15%;
+    padding-bottom: 3%;
+}
+
+.textoFooter {
+    text-align: center;
+    font-size: 1rem;
 }
