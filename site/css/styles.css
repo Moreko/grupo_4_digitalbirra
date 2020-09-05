@@ -5,7 +5,6 @@
     text-decoration: none;
     list-style: none;
     color:whitesmoke;
-    font-family: 'Quicksand', sans-serif;
 }
 
 html {
@@ -19,6 +18,8 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    font-family: 'Quicksand', sans-serif;
     width: 100%;
 }
 
@@ -114,7 +115,6 @@ FIN DEL MENU */
 .contenedorMain {
     width: 100%;
     min-height: 70vh;
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
