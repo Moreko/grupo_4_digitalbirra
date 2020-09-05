@@ -1,3 +1,14 @@
+/* 
+sumar a la base */
+
+
+@font-face{
+    font-family: 'Industry';
+    src: url("/static/fonts/Industry.ttf") format("truetype");
+}
+
+/* Base */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,9 +29,9 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    font-family: 'Quicksand', sans-serif;
     width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(0, 0, 0);
 }
 
 .navBar {
@@ -74,7 +85,7 @@ flex:1;
 }
 
 .buscador__formulario {
-     
+  border-block-end-style: none;   
 }
 
 /* MENU */
@@ -115,6 +126,7 @@ FIN DEL MENU */
 .contenedorMain {
     width: 100%;
     min-height: 70vh;
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,4 +155,356 @@ FIN DEL MENU */
 .textoFooter {
     text-align: center;
     font-size: 0.7rem;
+}
+
+
+/* 
+fin de base */
+
+
+
+
+.cont__portada{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+}
+
+.cont__img__titl{
+    width: 100%;
+    position: relative;
+}
+
+.portada--titl{
+    font-family: 'Industry';
+    font-size: 1.6rem;
+    width: 30%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 35%;
+    transform:translate(-50%)
+}
+
+.portada--img{
+    width: 100%;
+}
+
+.select--tcerveza{
+    width: 90%;
+    height: 4vh;
+    color: #222629;
+    background-color: grey;
+    font-family: 'Industry';
+    text-align: center;
+}
+
+.select--option{
+    background-color: #222629;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #61892F;
+    font-family: 'Industry';
+}
+
+.cont__venTodas{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    height: 5vh;
+}
+
+.btn--vent{
+    font-family: 'Industry';
+    font-size: 1rem;
+    width: 15vh;
+    color: #61892F;
+    background-color: #222629;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.btn--vent:hover{
+    color: white;
+    background-color: #6B6E70;
+}
+
+.section--titl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4vh;
+    background-color:  #6B6E70;
+    font-family: 'Industry';
+    font-size: 1rem;
+}
+
+
+
+
+.block__productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vh;
+}
+
+
+.block__producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vh;
+}
+
+
+
+.cont__producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    padding:2% 2%;
+}
+
+.cont__producto--pp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65vw;
+    padding:2% 2%;
+}
+
+
+
+
+.producto--img{
+    width: 100%;
+    border: solid grey .07vh;
+}
+
+.producto__info{
+    font-family: 'Industry';
+    font-size: 1rem;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-top: 1.5vh;
+}
+
+.producto__info--pp{
+    font-family: 'Industry';
+    font-size: 1rem;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5vh;
+}
+
+.info--precioMl{
+    font-family: 'Industry';
+    display: flex;
+    justify-content: space-between;
+    padding-top: .3vh;
+}
+
+.cont__cant__agregar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+
+.cont__cant__agregar--pp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+}
+
+.cont__cantidad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btn--cant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Industry';
+    background-color: black;
+    border: grey solid .3vh;
+    padding:4%;
+    margin: 1vh;
+    width:5vh;
+    height: 5vh;
+    font-size: 1.2rem;
+    color:#ffffff;
+    transition: 0.3s all;
+}
+
+.btn--cant:hover{
+    color:#86C232;
+}
+
+
+.btn--agregar{
+    width: 100%;
+    font-family: 'Industry';
+    font-size: 0.9rem;
+    background-color: black;
+    border: grey solid .3vh;
+    padding: 4%;
+    color:#61892F;
+    transition: 0.3s all;
+}
+
+.btn--agregar:hover{
+    color: white;
+    font-size: 1.1rem;
+    
+}
+
+.producto--desc{
+    text-align: center;
+    padding:0 10% 10% 10%;
+}
+
+.cont__form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 70vh;
+}
+
+.log--input{
+    background-color: grey;
+    font-family: 'Industry';
+    border: none;
+    padding: 6%;
+    margin-bottom: 10%;
+    width: 100%;
+    height: 7vh;
+    transition: 0.4s all;
+}
+
+.log--input:hover{
+    color:#D9B08C;
+    background-color: rgb(80, 80, 80);
+}
+
+.log--submit{
+    position: absolute;
+    bottom: 10%;
+    background-color: grey;
+    width: 100%;
+    height: 7vh;
+    font-family: 'Industry';
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+
+.log--submit:hover{
+    color: grey;
+    background-color: #222629;
+}
+
+.log--submit:active{
+    color:#61892F;
+}
+
+.logLogo{
+    width: 50%;
+    padding: 10%;
+}
+
+.cont__faq{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.cont__snos{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/static/img/lupuloOscuro.jpg');
+}
+
+
+.titl{
+    font-family: 'Industry';
+    font-size: 1.2rem;
+    padding: 2%;
+}
+.titlG{
+    font-family: 'Industry';
+    font-size: 1.6rem;
+    padding: 2%;
+}
+
+.parrafo{
+    text-align: left;
+    font-size: 1rem;
+    padding: 2% 7% 2% 7%;
+}
+
+.parrafoG{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2% 7% 2% 7%;
+}
+
+.btn--volver{
+    position: absolute;
+    bottom: 10%;
+    font-family: 'Industry';
+    font-size: 1rem;
+    height: 5vh;
+    width: 60%;
+    color: #61892F;
+    background-color: #222629;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.btn--volver:hover{
+    color: white;
+    background-color: #6B6E70;
 }
