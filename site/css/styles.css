@@ -34,6 +34,10 @@ html {
     background-color: rgb(0, 0, 0);
 }
 
+.cabeza{
+    width: 100%;
+}
+
 .navBar {
     display: flex;
     width: 100%;
@@ -81,19 +85,43 @@ flex:1;
     font-size: 2rem;
     height: 5vh;
     align-items: center;
-    background-color:#6B6E70;
+    background-color:#3a3d3f;
 }
 
 .buscador__formulario {
-  border-block-end-style: none;   
+  border-block-end-style: none; 
+  width: 100%; 
+  display: flex;
+  justify-items: center;
+}
+
+.buscador__formulario--input{
+    font-size: 1.6rem;
+    margin-left: 4%;
+    color: white;
+    text-align: left;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    box-shadow: none;
+    transform: 0.4s all;
+    border-bottom: white solid 1px;
+}
+
+
+.buscador__lupa{
+    width: 3vh;
+    margin-right: 2vh;
+    transition: .4s all;
+}
+
+.buscador__lupa:hover{
+    width: 3.6vh;
 }
 
 /* MENU */
 
-.menuH{
-    position: absolute;
-    top: 0%;
-    left: 0%;
+.menuHamburguesa{
     display: flex;
     flex-direction: column;
     width: 10vh;
@@ -102,6 +130,11 @@ flex:1;
     align-items: center;
     background-color: #222629;
     cursor: pointer;
+    transition: .5s all;
+}
+
+.menuHamburguesa:active{
+    background-color:#61892F;
 }
 
 .barrita1, .barrita2, .barrita3{
@@ -112,12 +145,21 @@ flex:1;
     transition: 1s all;
 }
 
-.menuH:hover .barrita1{
+.menuHamburguesa:hover .barrita1{
     margin: 0.1vh;
 }
-.menuH:hover .barrita3{
+.menuHamburguesa:hover .barrita3{
     margin: 0.1vh;
 }
+
+.menuHamburguesa:active .barrita1{
+    background-color: black;
+}
+
+.menuHamburguesa:active .barrita3{
+    background-color: black;
+}
+
 /* 
 FIN DEL MENU */
 
@@ -137,6 +179,7 @@ FIN DEL MENU */
 /* HASTA ACA ES EL MAIN */
 
 .pie {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -284,8 +327,6 @@ fin de base */
     width: 65vw;
     padding:2% 2%;
 }
-
-
 
 
 .producto--img{
