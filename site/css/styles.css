@@ -52,7 +52,6 @@ flex:1;
 }
 
 .navBar__contenedor--logo {
-    width: 40%;
     align-items: center;
     flex:2;
     display: flex;
@@ -61,6 +60,7 @@ flex:1;
 
 .logo-navBar {
     align-items: center;
+    width: 14vh;
 }
 
 .navBar__faq--carrito {
@@ -77,6 +77,10 @@ flex:1;
 
 .navBar__carrito {
     flex:1;
+}
+
+.navBar--imagenes{
+    width: 6vh;
 }
 
 .buscador {
@@ -137,7 +141,7 @@ flex:1;
     background-color:#61892F;
 }
 
-.barrita1, .barrita2, .barrita3{
+.menuHamburguesa > *{
     width: 70%;
     height: 6%;
     background-color: honeydew;
@@ -148,17 +152,19 @@ flex:1;
 .menuHamburguesa:hover .barrita1{
     margin: 0.1vh;
 }
+
+.menuHamburguesa:hover .barrita2{
+    width: 30%;
+}
+
 .menuHamburguesa:hover .barrita3{
     margin: 0.1vh;
 }
 
-.menuHamburguesa:active .barrita1{
+.menuHamburguesa:active > *{
     background-color: black;
 }
 
-.menuHamburguesa:active .barrita3{
-    background-color: black;
-}
 
 /* 
 FIN DEL MENU */
@@ -184,18 +190,20 @@ FIN DEL MENU */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+    height: 17vh;
     font-size: 2rem;
     background-color:#222629;
     border-top: grey solid 1px;
 }
 
 .imagenFooter {
-    width: 20%;
+    width: 10vh;
     padding-bottom: 3%;
+    opacity: .5;
 }
 
 .textoFooter {
+    padding-bottom: 4vh;
     text-align: center;
     font-size: 0.7rem;
 }
