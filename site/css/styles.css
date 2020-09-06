@@ -484,8 +484,6 @@ fin de base */
 }
 
 .log--submit{
-    position: relative;
-    bottom: -50%;
     background-color: grey;
     width: 100%;
     height: 7vh;
@@ -494,6 +492,8 @@ fin de base */
     border: none;
     cursor: pointer;
     transition: 0.4s all;
+    position: absolute;
+    bottom: 10%;
 }
 
 .log--submit:hover{
