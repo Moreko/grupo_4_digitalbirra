@@ -264,15 +264,16 @@ fin de base */
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 70%;
-    height: 5vh;
+    width: 90%;
+    height: 9vh;
 }
 
 .btn--vent{
     font-family: 'Industry';
-    font-size: 1rem;
-    width: 15vh;
+    font-size: .7rem;
+    width: 17vh;
     color: #61892F;
+    padding: 1%;
     background-color: #222629;
     border: none;
     cursor: pointer;
