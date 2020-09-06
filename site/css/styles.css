@@ -61,6 +61,12 @@ flex:1;
 .logo-navBar {
     align-items: center;
     width: 14vh;
+    opacity: .8;
+    transition: .4s all;
+}
+
+.logo-navBar:hover{
+    opacity: 1;
 }
 
 .navBar__faq--carrito {
@@ -81,6 +87,12 @@ flex:1;
 
 .navBar--imagenes{
     width: 6vh;
+    opacity: .7;
+    transition: .4s all;
+}
+
+.navBar--imagenes:hover{
+    opacity: 1;
 }
 
 .buscador {
@@ -250,6 +262,7 @@ fin de base */
     background-color: grey;
     font-family: 'Industry';
     text-align: center;
+    border-style: none;
 }
 
 .select--option{
@@ -397,6 +410,7 @@ fin de base */
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 1vh;
     width: 100%;
 }
 
@@ -408,7 +422,7 @@ fin de base */
     background-color: black;
     border: grey solid .3vh;
     padding:4%;
-    margin: 1vh;
+    margin: 0.4vh;
     width:5vh;
     height: 5vh;
     font-size: 1.2rem;
