@@ -32,6 +32,7 @@ html {
     width: 100%;
     font-family: 'Quicksand', sans-serif;
     background-color:rgb(20, 20, 20);
+    overflow-x: hidden;
 }
 
 .cabeza{
