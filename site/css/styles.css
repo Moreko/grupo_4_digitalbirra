@@ -19,7 +19,7 @@ sumar a la base */
 }
 
 html {
-    font-size: calc(10px + (14 - 10) * ((100vw - 200px) / (1024 - 200)));
+    font-size: calc(12px + (24 - 12) * ((100vw - 200px) / (1024 - 200)));
  }
  
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
@@ -103,12 +103,12 @@ flex:1;
     position: absolute;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     width: 90vw;
-    padding: 10%;
+    height: 100vh;
+    padding: 5%;
     background-color: #616161;
     z-index: 1;
-    font-size: 2rem;
+    font-size: 1.9rem;
     opacity: 0;
     left: -100%;
     font-family: 'Industry';
@@ -121,7 +121,7 @@ flex:1;
 }
 
 .linksMenu--a{
-    padding-bottom: 14%;
+    padding-bottom: 9%;
     transition: .3s all;
 }
 
@@ -221,7 +221,7 @@ FIN DEL MENU */
 
 .contenedorMain {
     width: 100%;
-    min-height: 70vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -549,7 +549,7 @@ fin de base */
 .cont__faq{
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     min-height: 70vh;
@@ -570,7 +570,7 @@ fin de base */
 .titl{
     font-family: 'Industry';
     font-size: 1.2rem;
-    padding: 2%;
+    padding-top: 6%;
 }
 .titlG{
     font-family: 'Industry';
@@ -588,6 +588,14 @@ fin de base */
     text-align: center;
     font-size: 1.2rem;
     padding: 2% 7% 2% 7%;
+}
+
+.cont__btn--volver{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
+    width: 80%;
+
 }
 
 .btn--volver{
@@ -608,5 +616,7 @@ fin de base */
     color: white;
     background-color: #6B6E70;
 }
+
+
 
 
