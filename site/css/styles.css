@@ -665,3 +665,71 @@ fin de base */
 .btn--adm:hover >*{
     color: white;
 }
+.reg__form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 70vh;
+}
+
+.reg--input{
+    background-color: grey;
+    font-family: 'Industry';
+    border: none;
+    padding: 6%;
+    margin-bottom: 8%;
+    width: 100%;
+    height: 7vh;
+    transition: 0.4s all;
+}
+
+.reg--input:hover{
+    color:#D9B08C;
+    background-color: rgb(80, 80, 80);
+}
+
+.reg--submit{
+    background-color: grey;
+    width: 100%;
+    height: 7vh;
+    font-family: 'Industry';
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s all;
+    position: absolute;
+    bottom: 10%;
+}
+
+.reg--submit:hover{
+    color: grey;
+    background-color: #222629;
+}
+
+.reg--submit:active{
+    color:#61892F;
+}
+
+.registro{
+    display:flex;
+    width: 100%;
+    padding-bottom: 12%;
+    padding-top: 7%;
+}
+.registrate{
+    font-family: "industry";
+    font-size: 1.9rem;
+    flex:1;
+    margin-left: 2%;
+    color: #61892F
+}
+.link_log{
+    font-family: "industry";
+    font-size: 1rem;
+    padding-left: 20%;
+    flex:1;
+   
+}
