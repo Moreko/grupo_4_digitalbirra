@@ -72,10 +72,10 @@ flex:1;
 
 .navBar__faq--carrito {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    padding-right: 2%;
-    flex:1;
+    padding-right: 1%;
+    flex: 1;
 }
 
 .navBar__faq {
