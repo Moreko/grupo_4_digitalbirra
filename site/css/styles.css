@@ -274,7 +274,14 @@ fin de base */
 
 .cont__img__titl{
     width: 100%;
+    height: 18vh;
     position: relative;
+    background-image: url('../static/img/fondoDB.jpg');
+    background-repeat: no-repeat;
+    background-size: 129%;
+    background-position-x: 87%;
+    background-position-y: 50%;
+    margin-bottom: 2vh;
 }
 
 .portada--titl{
@@ -284,13 +291,15 @@ fin de base */
     position: absolute;
     text-align: center;
     left: 50%;
-    top: 25%;
+    top: 28%;
     transform:translate(-50%)
 }
 
-.portada--img{
+/* .portada--img{
     width: 100%;
-}
+    object-fit: none;
+    object-position: 64% 35%;
+} */
 
 .select--tcerveza{
     width: 90%;
