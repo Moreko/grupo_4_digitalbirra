@@ -24,7 +24,7 @@ html {
  
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
 
-.contenedorBody{
+.contenedorApp{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -227,6 +227,7 @@ FIN DEL MENU */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color:rgb(20, 20, 20);
 }
 
 
