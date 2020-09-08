@@ -91,6 +91,7 @@ flex:1;
     width: 6vh;
     opacity: .7;
     transition: .4s all;
+    margin-left: 5%;
 }
 
 .navBar--imagenes:hover{
