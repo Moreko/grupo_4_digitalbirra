@@ -274,7 +274,7 @@ fin de base */
 
 .cont__img__titl{
     width: 100%;
-    height: 18vh;
+    height: 31vw;
     position: relative;
     background-image: url('../static/img/fondoDB.jpg');
     background-repeat: no-repeat;
@@ -285,14 +285,21 @@ fin de base */
 }
 
 .portada--titl{
-    font-family: 'Industry';
-    font-size: 1.6rem;
+    /* font-family: 'Industry';
+    font-size: 1.6rem; */
     width: 30%;
     position: absolute;
     text-align: center;
     left: 50%;
     top: 28%;
-    transform:translate(-50%)
+    transform:translate(-50%);
+    transition: .4s all;
+}
+
+.portada--titl:hover {
+    filter: grayscale(20);
+    width: 31%;
+    opacity: .9;
 }
 
 /* .portada--img{
@@ -399,6 +406,11 @@ fin de base */
 .producto--img{
     width: 100%;
     border: solid grey .07vh;
+    transition: .5s all;
+}
+
+.producto--img:hover{
+    filter: saturate(2);
 }
 
 .producto__info{
@@ -740,6 +752,5 @@ fin de base */
     font-family: "industry";
     font-size: 1rem;
     padding-left: 20%;
-    flex:1;
-   
+    flex:1;  
 }
