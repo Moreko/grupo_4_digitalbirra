@@ -367,16 +367,17 @@ fin de base */
 
 
 
-.block__productos{
+.bloque__productos{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding-top: 2vh;
+    flex-wrap: wrap;
 }
 
 
-.block__producto{
+.bloque__producto{
     display: flex;
     flex-direction: column;
     justify-content: center;
