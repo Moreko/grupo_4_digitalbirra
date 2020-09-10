@@ -239,7 +239,7 @@ FIN DEL MENU */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 17vh;
+    /* height: 17vh; */
     font-size: 2rem;
     background-color:#222629;
     border-top: grey solid 1px;
