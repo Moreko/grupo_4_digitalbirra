@@ -756,3 +756,71 @@ fin de base */
     padding-left: 20%;
     flex:1;  
 }
+
+
+@media (min-width: 900px){
+    .navBar__menu{
+        display: none;
+    }
+
+    .navBar__linksMenu{
+        display: flex;
+        order: 1;
+        position: relative;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        left: 0;
+        height: 10vh;
+        padding: 2%;
+        z-index: 1;
+        font-size: 0.7rem;
+        opacity: 1;
+        font-family: 'Industry';
+        transition: .7s all;
+        background-color: rgb(0, 0, 0,0);
+       
+    }
+    .navBar:hover > .navBar__linksMenu{
+        left: 0%;
+        opacity: 1;
+    }
+
+    .linksMenu--a{
+        padding-bottom: 0%;
+        width: 20%;
+        transition: .3s all;
+        text-align: center;
+    }
+ 
+    .linksMenu--a:nth-child(1){
+        display: none;
+    }
+
+    .linksMenu--a:nth-child(4){
+        display: none;
+    }
+    .linksMenu--a:nth-child(7){
+        display: none;
+    }
+
+    .linksMenu--a:hover{
+        font-size: 0.75rem;
+        color:#86C232;
+    }
+    
+    .navBar__faq--carrito{
+        order: 2;
+    }
+
+    .btn--vent{
+        width: 19vw;
+        padding: 2%;
+    }
+
+    .cont__venTodas {
+        height: 24vh;
+    }
+
+}
