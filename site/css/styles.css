@@ -427,8 +427,8 @@ fin de base */
     width: 65vw;
     padding:2% 2%;
 }
-
-
+/* 
+modificar desde el contenedor, esta clase está por todos lados */
 .producto--img{
     width: 100%;
     border: solid grey .07vh;
