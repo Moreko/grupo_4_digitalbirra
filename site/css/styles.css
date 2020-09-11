@@ -820,7 +820,7 @@ ojo con este que se usa en varios lados */
 @media (min-width: 900px){
 
     .navBar {
-        height: 12vh;
+        height: 8vh;
     }
 
     .navBar__menu{
@@ -836,10 +836,9 @@ ojo con este que se usa en varios lados */
         align-items: center;
         width: 90vw;
         left: 0;
-        height: 10vh;
-        padding: 2%;
+        height: auto;
+        padding: 0%;
         z-index: 1;
-        font-size: 0.7rem;
         opacity: 1;
         font-family: 'Industry';
         transition: none;
@@ -857,7 +856,7 @@ ojo con este que se usa en varios lados */
         transition: none;
         text-align: center;
         font-family: 'Quicksand';
-        font-size: .8rem;
+        font-size: .6rem;
     }
  
     .linksMenu--a:nth-child(1){
@@ -880,6 +879,10 @@ ojo con este que se usa en varios lados */
         order: 2;
     }
 
+    .navBar--imagenes{
+        height: 4vh;
+    }
+
     .btn--vent{
         width: 19vw;
         padding: 2%;
@@ -890,7 +893,7 @@ ojo con este que se usa en varios lados */
     }
 
     .logo-navBar {
-        width: 19vh
+        width: 10vh
     }
 
     .buscador__formulario--input{
