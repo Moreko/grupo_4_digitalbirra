@@ -1021,6 +1021,7 @@ ojo con este que se usa en varios lados */
     .btn--vent{
         width:18%;
         margin-top: 0%;
+        font-family: .5rem;
     }
 
     .btn--vent:nth-child(3){
@@ -1028,15 +1029,16 @@ ojo con este que se usa en varios lados */
     }
 
     .select--tcerveza{
-        height: 9vh;
-        font-size: .8rem;
+        height: 5vh;
+        font-size: .6rem;
         width: 60%;
         order: 2;
         margin: 1%;
     }
 
     .section--titl{
-        height: 8vh;
+        height: 5vh;
+        font-size: .7rem;
     }
 
     .cont__cantidad {
@@ -1115,6 +1117,10 @@ ojo con este que se usa en varios lados */
         height: 8vh;
         align-items: center;
         background-color:#3a3d3f;
+    }
+
+    .textoFooter{
+        font-size: .5rem;
     }
 
 } 
