@@ -319,6 +319,7 @@ fin de base */
     font-family: 'Industry';
     text-align: center;
     border-style: none;
+    cursor: pointer;
 }
 
 .select--option{
@@ -360,7 +361,7 @@ fin de base */
     align-items: center;
     width: 100%;
     height: 4vh;
-    background-color:  #6B6E70;
+    background-color:  #363737;;
     font-family: 'Industry';
     font-size: 1rem;
 }
@@ -375,6 +376,7 @@ fin de base */
     align-items: center;
     padding-top: 2vh;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 
@@ -510,7 +512,6 @@ fin de base */
 
 .btn--agregar:hover{
     color: white;
-    font-size: 1.1rem;
     
 }
 
@@ -760,7 +761,13 @@ fin de base */
 }
 
 
+
+
+
+
+
 @media (min-width: 900px){
+
     .navBar__menu{
         display: none;
     }
@@ -910,6 +917,43 @@ fin de base */
             width: 50%;
         }
     /* se podría modificar el contenedor de la imagen que
-    es el padre producto--img recién lo probé y va */
+    es el padre cont__producto--pp recién lo probé y va */
 
-}
+
+    /* ESTILOS PARA HOME */
+    .cont__producto{
+        width: 25%;
+    }
+
+    .bloque__productos{
+        justify-content: space-around;
+    }
+
+    .producto__info{
+        font-size: 0.7rem;
+    }
+
+    .btn--cant{
+        font-size: 1rem;
+    }
+
+    .btn--agregar{
+        font-size: .7rem;
+    }
+
+    .btn--vent{
+        width:20%
+    }
+
+    .select--tcerveza{
+        height: 9vh;
+        font-size: .8rem;
+    }
+    .section--titl{
+        height: 8vh;
+    }
+    .cont__cant__agregar{
+        width: 100%;
+    }
+} 
+ /* esta llave es clave */
