@@ -584,7 +584,7 @@ ojo con este que se usa en varios lados */
 }
 
 .log--input{
-    background-color: grey;
+    background-color: rgb(56, 56, 56);
     font-family: 'Industry';
     border: none;
     padding: 6%;
@@ -902,7 +902,9 @@ ojo con este que se usa en varios lados */
     }
 
     .imagenFooter {
-        width: 18vh;
+        width: 10vh;
+        padding-bottom: 2%;
+        padding-top: 1%;
     }
 
     /* ESTILOS RESPONSIVE DE PÁG SOBRE NOSOTROS */
