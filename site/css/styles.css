@@ -35,6 +35,8 @@ html {
     overflow-x: hidden;
 }
 
+/* EMPIEZA HEADER */
+
 .cabeza{
     width: 100%;
 }
@@ -761,6 +763,11 @@ fin de base */
 
 
 @media (min-width: 900px){
+
+    .navBar {
+        height: 12vh;
+    }
+
     .navBar__menu{
         display: none;
     }
@@ -837,7 +844,7 @@ fin de base */
         width: 18vh;
     }
 
-    /* ESTILOS DE PÁG SOBRE NOSOTROS */
+    /* ESTILOS RESPONSIVE DE PÁG SOBRE NOSOTROS */
 
     .parrafoG{
         font-size: 0.8rem;
@@ -869,7 +876,7 @@ fin de base */
         margin-left: 5%;
     }
 
-    /* ESTILOS DE PÁGINA LOGIN */
+    /* ESTILOS RESPONSIVE DE PÁGINA LOGIN */
 
     .logLogo{
         width: 18%;
@@ -901,9 +908,40 @@ fin de base */
         height: 55vh;
     }
 
-    /* ESTILOS DE PÁGINA PRODUCTO */
+    /* ESTILOS RESPONSIVE DE PÁGINA PRODUCTO */
+
+    .cont__producto{
+        width: 5vw;
+    }
 
     .producto--img {
         width: 30%;
+    }
+
+    .cont__cantidad {
+        width: 30%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .btn--cant {
+        font-size: 0.8rem;
+        width: 18%;
+        height: 8vh;
+
+    }
+
+    .btn--agregar {
+        font-size: 0.8rem;
+        width: 80%;
+    }
+
+    .producto--desc {
+        font-size: 0.7rem;
+        width:40%
+    }
+
+    .producto__info--pp {
+        font-size: 0.9rem;
     }
 }
