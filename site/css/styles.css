@@ -419,7 +419,7 @@ fin de base */
     padding:2% 2%;
 }
 
-.cont__producto--pp{
+.cont__img__producto--pp{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -450,16 +450,41 @@ fin de base */
     padding-top: 1.5vh;
 }
 
-.producto__info--pp{
+.cont__titl__btn__agregar--pp{
     font-family: 'Industry';
-    font-size: 1rem;
-    width: 70vw;
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 1.5vh;
 }
+
+.producto__titl--pp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.precio--pp{
+    align-self: flex-end;
+}
+
+.nombre--pp{
+    align-self: flex-start;
+}
+
+.descripcion--pp{
+    font-size: 1.2rem;
+    text-align: center;
+    padding:0 10% 10% 10%;
+    font-family: 'Quicksand';
+}
+
+
 
 .info--precioMl{
     font-family: 'Industry';
@@ -479,7 +504,7 @@ fin de base */
 }
 
 
-.cont__cant__agregar--pp{
+.cont__btn__agregar--pp{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -488,7 +513,8 @@ fin de base */
     padding-top: 1vh;
     padding-bottom: 2vh;
 }
-
+/* 
+ojo con este que se usa en varios lados */
 .cont__cantidad{
     display: flex;
     flex-direction: row;
@@ -498,9 +524,11 @@ fin de base */
     width: 100%;
 }
 
-.cont__botones--producto {
+.cont__btn__agregar--pp {
     display: flex;
+    flex-direction: column;
 }
+
 
 
 .btn--cant{
@@ -543,11 +571,6 @@ fin de base */
 .btn--agregar:hover{
     color: white;
     
-}
-
-.producto--desc{
-    text-align: center;
-    padding:0 10% 10% 10%;
 }
 
 .cont__form{
