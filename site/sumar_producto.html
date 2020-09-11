@@ -18,17 +18,15 @@
                     <div class="barrita3"></div>
                 </article>
             </section>
-
             <section class="navBar__linksMenu">
                 <a class="linksMenu--a" href="home.html">+ HOME</a>
                 <a class="linksMenu--a" href="producto.html">+ PRODUCTO</a>
                 <a class="linksMenu--a" href="sobre_nosotros.html">+ SOBRE NOSOTROS</a>
                 <a class="linksMenu--a" href="faq.html">+ PREGUNTAS FRECUENTES</a>
                 <a class="linksMenu--a" href="login.html">+ LOGIN</a>
-                <a class="linksMenu--a" href="registro.html">+ REGISTRARTE</a>
+                <a class="linksMenu--a" href="">+ REGISTRARTE</a>
                 <a class="linksMenu--a" href="">+ CARRITO</a>
             </section>
-
             <section class="navBar__contenedor--logo"><a href="index.html"><img class="logo-navBar"  src="static/img/LogoA.svg" alt="Logo Digital Birra"></a></section>
             <section class="navBar__faq--carrito">
                 <a href="faq.html">
@@ -40,46 +38,26 @@
             </section>
         </nav>
         
-        <section class="buscador">
-            <form class="buscador__formulario">
-                <input class="buscador__formulario--input" type="text" placeholder="encontrá tu cerveza.." autofocus>
-            </form>
-
-            <img class="buscador__lupa" src="static/img/lupa.svg" alt="Lupita">
-
-        </section>
     </header>
 
     <main class="contenedorMain">
+        <section class="cont__admin--titl">
+            <h1 class="titlG">SUMAR PRODUCTO</h1>
+        </section>
 
-    <section class="bloque__producto">
-            <article class="cont__producto--pp">
-                <img class="producto--img" src="static/img/ipa.jpg" alt="birraA">
-            </article>
-                
-            <article class="cont__cant__agregar--pp">
-                <article class="producto__info--pp">
-                    <p>IPA 14% 500ML IBU 52</p>
-                    <p>$100</p>
-                </article>
-
-                <section class="cont__cantidad">
-                <section class="cont__botones--producto">
-                        <button class="btn--cant">+</button>
-                        <button class="btn--cant">x1</button>
-                        <button class="btn--cant">-</button>
-                </section>
-                <section>
-                        <button class="btn--agregar">Agregar</button>
-                </section>
-                 </section>   
-
-                  <p class="producto--desc">IPA DB es una de nuestras primeras creaciones,
-                valorada por su sabor suave. Recomendamos
-                acompañarla con una pizza de muzzarella.</p>
-
-            </article> 
-    </section>
+        <form action="post" class="reg__form">
+            <input class="reg--input" type= "text" name="nombreProducto" placeholder="NOMBRE DEL PRODUCTO" autofocus required>
+            <input class="reg--input" type="text" name="descripProducto" placeholder="DESCRIPCIÓN" autofocus required>
+            <input class="reg--input" type="number" name="gradacion" placeholder="GRADACIÓN" autofocus required>
+            <input class="reg--input" type="number" name="ibu" placeholder="IBU"  autofocus required>
+            <input class="reg--input" type="number" name="mililitros" placeholder="MILILITROS" autofocus required>
+            <input class="reg--input" type="file" name="imagenProducto" placeholder="IMG" value="IMG" autofocus required>
+            <input class="reg--input" type="number" name="regConfPassword" placeholder="PRECIO" id="regConfPassword" autofocus required>
+            
+            <input class="reg--submit" type="submit" value="AGREGAR" autofocus>
+            
+           
+        </form>
 
     </main>
     
@@ -88,7 +66,6 @@
         <p class="textoFooter">DIGITAL BIRRA 2020 BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
         
     </footer>
-
 </section>
 </body>
 </html>

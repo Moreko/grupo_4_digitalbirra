@@ -175,6 +175,14 @@ flex:1;
     width: 3.6vh;
 }
 
+
+.buscadorModif{
+    align-self: flex-end;
+    width: 100%;
+    height: 6vh;
+    display: flex;
+}
+
 /* MENU BURGUER*/
 
 .menuHamburguesa{
@@ -286,7 +294,6 @@ fin de base */
     background-size: 129%;
     background-position-x: 87%;
     background-position-y: 50%;
-    margin-bottom: 2vh;
 }
 
 .portada--titl{
@@ -321,7 +328,16 @@ fin de base */
     font-family: 'Industry';
     text-align: center;
     border-style: none;
+    cursor: pointer;
+    -moz-appearance:none;
+    transition: .4s all;
 }
+
+.select--tcerveza:hover{
+    color: #61892F;
+    background-color: rgb(32, 32, 32);
+}
+
 
 .select--option{
     background-color: #222629;
@@ -329,25 +345,28 @@ fin de base */
     font-size: 1.2rem;
     color: #61892F;
     font-family: 'Industry';
+    flex:3;
 }
 
-.cont__venTodas{
+.cont__select__venTodas{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 90%;
-    height: 9vh;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2%;
 }
 
 .btn--vent{
     font-family: 'Industry';
     font-size: .7rem;
-    width: 17vh;
+    width: 40%;
     color: #61892F;
     padding: 1%;
     background-color: #222629;
     border: none;
     cursor: pointer;
+    margin-top: 2%;
     transition: 0.3s all;
 }
 
@@ -362,7 +381,7 @@ fin de base */
     align-items: center;
     width: 100%;
     height: 4vh;
-    background-color:  #6B6E70;
+    background-color:  #363737;;
     font-family: 'Industry';
     font-size: 1rem;
 }
@@ -377,6 +396,7 @@ fin de base */
     align-items: center;
     padding-top: 2vh;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 
@@ -395,7 +415,7 @@ fin de base */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 45vw;
+    width: 45%;
     padding:2% 2%;
 }
 
@@ -422,7 +442,7 @@ fin de base */
 .producto__info{
     font-family: 'Industry';
     font-size: 1rem;
-    width: 40vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -461,7 +481,7 @@ fin de base */
 
 .cont__cant__agregar--pp{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 75%;
@@ -471,12 +491,17 @@ fin de base */
 
 .cont__cantidad{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 1vh;
     width: 100%;
 }
+
+.cont__botones--producto {
+    display: flex;
+}
+
 
 .btn--cant{
     display: flex;
@@ -489,10 +514,15 @@ fin de base */
     margin: 0.4vh;
     width:5vh;
     height: 5vh;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color:#ffffff;
     transition: 0.3s all;
 }
+
+.btn--cant:nth-child(2){
+    font-size: 1.2rem;
+}
+
 
 .btn--cant:hover{
     color:#86C232;
@@ -512,7 +542,6 @@ fin de base */
 
 .btn--agregar:hover{
     color: white;
-    font-size: 1.1rem;
     
 }
 
@@ -700,7 +729,7 @@ fin de base */
     justify-content: flex-start;
     align-items: center;
     width: 90%;
-    height: 70vh;
+    padding-bottom: 4%;
 }
 
 .reg--input{
@@ -728,8 +757,6 @@ fin de base */
     border: none;
     cursor: pointer;
     transition: 0.4s all;
-    position: absolute;
-    bottom: 10%;
 }
 
 .reg--submit:hover{
@@ -760,6 +787,11 @@ fin de base */
     padding-left: 20%;
     flex:1;  
 }
+
+
+
+
+
 
 
 @media (min-width: 900px){
@@ -862,7 +894,7 @@ fin de base */
 
     .btn--volver{
         height: 7vh;
-        width: 25%
+        width: 30%
     }
 
     .navBar__faq--carrito a{
@@ -914,8 +946,68 @@ fin de base */
         width: 5vw;
     }
 
-    .producto--img {
+    /* .producto--img {
         width: 30%;
+    } */
+        .cont__producto--pp{
+            width: 50%;
+        }
+    /* se podría modificar el contenedor de la imagen que
+    es el padre cont__producto--pp recién lo probé y va */
+
+
+    /* ESTILOS PARA HOME */
+    .cont__producto{
+        width: 25%;
+    }
+
+    .bloque__productos{
+        justify-content: space-around;
+    }
+
+    .producto__info{
+        font-size: 0.7rem;
+    }
+
+    .btn--cant{
+        font-size: 1.6rem;
+        width: 60%;
+        height: 7vh;
+    }
+
+    .btn--cant:nth-child(2){
+        font-size: 1rem;
+    }
+    
+
+    .btn--agregar{
+        font-size: .7rem;
+    }
+
+    .cont__select__venTodas{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn--vent{
+        width:18%;
+        margin-top: 0%;
+    }
+
+    .btn--vent:nth-child(3){
+        order: 2;
+    }
+
+    .select--tcerveza{
+        height: 9vh;
+        font-size: .8rem;
+        width: 60%;
+        order: 2;
+        margin: 1%;
+    }
+
+    .section--titl{
+        height: 8vh;
     }
 
     .cont__cantidad {
@@ -944,4 +1036,59 @@ fin de base */
     .producto__info--pp {
         font-size: 0.9rem;
     }
-}
+
+    .cont__cant__agregar{
+        width: 100%;
+    }
+
+    .registro{
+        padding-bottom: 4%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .registrate{
+        flex:1;
+        text-align: center;
+    }
+
+    .link_log{
+        width: 20%;
+        padding-left: 0%;
+        flex: 1;
+        text-align: center;
+    }
+
+    .reg__form{
+        width: 40%;
+        
+    }
+
+    .reg--input{
+        font-size: .7rem;
+    }
+
+    .reg--submit{
+        margin-top: 10%;
+        font-size: 1rem;
+    }
+
+    .buscadorModif{
+        width: 50%;
+    }
+    .cont__btn--volver{
+        padding-bottom: 0%;
+        margin: 6.5vh;
+    }
+
+    .buscador {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2rem;
+        height: 8vh;
+        align-items: center;
+        background-color:#3a3d3f;
+    }
+
+} 
+
+ /* esta llave es clave */
