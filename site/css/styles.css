@@ -857,6 +857,7 @@ ojo con este que se usa en varios lados */
         text-align: center;
         font-family: 'Quicksand';
         font-size: .6rem;
+        transition: .4s font-size;
     }
  
     .linksMenu--a:nth-child(1){
@@ -871,7 +872,7 @@ ojo con este que se usa en varios lados */
     }
 
     .linksMenu--a:hover{
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         color:#86C232;
     }
     
