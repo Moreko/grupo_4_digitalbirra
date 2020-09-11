@@ -104,7 +104,7 @@ flex:1;
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 80vw;
     height: 100vh;
     padding: 5%;
     background-color: #616161;
@@ -526,7 +526,7 @@ fin de base */
     justify-content: flex-start;
     align-items: center;
     width: 90%;
-    height: 70vh;
+    height: 60vh;
 }
 
 .log--input{
@@ -825,4 +825,85 @@ fin de base */
         height: 24vh;
     }
 
+    .logo-navBar {
+        width: 19vh
+    }
+
+    .buscador__formulario--input{
+        font-size: 0.8rem;
+    }
+
+    .imagenFooter {
+        width: 18vh;
+    }
+
+    /* ESTILOS DE PÁG SOBRE NOSOTROS */
+
+    .parrafoG{
+        font-size: 0.8rem;
+    }
+
+    .titlG{
+        font-family: 'Industry';
+        font-size: 1.5rem;
+        padding: 2%;
+    }
+
+    .volverInicio {
+        font-size: 0.7rem;
+    }
+
+    .btn--volver{
+        height: 7vh;
+        width: 25%
+    }
+
+    .navBar__faq--carrito a{
+        margin:5%
+    }
+
+    .navBar--imagenes{
+        width: 7vh;
+        opacity: .7;
+        transition: .4s all;
+        margin-left: 5%;
+    }
+
+    /* ESTILOS DE PÁGINA LOGIN */
+
+    .logLogo{
+        width: 18%;
+        padding: 4%;
+    }
+
+    
+    .log--input {
+        padding: 3%;
+        margin-bottom: 5%;
+        width: 40%;
+        margin:1%;
+        font-size:0.6rem;
+    }
+
+    .log--submit {
+        width: 25%;
+        height: 7vh;
+        font-size: 0.8rem;
+    }
+
+    .cont__form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 85%;
+        height: 55vh;
+    }
+
+    /* ESTILOS DE PÁGINA PRODUCTO */
+
+    .producto--img {
+        width: 30%;
+    }
 }
