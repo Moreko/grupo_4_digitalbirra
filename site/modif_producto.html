@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <title>Digital Birra</title>
+</head>
+<body>
+<section class="contenedorApp">
+    <header class="cabeza">
+        <nav class="navBar">
+            <section class="navBar__menu">
+                <article class="menuHamburguesa">
+                    <div class="barrita1"></div>
+                    <div class="barrita2"></div>
+                    <div class="barrita3"></div>
+                </article>
+            </section>
+            <section class="navBar__linksMenu">
+                <a class="linksMenu--a" href="home.html">+ HOME</a>
+                <a class="linksMenu--a" href="producto.html">+ PRODUCTO</a>
+                <a class="linksMenu--a" href="sobre_nosotros.html">+ SOBRE NOSOTROS</a>
+                <a class="linksMenu--a" href="faq.html">+ PREGUNTAS FRECUENTES</a>
+                <a class="linksMenu--a" href="login.html">+ LOGIN</a>
+                <a class="linksMenu--a" href="">+ REGISTRARTE</a>
+                <a class="linksMenu--a" href="">+ CARRITO</a>
+            </section>
+            <section class="navBar__contenedor--logo"><a href="index.html"><img class="logo-navBar"  src="static/img/LogoA.svg" alt="Logo Digital Birra"></a></section>
+            <section class="navBar__faq--carrito">
+                <a href="faq.html">
+                    <img class="navBar--imagenes" src="static/img/question.svg" alt="question">
+                </a>
+                <a href="carrito.html">
+                    <img class="navBar--imagenes" src="static/img/shopping-cart.svg" alt="carrito">
+                </a>
+            </section>
+        </nav>
+        
+    </header>
+
+    <main class="contenedorMain">
+        <section class="cont__admin--titl">
+            <h1 class="titlG">MODIFICAR PRODUCTO</h1>
+        </section>
+
+        <form action="post" class="reg__form">
+            <input class="reg--input" type= "text" name="nombreProducto" placeholder="NOMBRE DEL PRODUCTO" autofocus required>
+            <input class="reg--input" type="text" name="descripProducto" placeholder="DESCRIPCIÓN" autofocus required>
+            <input class="reg--input" type="number" name="gradacion" placeholder="GRADACIÓN" autofocus required>
+            <input class="reg--input" type="number" name="ibu" placeholder="IBU"  autofocus required>
+            <input class="reg--input" type="number" name="mililitros" placeholder="MILILITROS" autofocus required>
+            <input class="reg--input" type="file" name="imagenProducto" placeholder="IMG" value="IMG" autofocus required>
+            <input class="reg--input" type="number" name="regConfPassword" placeholder="PRECIO" id="regConfPassword" autofocus required>
+            
+            <input class="reg--submit" type="submit" value="GUARDAR" autofocus>
+            <input class="reg--submit" type="submit" value="ELIMINAR" autofocus>
+           
+        </form>
+
+    </main>
+    
+    <footer class="pie">
+        <img class="imagenFooter" src="static/img/LogoA.svg" alt="Logo Digital Birra Footer">
+        <p class="textoFooter">DIGITAL BIRRA 2020 BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+        
+    </footer>
+</section>
+</body>
+</html>
