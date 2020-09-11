@@ -811,7 +811,7 @@ fin de base */
         font-size: 0.7rem;
         opacity: 1;
         font-family: 'Industry';
-        transition: .7s all;
+        transition: none;
         background-color: rgb(0, 0, 0,0);
        
     }
@@ -823,7 +823,7 @@ fin de base */
     .linksMenu--a{
         padding-bottom: 0%;
         width: 20%;
-        transition: .3s all;
+        transition: none;
         text-align: center;
     }
  
