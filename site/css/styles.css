@@ -478,6 +478,9 @@ fin de base */
     width: 100%;
 }
 
+
+
+
 .btn--cant{
     display: flex;
     justify-content: center;
@@ -489,10 +492,15 @@ fin de base */
     margin: 0.4vh;
     width:5vh;
     height: 5vh;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color:#ffffff;
     transition: 0.3s all;
 }
+
+.btn--cant:nth-child(2){
+    font-size: 1.2rem;
+}
+
 
 .btn--cant:hover{
     color:#86C232;
@@ -932,10 +940,15 @@ fin de base */
     }
 
     .btn--cant{
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         width: 60%;
         height: 7vh;
     }
+
+    .btn--cant:nth-child(2){
+        font-size: 1rem;
+    }
+    
 
     .btn--agregar{
         font-size: .7rem;
