@@ -819,8 +819,10 @@ ojo con este que se usa en varios lados */
 
 @media (min-width: 900px){
 
+    /* ESTILOS RESPONSIVE DE NAVBAR */
+
     .navBar {
-        height: 8vh;
+        height: 9vh;
     }
 
     .navBar__menu{
@@ -856,7 +858,7 @@ ojo con este que se usa en varios lados */
         transition: none;
         text-align: center;
         font-family: 'Quicksand';
-        font-size: .6rem;
+        font-size: .7rem;
         transition: .4s font-size;
     }
  
@@ -894,7 +896,7 @@ ojo con este que se usa en varios lados */
     }
 
     .logo-navBar {
-        width: 10vh
+        width: 14vh
     }
 
     .buscador__formulario--input{
