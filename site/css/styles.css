@@ -152,7 +152,7 @@ flex:1;
 
 .buscador__formulario--input{
     font-size: 1.4rem;
-    width: 100%;
+    width: 90%;
     margin-left: 4%;
     color: white;
     text-align: left;
@@ -163,6 +163,11 @@ flex:1;
     transform: 0.4s all;
     border-bottom: white solid 1px;
 }
+
+.buscador__formulario--input:active {
+    border: none;
+}
+
 
 
 .buscador__lupa{
