@@ -811,9 +811,153 @@ ojo con este que se usa en varios lados */
     flex:1;  
 }
 
+/* aca esta el carrito*/
+.mi_carrito{
+    margin-top: 1.2vh;
+    color: #61892F;
+}
+.carrito_productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vh;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 2vh;
+}
+
+
+.carrito__producto{
+    display: flex;
+    flex-direction:row;
+    margin-left: 5vh;
+    
+    justify-content: space-between;
+}
+
+.carrito_producto--img{
+    width: 40%;
+    border: solid grey .07vh;
+    transition: .5s all;
+}
+
+.carrito_producto__info{
+    font-family: 'Industry';
+    font-size: 1rem;
+    width: 60%;
+    display: flex;
+    flex-direction:column;
+    margin-left: 6vh;
+    
+    
+    
+    padding-top: 1.5vh;
+}
+
+.carrito_precio{
+    font-family: 'Industry';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: .3vh;
+}
+
+.carrito__cant__agregar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+
+.cont__btn__agregar--pp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+}
+.carrito__cantidad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 1vh;
+    width: 100%;
+}
+
+.cont__btn__agregar--pp {
+    display: flex;
+    flex-direction: column;
+}
 
 
 
+.btn--cant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Industry';
+    background-color: black;
+    border: grey solid .3vh;
+    padding:4%;
+    margin: 0.4vh;
+    width:5vh;
+    height: 5vh;
+    font-size: 2rem;
+    color:#ffffff;
+    transition: 0.3s all;
+}
+
+.btn--cant:nth-child(2){
+    font-size: 1.2rem;
+}
+
+
+.btn--cant:hover{
+    color:#86C232;
+}
+.carrito_total{
+    display:flex;
+    justify-content: space-evenly;
+    width:100%;
+
+    
+}
+.carrito_total_total{
+    font-family: 'Industry';
+    color:#86C232;
+    font-size: 1.8rem;
+}
+.carrito_total_precio{
+    font-family: 'Industry';
+    color:#ffffff;
+    font-size: 1.8rem;
+}
+
+.boton_comprar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Industry';
+    background-color: black;
+    border: grey solid .3vh;
+    padding:4%;
+    margin: 1vh;
+    width:20vh;
+    height: 5vh;
+    font-size: 1.5rem;
+    color:#ffffff;
+    transition: 0.3s all
+}
+.boton_comprar:hover{
+    color:#86C232;
+}
 
 
 
