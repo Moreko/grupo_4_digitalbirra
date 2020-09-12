@@ -152,7 +152,7 @@ flex:1;
 
 .buscador__formulario--input{
     font-size: 1.4rem;
-    width: 100%;
+    width: 90%;
     margin-left: 4%;
     color: white;
     text-align: left;
@@ -163,6 +163,11 @@ flex:1;
     transform: 0.4s all;
     border-bottom: white solid 1px;
 }
+
+.buscador__formulario--input:active {
+    border: none;
+}
+
 
 
 .buscador__lupa{
@@ -481,7 +486,7 @@ modificar desde el contenedor, esta clase está por todos lados */
     font-size: 1.2rem;
     text-align: center;
     padding:0 10% 10% 10%;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', sans-serif;
 }
 
 
@@ -584,7 +589,7 @@ ojo con este que se usa en varios lados */
 }
 
 .log--input{
-    background-color: grey;
+    background-color: rgb(56, 56, 56);
     font-family: 'Industry';
     border: none;
     padding: 6%;
@@ -963,8 +968,10 @@ ojo con este que se usa en varios lados */
 
 @media (min-width: 900px){
 
+    /* ESTILOS RESPONSIVE DE NAVBAR */
+
     .navBar {
-        height: 8vh;
+        height: 9vh;
     }
 
     .navBar__menu{
@@ -999,8 +1006,8 @@ ojo con este que se usa en varios lados */
         width: 23%;
         transition: none;
         text-align: center;
-        font-family: 'Quicksand';
-        font-size: .6rem;
+        font-family: 'Quicksand', sans-serif;
+        font-size: .7rem;
         transition: .4s font-size;
     }
  
@@ -1038,7 +1045,7 @@ ojo con este que se usa en varios lados */
     }
 
     .logo-navBar {
-        width: 10vh
+        width: 14vh
     }
 
     .buscador__formulario--input{
@@ -1046,7 +1053,9 @@ ojo con este que se usa en varios lados */
     }
 
     .imagenFooter {
-        width: 18vh;
+        width: 10vh;
+        padding-bottom: 2%;
+        padding-top: 1%;
     }
 
     /* ESTILOS RESPONSIVE DE PÁG SOBRE NOSOTROS */
@@ -1165,6 +1174,7 @@ ojo con este que se usa en varios lados */
     .btn--vent{
         width:18%;
         margin-top: 0%;
+        font-family: .5rem;
     }
 
     .btn--vent:nth-child(3){
@@ -1172,15 +1182,16 @@ ojo con este que se usa en varios lados */
     }
 
     .select--tcerveza{
-        height: 9vh;
-        font-size: .8rem;
+        height: 5vh;
+        font-size: .6rem;
         width: 60%;
         order: 2;
         margin: 1%;
     }
 
     .section--titl{
-        height: 8vh;
+        height: 5vh;
+        font-size: .7rem;
     }
 
     .cont__cantidad {
@@ -1259,6 +1270,10 @@ ojo con este que se usa en varios lados */
         height: 8vh;
         align-items: center;
         background-color:#3a3d3f;
+    }
+
+    .textoFooter{
+        font-size: .5rem;
     }
 
 } 
