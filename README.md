@@ -35,3 +35,11 @@ De la página web de Patagonia el diseño preciso y ágil.
 *https://www.beerhawk.co.uk/browse-beers/browse-by-country/british-beers*
 
 De Beerhawk sacamos la manera de poder elejir la cantidad, y el botón de agregar al carrito debajo de cada producto.
+
+
+-----------------------------------------------------------------------------
+
+Sprint 2:
+
+Página organización de trabajo:
+https://trello.com/b/PIOE5mgY/dh
