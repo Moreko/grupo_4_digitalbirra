@@ -481,7 +481,7 @@ modificar desde el contenedor, esta clase está por todos lados */
     font-size: 1.2rem;
     text-align: center;
     padding:0 10% 10% 10%;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', sans-serif;
 }
 
 
@@ -857,7 +857,7 @@ ojo con este que se usa en varios lados */
         width: 23%;
         transition: none;
         text-align: center;
-        font-family: 'Quicksand';
+        font-family: 'Quicksand', sans-serif;
         font-size: .7rem;
         transition: .4s font-size;
     }
