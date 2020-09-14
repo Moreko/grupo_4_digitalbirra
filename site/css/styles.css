@@ -571,6 +571,7 @@ ojo con este que se usa en varios lados */
     padding: 4%;
     color:#61892F;
     transition: 0.3s all;
+    cursor: pointer;
 }
 
 .btn--agregar:hover{
@@ -761,7 +762,7 @@ ojo con este que se usa en varios lados */
 }
 
 .reg--input{
-    background-color: grey;
+    background-color: #2b2b2b;
     font-family: 'Industry';
     border: none;
     padding: 6%;
