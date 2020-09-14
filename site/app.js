@@ -27,6 +27,9 @@ app.get("/sobre_nosotros", (req, res) => {
 app.get("/faq", (req, res) => {
     res.sendFile(__dirname + "/faq.html")
 });
+app.get("/carrito", (req, res) => {
+    res.sendFile(__dirname + "/carrito.html")
+});
 
 app.get("*", (req, res) => {
     res.sendFile(__dirname + "/error.html")
