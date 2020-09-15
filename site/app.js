@@ -36,6 +36,19 @@ app.get("/carrito", (req, res) => {
     res.sendFile(__dirname + "/carrito.html")
 });
 
+app.get("/admin", (req, res) => {
+    res.sendFile(__dirname + "/admin_db.html")
+});
+
+app.get("/sumar", (req, res) => {
+    res.sendFile(__dirname + "/sumar_producto.html")
+});
+
+app.get("/modificar", (req, res) => {
+    res.sendFile(__dirname + "/modif_producto.html")
+});
+
+
 app.get("*", (req, res) => {
     res.sendFile(__dirname + "/error.html")
 });
