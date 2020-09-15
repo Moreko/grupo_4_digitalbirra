@@ -819,6 +819,7 @@ ojo con este que se usa en varios lados */
 
 /* aca esta el carrito*/
 .mi_carrito{
+    font-family: 'Industry';
     margin-top: 1.2vh;
     color: #61892F;
 }
