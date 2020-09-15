@@ -22,7 +22,7 @@ html {
     font-size: calc(12px + (24 - 12) * ((100vw - 200px) / (1024 - 200)));
  }
  
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 .contenedorApp{
     display: flex;
