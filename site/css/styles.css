@@ -319,7 +319,7 @@ fin de base */
 
 .cont__img__titl{
     width: 100%;
-    height: 31vw;
+    height: 27vw;
     position: relative;
     background-image: url('../static/img/fondoDB.jpg');
     background-repeat: no-repeat;
@@ -359,12 +359,15 @@ fin de base */
     color: #222629;
     background-color: grey;
     font-family: 'Industry';
-    text-align: center;
+    text-align-last: center;
     border-style: none;
     cursor: pointer;
     -moz-appearance:none;
     transition: .4s all;
+    display:flex;
+    align-items: center;
 }
+
 
 .select--tcerveza:hover{
     color: #61892F;
@@ -373,12 +376,14 @@ fin de base */
 
 
 .select--option{
+    all:unset;
     background-color: #222629;
     text-align: center;
     font-size: 1.2rem;
     color: #61892F;
     font-family: 'Industry';
     flex:3;
+    text-align-last: center;
 }
 
 .cont__select__venTodas{
@@ -1249,16 +1254,19 @@ ojo con este que se usa en varios lados */
     .btn--vent:nth-child(3){
         order: 2;
     }
-/* 
+
     .select--tcerveza{
-        all:unset;
         font-family: "Industry";
-        height: 5vh;
-        font-size: .6rem;
+        height: 6vh;
+        font-size: .8rem;
         width: 60%;
         order: 2;
         margin: 1%;
-    } */
+    }
+
+    .select--option {
+        font-size: .8rem;
+    }
 
     .section--titl{
         height: 5vh;
@@ -1390,7 +1398,6 @@ ojo con este que se usa en varios lados */
         font-size: 1.0rem;
         color:#61892F;
     }
-
 
 } 
 
