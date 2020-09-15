@@ -164,6 +164,22 @@ flex:1;
     border-bottom: white solid 1px;
 }
 
+.buscador__formulario--input:focus{
+    all:unset;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+    width: 90%;
+    margin-left: 4%;
+    color: white;
+    text-align: left;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    box-shadow: none;
+    transform: 0.4s all;
+    border-bottom: white solid 1px;
+}
+
 .buscador__formulario--input:active {
     border: none;
 }
@@ -337,6 +353,7 @@ fin de base */
 } */
 
 .select--tcerveza{
+    all:unset;
     width: 90%;
     height: 4vh;
     color: #222629;
@@ -1085,6 +1102,9 @@ ojo con este que se usa en varios lados */
         font-size: 0.8rem;
     }
 
+    .buscador__formulario--input:focus{
+        font-size: 0.8rem;
+    }
     .portada--titl{
         width: 25%;
     }
@@ -1224,20 +1244,21 @@ ojo con este que se usa en varios lados */
     .btn--vent{
         width:18%;
         margin-top: 0%;
-        font-family: .5rem;
     }
 
     .btn--vent:nth-child(3){
         order: 2;
     }
-
+/* 
     .select--tcerveza{
+        all:unset;
+        font-family: "Industry";
         height: 5vh;
         font-size: .6rem;
         width: 60%;
         order: 2;
         margin: 1%;
-    }
+    } */
 
     .section--titl{
         height: 5vh;
@@ -1339,29 +1360,38 @@ ojo con este que se usa en varios lados */
     .cont__titl__btn__agregar--pp {
         width: 40%;
         align-items: flex-end;
-        justify-content: space-evenly;
-        min-height: 40vh;
+        justify-content: space-between;
+        min-height: 64vh
     }
 
     .cont__btn__agregar--pp {
         order: 1;
-        width: 78%;
+        width: 50%;
     }
 
     .descripcion--pp {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         text-align: right;
         padding:0;
-        width:70%;
+        width:55%;
+        line-height: 1.0rem;
+    }
+
+    .btn--agregar {
+        width:100%;
     }
 
     .nombre--pp {
         align-self: flex-end;
+        font-size: 0.9rem;
     }
 
     .precio--pp {
-        font-size: 1rem;
+        font-size: 1.0rem;
+        color:#61892F;
     }
+
+
 } 
 
  /* esta llave es clave */
