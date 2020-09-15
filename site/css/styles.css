@@ -270,6 +270,8 @@ FIN DEL MENU */
 
 .textoFooter {
     padding-bottom: 4vh;
+    padding-left: 7%;
+    padding-right: 7%;
     text-align: center;
     font-size: 0.7rem;
 }
@@ -973,7 +975,7 @@ ojo con este que se usa en varios lados */
     /* ESTILOS RESPONSIVE DE NAVBAR */
 
     .navBar {
-        height: 9vh;
+        height: 7vh;
     }
 
     .navBar__menu{
@@ -1039,7 +1041,7 @@ ojo con este que se usa en varios lados */
 
     .btn--vent{
         width: 19vw;
-        padding: 2%;
+        padding: 1%;
     }
 
     .cont__venTodas {
@@ -1047,11 +1049,27 @@ ojo con este que se usa en varios lados */
     }
 
     .logo-navBar {
-        width: 14vh
+        width: 11vh
     }
 
     .buscador__formulario--input{
         font-size: 0.8rem;
+    }
+
+    .portada--titl{
+        width: 25%;
+    }
+    
+
+    .cont__img__titl {
+        height: 29vw;
+        background-size: 135%;
+        background-position-x: 87%;
+        background-position-y: 48%;
+}
+
+    .portada--titl:hover {
+        width: 27%;
     }
 
     .imagenFooter {
@@ -1064,6 +1082,7 @@ ojo con este que se usa en varios lados */
 
     .parrafoG{
         font-size: 0.8rem;
+        line-height: 1.7rem;
     }
 
     .titlG{
@@ -1197,14 +1216,14 @@ ojo con este que se usa en varios lados */
     }
 
     .cont__cantidad {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: space-evenly;
     }
 
     .btn--cant {
         font-size: 1.2rem;
-        width: 7vh;
-        height: 7vh;
+        width: 5vh;
+        height: 5vh;
 
     }
 
@@ -1269,7 +1288,7 @@ ojo con este que se usa en varios lados */
         display: flex;
         justify-content: space-between;
         font-size: 2rem;
-        height: 8vh;
+        height: 4vh;
         align-items: center;
         background-color:#3a3d3f;
     }
