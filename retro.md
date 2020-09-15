@@ -10,5 +10,5 @@ Less of/Stop doing: Definir ambiguamente las clases de la hoja de estilos.
 
 
 Metodología estrella
-*![Alt text](https://i.pinimg.com/736x/0e/fa/ec/0efaec4949765fbffd4ffbc61584dd02.jpg "Patricio estrella")*
 
+<img src="https://i.pinimg.com/736x/0e/fa/ec/0efaec4949765fbffd4ffbc61584dd02.jpg" style=" width:100px ; height:100px " />
