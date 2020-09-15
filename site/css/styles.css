@@ -266,6 +266,15 @@ FIN DEL MENU */
     width: 10vh;
     padding-bottom: 3%;
     opacity: .5;
+    transition: .4s all;
+}
+
+.imagenFooter:hover{
+    opacity: .9;
+}
+
+.imagenFooter:active{
+    width: 11vh;
 }
 
 .textoFooter {
@@ -630,8 +639,14 @@ ojo con este que se usa en varios lados */
 }
 
 .logLogo{
+    opacity: .7;
     width: 50%;
     padding: 10%;
+    transition: .6s all;
+}
+
+.logLogo:hover{
+    opacity: .9;
 }
 
 .cont__faq{
