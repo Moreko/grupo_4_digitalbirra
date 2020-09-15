@@ -112,13 +112,18 @@ flex:1;
     background-color: #616161;
     z-index: 1;
     font-size: 1.9rem;
-    opacity: 0;
+    opacity: 0.4;
     left: -100%;
     font-family: 'Industry';
-    transition: .7s all;
+    transition: 1s all;
 }
 
-.navBar:hover > .navBar__linksMenu{
+/* .navBar:hover > .navBar__linksMenu{
+    left: 0%;
+    opacity: 1;
+} */
+
+.navBar__linksMenu.toggleCls{
     left: 0%;
     opacity: 1;
 }
@@ -133,6 +138,19 @@ flex:1;
     color:#86C232;
 }
 
+.x_menu{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 10%;
+    transition: 1s all;
+}
+
+.x_menu:hover{
+    filter: grayscale(0);
+    transform: rotate(90deg);
+    width: 14%;
+}
 
 .buscador {
     display: flex;
@@ -1163,6 +1181,10 @@ ojo con este que se usa en varios lados */
         opacity: .7;
         transition: .4s all;
         margin-left: 5%;
+    }
+
+    .x_menu{
+        display: none;
     }
 
     /* ESTILOS RESPONSIVE DE PÁGINA LOGIN */

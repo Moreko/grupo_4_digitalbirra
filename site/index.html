@@ -11,7 +11,7 @@
     <section  class="contenedorApp">
     <header class="cabeza">
         <nav class="navBar">
-            <section class="navBar__menu">
+            <section class="navBar__menu" onclick="toggleClass()">
                 <article class="menuHamburguesa">
                     <div class="barrita1"></div>
                     <div class="barrita2"></div>
@@ -27,6 +27,7 @@
                 <a class="linksMenu--a" href="login">+ login</a>
                 <a class="linksMenu--a" href="registro">+ registrate</a>
                 <a class="linksMenu--a" href="">+ carrito</a>
+                <img class="x_menu" src="./img/laX.svg" alt="laX" onclick="toggleClass()">
             </section>
 
             <section class="navBar__contenedor--logo"><a href="index"><img class="logo-navBar" src="./img/LogoA.svg" alt="Logo Digital Birra"></a></section>
@@ -146,5 +147,6 @@
         <p class="textoFooter">DIGITAL BIRRA 2020 BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
     </footer>
 </section>
+<script src="index.js"></script>
 </body>
 </html>
