@@ -1326,6 +1326,42 @@ ojo con este que se usa en varios lados */
         font-size: .5rem;
     }
 
+    /* RESPONSIVE PRODUCTO */
+
+    .bloque__producto {
+        flex-direction: row;
+    }
+
+    .cont__img__producto--pp {
+        width: 30%;
+    }
+
+    .cont__titl__btn__agregar--pp {
+        width: 40%;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        min-height: 40vh;
+    }
+
+    .cont__btn__agregar--pp {
+        order: 1;
+        width: 78%;
+    }
+
+    .descripcion--pp {
+        font-size: 0.8rem;
+        text-align: right;
+        padding:0;
+        width:70%;
+    }
+
+    .nombre--pp {
+        align-self: flex-end;
+    }
+
+    .precio--pp {
+        font-size: 1rem;
+    }
 } 
 
  /* esta llave es clave */
