@@ -545,6 +545,15 @@ ojo con este que se usa en varios lados */
     width: 100%;
 }
 
+.cont__cantidad--pp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1vh;
+    width: 100%;
+}
+
 .cont__btn__agregar--pp {
     display: flex;
     flex-direction: column;
