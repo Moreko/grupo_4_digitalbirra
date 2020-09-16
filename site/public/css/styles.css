@@ -53,6 +53,7 @@ html {
     stroke-width: 2.5;
     stroke: #60892f;
     width: 100%;
+    transform: translateX(-.5vw);
 }
 
 .st2l, .st2r, .st1, .st0{
@@ -94,33 +95,59 @@ html {
     opacity: .7;
 }
 
+.soyMayor--input{
+    transform: scale(1.7);
+    /* display: none; */
+}
+
 
 .cont__intro--logo:active >.st1{
     fill:  transparent;
     opacity: 1;
 }
 
-.titl__preindex{
-    transition: .7s;
-}
 
-.titl__preindex:hover{
-    opacity: .5;
-    color:#86C232;
-}
 
 .intro--respuesta{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    width: 60%;
 }
 
-.intro--respuesta > *{
-    padding: 10%;
-}
 
 .titl__preindex{
     font-size: 1.4rem;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 4%;
+    transition: .7s;
+    cursor: pointer;
+    opacity: .7;
+    width: 80%;
+}
+
+.titl__preindex:hover{
+    opacity: 1;
+    color:#86C232;
+}
+
+.titl__preindex > *{
+    margin-bottom: 10%;
+}
+
+.laX--intro{
+    width: 20%;
+    transform: rotate(45deg);
+    transition: .6s all;
+}
+
+.laX--intro:hover{
+    transform: rotate(90deg);
 }
 
 
@@ -1555,10 +1582,18 @@ ojo con este que se usa en varios lados */
         width: 50%;
     }
 
+    .cont__intro--logo{
+        width: 30%;
+    }
+
     .titl__preindex{
-        font-size: 1rem;
+        font-size: .8rem;
+        width: 54%;
     }
     
+    .laX--intro{
+        width: 10%;
+    }
     
     .ingreso{
         font-size: .8rem;
