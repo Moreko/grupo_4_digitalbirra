@@ -35,6 +35,81 @@ html {
     overflow-x: hidden;
 }
 
+.contenedorPreIntro{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Industry';
+}
+
+.cont__intro--logo{
+    position: relative;
+    fill: transparent;
+    cursor: pointer;
+    stroke-width: 1;
+    stroke: #60892f;
+    width: 100%;
+}
+
+.st2l, .st2r, .st1, .st0{
+    stroke-dasharray: 500;
+    stroke-dashoffset: 0;
+    animation: intro 25s ease-in-out infinite;
+}
+
+.st1{
+    position: absolute;
+    transition: .6s ease-in-out;
+}
+
+
+.cont__intro--logo:hover > .st1{
+    fill:  #60892f;
+    opacity: 1;
+}
+
+.st2r, .st2l{
+    transition: 1.4s ease-out;
+    transform: translate(40px,0px);
+}
+
+.st2r{
+    transform: translate(-40px,0px);
+}
+
+
+.cont__intro--logo:hover .st2r{
+    fill:  grey;
+    transform: translate(0px,0px);
+    opacity: .7;
+}
+
+.cont__intro--logo:hover .st2l{
+    fill:  grey;
+    transform: translate(0px,0px);
+    opacity: .7;
+}
+
+
+.cont__intro--logo:active >.st1{
+    fill:  transparent;
+    opacity: 1;
+}
+
+@keyframes intro{
+    0%, 100%{
+        stroke-dashoffset: 0%;
+    }
+    50%{
+        stroke-dashoffset: 100%;
+    }
+}
+
+
 /* EMPIEZA HEADER */
 
 .cabeza{
@@ -417,7 +492,7 @@ fin de base */
     font-family: 'Industry';
     font-size: .7rem;
     width: 40%;
-    color: #61892F;
+    color: #60892f;
     padding: 1%;
     background-color: #222629;
     border: none;
