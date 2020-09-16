@@ -96,7 +96,7 @@ html {
 }
 
 .soyMayor--input{
-    transform: scale(1.7);
+    transform: scale(2);
     /* display: none; */
 }
 
@@ -1593,6 +1593,14 @@ ojo con este que se usa en varios lados */
     
     .laX--intro{
         width: 10%;
+    }
+
+    .soyMayor--input{
+        transform: scale(1.4);
+        /* display: none; */
+    }
+    .titl__preindex > * {
+        margin-bottom: 2%;
     }
     
     .ingreso{
