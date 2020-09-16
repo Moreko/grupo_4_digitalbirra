@@ -50,7 +50,7 @@ html {
     position: relative;
     fill: transparent;
     cursor: pointer;
-    stroke-width: 1;
+    stroke-width: 2.5;
     stroke: #60892f;
     width: 100%;
 }
@@ -99,6 +99,27 @@ html {
     fill:  transparent;
     opacity: 1;
 }
+
+.titl__preindex{
+    transition: .7s;
+}
+
+.titl__preindex:hover{
+    opacity: .5;
+    color:#86C232;
+}
+
+.intro--respuesta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro--respuesta > *{
+    padding: 10%;
+}
+
+
 
 @keyframes intro{
     0%, 100%{
