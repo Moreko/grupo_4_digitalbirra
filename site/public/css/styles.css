@@ -119,6 +119,15 @@ html {
     padding: 10%;
 }
 
+.ingreso{
+    color:#86C232;
+    transition: .6s all;
+    font-size: .8rem;
+}
+.ingreso:hover{
+    color: white;
+    opacity: .6;
+}
 
 
 @keyframes intro{
