@@ -53,7 +53,7 @@ html {
     stroke-width: 2.5;
     stroke: #60892f;
     width: 100%;
-    transform: translateX(-.5vw);
+    transform: translateX(-.7vw);
 }
 
 .st2l, .st2r, .st1, .st0{
@@ -96,9 +96,36 @@ html {
 }
 
 .soyMayor--input{
+    appearance: none;
+    border: 1% solid #cacece;
+    padding: 4%;
+    opacity: .7;
+	border-radius: 3%;
+    background-color: #86C232;
     transform: scale(2);
+    cursor: pointer;
     /* display: none; */
 }
+
+.soyMayor--input:active, .soyMayor--input:checked:active {
+	opacity: 1;
+}
+
+.soyMayor--input:checked {
+	background-color: #e9ecee;
+	border: 1% solid #adb8c0;
+	color: #99a1a7;
+}
+
+.soyMayor--input:checked:after {
+	content: '\2714';
+	font-size: 2rem;
+    position: absolute;
+    right: 0%;
+	bottom: -15%;
+	color: #46853a;
+}
+
 
 
 .cont__intro--logo:active >.st1{
@@ -282,6 +309,7 @@ flex:1;
     right: 10%;
     width: 10%;
     transition: 1s all;
+    cursor: pointer;
 }
 
 .x_menu:hover{
@@ -1584,6 +1612,12 @@ ojo con este que se usa en varios lados */
 
     .cont__intro--logo{
         width: 30%;
+        transform: translateX(-.5vw);
+    }
+
+    .intro--respuesta{
+        position: relative;
+        flex-direction: row;
     }
 
     .titl__preindex{
@@ -1595,8 +1629,18 @@ ojo con este que se usa en varios lados */
         width: 10%;
     }
 
+    .soyMayor--par{
+        position: absolute;
+        top: 27%;
+        left: 35%;
+    }
+
     .soyMayor--input{
-        transform: scale(1.4);
+        position: absolute;
+        right: 34%;
+        top: -12%;
+        padding: 4%;
+        transform: scale(.5);
         /* display: none; */
     }
     .titl__preindex > * {
