@@ -1015,7 +1015,8 @@ ojo con este que se usa en varios lados */
 }
 
 .reg--submit{
-    background-color: grey;
+    background-color:#61892F;
+    color:white;
     width: 100%;
     height: 7vh;
     font-family: 'Industry';
@@ -1026,12 +1027,31 @@ ojo con este que se usa en varios lados */
 }
 
 .reg--submit:hover{
-    color: grey;
+    color: #61892F;
     background-color: #222629;
 }
 
 .reg--submit:active{
-    color:#61892F;
+    color:white;
+}
+.reg--submit--eliminar{
+    background-color: tomato;
+    color:white;
+    width: 100%;
+    height: 7vh;
+    font-family: 'Industry';
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 10%;
+    transition: 0.4s all;
+}
+.reg--submit--eliminar:hover{
+    color:tomato;
+    background-color: #222629;
+}
+.reg--submit--eliminar:active{
+    color:white;
 }
 
 .registro{
@@ -1055,6 +1075,24 @@ ojo con este que se usa en varios lados */
 }
 
 /* aca esta el carrito*/
+.carrito_boton_eliminar{
+    width: 100%;
+    font-family: 'Industry';
+    font-size: 0.9rem;
+    background-color: black;
+    border: grey solid .3vh;
+    padding: 4%;
+    color:white;
+    transition: 0.3s all;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+
+.carrito_boton_eliminar:hover{
+    color:#61892F;
+}
 .mi_carrito{
     font-family: 'Industry';
     margin-top: 1.2vh;
@@ -1089,10 +1127,12 @@ ojo con este que se usa en varios lados */
 .carrito_producto__info{
     font-family: 'Industry';
     font-size: 1rem;
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction:column;
     margin-left: 6vh;
+    align-items: flex-end;
+    padding-right: 10%;
     
     
     
@@ -1105,6 +1145,7 @@ ojo con este que se usa en varios lados */
     flex-direction: column;
     justify-content: space-between;
     padding-top: .3vh;
+    align-items: flex-end;
 }
 
 .carrito__cant__agregar{
@@ -1112,7 +1153,7 @@ ojo con este que se usa en varios lados */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    min-width: 18vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
 }
@@ -1132,7 +1173,8 @@ ojo con este que se usa en varios lados */
     flex-direction: row;
     align-items: center;
     padding-bottom: 1vh;
-    width: 100%;
+    width: 18vh;
+    justify-content: end;
 }
 
 .cont__btn__agregar--pp {
@@ -1193,7 +1235,7 @@ ojo con este que se usa en varios lados */
     border: grey solid .3vh;
     padding:4%;
     margin: 1vh;
-    width:20vh;
+   
     height: 5vh;
     font-size: 1.5rem;
     color:#ffffff;
@@ -1201,6 +1243,11 @@ ojo con este que se usa en varios lados */
 }
 .boton_comprar:hover{
     color:#86C232;
+}
+.carrito_descripcion_nombre{
+    font-size: 1.1rem;
+    color:#86C232;
+
 }
 
 
@@ -1227,7 +1274,10 @@ ojo con este que se usa en varios lados */
         width: 90vw;
         left: 0;
         height: auto;
-        padding: 0%;
+        padding-top:0%;
+        padding-bottom: 0%;
+        padding-right: 10%;
+        padding-left: 10%;
         z-index: 1;
         opacity: 1;
         font-family: 'Industry';
@@ -1521,6 +1571,11 @@ ojo con este que se usa en varios lados */
         margin-top: 10%;
         font-size: 1rem;
     }
+    .reg--submit--eliminar{
+        font-size: 1rem;
+        height: 8vh;
+
+    }
 
     .buscadorModif{
         width: 50%;
@@ -1590,25 +1645,49 @@ ojo con este que se usa en varios lados */
     /*responsive para carrito*/
     .carrito__producto{
         justify-content: space-evenly;
+        width: 40%;
         
 
-    }
-    .carrito_producto--img{
-        width: 20%;
+
     }
     .carrito_producto__info{
-        width: 30%;
+        width: 80%;
         justify-content: space-evenly;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        margin-left: 0%;
+        padding-right: 0%;
     }
-    
-    
+    .carrito__cantidad{
+        justify-content: end;
+    }
+
+
     .carrito__cant__agregar{
         width: 100%;
+        align-items: end;
     }
     .carrito_total{
         width: 50%;
     }
+    .carrito_total_total{
+        font-size: 1.5rem;
+    }
+    .carrito_total_precio{
+        font-size: 1.5rem
+    }
+    .carrito_descripcion_nombre{
+        font-size: 1rem;
+
+    }
+    .carrito_boton_eliminar{
+        width: 17vh;
+        font-size: .6rem;
+    }
+    .boton_comprar{
+        padding: 2%;
+        margin-bottom:3vh; 
+    }
+    
 
     .cont__intro--logo{
         width: 30%;
