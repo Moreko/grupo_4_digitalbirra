@@ -902,7 +902,7 @@ ojo con este que se usa en varios lados */
     padding-top: 2vh;
     flex-wrap: wrap;
     width: 100%;
-    padding-bottom: 2vh;
+
 }
 
 
@@ -912,12 +912,12 @@ ojo con este que se usa en varios lados */
     margin-left: 5vh;
     
     justify-content: space-between;
+    padding-bottom: 5vh;
 }
 
 .carrito_producto--img{
     width: 40%;
     border: solid grey .07vh;
-    transition: .5s all;
 }
 
 .carrito_producto__info{
@@ -1421,6 +1421,28 @@ ojo con este que se usa en varios lados */
         color:#61892F;
     }
 
+    /*responsive para carrito*/
+    .carrito__producto{
+        justify-content: space-evenly;
+        
+
+    }
+    .carrito_producto--img{
+        width: 20%;
+    }
+    .carrito_producto__info{
+        width: 30%;
+        justify-content: space-evenly;
+        font-size: 0.8rem;
+    }
+    
+    
+    .carrito__cant__agregar{
+        width: 100%;
+    }
+    .carrito_total{
+        width: 50%;
+    }
 } 
 
  /* esta llave es clave */
