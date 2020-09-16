@@ -119,10 +119,16 @@ html {
     padding: 10%;
 }
 
+.titl__preindex{
+    font-size: 1.4rem;
+}
+
+
 .ingreso{
     color:#86C232;
     transition: .6s all;
-    font-size: .8rem;
+    padding-top: 10%;
+    font-size: 1.2rem;
 }
 .ingreso:hover{
     color: white;
@@ -1547,6 +1553,15 @@ ojo con este que se usa en varios lados */
     }
     .carrito_total{
         width: 50%;
+    }
+
+    .titl__preindex{
+        font-size: 1rem;
+    }
+    
+    
+    .ingreso{
+        font-size: .8rem;
     }
 } 
 
