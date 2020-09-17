@@ -35,6 +35,10 @@ html {
     overflow-x: hidden;
 }
 
+.cabeza{
+    width: 100%;
+}
+
 .contenedorPreIntro{
     background-color: rgb(0, 0, 0);
     display: flex;
