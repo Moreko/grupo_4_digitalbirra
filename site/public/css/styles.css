@@ -1254,7 +1254,7 @@ ojo con este que se usa en varios lados */
     /* ESTILOS RESPONSIVE DE NAVBAR */
 
     .navBar {
-        height: 7vh;
+        height: 8vh;
     }
 
     .navBar__menu{
@@ -1331,7 +1331,7 @@ ojo con este que se usa en varios lados */
     }
 
     .logo-navBar {
-        width: 11vh
+        width: 13vh
     }
 
     .buscador__formulario--input{
@@ -1342,19 +1342,19 @@ ojo con este que se usa en varios lados */
         font-size: 0.8rem;
     }
     .portada--titl{
-        width: 25%;
+        width: 23%;
     }
     
 
     .cont__img__titl {
-        height: 26vw;
+        height: 23vw;
         background-size: 135%;
         background-position-x: 87%;
         background-position-y: 48%;
 }
 
     .portada--titl:hover {
-        width: 27%;
+        width: 26%;
     }
 
     .imagenFooter {
@@ -1390,10 +1390,11 @@ ojo con este que se usa en varios lados */
     }
 
     .navBar--imagenes{
-        width: 7vh;
+        width: 10vh;
         opacity: .7;
         transition: .4s all;
         margin-left: 5%;
+        height:5vh
     }
 
     .x_menu{
