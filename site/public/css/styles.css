@@ -73,6 +73,11 @@ html {
     opacity: 1;
 }
 
+.lupuloAnim{
+    fill:  #60892f;
+    opacity: 1;
+}
+
 .st2r, .st2l{
     transition: 1.4s ease-out;
     transform: translate(40px,0px);
@@ -90,6 +95,12 @@ html {
 }
 
 .cont__intro--logo:hover .st2l{
+    fill:  grey;
+    transform: translate(0px,0px);
+    opacity: .7;
+}
+
+.corchetes{
     fill:  grey;
     transform: translate(0px,0px);
     opacity: .7;
@@ -1667,12 +1678,7 @@ ojo con este que se usa en varios lados */
         justify-content: end;
     }
 
-
     .carrito__cant__agregar{
-<<<<<<< HEAD
-       /* width: 100%;*/
-=======
->>>>>>> 95e851490c3a0f88af7986907490195b251a845d
         align-items: end;
     }
     .carrito_total{
