@@ -96,6 +96,7 @@ html {
 }
 
 .soyMayor--input{
+    all: unset;
     appearance: none;
     border: 1% solid #cacece;
     padding: 4%;
@@ -1348,19 +1349,19 @@ ojo con este que se usa en varios lados */
         font-size: 0.8rem;
     }
     .portada--titl{
-        width: 23%;
+        width: 22%;
     }
     
 
     .cont__img__titl {
-        height: 23vw;
+        height: 22vw;
         background-size: 135%;
         background-position-x: 87%;
         background-position-y: 48%;
 }
 
     .portada--titl:hover {
-        width: 26%;
+        width: 23%;
     }
 
     .imagenFooter {
@@ -1458,11 +1459,11 @@ ojo con este que se usa en varios lados */
 
     /* ESTILOS PARA HOME */
     .cont__producto{
-        width: 25%;
+        width: 20%;
     }
 
     .bloque__productos{
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .producto__info{
@@ -1490,8 +1491,13 @@ ojo con este que se usa en varios lados */
     }
 
     .btn--vent{
-        width:18%;
+        width:16%;
         margin-top: 0%;
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.6rem;
     }
 
     .btn--vent:nth-child(3){
@@ -1500,9 +1506,9 @@ ojo con este que se usa en varios lados */
 
     .select--tcerveza{
         font-family: "Industry";
-        height: 6vh;
-        font-size: .8rem;
-        width: 60%;
+        height: 5vh;
+        font-size: .7rem;
+        width: 55%;
         order: 2;
         margin: 1%;
     }
