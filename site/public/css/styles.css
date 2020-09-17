@@ -706,7 +706,7 @@ modificar desde el contenedor, esta clase está por todos lados */
 
 .descripcion--pp{
     font-size: 1.2rem;
-    text-align: center;
+    text-align: justify;
     padding:0 10% 10% 10%;
     font-family: 'Quicksand', sans-serif;
 }
@@ -1618,7 +1618,7 @@ ojo con este que se usa en varios lados */
 
     .cont__btn__agregar--pp {
         order: 1;
-        width: 50%;
+        width: 55%;
     }
 
     .descripcion--pp {
