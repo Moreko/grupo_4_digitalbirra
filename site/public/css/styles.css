@@ -837,7 +837,11 @@ ojo con este que se usa en varios lados */
 }
 
 .log--submit{
+<<<<<<< HEAD
     background-color:#61892F;
+=======
+    background-color: #61892F;
+>>>>>>> 95e851490c3a0f88af7986907490195b251a845d
     width: 100%;
     height: 7vh;
     font-family: 'Industry';
@@ -851,12 +855,14 @@ ojo con este que se usa en varios lados */
 }
 
 .log--submit:hover{
+<<<<<<< HEAD
     color:#61892F;
     background-color:grey;
 }
 
 .log--submit:active{
-    color:#61892F;
+    color:grey;
+    background-color: #abca84;
 }
 
 .logLogo{
@@ -1663,7 +1669,10 @@ ojo con este que se usa en varios lados */
 
 
     .carrito__cant__agregar{
+<<<<<<< HEAD
        /* width: 100%;*/
+=======
+>>>>>>> 95e851490c3a0f88af7986907490195b251a845d
         align-items: end;
     }
     .carrito_total{
