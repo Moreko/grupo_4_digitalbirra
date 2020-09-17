@@ -202,9 +202,6 @@ html {
 
 /* EMPIEZA HEADER */
 
-.cabeza{
-    width: 100%;
-}
 
 .navBar {
     display: flex;
