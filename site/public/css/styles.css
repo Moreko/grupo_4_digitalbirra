@@ -202,6 +202,9 @@ html {
 
 /* EMPIEZA HEADER */
 
+.cabeza{
+    width: 100%;
+}
 
 .navBar {
     display: flex;
@@ -703,7 +706,7 @@ modificar desde el contenedor, esta clase está por todos lados */
 
 .descripcion--pp{
     font-size: 1.2rem;
-    text-align: center;
+    text-align: justify;
     padding:0 10% 10% 10%;
     font-family: 'Quicksand', sans-serif;
 }
@@ -834,7 +837,7 @@ ojo con este que se usa en varios lados */
 }
 
 .log--submit{
-    background-color: grey;
+    background-color: #61892F;
     width: 100%;
     height: 7vh;
     font-family: 'Industry';
@@ -844,15 +847,18 @@ ojo con este que se usa en varios lados */
     transition: 0.4s all;
     position: absolute;
     bottom: 10%;
+    color: white
 }
 
 .log--submit:hover{
-    color: grey;
-    background-color: #222629;
+<<<<<<< HEAD
+    color:#61892F;
+    background-color:grey;
 }
 
 .log--submit:active{
-    color:#61892F;
+    color:grey;
+    background-color: #abca84;
 }
 
 .logLogo{
@@ -1341,25 +1347,20 @@ ojo con este que se usa en varios lados */
     .buscador__formulario--input:focus{
         font-size: 0.8rem;
     }
-
-
     .portada--titl{
-        width: 20%;
-        align-items: center;
-        justify-content: center;
+        width: 23%;
     }
     
 
     .cont__img__titl {
-        display: flex;
-        height: 22vw;
+        height: 23vw;
         background-size: 135%;
         background-position-x: 87%;
         background-position-y: 48%;
 }
 
     .portada--titl:hover {
-        width: 21%;
+        width: 26%;
     }
 
     .imagenFooter {
@@ -1440,6 +1441,11 @@ ojo con este que se usa en varios lados */
 
     /* ESTILOS RESPONSIVE DE PÁGINA PRODUCTO */
 
+<<<<<<< HEAD
+=======
+    ¿
+
+>>>>>>> 4d1670103ad1bd603c707d663b4ab48d5b45df81
     /* .producto--img {
         width: 30%;
     } */
@@ -1452,7 +1458,7 @@ ojo con este que se usa en varios lados */
 
     /* ESTILOS PARA HOME */
     .cont__producto{
-        width: 20%;
+        width: 25%;
     }
 
     .bloque__productos{
@@ -1484,13 +1490,8 @@ ojo con este que se usa en varios lados */
     }
 
     .btn--vent{
-        width:14%;
+        width:18%;
         margin-top: 0%;
-        height: 5vh;
-        font-size: 0.6rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .btn--vent:nth-child(3){
@@ -1499,9 +1500,9 @@ ojo con este que se usa en varios lados */
 
     .select--tcerveza{
         font-family: "Industry";
-        height: 5vh;
-        font-size: .7rem;
-        width: 47%;
+        height: 6vh;
+        font-size: .8rem;
+        width: 60%;
         order: 2;
         margin: 1%;
     }
@@ -1621,7 +1622,7 @@ ojo con este que se usa en varios lados */
 
     .cont__btn__agregar--pp {
         order: 1;
-        width: 50%;
+        width: 55%;
     }
 
     .descripcion--pp {
@@ -1667,7 +1668,10 @@ ojo con este que se usa en varios lados */
 
 
     .carrito__cant__agregar{
-        width: 100%;
+<<<<<<< HEAD
+       /* width: 100%;*/
+=======
+>>>>>>> 95e851490c3a0f88af7986907490195b251a845d
         align-items: end;
     }
     .carrito_total{
