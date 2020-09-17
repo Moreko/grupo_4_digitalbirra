@@ -838,7 +838,7 @@ ojo con este que se usa en varios lados */
 }
 
 .log--submit{
-    background-color: grey;
+    background-color: #61892F;
     width: 100%;
     height: 7vh;
     font-family: 'Industry';
@@ -851,12 +851,13 @@ ojo con este que se usa en varios lados */
 }
 
 .log--submit:hover{
-    color: grey;
+    color: #61892F;
     background-color: #222629;
 }
 
 .log--submit:active{
-    color:#61892F;
+    color:grey;
+    background-color: #abca84;
 }
 
 .logLogo{
