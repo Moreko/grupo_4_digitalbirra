@@ -58,4 +58,6 @@ app.get("*", (req, res) => {
     res.sendFile(__dirname + "/error.html")
 });
 
-app.listen(3000, () => console.log("Servidor corriendo"))
+// app.listen(3000, () => console.log("Servidor corriendo"))
+
+app.listen(process.env.PORT || 5000)
