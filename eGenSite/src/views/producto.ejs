@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+<body>
+<section class="contenedorApp">
+    <%-include('./partials/header.ejs')%>
+
+    <main class="contenedorMain">
+
+    <section class="bloque__producto">
+            <article class="cont__img__producto--pp">
+                <img class="producto--img" src="/img/<%= birra.nombre %>.jpg" alt="birraA">
+            </article>
+                
+            <article class="cont__titl__btn__agregar--pp">
+                <article class="producto__titl--pp">
+                    <p class="nombre--pp"><%= birra.nombre + ' ' + birra.graduacion + ' ' + birra.mililitros +'ml' + ' ibu ' + birra.ibu%>
+                    </p>
+                    <p class="precio--pp"><%= '$' + birra.precio %></p>
+                </article>
+
+                <section class="cont__btn__agregar--pp">
+                    <section class="cont__cantidad--pp">
+                        <button class="btn--cant">+</button>
+                        <button class="btn--cant">x1</button>
+                        <button class="btn--cant">-</button>
+                    </section>
+                        <button class="btn--agregar">Agregar</button>
+                    </section>
+                <p class="descripcion--pp">
+                    <%= birra.descripcion()%>
+                </p>
+                   <!-- Nuestra primera cerveza! Elaborada con lupulos 100% americanos, sabores citricos que recuerdan la naranja y el maracuya. Refrescante y amarga, ideal para disfrutar con un buen asado.                 -->
+                </section>   
+            </article> 
+    </section>
+
+    </main>
+    
+    <%-include('./partials/footer.ejs')%>
+
+</section>
+
+</body>
+</html>

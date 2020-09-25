@@ -1,0 +1,87 @@
+    <!DOCTYPE html>
+    <html lang="en">
+		<%-include('./partials/head.ejs')%>
+
+	<body>
+	<section class="contenedorApp">	
+
+		<%-include('./partials/header.ejs')%>
+
+				<h2 class="mi_carrito">MI CARRITO</h2>
+			<article class="carrito_productos">
+				<article class="carrito__producto">
+					<img class="carrito_producto--img" src="./img/ipa.jpg" alt="birraA">
+					<article class="carrito_producto__info">
+						<p class= carrito_descripcion_nombre>IPA 14%</p>
+						<p class= carrito_descripcion> 500ML</p>
+						<section class="carrito_precio">
+							<p class= carrito_descripcion>Unidad: $100</p>
+							<p class= carrito_descripcion>Subtotal: $100</p>
+						</section>
+							<article class="carrito__cant__agregar">
+								<section class="carrito__cantidad">
+									<button class="btn--cant">+</button>
+									<button class="btn--cant">x1</button>
+									<button class="btn--cant">-</button>
+								</section>
+								<button class="carrito_boton_eliminar">eliminar</button>
+					
+							</article>
+							
+					</article>
+				</article>
+					<article class="carrito__producto">
+						<img class="carrito_producto--img" src="./img/Rubia.jpg" alt="birraA">
+						<article class="carrito_producto__info">
+							<p class= carrito_descripcion_nombre>Rubia 7%</p>
+							<p class= carrito_descripcion> 500ML</p>
+							<section class="carrito_precio">
+								<p class= carrito_descripcion>Unidad: $120</p>
+								<p class= carrito_descripcion>Subtotal: $120</p>
+							</section>
+								<article class="carrito__cant__agregar">
+									<section class="carrito__cantidad">
+										<button class="btn--cant">+</button>
+										<button class="btn--cant">x1</button>
+										<button class="btn--cant">-</button>
+									</section>
+									<button class="carrito_boton_eliminar">eliminar</button>
+						
+								</article>
+								
+						</article>
+					</article>
+				
+					<article class="carrito__producto">
+						<img class="carrito_producto--img" src="./img/Negra.jpg" alt="birraA">
+						<article class="carrito_producto__info">
+							<p class= carrito_descripcion_nombre>Negra 14%</p>
+							<p class= carrito_descripcion> 500ML</p>
+							<section class="carrito_precio">
+								<p class= carrito_descripcion>Unidad: $120</p>
+								<p class= carrito_descripcion>Subtotal: $120</p>
+							</section>
+								<article class="carrito__cant__agregar">
+									<section class="carrito__cantidad">
+										<button class="btn--cant">+</button>
+										<button class="btn--cant">x1</button>
+										<button class="btn--cant">-</button>
+									</section>
+									<button class="carrito_boton_eliminar">eliminar</button>
+						
+								</article>
+								
+						</article>
+					</article>
+				</article>
+		<article class="carrito_total">
+			<p class="carrito_total_total">TOTAL</p>
+			<p class= "carrito_total_precio">$340</p>
+		</article>
+		<button class="boton_comprar" type="submit">COMPRAR</button>
+				
+	<%-include('./partials/footer.ejs')%>
+			
+</section>
+</body>
+</html>

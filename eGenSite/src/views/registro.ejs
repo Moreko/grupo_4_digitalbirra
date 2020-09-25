@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+<body>
+    <section  class="contenedorApp">
+    <%-include('./partials/header.ejs')%>
+
+    <main class="contenedorMain">
+      
+        <section class= "registro">
+            <p class="registrate">Registrate</p>
+            <a class="link_log" href="/login">ya sos cliente?</a>
+        </section>
+            <form action="/registro" method="POST" class="reg__form">
+                <input class="reg--input" type= "text" name="regNombre" placeholder="NOMBRE" id="regNombre" autofocus required>
+                <input class="reg--input" type="text" name="regApellido" placeholder="APELLIDO" id="regApellido" autofocus required>
+                <input class="reg--input" type="email" name="regMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" autofocus required>
+                <input class="reg--input" type="password" name="regPassword" placeholder="PASSWORD" id="regPassword" autofocus required>
+                <input class="reg--input" type="password" name="regConfPassword" placeholder="CONFIRMÁ PASSWORD" id="regConfPassword" autofocus required>
+                
+                <input class="reg--submit" type="submit" value="Registrarme" autofocus>
+                
+               
+            </form>    
+    </main>
+    
+    <%-include('./partials/footer.ejs')%>
+
+</section>
+</body>
+</html>
