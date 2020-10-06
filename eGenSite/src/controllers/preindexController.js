@@ -3,15 +3,14 @@ const session = require("express-session")
 
 module.exports = {    
     index:(req,res)=>{
-        if(undefined == undefined){
-        // todavia ando viendo como armar esta parte
+        if(req.cookies.serMayor == undefined){
             res.render('preindex')
         } else{
             res.redirect('/')
         }
     },
     mostrar:(req,res)=>{
-        req.session.mayor = req.body.soyMayor
+        res.cookie( 'serMayor', req.body.soyMayor)
         res.redirect('/')
     }
 }

@@ -1,0 +1,37 @@
+[{
+    "nombre": "ipa",
+    "precio": 100,
+    "graduacion": "14%",
+    "descripcion":  "La ipa es",
+    "mililitros": 500,
+    "ibu": 30,
+    "categoria": "mas-vendidas"
+  }, 
+  {
+    "nombre": "rubia",
+    "precio": 100,
+    "graduacion": "12%",
+    "descripcion":  "La rubia es",
+    "mililitros": 500,
+    "ibu": 30,
+    "categoria": "mas-vendidas"
+  }, 
+  {
+    "nombre": "negra",
+    "precio": 100,
+    "graduacion": "11%",
+    "descripcion":  "La negra es",
+    "mililitros": 500,
+    "ibu": 30,
+    "categoria": ""
+  }, 
+  {
+    "nombre": "roja",
+    "precio": 100,
+    "graduacion": "16%",
+    "descripcion":  "La roja es",
+    "mililitros": 500,
+    "ibu": 30,
+    "categoria": ""
+  }
+  ]
