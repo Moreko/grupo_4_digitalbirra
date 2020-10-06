@@ -6,9 +6,16 @@ const productosController = require('../controllers/productosController')
 
 /* GET home page. */
 router.get('/', productosController.index );
-router.get('/:nombre', productosController.elegir );
 
 // Sumar producto
 router.get('/crear', productosController.createForm);
+
+// Modificar producto
+router.get('/modificar', productosController.modificarProducto);
+
+// Detalle producto
+router.get('/:nombre', productosController.detalle);
+
+
 
 module.exports = router;
