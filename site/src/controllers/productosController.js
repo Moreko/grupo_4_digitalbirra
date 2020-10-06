@@ -41,8 +41,13 @@ const birras = [{
       index: (req,res)=>{
         res.render('producto', {birra : birras[1]})
       },
+
       elegir : (req, res) =>{
-    let birra = birras.find(unaBirra => unaBirra.nombre == req.params.nombre)
-    res.render('producto', { birra: birra })
-    }
+        let birra = birras.find(unaBirra => unaBirra.nombre == req.params.nombre)
+        res.render('producto', { birra: birra })
+      },
+
+      createForm: (req, res) =>{
+        res.send("sumar_producto")
+      }
 }

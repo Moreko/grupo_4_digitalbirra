@@ -8,4 +8,7 @@ const productosController = require('../controllers/productosController')
 router.get('/', productosController.index );
 router.get('/:nombre', productosController.elegir );
 
+// Sumar producto
+router.get('/crear', productosController.createForm);
+
 module.exports = router;
