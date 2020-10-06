@@ -36,6 +36,7 @@ const birras = [{
     ibu: 45,
   }]
 
+
   module.exports = {
       index: (req,res)=>{
         res.render('producto', {birra : birras[1]})
