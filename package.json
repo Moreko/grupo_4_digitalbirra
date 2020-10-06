@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    // package json solo para correr node en heroku, ruta distinta al otro package json del site
     "start": "node ./site/src/bin/www",
   },
   "dependencies": {
@@ -16,3 +15,5 @@
     "morgan": "~1.9.1"
   }
 }
+
+
