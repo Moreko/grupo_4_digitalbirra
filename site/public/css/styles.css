@@ -708,9 +708,6 @@ modificar desde el contenedor, esta clase está por todos lados */
     font-size: 1.2rem;
 }
 
-.precio--pp{
-    /* align-self: flex-end; */
-}
 
 .nombre--pp{
     align-self: flex-start;
