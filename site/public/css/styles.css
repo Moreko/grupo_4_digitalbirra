@@ -691,7 +691,7 @@ modificar desde el contenedor, esta clase está por todos lados */
 
 .cont__titl__btn__agregar--pp{
     font-family: 'Industry';
-    width: 85%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -703,14 +703,28 @@ modificar desde el contenedor, esta clase está por todos lados */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 80%;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
+    border: 1px solid grey;
 }
 
+.precio--pp{
+    padding:2%;
+    color: #ffffff;
+    background-color: #a08268;
+    transition: .4s all;
+}
+
+.precio--pp:hover{
+    padding:2%;
+    background-color: #6b6b6b;
+    color: #a08268
+}
 
 .nombre--pp{
     align-self: flex-start;
+    background-color: rgb(63, 63, 63);
 }
 
 .descripcion--pp{
@@ -805,7 +819,7 @@ ojo con este que se usa en varios lados */
 .btn--agregar{
     width: 100%;
     font-family: 'Industry';
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     background-color: black;
     border: grey solid .3vh;
     padding: 4%;
