@@ -709,7 +709,7 @@ modificar desde el contenedor, esta clase está por todos lados */
 }
 
 .precio--pp{
-    align-self: flex-end;
+    /* align-self: flex-end; */
 }
 
 .nombre--pp{
@@ -1619,17 +1619,34 @@ ojo con este que se usa en varios lados */
 
     .bloque__producto {
         flex-direction: row;
+        width: 80%;
+        justify-content: space-around;
+        padding-bottom: 2%;
     }
 
     .cont__img__producto--pp {
-        width: 30%;
+        width: 46vh;
+        padding: 0% 0%;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        transition: .5s all;
+    }
+
+    .cont__img__producto--pp:hover{
+        box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
     }
 
     .cont__titl__btn__agregar--pp {
-        width: 40%;
-        align-items: flex-end;
+        width: 46vh;
+        height: 68.5vh;
+        border: grey 1px solid;
+        align-items: center;
         justify-content: space-between;
-        min-height: 64vh
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        transition: .5s all;
+    }
+
+    .cont__titl__btn__agregar--pp:hover{
+        box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
     }
 
     .cont__btn__agregar--pp {
@@ -1638,25 +1655,43 @@ ojo con este que se usa en varios lados */
     }
 
     .descripcion--pp {
-        font-size: 0.7rem;
+        padding-top: 2%;
+        font-size: 0.6rem;
         text-align: right;
-        padding:0;
-        width:55%;
+        padding-right:5%;
+        padding-bottom: 0%;
+        width:100%;
         line-height: 1.0rem;
+        height: 30vh;
     }
 
     .btn--agregar {
         width:100%;
     }
 
+    .producto__titl--pp{
+        width: 100%;
+        /* padding:3%; */
+    }
+
     .nombre--pp {
         align-self: flex-end;
-        font-size: 0.9rem;
+        text-align: center;
+        font-size: 0.7rem;
+        width: 100%;
+        padding:2%;
+        background-color: rgb(63, 63, 63);
+        /* height: 10vh; */
     }
 
     .precio--pp {
-        font-size: 1.0rem;
-        color:#61892F;
+        font-size: .7rem;
+        color:#97c264;
+        /* align-self: start; */
+        /* margin-left: 5%; */
+        padding:2%;
+        background-color: #a08268
+        /* height: 5vh; */
     }
 
     /*responsive para carrito*/
