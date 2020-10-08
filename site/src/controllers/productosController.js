@@ -1,5 +1,5 @@
 const birras = [{
-    nombre:'ipa',
+    nombre:'Ipa',
     precio: 100,
     graduacion: '14%',
     descripcion:  function() {
@@ -8,7 +8,7 @@ const birras = [{
     mililitros: 500,
     ibu: 30,
   }, {
-    nombre:'rubia',
+    nombre:'Rubia',
     precio: 120,
     graduacion: '10%',
     descripcion:  function() {
@@ -17,7 +17,7 @@ const birras = [{
     mililitros: 500,
     ibu: 40,
   },{
-    nombre:'negra',
+    nombre:'Negra',
     precio: 120,
     graduacion: '15%',
     descripcion:  function() {
@@ -26,7 +26,7 @@ const birras = [{
     mililitros: 500,
     ibu: 60,
   },{
-    nombre:'roja',
+    nombre:'Roja',
     precio: 140,
     graduacion: '11%',
     descripcion:  function() {
