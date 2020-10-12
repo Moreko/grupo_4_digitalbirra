@@ -53,5 +53,10 @@ const birras = [{
 
       modificarProducto: (req, res) =>{
         res.render("modif_producto");
+      },
+      
+      carrito: (req, res) =>{
+        res.render("carrito");
       }
 }
+
