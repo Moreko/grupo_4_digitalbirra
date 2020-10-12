@@ -1,6 +1,6 @@
 module.exports = {
     registro:(req,res)=>{
-        res.render('registro')
+        res.render("registro")
     },
     registrar:(req,res)=>{
         // simplemente probando
@@ -12,7 +12,7 @@ module.exports = {
         res.send('hola ' + usuario.nombre)
     },
     login:(req,res)=>{
-        res.render('login')
+        res.render("login")
     },
     loguear:(req,res)=>{
         
