@@ -1,5 +1,5 @@
 module.exports = {
-    index:(req,res)=>{
+    registro:(req,res)=>{
         res.render('registro')
     },
     registrar:(req,res)=>{
@@ -10,5 +10,12 @@ module.exports = {
         }
         console.log('el apellido es '+ usuario.apellido)
         res.send('hola ' + usuario.nombre)
+    },
+    login:(req,res)=>{
+        res.render('login')
+    },
+    loguear:(req,res)=>{
+        
     }
 }
+
