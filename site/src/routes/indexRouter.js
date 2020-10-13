@@ -12,6 +12,4 @@ router.get('/faq', indexController.faq);
 router.get('/sobre_nosotros', indexController.sobre_nosotros);
 
 
-
-
 module.exports = router;

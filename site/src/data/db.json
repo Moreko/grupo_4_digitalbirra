@@ -10,7 +10,7 @@
   }, 
   {
     "id": 2,
-    "nombre": "rubia",
+    "nombre": "Rubia",
     "precio": 100,
     "graduacion": "12%",
     "descripcion":  "La rubia es",
@@ -37,5 +37,16 @@
     "mililitros": 500,
     "ibu": 30,
     "categoria": ""
+  },
+  {
+    "id": 4,
+    "nombre": "diamond",
+    "precio": 200,
+    "graduacion": "11%",
+    "descripcion":  "La diamond es",
+    "mililitros": 500,
+    "ibu": 30,
+    "categoria": "mas-vendidas"
   }
+
   ]

@@ -16,10 +16,10 @@ router.get('/crear', productsController.createForm);
 // Modificar producto
 router.get('/modificar', productsController.modificarProducto);
 
-// Detalle producto
+router.get('/admin', productsController.admin)
+
+// Detalle producto (comentario,detalle, este tipo de rutas nos conviene mandarlas al final)
 router.get('/:nombre', productsController.detalle);
-
-
 
 
 
