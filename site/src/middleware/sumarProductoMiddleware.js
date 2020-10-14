@@ -2,7 +2,7 @@ const {body} = require('express-validator')
 
 module.exports = [
     body('nombreProducto')
-    .isEmpty()
+    .isLength({min:1})
     .withMessage('Debe ingresar un nombre de producto'),
 
     body("descripProducto")
@@ -10,7 +10,7 @@ module.exports = [
     .withMessage("La descripción debe tener un mínimo de 5 caracteres y un máximo de 140"),
 
     body("graduacion")
-    .isEmpty()
+    .isLength({min:1})
     .withMessage("Debe ingresar un número en el campo graduación")
     .bail()
     .isNumeric()
@@ -20,7 +20,7 @@ module.exports = [
     .withMessage("La graduación debe tener un máximo de 2 dígitos"),
 
     body("ibu")
-    .isEmpty()
+    .isLength({min:1})
     .withMessage("Debe ingresar un número en el campo IBU")
     .bail()
     .isNumeric()
@@ -30,7 +30,7 @@ module.exports = [
     .withMessage("El IBU debe tener un máximo de 3 dígitos"),
 
     body("mililitros")
-    .isEmpty()
+    .isLength({min:1})
     .withMessage("Debe ingresar un número en el campo mililitros")
     .bail()
     .isNumeric()
@@ -39,10 +39,10 @@ module.exports = [
     .isLength({max:4})
     .withMessage("El IBU debe tener un máximo de 4 dígitos"),
 
-    body("imagenProducto"),
+    // body("imagenProducto"),
 
     body("precio")
-    .isEmpty()
+    .isLength({min:1})
     .withMessage("Debe ingresar un número en el campo precio")
     .bail()
     .isNumeric()

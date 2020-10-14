@@ -20,13 +20,13 @@
         <% } %> 
 
         <form action="/products/crear" method="POST" class="reg__form">
-            <input class="reg--input" type= "text" name="nombreProducto" placeholder="NOMBRE DEL PRODUCTO" autofocus required>
-            <input class="reg--input" type="text" name="descripProducto" placeholder="DESCRIPCIÓN" autofocus required>
-            <input class="reg--input" type="number" name="graduacion" placeholder="GRADACIÓN" autofocus required>
-            <input class="reg--input" type="number" name="ibu" placeholder="IBU"  autofocus required>
-            <input class="reg--input" type="number" name="mililitros" placeholder="MILILITROS" autofocus required>
+            <input class="reg--input" type= "text" name="nombreProducto" placeholder="NOMBRE DEL PRODUCTO" value="<%= typeof oldValues != "undefined" ? oldValues.nombreProducto : "" %>" autofocus required>
+            <input class="reg--input" type="text" name="descripProducto" placeholder="DESCRIPCIÓN" value="<%= typeof oldValues != "undefined" ? oldValues.descripProducto : "" %>" autofocus required>
+            <input class="reg--input" type="number" name="graduacion" placeholder="GRADUACIÓN" value="<%= typeof oldValues != "undefined" ? oldValues.graduacion : "" %>" autofocus required>
+            <input class="reg--input" type="number" name="ibu" placeholder="IBU"  value="<%= typeof oldValues != "undefined" ? oldValues.ibu : "" %>" autofocus required>
+            <input class="reg--input" type="number" name="mililitros" value="<%= typeof oldValues != "undefined" ? oldValues.mililitros : "" %>" placeholder="MILILITROS" autofocus required>
             <input class="reg--input" type="file" name="imagenProducto" placeholder="IMG" value="IMG" autofocus required>
-            <input class="reg--input" type="number" name="precio" placeholder="PRECIO" id="precio" autofocus required>
+            <input class="reg--input" type="number" name="precio" placeholder="PRECIO" id="precio" value="<%= typeof oldValues != "undefined" ? oldValues.precio : "" %>"autofocus required>
             
             <input class="reg--submit" type="submit" value="AGREGAR" autofocus>
             
