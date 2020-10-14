@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const productsController = require('../controllers/productsController')
 const sumarProductoMiddleware = require('../middleware/sumarProductoMiddleware');
-const { route } = require('./indexRouter');
+// const { route } = require('./indexRouter');
 
 
 
