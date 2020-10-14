@@ -1,6 +1,7 @@
 [{
     "id": 1,
     "nombre": "ipa",
+    "tipo": "rubia",
     "precio": 100,
     "graduacion": "14%",
     "descripcion":  "La ipa es",
@@ -10,7 +11,8 @@
   }, 
   {
     "id": 2,
-    "nombre": "Rubia",
+    "nombre": "rubia",
+    "tipo": "rubia",
     "precio": 100,
     "graduacion": "12%",
     "descripcion":  "La rubia es",
@@ -21,6 +23,7 @@
   {
     "id": 3,
     "nombre": "negra",
+    "tipo": "negra",
     "precio": 100,
     "graduacion": "11%",
     "descripcion":  "La negra es",
@@ -31,6 +34,7 @@
   {
     "id": 4,
     "nombre": "roja",
+    "tipo": "roja",
     "precio": 100,
     "graduacion": "16%",
     "descripcion":  "La roja es",
@@ -41,6 +45,7 @@
   {
     "id": 4,
     "nombre": "diamond",
+    "tipo": "ipa",
     "precio": 200,
     "graduacion": "11%",
     "descripcion":  "La diamond es",

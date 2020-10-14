@@ -12,23 +12,24 @@
                 <img class="portada--titl" src="./img/dBirra-titl.svg" alt="digital birra">
                 <!-- <img class="portada--img" src="./img/fondoDB.jpg" alt="portada"> -->
             </section>
-            
+            <form class="formFiltroHome" action="/" method="POST">
             <section class="cont__select__venTodas"> 
-            <select class="select--tcerveza" name="" id="tipoCerveza">
+            <select onchange="this.form.submit()" class="select--tcerveza" name="tipoCerveza">
                 <option class="select--option" value="" disabled selected>TIPO DE CERVEZA</option>
                 <option class="select--option" value="ipa">IPA</option>
                 <option class="select--option" value="rubia">Rubia</option>
-                <option class="select--option"value="negra">Negra</option>
+                <option class="select--option" value="negra">Negra</option>
             </select>
-            <button class="btn--vent">Más vendidas</button>
-            
-            <button class="btn--vent" >Todas</button>
-            
+           
+            <input type="submit" name="eleccion" value="mas-vendidas" class="btn--vent"></input>
+            <input type="submit" name="eleccion" value="todas" class="btn--vent" ></input>
+            </form>   
             </section>
         </article>
         <h2 class="section--titl">MÁS VENDIDAS</h2>
 
     <section class="bloque__productos">
+        
             <article class="cont__producto">
                 <img class="producto--img" src="./img/ipa.jpg" alt="birraA">
                 <article class="producto__info">
@@ -50,47 +51,6 @@
                 
             </article>
             
-            <article class="cont__producto">
-                <img class="producto--img" src="./img/Rubia.jpg" alt="birraB">
-                <article class="producto__info">
-                    <p>Rubia 7%</p>
-                    <section class="info--precioMl">
-                    <p>500ML</p>
-                    <p>$120</p>
-                    </section>
-                </article>
-
-                <article class="cont__cant__agregar">
-                    <section class="cont__cantidad">
-                        <button class="btn--cant">+</button>
-                        <button class="btn--cant">x1</button>
-                        <button class="btn--cant">-</button>
-                    </section>
-                    <button class="btn--agregar">Agregar</button>
-                </article>
-                
-            </article>
-
-        <article class="cont__producto">
-                <img class="producto--img" src="./img/Negra.jpg" alt="birraC">
-           <article class="producto__info">
-               <p>Negra 14%</p>
-               <section class="info--precioMl">
-               <p>500ML</p>
-               <p>$120</p>
-               </section>
-           </article>
-
-           <article class="cont__cant__agregar">
-               <section class="cont__cantidad">
-                   <button class="btn--cant">+</button>
-                   <button class="btn--cant">x1</button>
-                   <button class="btn--cant">-</button>
-               </section>
-               <button class="btn--agregar">Agregar</button>
-           </article>
-           
-        </article>
 
 
     </section>
