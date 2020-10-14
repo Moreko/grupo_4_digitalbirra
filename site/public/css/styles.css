@@ -1096,6 +1096,19 @@ ojo con este que se usa en varios lados */
     margin-left: 2%;
     color: #61892F
 }
+
+.listadoErrores{
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    margin-bottom: 7%
+}
+
+.registroErorres li{
+    text-transform: capitalize;
+}
+
 .link_log{
     font-family: "industry";
     font-size: 1rem;

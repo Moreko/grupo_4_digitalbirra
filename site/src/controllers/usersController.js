@@ -7,10 +7,11 @@ module.exports = {
     registrar:(req,res)=>{
 
         let errors = validationResult(req)
+        let oldValues = req.body
         if (errors.isEmpty()){
             res.send('todo bien')
         } else{
-            res.send(errors.errors)
+            res.render("registro", {registerErrors:errors.errors, oldValues})
         }
     },
 

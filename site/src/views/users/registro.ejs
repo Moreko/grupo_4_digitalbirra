@@ -11,17 +11,28 @@
             <p class="registrate">Registrate</p>
             <a class="link_log" href="/users/login">¿ya sos cliente?</a>
         </section>
+
+        <% if(typeof registerErrors != "undefined") {%> 
+        <ul class="listadoErrores">
+            <% registerErrors.forEach(error => { %> 
+                <li>· <%= error.msg %> </li>
+            <% }); %> 
+        </ul>
+        <% } %> 
+
             <form action="/users/registrar" method="POST" class="reg__form">
-                <input class="reg--input" type= "text" name="regNombre" placeholder="NOMBRE" id="regNombre" autofocus required>
-                <input class="reg--input" type="text" name="regApellido" placeholder="APELLIDO" id="regApellido" autofocus required>
-                <input class="reg--input" type="email" name="regMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" autofocus required>
-                <input class="reg--input" type="password" name="regPassword" placeholder="PASSWORD" id="regPassword" autofocus required>
+                <input class="reg--input" type= "text" name="regNombre" placeholder="NOMBRE" id="regNombre" value="<%= typeof oldValues != "undefined" ? oldValues.regNombre : "" %>" autofocus required>
+                <input class="reg--input" type="text" name="regApellido" placeholder="APELLIDO" id="regApellido" value="<%= typeof oldValues != "undefined" ? oldValues.regApellido : "" %>" autofocus required>
+                <input class="reg--input" type="email" name="regMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" value="<%= typeof oldValues != "undefined" ? oldValues.regMail : "" %>" autofocus required>
+                <input class="reg--input" type="password" name="regPassword" placeholder="PASSWORD" id="regPassword"  autofocus required>
                 <input class="reg--input" type="password" name="regConfPassword" placeholder="CONFIRMÁ PASSWORD" id="regConfPassword" autofocus required>
                 
                 <input class="reg--submit" type="submit" value="Registrarme" autofocus>
                 
                
             </form>    
+
+           
     </main>
     
     <%-include('./partials/footer.ejs')%>
