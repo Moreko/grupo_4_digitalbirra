@@ -11,14 +11,22 @@
             <h1 class="titlG">SUMAR PRODUCTO</h1>
         </section>
 
-        <form action="post" class="reg__form">
+        <% if(typeof registerErrors != "undefined") {%> 
+            <ul class="listadoErrores">
+                <% registerErrors.forEach(error => { %> 
+                    <li>· <%= error.msg %> </li>
+                <% }); %> 
+            </ul>
+        <% } %> 
+
+        <form action="/products/crear" method="POST" class="reg__form">
             <input class="reg--input" type= "text" name="nombreProducto" placeholder="NOMBRE DEL PRODUCTO" autofocus required>
             <input class="reg--input" type="text" name="descripProducto" placeholder="DESCRIPCIÓN" autofocus required>
             <input class="reg--input" type="number" name="graduacion" placeholder="GRADACIÓN" autofocus required>
             <input class="reg--input" type="number" name="ibu" placeholder="IBU"  autofocus required>
             <input class="reg--input" type="number" name="mililitros" placeholder="MILILITROS" autofocus required>
             <input class="reg--input" type="file" name="imagenProducto" placeholder="IMG" value="IMG" autofocus required>
-            <input class="reg--input" type="number" name="regConfPassword" placeholder="PRECIO" id="regConfPassword" autofocus required>
+            <input class="reg--input" type="number" name="precio" placeholder="PRECIO" id="precio" autofocus required>
             
             <input class="reg--submit" type="submit" value="AGREGAR" autofocus>
             
@@ -27,7 +35,7 @@
 
     </main>
     
-    <%-include('./partials/header.ejs')%>
+    <%-include('./partials/footer.ejs')%>
     
 </section>
 </body>

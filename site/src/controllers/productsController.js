@@ -1,8 +1,9 @@
   const fs = require('fs');
   const path = require('path');
 
+  const {validationResult} = require('express-validator')
 
-  const productsFilePath = path.join(__dirname, '../data/db.json')
+  const productsFilePath = path.join(__dirname, '../data/dbProducts.json')
   const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
   
 
@@ -18,6 +19,17 @@
 
       createForm: (req, res) =>{
         res.render("sumar_producto");
+      },
+
+      sumarProducto: (req, res) => {
+        let errors = validationResult(req)
+        let oldValues = req.body
+        if (errors.isEmpty()){
+            res.send('todo bien')
+        } else{
+            res.render("sumar_producto", {registerErrors:errors.errors, oldValues})
+        }
+
       },
 
       modificarProducto: (req, res) =>{
