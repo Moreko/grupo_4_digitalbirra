@@ -4,7 +4,7 @@ const productsController = require('../controllers/productsController')
 const sumarProductoMiddleware = require('../middleware/sumarProductoMiddleware');
 const multer = require('multer')
 const path = require('path')
-// const { route } = require('./indexRouter');
+const { route } = require('./indexRouter');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
