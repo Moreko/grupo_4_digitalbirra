@@ -48,7 +48,7 @@ router.get('/carrito', productsController.carrito);
 router.get('/crear', productsController.createForm);
 
 // Crear producto
-router.post("/crear", upload.single('imageimagenProducto'), sumarProductoMiddleware, productsController.sumarProducto)
+router.post("/crear", upload.single('imagenProducto'), sumarProductoMiddleware, productsController.sumarProducto)
 
 // Modificar producto
 router.get('/modificar', productsController.modificarProducto);

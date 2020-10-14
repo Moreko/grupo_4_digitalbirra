@@ -19,7 +19,7 @@
             </ul>
         <% } %> 
 
-        <form action="/products/crear" method="POST" class="reg__form">
+        <form action="/products/crear" method="POST" class="reg__form" enctype="multipart/form-data">
             <input class="reg--input" type= "text" name="nombreProducto" placeholder="NOMBRE DEL PRODUCTO" value="<%= typeof oldValues != "undefined" ? oldValues.nombreProducto : "" %>" autofocus required>
             <input class="reg--input" type="text" name="descripProducto" placeholder="DESCRIPCIÓN" value="<%= typeof oldValues != "undefined" ? oldValues.descripProducto : "" %>" autofocus required>
             <input class="reg--input" type="number" name="graduacion" placeholder="GRADUACIÓN" value="<%= typeof oldValues != "undefined" ? oldValues.graduacion : "" %>" autofocus required>
