@@ -41,15 +41,15 @@ const { find } = require('../middleware/registerMiddleware');
               let elIndex = products.indexOf(productToUpdate)
               products[elIndex] = productUpdated
               fs.writeFileSync(productsFilePath, JSON.stringify(products), null,2)
-              res.redirect('/')
+              res.send(products)
             }else{            
 
             let newProduct = req.body
             newProduct.id = products[products.length -1].id + 1 
             newProduct.imagen = req.file.filename
-            res.send(newProduct)
             let newDB = [...products, productoNuevo]
             fs.writeFileSync(productsFilePath, JSON.stringify(newDB), null,2)
+            res.send(newDB)
             }
         } else{
             let oldValues = req.body
