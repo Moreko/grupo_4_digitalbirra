@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan",
+    "apellido": "Moreno",
+    "email": "juan@digitalbirra.com",
+    "password": "12345678"
+  }
+]

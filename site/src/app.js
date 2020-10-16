@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session')
+var bcrypt = require("bcryptjs")
 
 var indexRouter = require('./routes/indexRouter');
 let preindexRouter = require('./routes/preindexRouter');
