@@ -8,7 +8,12 @@
     <main class="contenedorMain">
       
             <img class="logLogo" src="/img/logoLog.png" alt="logLogo">
-            <form action="" class="cont__form">
+
+            <% if(typeof errorCredenciales != "undefined") {%> 
+                <%= errorCredenciales %>
+                <% } %> 
+
+            <form action="/users/loguear" method="POST" class="cont__form">
                 <!-- <label for="logMail">Mail</label> -->
                 <input class="log--input" type="email" name="logMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" autofocus>
                 <!-- <label for="logPassword">Password</label> -->

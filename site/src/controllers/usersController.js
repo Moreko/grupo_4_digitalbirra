@@ -4,8 +4,8 @@ var bcrypt = require("bcryptjs")
 
 const {validationResult} = require('express-validator')
 
-const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+let usersFilePath = path.join(__dirname, '../data/dbUsers.json')
+let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 module.exports = {
     registro:(req,res)=>{
@@ -16,6 +16,7 @@ module.exports = {
         let errors = validationResult(req)
         let oldValues = req.body
 
+        // Si no tengo errores, registro, sino, mando vista de registro con errores
         if (errors.isEmpty()){
             
             // Creo usuario con contraseña encriptada
@@ -24,7 +25,7 @@ module.exports = {
                 "nombre": req.body.regNombre,
                 "apellido": req.body.regApellido,
                 "email": req.body.regMail,
-                "password": bcrypt.hashSync(req.body.regPassword, 10)
+                "password": req.body.regPassword //Falta encriptar las pw
             }
 
             // Creo variable con base de datos vieja y le sumo el usuario nuevo
@@ -47,7 +48,28 @@ module.exports = {
     login:(req,res)=>{
         res.render("login")
     },
+    
     loguear:(req,res)=>{
+
+        // for (let index = 0; index < users.length; index++) {
+        //     if(req.body.logMail == users[index].email){ //chequear esto porque no anda!
+        //         res.render("logeoExitoso")
+        //     } else {
+        //         let errorCredenciales = "El email y/o la contraseña son invalidos" + req.body.logMail + users[index].email
+        //         res.render("login", {errorCredenciales})
+        //     }       
+        // }
+
+        // for (let index = 0; index < users.length; index++) {
+        //     res.send(users);
+            
+        // }
+
+        for (let index = 0; index < users.length; index++) {
+            res.send(users[index])
+            
+        }
+        
         
     }
 }
