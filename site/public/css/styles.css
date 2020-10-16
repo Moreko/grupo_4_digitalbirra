@@ -88,7 +88,7 @@ html {
 }
 
 .formFiltroHome{
-    width: 70%;
+    width: 100%;
 }
 
 
@@ -1521,9 +1521,9 @@ ojo con este que se usa en varios lados */
     }
 
     .btn--vent{
-        width:16%;
+        /* width:16%; */
         margin-top: 0%;
-        height: 5vh;
+        /* height: 5vh; */
         display: flex;
         justify-content: center;
         align-items: center;
