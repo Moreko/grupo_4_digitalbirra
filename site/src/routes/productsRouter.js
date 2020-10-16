@@ -44,14 +44,20 @@ router.get('/', productsController.index);
 // Carrito
 router.get('/carrito', productsController.carrito);
 
-// Sumar producto formulario
-router.get('/crear', productsController.createForm);
+// Acceder a agregar, modificar, borrar producto
+router.get('/form/:id?', productsController.formProducto);
 
 // Crear producto
 router.post("/crear", upload.single('imagenProducto'), sumarProductoMiddleware, productsController.sumarProducto)
 
-// Modificar producto
-router.get('/modificar', productsController.modificarProducto);
+// Borrar producto
+router.delete("/form/:id/borrar", (req,res)=>{
+  res.send('soy delete')
+})
+
+router.put("/form/:id/modificar", (req,res)=>{
+  res.send('soy put')
+})
 
 // Panel admin
 router.get('/admin', productsController.admin)

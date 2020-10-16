@@ -51,8 +51,6 @@ module.exports = {
     
     loguear:(req,res)=>{
 
-
-
         console.log(users)
         let elUsuario = users.find(element => element.email == req.body.logMail) 
 

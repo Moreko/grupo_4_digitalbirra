@@ -32,9 +32,26 @@
 
       },
 
-      modificarProducto: (req, res) =>{
-        res.render("modif_producto");
-      },
+      formProducto: (req, res) =>{
+        if(typeof req.params.id != 'undefined'){
+        let elId = req.params.id
+        let elProducto  = products.find(element => element.id == elId)
+        console.log(elProducto)
+        let oldValues = {id: elProducto.id,
+                        nombreProducto: elProducto.nombre,
+                        tipo: elProducto.tipo,
+                        descripProducto: elProducto.descripcion,
+                        graduacion: elProducto.graduacion,
+                        ibu: elProducto.ibu,
+                        mililitros: elProducto.mililitros,
+                        categoria: elProducto.categoria,
+                        precio: elProducto.precio,
+                        imagenProducto: elProducto.imagen }
+
+        res.render("sumar_producto", {oldValues});
+      } else{
+        res.render("sumar_producto");
+      }},
       
       carrito: (req, res) =>{
         res.render("carrito");

@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session')
 var bcrypt = require("bcryptjs")
+const methodOverride = require('method-override')
 
 var indexRouter = require('./routes/indexRouter');
 let preindexRouter = require('./routes/preindexRouter');
@@ -26,6 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(session({secret:'secreto'}))
+app.use(methodOverride('_method'))
 
 
 
