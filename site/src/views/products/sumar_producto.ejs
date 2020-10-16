@@ -8,7 +8,7 @@
 
     <main class="contenedorMain">
         <section class="cont__admin--titl">
-            <h1 class="titlG">SUMAR PRODUCTO</h1>
+            <h1 class="titlG">SUMAR/MODIFICAR PRODUCTO</h1>
         </section>
 
         <% if(typeof registerErrors != "undefined") {%> 
@@ -20,13 +20,18 @@
         <% } %> 
 
         <form action="/products/crear" method="POST" class="reg__form" enctype="multipart/form-data">
-            <input class="reg--input" type= "text" name="nombreProducto" placeholder="NOMBRE DEL PRODUCTO" value="<%= typeof oldValues != "undefined" ? oldValues.nombreProducto : "" %>" autofocus required>
+            <input class="reg--input" type= "text" name="nombre" placeholder="NOMBRE DEL PRODUCTO" value="<%= typeof oldValues != "undefined" ? oldValues.nombre : "" %>" autofocus required>
             <input class="reg--input" type= "text" name="tipo" placeholder="TIPO DEL CERVEZA" value="<%= typeof oldValues != "undefined" ? oldValues.tipo : "" %>" autofocus required>
-            <input class="reg--input" type="textarea" name="descripProducto" placeholder="DESCRIPCIÓN" value="<%= typeof oldValues != "undefined" ? oldValues.descripProducto : "" %>" autofocus required>
+            <input class="reg--input" type="textarea" name="descripcion" placeholder="DESCRIPCIÓN" value="<%= typeof oldValues != "undefined" ? oldValues.descripcion : "" %>" autofocus required>
             <input class="reg--input" type="number" name="graduacion" placeholder="GRADUACIÓN" value="<%= typeof oldValues != "undefined" ? oldValues.graduacion : "" %>" autofocus required>
             <input class="reg--input" type="number" name="ibu" placeholder="IBU"  value="<%= typeof oldValues != "undefined" ? oldValues.ibu : "" %>" autofocus required>
             <input class="reg--input" type="number" name="mililitros" value="<%= typeof oldValues != "undefined" ? oldValues.mililitros : "" %>" placeholder="MILILITROS" autofocus required>
-            <input class="reg--input" type="file" name="imagenProducto" placeholder="IMG" value="<%= typeof oldValues != "undefined" ? oldValues.imagen  : "" %>"  autofocus required>
+            <input class="reg--input" type="file" name="imagen" placeholder="IMG">
+            <select class="reg--input" name="categoria" id="">
+                <option class="select--option" value="" disabled selected>"<%= typeof oldValues != "undefined" ? oldValues.categoria : "CATEGORÍA" %>"</option>
+                <option value="mas-vendidas">más-vendidas</option>
+                <option value="estandar">estándar</option>
+            </select>
             <input class="reg--input" type="number" name="precio" placeholder="PRECIO" id="precio" value="<%= typeof oldValues != "undefined" ? oldValues.precio : "" %>"autofocus required>
             
             <input class="reg--submit" type="submit" value="GUARDAR" autofocus>            

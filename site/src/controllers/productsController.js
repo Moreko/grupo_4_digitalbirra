@@ -1,7 +1,8 @@
   const fs = require('fs');
   const path = require('path');
 
-  const {validationResult} = require('express-validator')
+  const {validationResult} = require('express-validator');
+const { find } = require('../middleware/registerMiddleware');
 
   const productsFilePath = path.join(__dirname, '../data/dbProducts.json')
   const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -17,41 +18,45 @@
         res.render('producto', { birra: birra })
       },
 
-      createForm: (req, res) =>{
-        res.render("sumar_producto");
-      },
+      formProducto: (req, res) =>{
+        if(typeof req.params.id != 'undefined'){
+            let elId = req.params.id
+            let elProducto  = products.find(element => element.id == elId)
+            console.log(elProducto)
+            let oldValues = {...elProducto}
 
+            res.render("sumar_producto", {oldValues});
+      } else{
+            res.render("sumar_producto");
+      }},
+// Juan los nombre pitucos en ingles, son para vos
       sumarProducto: (req, res) => {
         let errors = validationResult(req)
-        let oldValues = req.body
+        let nameTocheck = req.body.nombre
         if (errors.isEmpty()){
-            res.send('todo bien')
+            
+            let productToUpdate = products.find(element=> element.nombre == nameTocheck)
+            if(productToUpdate){
+              let productUpdated = {...productToUpdate, ...req.body}
+              let elIndex = products.indexOf(productToUpdate)
+              products[elIndex] = productUpdated
+              fs.writeFileSync(productsFilePath, JSON.stringify(products), null,2)
+              res.redirect('/')
+            }else{            
+
+            let newProduct = req.body
+            newProduct.id = products[products.length -1].id + 1 
+            newProduct.imagen = req.file.filename
+            res.send(newProduct)
+            let newDB = [...products, productoNuevo]
+            fs.writeFileSync(productsFilePath, JSON.stringify(newDB), null,2)
+            }
         } else{
+            let oldValues = req.body
             res.render("sumar_producto", {registerErrors:errors.errors, oldValues})
         }
 
       },
-
-      formProducto: (req, res) =>{
-        if(typeof req.params.id != 'undefined'){
-        let elId = req.params.id
-        let elProducto  = products.find(element => element.id == elId)
-        console.log(elProducto)
-        let oldValues = {id: elProducto.id,
-                        nombreProducto: elProducto.nombre,
-                        tipo: elProducto.tipo,
-                        descripProducto: elProducto.descripcion,
-                        graduacion: elProducto.graduacion,
-                        ibu: elProducto.ibu,
-                        mililitros: elProducto.mililitros,
-                        categoria: elProducto.categoria,
-                        precio: elProducto.precio,
-                        imagenProducto: elProducto.imagen }
-
-        res.render("sumar_producto", {oldValues});
-      } else{
-        res.render("sumar_producto");
-      }},
       
       carrito: (req, res) =>{
         res.render("carrito");
