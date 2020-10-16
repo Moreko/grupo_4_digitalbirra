@@ -51,6 +51,17 @@ module.exports = {
     
     loguear:(req,res)=>{
 
+
+
+        console.log(users)
+        let elUsuario = users.find(element => element.email == req.body.logMail) 
+
+
+        if(elUsuario != undefined){
+            res.send('todo bien ' + elUsuario.nombre)
+        } else{
+            res.send('este mail no está')
+        }
         // for (let index = 0; index < users.length; index++) {
         //     if(req.body.logMail == users[index].email){ //chequear esto porque no anda!
         //         res.render("logeoExitoso")
@@ -65,10 +76,10 @@ module.exports = {
             
         // }
 
-        for (let index = 0; index < users.length; index++) {
-            res.send(users[index])
+        // for (let index = 0; index < users.length; index++) {
+        //     res.send(users[index])
             
-        }
+        // }
         
         
     }
