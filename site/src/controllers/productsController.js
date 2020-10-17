@@ -42,6 +42,10 @@ const { find } = require('../middleware/registerMiddleware');
               let elIndex = products.indexOf(productToUpdate)
               products[elIndex] = productUpdated
               fs.writeFileSync(productsFilePath, JSON.stringify(products), null,2)
+
+              // Rodri, aca para que se te acomode el JSON creo que sería así, tenes mal un parentesis.
+              // fs.writeFileSync(productsFilePath, JSON.stringify(products, null,2))
+
               res.send(products) 
             }else{            
 
