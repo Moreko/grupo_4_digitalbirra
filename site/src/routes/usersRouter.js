@@ -15,6 +15,8 @@ router.post('/loguear', loginMiddleware, usersController.loguear);
 
 router.get('/perfil', usersController.perfil)
 
+router.get("/logout", usersController.logout)
+
 module.exports = router
 
 

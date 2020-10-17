@@ -61,19 +61,30 @@ module.exports = {
         
         // Si no tengo errores, mando logeoExitoso, sino, vuelve a vista login con los errores
         if (loginErrors.isEmpty()){
-            console.log(usuarioLogueado)
+            
+            // Si apretan checkbox recordame, crea una cookie que dura 1 año
+            if(req.body.recordarme) {
+                res.cookie("recordarme", usuarioLogueado.email, {maxAge: 1000 * 60 * 60 * 24 * 365}) 
+            }
+
             res.render("logeoExitoso", {usuarioLogueado})
        
          } else {
              res.render("login", {loginErrors:loginErrors.errors})
             }
-        }
+        },
 
-        // for (let index = 0; index < users.length; index++) {
-        //     res.send(users[index])
-            
-        // }
-        
+    logout:(req,res)=>{
+        res.locals.usuarioActivo = false;
+
+        // Cierro session
+        req.session.destroy();
+
+        // Borro cookie
+        res.clearCookie("recordarme")
+
+        res.render("deslogeoExitoso")
+    }  
         
     }
     

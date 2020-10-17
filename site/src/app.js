@@ -27,13 +27,21 @@ app.set('views',  [path.join(__dirname, 'views'),path.join(__dirname, 'views/use
 
 app.set('view engine', 'ejs');
 
+// Middlewares nivel aplicación
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
-app.use(session({secret:'Secreto empresarial de Digital Birra'}))
 app.use(methodOverride('_method'))
+app.use(session({
+  secret: 'Secreto empresarial de Digital Birra',
+  resave: false,
+  saveUninitialized: true,
+}))
+
+// Mis Middlewares propios
+app.use(logAppMw)
 
 
 app.use('/', indexRouter);
