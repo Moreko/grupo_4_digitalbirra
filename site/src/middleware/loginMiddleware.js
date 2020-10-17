@@ -10,11 +10,11 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 module.exports = [
     body('logMail')
         .isEmail()
-        .withMessage('Debe ingresar un email válido')
+        .withMessage('Debe ingresar un email válido').bail()
         .custom(function (value, {req}){
             let usuarioALoguearse = users.find(element => element.email == value) 
 
-            if(usuarioALoguearse != undefined){
+            if(usuarioALoguearse){
                 return true
             } else {
                 return false

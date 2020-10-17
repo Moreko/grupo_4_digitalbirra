@@ -19,5 +19,12 @@
     "apellido": "ortiz",
     "email": "raul@gmail.com",
     "password": "123456789"
+  },
+  {
+    "id": 4,
+    "nombre": "pepito",
+    "apellido": "marolio",
+    "email": "pepito@marolio.com",
+    "password": "12345678"
   }
 ]

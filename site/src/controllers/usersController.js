@@ -61,6 +61,7 @@ module.exports = {
         
         // Si no tengo errores, mando logeoExitoso, sino, vuelve a vista login con los errores
         if (loginErrors.isEmpty()){
+            console.log(usuarioLogueado)
             res.render("logeoExitoso", {usuarioLogueado})
        
          } else {
@@ -68,18 +69,12 @@ module.exports = {
             }
         }
 
-            // for (let index = 0; index < array.length; index++) {
-            //     if(users[index].email == value) {
-            //         return false
-            //     } else {
-            //         return true
-            //     }
-                
-            // }
-            // }
+        // for (let index = 0; index < users.length; index++) {
+        //     res.send(users[index])
+            
+        // }
+        
+        
+    }
+    
 
-            // for (let index = 0; index < users.length; index++) {
-            //     res.send(users[index])
-            // }
-            // }
-}
