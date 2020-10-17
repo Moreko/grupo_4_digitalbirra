@@ -2,10 +2,10 @@ const fs = require('fs');
 const path = require('path');
 var bcrypt = require("bcryptjs")
 
-const {validationResult} = require('express-validator')
+const {value, validationResult} = require('express-validator');
 
-let usersFilePath = path.join(__dirname, '../data/dbUsers.json')
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 module.exports = {
     registro:(req,res)=>{
@@ -51,37 +51,32 @@ module.exports = {
     
     loguear:(req,res)=>{
 
+        let loginErrors = validationResult(req)
 
-
-        console.log(users)
-        let elUsuario = users.find(element => element.email == req.body.logMail) 
-
-
-        if(elUsuario != undefined){
-            res.send('todo bien ' + elUsuario.nombre)
-        } else{
-            res.send('este mail no está')
+        // Guardo usuario en una variable para el ejs
+        let usuarioLogueado = users.find(element => element.email == req.body.logMail);
+        
+        // Si no tengo errores, mando logeoExitoso, sino, vuelve a vista login con los errores
+        if (loginErrors.isEmpty()){
+            res.render("logeoExitoso", {usuarioLogueado})
+       
+         } else {
+             res.render("login", {loginErrors:loginErrors.errors})
+            }
         }
-        // for (let index = 0; index < users.length; index++) {
-        //     if(req.body.logMail == users[index].email){ //chequear esto porque no anda!
-        //         res.render("logeoExitoso")
-        //     } else {
-        //         let errorCredenciales = "El email y/o la contraseña son invalidos" + req.body.logMail + users[index].email
-        //         res.render("login", {errorCredenciales})
-        //     }       
-        // }
 
-        // for (let index = 0; index < users.length; index++) {
-        //     res.send(users);
-            
-        // }
+            // for (let index = 0; index < array.length; index++) {
+            //     if(users[index].email == value) {
+            //         return false
+            //     } else {
+            //         return true
+            //     }
+                
+            // }
+            // }
 
-        // for (let index = 0; index < users.length; index++) {
-        //     res.send(users[index])
-            
-        // }
-        
-        
-    }
+            // for (let index = 0; index < users.length; index++) {
+            //     res.send(users[index])
+            // }
+            // }
 }
-
