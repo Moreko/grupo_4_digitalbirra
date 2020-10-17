@@ -9,8 +9,12 @@
       
             <img class="logLogo" src="/img/logoLog.png" alt="logLogo">
 
-            <% if(typeof errorCredenciales != "undefined") {%> 
-                <%= errorCredenciales %>
+            <% if(typeof loginErrors != "undefined") {%> 
+                <ul class="listadoErrores">
+                    <% loginErrors.forEach(error => { %> 
+                        <li>· <%= error.msg %> </li>
+                    <% }); %> 
+                </ul>
                 <% } %> 
 
             <form action="/users/loguear" method="POST" class="cont__form">
