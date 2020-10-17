@@ -48,6 +48,9 @@ module.exports = {
     login:(req,res)=>{
         res.render("login")
     },
+    perfil:(req,res)=>{
+      res.render("perfilusuario")
+    },
     
     loguear:(req,res)=>{
 
@@ -80,6 +83,7 @@ module.exports = {
         // }
         
         
-    }
+    },
+    
 }
 

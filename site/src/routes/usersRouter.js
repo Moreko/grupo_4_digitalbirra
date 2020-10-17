@@ -11,6 +11,8 @@ router.get('/login', usersController.login);
 
 router.post('/loguear', usersController.loguear); 
 
+router.get('/perfil', usersController.perfil)
+
 module.exports = router
 
 

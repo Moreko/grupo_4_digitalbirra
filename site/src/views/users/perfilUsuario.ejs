@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+<body>
+<section class="contenedorApp">
+    <%-include('./partials/header.ejs')%>
+
+    <main class="contenedorPerfil">
+      
+        <section class="menuPerfil">
+            <p class="contenedorPerfil__saludo">Hola Usuario!</p> 
+        
+        
+            <button href="/users/registro" class="btn--volver">
+                <a class="volverInicio" href="/users/registro">Editar perfil</a>
+            </button></a>
+
+            <button href="index" class="btn--volver">
+                <a class="volverInicio" href="/">Volver al inicio</a>
+             </button></a>
+        </section>   
+        <section>
+           <p class=historialUsuario>Historial</p>
+        </section>
+        <section class="bloque__productos">
+        
+            <% if (typeof cervezas != 'undefined'){ %> 
+                <% cervezas.forEach(element =>{ %> 
+                <article class="cont__producto">
+                    <img class="producto--img" src="./img/products/<%= element.imagen %>" alt="birraA">
+                    <article class="producto__info">
+                        <p><%= element.nombre + ' ' + element.graduacion %></p>
+                        <section class="info--precioMl">
+                        <p><%= element.mililitros %>ML</p>
+                        <p>$<%= element.precio %></p>
+                        </section>
+                    </article>
+                    
+                    <article class="cont__cant__agregar">
+                        <section class="cont__cantidad">
+                            <button class="btn--cant">+</button>
+                            <button class="btn--cant">x1</button>
+                            <button class="btn--cant">-</button>
+                        </section>
+                        <button class="btn--agregar">Agregar</button>
+                    </article>
+                    
+                </article>
+                <% })} else { %> <p>Todavia no compraste nada</p>
+                 
+             
+                <%} %> 
+    
+        </section>
+
+    </main>
+    
+    <%-include('./partials/footer.ejs')%>
+</section>
+
+</body>
+</html>
