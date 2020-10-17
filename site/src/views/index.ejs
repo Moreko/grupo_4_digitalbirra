@@ -9,7 +9,7 @@
     <main class="contenedorMain">
         <article class="cont__portada">
             <section class="cont__img__titl">
-                <img class="portada--titl" src="./img/dBirra-titl.svg" alt="digital birra">
+                <img class="portada--titl" src="/img/dBirra-titl.svg" alt="digital birra">
                 <!-- <img class="portada--img" src="./img/fondoDB.jpg" alt="portada"> -->
             </section>
             <form class="formFiltroHome" action="/" method="POST">
@@ -34,7 +34,7 @@
         <% if (typeof cervezas != 'undefined'){ %> 
             <% cervezas.forEach(element =>{ %> 
             <article class="cont__producto">
-                <img class="producto--img" src="./img/<%= element.nombre %>.jpg" alt="birraA">
+                <img class="producto--img" src="./img/products/<%= element.imagen %>" alt="birraA">
                 <article class="producto__info">
                     <p><%= element.nombre + ' ' + element.graduacion %></p>
                     <section class="info--precioMl">

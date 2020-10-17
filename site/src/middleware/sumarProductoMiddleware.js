@@ -1,11 +1,11 @@
 const {body, validationResult} = require('express-validator');
 
 module.exports = [
-    body('nombreProducto')
+    body('nombre')
     .isLength({min:1})
     .withMessage('Debe ingresar un nombre de producto'),
 
-    body("descripProducto")
+    body("descripcion")
     .isLength({min:5, max:140})
     .withMessage("La descripción debe tener un mínimo de 5 caracteres y un máximo de 140"),
 
