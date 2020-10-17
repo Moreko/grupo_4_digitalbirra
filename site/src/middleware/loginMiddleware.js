@@ -14,7 +14,7 @@ module.exports = [
         .custom(function (value, {req}){
             let usuarioALoguearse = users.find(element => element.email == value) 
 
-            if(usuarioALoguearse != undefined){
+            if(usuarioALoguearse){
                 return true
             } else {
                 return false

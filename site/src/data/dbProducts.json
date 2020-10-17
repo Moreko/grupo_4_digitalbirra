@@ -1,46 +1,47 @@
-[{
+[
+  {
     "id": 1,
     "nombre": "ipa",
     "tipo": "ipa",
-    "precio": 100,
-    "graduacion": 14,
-    "descripcion":  "La ipa es una gran cerveza",
-    "mililitros": 500,
-    "ibu": 30,
-    "categoria": "mas-vendidas",
+    "precio": "100",
+    "graduacion": "14",
+    "descripcion": "La ipa es una gran cerveza",
+    "mililitros": "500",
+    "ibu": "30",
+    "categoria": "estandar",
     "imagen": "ipa.jpg"
-  }, 
+  },
   {
     "id": 2,
     "nombre": "rubia",
     "tipo": "rubia",
     "precio": 100,
     "graduacion": 12,
-    "descripcion":  "La rubia es",
+    "descripcion": "La rubia es",
     "mililitros": 500,
     "ibu": 30,
     "categoria": "mas-vendidas",
     "imagen": "rubia.jpg"
-  }, 
+  },
   {
     "id": 3,
     "nombre": "negra",
     "tipo": "negra",
     "precio": 100,
     "graduacion": 11,
-    "descripcion":  "La negra es",
+    "descripcion": "La negra es",
     "mililitros": 500,
     "ibu": 30,
     "categoria": "",
     "imagen": "negra.jpg"
-  }, 
+  },
   {
     "id": 4,
     "nombre": "roja",
     "tipo": "roja",
     "precio": 100,
     "graduacion": 16,
-    "descripcion":  "La roja es",
+    "descripcion": "La roja es",
     "mililitros": 500,
     "ibu": 30,
     "imagen": "roja.jpg"
@@ -51,11 +52,10 @@
     "tipo": "ipa",
     "precio": 200,
     "graduacion": 11,
-    "descripcion":  "La diamond es",
+    "descripcion": "La diamond es",
     "mililitros": 500,
     "ibu": 30,
     "categoria": "mas-vendidas",
     "imagen": "diamond.jpg"
   }
-
-  ]
+]

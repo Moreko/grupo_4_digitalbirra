@@ -58,6 +58,7 @@ module.exports = {
         
         // Si no tengo errores, mando logeoExitoso, sino, vuelve a vista login con los errores
         if (loginErrors.isEmpty()){
+            console.log(usuarioLogueado)
             res.render("logeoExitoso", {usuarioLogueado})
        
          } else {

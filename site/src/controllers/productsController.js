@@ -40,7 +40,7 @@ const { find } = require('../middleware/registerMiddleware');
               let productUpdated = {...productToUpdate, ...req.body}
               let elIndex = products.indexOf(productToUpdate)
               products[elIndex] = productUpdated
-              fs.writeFileSync(productsFilePath, JSON.stringify(products), null,2)
+              fs.writeFileSync(productsFilePath, JSON.stringify(products, null,2))
               res.send(products)
             }else{            
 
