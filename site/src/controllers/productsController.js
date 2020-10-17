@@ -48,8 +48,8 @@ const { find } = require('../middleware/registerMiddleware');
             let newProduct = req.body
             newProduct.id = products[products.length -1].id + 1 
             newProduct.imagen = req.file.filename
-            let newDB = [...products, productoNuevo]
-            fs.writeFileSync(productsFilePath, JSON.stringify(newDB), null,2)
+            let newDB = [...products, newProduct]
+            fs.writeFileSync(productsFilePath, JSON.stringify(newDB,null,2))
             res.send(newDB)
             }
         } else{
