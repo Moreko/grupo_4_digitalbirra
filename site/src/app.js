@@ -1,3 +1,4 @@
+// Modulos externos
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -7,6 +8,11 @@ const session = require('express-session')
 var bcrypt = require("bcryptjs")
 const methodOverride = require('method-override')
 
+// Modulos propios
+const logAppMw = require("./middleware/aplicacion/logAppMw")
+
+
+// Routers
 var indexRouter = require('./routes/indexRouter');
 let preindexRouter = require('./routes/preindexRouter');
 let productsRouter = require('./routes/productsRouter');
@@ -28,7 +34,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(session({secret:'secreto'}))
 app.use(methodOverride('_method'))
-
 
 
 app.use('/', indexRouter);
