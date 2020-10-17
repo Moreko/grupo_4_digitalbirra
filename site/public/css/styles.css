@@ -1347,14 +1347,18 @@ ojo con este que se usa en varios lados */
         transition: .4s font-size;
     }
  
-    .linksMenu--a:nth-child(1){
+    .linksMenu--a.home{
         display: none;
     }
 
-    .linksMenu--a:nth-child(4){
+    .linksMenu--a.producto{
         display: none;
     }
-    .linksMenu--a:nth-child(7){
+
+    .linksMenu--a.faq{
+        display: none;
+    }
+    .linksMenu--a.carrito{
         display: none;
     }
 
