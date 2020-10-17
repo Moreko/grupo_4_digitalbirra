@@ -69,6 +69,7 @@ module.exports = {
             }
         }
 
+<<<<<<< HEAD
         // for (let index = 0; index < users.length; index++) {
         //     res.send(users[index])
             
@@ -78,3 +79,20 @@ module.exports = {
     }
     
 
+=======
+            // for (let index = 0; index < array.length; index++) {
+            //     if(users[index].email == value) {
+            //         return false
+            //     } else {
+            //         return true
+            //     }
+                
+            // }
+            // }
+
+            // for (let index = 0; index < users.length; index++) {
+            //     res.send(users[index])
+            // }
+            // }
+}
+>>>>>>> 0dec8293978394298d0989dc1d581b67c06c1887
