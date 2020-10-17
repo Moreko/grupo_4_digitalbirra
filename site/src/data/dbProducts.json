@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
   {
     "id": 1,
@@ -59,3 +60,6 @@
     "imagen": "diamond.jpg"
   }
 ]
+=======
+[{"id":1,"nombre":"ipa","tipo":"ipa","precio":100,"graduacion":14,"descripcion":"La ipa es una gran cerveza","mililitros":500,"ibu":30,"categoria":"mas-vendidas","imagen":"ipa.jpg"},{"id":2,"nombre":"rubia","tipo":"rubia","precio":100,"graduacion":12,"descripcion":"La rubia es","mililitros":500,"ibu":30,"categoria":"mas-vendidas","imagen":"rubia.jpg"},{"id":3,"nombre":"negra","tipo":"negra","precio":100,"graduacion":11,"descripcion":"La negra es","mililitros":500,"ibu":30,"categoria":"","imagen":"negra.jpg"},{"id":4,"nombre":"roja","tipo":"roja","precio":100,"graduacion":16,"descripcion":"La roja es","mililitros":500,"ibu":30,"imagen":"roja.jpg"},{"id":5,"nombre":"diamond","tipo":"ipa","precio":200,"graduacion":11,"descripcion":"La diamond es","mililitros":500,"ibu":30,"categoria":"mas-vendidas","imagen":"diamond.jpg"},{"nombre":"liebre","tipo":"rubia","descripcion":"La liebre es una gran cerveza para los tiempos que corren","graduacion":"12","ibu":"30","mililitros":"500","categoria":"mas-vendidas","precio":"300","id":6,"imagen":"imagen-1602909945781.jpg"}]
+>>>>>>> d9971a03612503f608cfbf28618e37fdbbbdca69
