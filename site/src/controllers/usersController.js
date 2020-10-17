@@ -76,7 +76,13 @@ module.exports = {
 
     logout:(req,res)=>{
         res.locals.usuarioActivo = false;
-        req.session.usuarioLogueado = false;
+
+        // Cierro session
+        req.session.destroy();
+
+        // Borro cookie
+        res.clearCookie("recordarme")
+
         res.render("deslogeoExitoso")
     }  
         
