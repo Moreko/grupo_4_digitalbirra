@@ -13,6 +13,8 @@ router.get('/login', usersController.login);
 
 router.post('/loguear', loginMiddleware, usersController.loguear); 
 
+router.get('/perfil', usersController.perfil)
+
 module.exports = router
 
 

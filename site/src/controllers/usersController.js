@@ -48,6 +48,9 @@ module.exports = {
     login:(req,res)=>{
         res.render("login")
     },
+    perfil:(req,res)=>{
+      res.render("perfilusuario")
+    },
     
     loguear:(req,res)=>{
 
@@ -66,6 +69,16 @@ module.exports = {
             }
         }
 
+<<<<<<< HEAD
+        // for (let index = 0; index < users.length; index++) {
+        //     res.send(users[index])
+            
+        // }
+        
+        
+    },
+    
+=======
             // for (let index = 0; index < array.length; index++) {
             //     if(users[index].email == value) {
             //         return false
@@ -80,4 +93,5 @@ module.exports = {
             //     res.send(users[index])
             // }
             // }
+>>>>>>> 3fce1e6158381285365e4f8ac9e8e8ce2e2225ee
 }

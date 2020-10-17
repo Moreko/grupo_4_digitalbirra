@@ -1650,9 +1650,18 @@ ojo con este que se usa en varios lados */
         display: flex;
         justify-content: space-between;
         font-size: 2rem;
-        height: 4vh;
+        flex-direction: row-reverse;
         align-items: center;
         background-color:#3a3d3f;
+    }
+    .buscador__formulario{
+        width: 90%;
+    }
+   
+    .buscador__lupa{
+        width: 4vh;
+        margin-right:0vh;
+        margin-left: 15vh;
     }
 
     .textoFooter{
@@ -1827,6 +1836,37 @@ ojo con este que se usa en varios lados */
     .elFormDelete{
         width: 40%;
     }
+    .menuPerfil{
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        justify-content: space-between;
+    }
+    .contenedorPerfil{
+        width: 100%;
+        min-height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content:start;
+        align-items: start;
+        background-color:rgb(20, 20, 20);
+
+    }
+    .contenedorPerfil__saludo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5vh;
+        flex: 2;
+
+    }
+    .historialUsuario{
+        margin-left: 5vh;
+        color:#86C232;
+        font-size: 1.5 rem;
+        padding-top: 4vh;
+    }
+
 } 
 
  /* esta llave es clave */
