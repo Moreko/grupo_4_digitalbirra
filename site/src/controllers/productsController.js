@@ -29,7 +29,8 @@ const { find } = require('../middleware/registerMiddleware');
       } else{
             res.render("sumar_producto");
       }},
-// Juan los nombre pitucos en ingles, son para vos
+
+      // Juan los nombre pitucos en ingles, son para vos
       sumarProducto: (req, res) => {
         let errors = validationResult(req)
         let nameTocheck = req.body.nombre
@@ -41,7 +42,7 @@ const { find } = require('../middleware/registerMiddleware');
               let elIndex = products.indexOf(productToUpdate)
               products[elIndex] = productUpdated
               fs.writeFileSync(productsFilePath, JSON.stringify(products), null,2)
-              res.send(products)
+              res.send(products) 
             }else{            
 
             let newProduct = req.body
