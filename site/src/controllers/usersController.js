@@ -25,7 +25,7 @@ module.exports = {
                 "nombre": req.body.regNombre,
                 "apellido": req.body.regApellido,
                 "email": req.body.regMail,
-                "password": req.body.regPassword //Falta encriptar las pw
+                "password": bcrypt.hashSync(req.body.regPassword, 10)
             }
 
             // Creo variable con base de datos vieja y le sumo el usuario nuevo

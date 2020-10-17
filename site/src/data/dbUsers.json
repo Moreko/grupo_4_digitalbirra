@@ -1,30 +1,23 @@
 [
   {
     "id": 1,
-    "nombre": "Juan",
-    "apellido": "Moreno",
-    "email": "juan@digitalbirra.com",
-    "password": "12345678"
+    "nombre": "lu",
+    "apellido": "ortiz",
+    "email": "lu@ortiz.com",
+    "password": "$2a$10$G9ciKRuflbfGSiGCfKazRefdh9YnjNXO.QdyQ.FpafM46qskoE1yG"
   },
   {
     "id": 2,
-    "nombre": "Juancho",
-    "apellido": "morenito",
+    "nombre": "Juan jose",
+    "apellido": "moreno",
     "email": "morenojuanjose99@gmail.com",
-    "password": "moraleja"
+    "password": "$2a$10$y2NqkrelzuQgQly3alqU9./ydQbvDsqrMbFnDwfN0/mOCQZC3130q"
   },
   {
     "id": 3,
-    "nombre": "Raul",
+    "nombre": "raul",
     "apellido": "ortiz",
     "email": "raul@gmail.com",
-    "password": "123456789"
-  },
-  {
-    "id": 4,
-    "nombre": "pepito",
-    "apellido": "marolio",
-    "email": "pepito@marolio.com",
-    "password": "12345678"
+    "password": "$2a$10$hoarOllRqOr/vEJT6C6CpeXPmTx3JjgNN6xi0gbo2rtJhYHVubBuy"
   }
 ]

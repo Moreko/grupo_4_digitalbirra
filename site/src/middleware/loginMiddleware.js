@@ -26,9 +26,11 @@ module.exports = [
         .isLength({min:6})
         .withMessage('El password debe tener al menos 6 caracteres').bail()
         .custom(function (value, {req}){
-            let pwUsuarioALoguearse = users.find(element => element.password == value) 
+            let pwUsuarioALoguearse = users.find(element => bcrypt.compareSync(value, element.password))
 
-            if(pwUsuarioALoguearse != undefined){
+            console.log(pwUsuarioALoguearse)
+            
+            if(pwUsuarioALoguearse){
                 return true
             } else {
                 return false
