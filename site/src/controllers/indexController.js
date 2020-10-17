@@ -8,8 +8,11 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 module.exports = {
     index:(req,res)=>{
-
-        res.render('index', { cervezas: products.slice(1,4) ,eleccion: 'DIGITAL BIRRA'})
+        if(req.cookies.serMayor == undefined){
+            res.render('preindex')
+        } else{
+            res.render('index', { cervezas: products.slice(1,4) ,eleccion: 'DIGITAL BIRRA'})
+        }
     },
     faq:(req,res)=>{
         res.render("faq")
