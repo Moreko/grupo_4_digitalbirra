@@ -19,5 +19,13 @@
     "apellido": "ortiz",
     "email": "raul@gmail.com",
     "password": "$2a$10$hoarOllRqOr/vEJT6C6CpeXPmTx3JjgNN6xi0gbo2rtJhYHVubBuy"
+  },
+  {
+    "id": 4,
+    "nombre": "patricio",
+    "apellido": "estrella",
+    "email": "patricio@estrella.com",
+    "password": "$2a$10$lfpI.EWJ6DUTsWYwSnbwYu7QhSVaIlS8KNtXWhN.imRccZzhiSNde"
   }
+  
 ]

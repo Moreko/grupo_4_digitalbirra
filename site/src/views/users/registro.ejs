@@ -8,8 +8,8 @@
     <main class="contenedorMain">
       
         <section class= "registro">
-            <p class="registrate">Registrate</p>
-            <a class="link_log" href="/users/login">¿ya sos cliente?</a>
+            <p class="registrate"><%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.nombre +" "+usuarioActivo.apellido :"Registrate"%></p>
+            <a class="link_log" href="/users/login"><%=typeof usuarioActivo.nombre != "undefined" ? "" :"¿ya sos cliente?"%></a>
         </section>
 
         <% if(typeof registerErrors != "undefined") {%> 
@@ -21,13 +21,13 @@
         <% } %> 
 
             <form action="/users/registrar" method="POST" class="reg__form">
-                <input class="reg--input" type= "text" name="regNombre" placeholder="NOMBRE" id="regNombre" value="<%= typeof oldValues != "undefined" ? oldValues.regNombre : "" %>" autofocus required>
-                <input class="reg--input" type="text" name="regApellido" placeholder="APELLIDO" id="regApellido" value="<%= typeof oldValues != "undefined" ? oldValues.regApellido : "" %>" autofocus required>
-                <input class="reg--input" type="email" name="regMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" value="<%= typeof oldValues != "undefined" ? oldValues.regMail : "" %>" autofocus required>
+                <input class="reg--input" type= "text" name="regNombre" placeholder="NOMBRE" id="regNombre" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.nombre :(typeof oldValues != "undefined" ? oldValues.regNombre : "") %>" autofocus required>
+                <input class="reg--input" type="text" name="regApellido" placeholder="APELLIDO" id="regApellido" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.apellido : (typeof oldValues != "undefined" ? oldValues.regApellido : "") %>" autofocus required>
+                <input class="reg--input" type="email" name="regMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.email :(typeof oldValues != "undefined" ? oldValues.regMail : "") %>" autofocus required>
                 <input class="reg--input" type="password" name="regPassword" placeholder="PASSWORD" id="regPassword"  autofocus required>
-                <input class="reg--input" type="password" name="regConfPassword" placeholder="CONFIRMÁ PASSWORD" id="regConfPassword" autofocus required>
+                <input class="reg--input" type="password" name="regConfPassword" placeholder="CONFIRMÁ PASSWORD" id="regConfPassword"  autofocus required>
                 
-                <input class="reg--submit" type="submit" value="Registrarme" autofocus>
+                <input class="reg--submit" type="submit" value=<%=typeof usuarioActivo.nombre != "undefined" ? "guardar" :  "Registrarme" %> autofocus>
                 
                
             </form>    
