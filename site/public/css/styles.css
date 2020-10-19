@@ -363,6 +363,10 @@ flex:1;
     transform: 0.4s all;
     border-bottom: white solid 1px;
 }
+.buscador__formulario--input::placeholder{
+    color:white;    
+    opacity:100%;
+}
 
 .buscador__formulario--input:focus{
     all:unset;
