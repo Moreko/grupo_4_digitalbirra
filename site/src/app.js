@@ -10,6 +10,7 @@ const methodOverride = require('method-override')
 
 // Modulos propios
 const logAppMw = require("./middleware/aplicacion/logAppMw")
+const serAdminMw = require("./middleware/aplicacion/serAdminMw")
 
 
 // Routers
@@ -42,6 +43,7 @@ app.use(session({
 
 // Mis Middlewares propios
 app.use(logAppMw)
+app.use(serAdminMw)
 
 
 app.use('/', indexRouter);

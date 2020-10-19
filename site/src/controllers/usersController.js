@@ -78,7 +78,10 @@ module.exports = {
             if(req.body.recordarme) {
                 res.cookie("recordarme", usuarioLogueado.email, {maxAge: 1000 * 60 * 60 * 24 * 365}) 
             }
-
+            if(req.session.admin) {
+                res.locals.usuarioAdmin = req.session.admin
+            }
+            
             res.render("logeoExitoso", {usuarioLogueado})
        
          } else {
@@ -88,7 +91,7 @@ module.exports = {
 
     logout:(req,res)=>{
         res.locals.usuarioActivo = false;
-
+        res.locals.usuarioAdmin = false;
         // Cierro session
         req.session.destroy();
 
