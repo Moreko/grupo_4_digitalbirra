@@ -43,8 +43,8 @@ const { find } = require('../middleware/registerMiddleware');
               products[elIndex] = productUpdated
               fs.writeFileSync(productsFilePath, JSON.stringify(products, null,2))
 
-
-              res.send(products) 
+              //ir al detalle del producto modificado
+              res.redirect('/products/' + productToUpdate.nombre)
             }else{            
 
             let newProduct = req.body
@@ -52,7 +52,9 @@ const { find } = require('../middleware/registerMiddleware');
             newProduct.imagen = req.file.filename
             let newDB = [...products, newProduct]
             fs.writeFileSync(productsFilePath, JSON.stringify(newDB,null,2))
-            res.send(newDB)
+            //ir al detalle del nuevo producto  no estaria funcionando con redirect y el nombre
+            // res.redirect('/products/' + newProduct.nombre)
+            res.redirect('/')
             }
         } else{
             let oldValues = req.body
