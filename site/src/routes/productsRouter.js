@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const productsController = require('../controllers/productsController')
 const sumarProductoMiddleware = require('../middleware/sumarProductoMiddleware');
+const serAdminRouteMw = require('../middleware/serAdminRouteMw');
 const multer = require('multer')
 const path = require('path')
 const { route } = require('./indexRouter');
@@ -45,7 +46,7 @@ router.get('/', productsController.index);
 router.get('/carrito', productsController.carrito);
 
 // Acceder a agregar, modificar, borrar producto
-router.get('/form/:id?', productsController.formProducto);
+router.get('/form/:id?', serAdminRouteMw, productsController.formProducto);
 
 // Crear o modificar producto
 router.post("/crear", upload.single('imagen'), sumarProductoMiddleware, productsController.sumarProducto)

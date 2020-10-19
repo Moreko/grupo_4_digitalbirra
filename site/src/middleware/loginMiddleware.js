@@ -26,8 +26,16 @@ module.exports = [
         .isLength({min:6})
         .withMessage('El password debe tener al menos 6 caracteres').bail()
         .custom(function (value, {req}){
+            //acá con el .find estas pisando al usuario, 
+            //creo que podes llamar la propiedad password de UsuarioALoguearse 
+            //y ver el compare ahi, deberia ser del mismo usuario, aca podrias poner un usuario valido
+            //y una contraseña de otro usuario... creo
             let usuarioALoguearse = users.find(element => bcrypt.compareSync(value, element.password))
             
+            // prueba de admin con el amigo bob
+            if(usuarioALoguearse.email == "bobisjapanese@gmail.com"){
+                req.session.admin = true
+            }
 
             if(usuarioALoguearse){
                 req.session.usuarioLogueado = usuarioALoguearse

@@ -26,6 +26,26 @@
     "apellido": "estrella",
     "email": "patricio@estrella.com",
     "password": "$2a$10$lfpI.EWJ6DUTsWYwSnbwYu7QhSVaIlS8KNtXWhN.imRccZzhiSNde"
+  },
+  {
+    "id": 5,
+    "nombre": "bob",
+    "apellido": "esponja",
+    "email": "bobisjapanese@gmail.com",
+    "password": "$2a$10$bAN2PvvxdHdCBzQwelnP9uheQNOL1M7OXRUcvLoXLCycHnCd56OFe"
+  },
+  {
+    "id": 6,
+    "nombre": "bobnoadmin",
+    "apellido": "esponja",
+    "email": "bobnoadming@gmail.com",
+    "password": "$2a$10$Z1JodAUZzAZwcNkmRdmDC.WnNztwQzPg3olZGFyeuhFIElvfIMnp6"
+  },
+  {
+    "id": 7,
+    "nombre": "unoconotracont",
+    "apellido": "contra",
+    "email": "decerveza@gmail.com",
+    "password": "$2a$10$xoaucp7zmFnVlY3D0grtyObJfL1oDrzGxz9bPDwUgH9bSfKaPPyz2"
   }
-  
 ]

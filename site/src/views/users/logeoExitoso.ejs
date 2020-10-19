@@ -10,10 +10,16 @@
         
         <p class="contenedorMain__links">¡Bienvenido <%= usuarioLogueado.nombre %>!</p> 
         <br>
-
+        <% if(usuarioAdmin){%>
+        <button href="index" class="btn--volver">
+            <a class="volverInicio" href="/products/form">Crear,modificar,borrar</a>
+        </button></a>
+        <%}%>
         <button href="index" class="btn--volver">
             <a class="volverInicio" href="/">Volver al inicio</a>
         </button></a>
+
+        
             
 
     </main>
