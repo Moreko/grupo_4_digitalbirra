@@ -1321,6 +1321,20 @@ ojo con este que se usa en varios lados */
     display:flex;
     flex-direction: column;
 }
+.contenedorPerfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 60vh;
+}
+
+.menuPerfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
 
 @media (min-width: 900px){
 
