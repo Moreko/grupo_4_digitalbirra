@@ -1026,6 +1026,10 @@ ojo con este que se usa en varios lados */
     width: 90%;
     padding-bottom: 4%;
 }
+.reg__form label{
+    font-size: 1.2rem;
+    align-self: start;
+}
 
 .reg--input{
     background-color: #2b2b2b;
@@ -1296,8 +1300,23 @@ ojo con este que se usa en varios lados */
     color:#86C232;
 
 }
-
-
+.recuerdame{
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+.recuerdame label{
+    font-size: 1.2rem;
+    padding-left: 1vh;
+}
+.cont__form label{
+    font-size: 1.2rem;
+    align-self: start;
+}
+.log__info{
+    display:flex;
+    flex-direction: column;
+}
 
 @media (min-width: 900px){
 
@@ -1480,7 +1499,7 @@ ojo con este que se usa en varios lados */
         justify-content: flex-start;
         align-items: center;
         width: 85%;
-        height: 55vh;
+        height: 75vh;
     }
 
     /* ESTILOS RESPONSIVE DE PÁGINA PRODUCTO */
@@ -1620,6 +1639,11 @@ ojo con este que se usa en varios lados */
     .reg__form{
         width: 40%;
         
+    }
+    .reg__form label{
+        font-size: 0.9rem;
+        align-self: start;
+        padding-left: 7.3%;
     }
 
     .reg--input{
@@ -1870,7 +1894,11 @@ ojo con este que se usa en varios lados */
         font-size: 1.5 rem;
         padding-top: 4vh;
     }
-
+    .cont__form label{
+        align-self:start;
+        padding-left:30%;
+        font-size:1rem;
+    }
 } 
 
  /* esta llave es clave */
