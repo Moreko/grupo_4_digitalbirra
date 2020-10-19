@@ -3,6 +3,7 @@ const path = require('path');
 var bcrypt = require("bcryptjs")
 
 const {body, value, validationResult} = require('express-validator');
+const e = require('express');
 
 const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -26,19 +27,20 @@ module.exports = [
         .isLength({min:6})
         .withMessage('El password debe tener al menos 6 caracteres').bail()
         .custom(function (value, {req}){
-            //acá con el .find estas pisando al usuario, 
-            //creo que podes llamar la propiedad password de UsuarioALoguearse 
-            //y ver el compare ahi, deberia ser del mismo usuario, aca podrias poner un usuario valido
-            //y una contraseña de otro usuario... creo
-            let usuarioALoguearse = users.find(element => bcrypt.compareSync(value, element.password))
+            console.log(req.body.logMail)
+            let elUsuario = users.find(element => element.email == req.body.logMail )
+    
+            console.log(elUsuario)
+            if(bcrypt.compareSync(value, elUsuario.password)){
+                if(elUsuario.email == "bobisjapanese@gmail.com"){
+                    req.session.admin = true;
+                }
             
-            // prueba de admin con el amigo bob
-            if(usuarioALoguearse.email == "bobisjapanese@gmail.com"){
-                req.session.admin = true
-            }
+                req.session.usuarioLogueado = elUsuario
+                 // //aunque sea hasheado lo saco de lo que se pasa a session
+                // delete elUsuario.password, lo intenté pero se rompe todo,  
+                //illegal arguments string undefined bcrypt pareciería ser un tema de scopes
 
-            if(usuarioALoguearse){
-                req.session.usuarioLogueado = usuarioALoguearse
                 return true
             } else {
                 return false
