@@ -3,6 +3,7 @@ const path = require('path');
 var bcrypt = require("bcryptjs")
 
 const {value, validationResult} = require('express-validator');
+//que onda esto?
 const { isUndefined } = require('util');
 
 const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
