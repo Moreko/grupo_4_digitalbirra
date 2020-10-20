@@ -688,6 +688,16 @@ fin de base */
     background-image: url('.././img/lupuloOscuro.jpg');
 }
 
+.contenedorMainFAQ {
+    width: 100%;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(20, 20, 20);
+    background-image: url('.././img/lupuloOscuro.jpg');
+}
 .cont__producto{
     display: flex;
     flex-direction: column;
