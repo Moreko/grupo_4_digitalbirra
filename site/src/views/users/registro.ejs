@@ -28,9 +28,9 @@
                 <label for="regMail">Mail</label>
                 <input class="reg--input" type="email" name="regMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.email :(typeof oldValues != "undefined" ? oldValues.regMail : "") %>" autofocus required>
                 <label for="regPassword">Contraseña</label>
-                <input class="reg--input" type="password" name="regPassword" placeholder="PASSWORD" id="regPassword"  autofocus required>
-                <label for="regConfPassword">Repite Contraseña</label>
-                <input class="reg--input" type="password" name="regConfPassword" placeholder="CONFIRMÁ PASSWORD" id="regConfPassword"  autofocus required>
+                <input class="reg--input" type="password" name="regPassword" placeholder="*******" id="regPassword"  autofocus required>
+                <label for="regConfPassword">Repetir Contraseña</label>
+                <input class="reg--input" type="password" name="regConfPassword" placeholder="*******" id="regConfPassword"  autofocus required>
                 
                 <input class="reg--submit" type="submit" value=<%=typeof usuarioActivo.nombre != "undefined" ? "guardar" :  "Registrarme" %> autofocus>
                 

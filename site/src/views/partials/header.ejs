@@ -9,15 +9,15 @@
         </section>
 
         <section class="navBar__linksMenu">
-            <a class="linksMenu--a home" href="/">+ home</a>
-            <a class="linksMenu--a sobre" href="/sobre_nosotros">+ sobre nosotros</a>
-            <a class="linksMenu--a faq" href="/faq">+ preguntas frecuentes</a>
-            <a class="linksMenu--a login" href=<%=typeof usuarioActivo.nombre != "undefined" ?"/users/perfil" :"/users/login"%>><%= typeof usuarioActivo.nombre != "undefined" ?"+"+" "+ usuarioActivo.nombre +" "+usuarioActivo.apellido :"+ ingresá"%></a>
+            <a class="linksMenu--a home" href="/">+ Home</a>
+            <a class="linksMenu--a sobre" href="/sobre_nosotros">+ Sobre nosotros</a>
+            <a class="linksMenu--a faq" href="/faq">+ Preguntas frecuentes</a>
+            <a class="linksMenu--a login" href=<%=typeof usuarioActivo.nombre != "undefined" ?"/users/perfil" :"/users/login"%>><%= typeof usuarioActivo.nombre != "undefined" ?"+ Mi perfil":"+ Ingresá"%></a>
             <% if(usuarioAdmin){%>
-                <a class="linksMenu--a" href="/products/form"> + crear producto</a>
+                <a class="linksMenu--a" href="/products/form"> + Crear producto</a>
             <%}%>
-            <a class="linksMenu--a registro" href=<%=typeof usuarioActivo.nombre != "undefined" ?"/users/logout" :"/users/registro"%>><%= typeof usuarioActivo.nombre != "undefined" ?"+ cerrar sesión" :"+ registrate"%></a>
-            <a class="linksMenu--a carrito" href="/products/carrito">+ carrito</a>
+            <a class="linksMenu--a registro" href=<%=typeof usuarioActivo.nombre != "undefined" ?"/users/logout" :"/users/registro"%>><%= typeof usuarioActivo.nombre != "undefined" ?"+ Cerrar sesión" :"+ Registrate"%></a>
+            <a class="linksMenu--a carrito" href="/products/carrito">+ Carrito</a>
             <img class="x_menu" src="/img/laX.svg" alt="laX" onclick="toggleClass()">
         </section>
 

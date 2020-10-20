@@ -1326,12 +1326,13 @@ ojo con este que se usa en varios lados */
 .recuerdame{
     display: flex;
     flex-direction: row-reverse;
-    
+    align-items: center;
 }
 .recuerdame label{
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-left: 1vh;
 }
+
 .cont__form label{
     font-size: 1.2rem;
     align-self: start;
@@ -1526,8 +1527,8 @@ ojo con este que se usa en varios lados */
 
     .log--submit {
         width: 25%;
-        height: 7vh;
-        font-size: 0.8rem;
+        height: 8vh;
+        font-size: 0.9rem;
     }
 
     .cont__form{
@@ -1681,22 +1682,23 @@ ojo con este que se usa en varios lados */
     .reg__form label{
         font-size: 0.9rem;
         align-self: start;
-        padding-left: 7.3%;
+        padding-left: 7.6%;
     }
 
     .reg--input{
         font-size: .6rem;
         padding: 2%;
-        height: 6vh;
-        margin-bottom: 5%;
+        height: 9vh;
+        margin-bottom: 4%;
+        margin-top: 2%;
         width: 85%;
     }
 
     .reg--submit{
         margin-top: 10%;
-        font-size: 1rem;
+        font-size: 0.9rem;
         height: 8vh;
-        width: 100%;
+        width: 65%;
     }
     .reg--submit--eliminar{
         font-size: 1rem;
@@ -1946,6 +1948,7 @@ ojo con este que se usa en varios lados */
         padding-left:30%;
         font-size:1rem;
     }
+
 } 
 
  /* esta llave es clave */
