@@ -47,5 +47,12 @@
     "apellido": "contra",
     "email": "decerveza@gmail.com",
     "password": "$2a$10$xoaucp7zmFnVlY3D0grtyObJfL1oDrzGxz9bPDwUgH9bSfKaPPyz2"
+  },
+  {
+    "id": 8,
+    "nombre": "juan",
+    "apellido": "morekodiamond",
+    "email": "morekodiamond@digitalbirra.com",
+    "password": "$2a$10$ooiZhl1jw37jepv/yH0hS.zHlHI5tZje/xxdkuEEoeFJvOpzMGPBC"
   }
 ]
