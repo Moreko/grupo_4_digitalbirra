@@ -663,6 +663,7 @@ fin de base */
     padding-top: 2vh;
     flex-wrap: wrap;
     width: 100%;
+    
 }
 
 
@@ -672,9 +673,20 @@ fin de base */
     justify-content: center;
     align-items: center;
     padding-top: 2vh;
+    background-image: url('.././img/lupuloOscuro.jpg');
+    width: 100%;
 }
 
-
+.contenedorMainProducto {
+    width: 100%;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(20, 20, 20);
+    background-image: url('.././img/lupuloOscuro.jpg');
+}
 
 .cont__producto{
     display: flex;
@@ -928,6 +940,7 @@ ojo con este que se usa en varios lados */
     flex-direction: column;
     align-items: center;
     min-height: 70vh;
+    background-image: url('.././img/lupuloOscuro.jpg');
 }
 
 .cont__snos{
@@ -963,6 +976,22 @@ ojo con este que se usa en varios lados */
     text-align: center;
     font-size: 1.2rem;
     padding: 2% 7% 2% 7%;
+    line-height: 1.8rem;
+
+}
+
+.preguntasFAQ{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2% 7% 2% 7%;
+    text-decoration: underline;
+}
+
+.parrafoFAQ{
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 2% 7% 2% 7%;
+    line-height: 1.5rem;
 }
 
 .cont__btn--volver{
@@ -1477,6 +1506,17 @@ ojo con este que se usa en varios lados */
     .parrafoG{
         font-size: 0.8rem;
         line-height: 1.7rem;
+    }
+
+    .preguntasFAQ{
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .parrafoFAQ{
+        text-align: center;
+        font-size: 0.8rem;
+        line-height: 1.3rem;
     }
 
     .titlG{
