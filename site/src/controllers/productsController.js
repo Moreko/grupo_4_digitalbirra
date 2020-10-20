@@ -53,7 +53,7 @@ const { find } = require('../middleware/registerMiddleware');
             let newDB = [...products, newProduct]
             fs.writeFileSync(productsFilePath, JSON.stringify(newDB,null,2))
             //ir al detalle del nuevo producto  no estaria funcionando con redirect y el nombre
-            // res.redirect('/products/' + newProduct.nombre)
+            // res.redirect('/products/' + newProduct.nombre) averiguar
             res.redirect('/')
             }
         } else{

@@ -69,5 +69,17 @@
     "precio": "300",
     "id": 6,
     "imagen": "imagen-1602909945781.jpg"
+  },
+  {
+    "nombre": "offline",
+    "tipo": "negra",
+    "descripcion": "la offline es una típica cerveza del sur de nuestro país.",
+    "graduacion": "30",
+    "ibu": "70",
+    "mililitros": "500",
+    "categoria": "mas-vendidas",
+    "precio": "250",
+    "id": 7,
+    "imagen": "imagen-1603156671366.jpg"
   }
 ]
