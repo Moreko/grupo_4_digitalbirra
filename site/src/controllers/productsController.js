@@ -2,7 +2,7 @@
   const path = require('path');
 
   const {validationResult} = require('express-validator');
-// const { find } = require('../middleware/registerMiddleware');
+
 
   const productsFilePath = path.join(__dirname, '../data/dbProducts.json')
   const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

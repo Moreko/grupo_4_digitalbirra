@@ -83,6 +83,7 @@ module.exports = {
             if(req.session.admin) {
                 res.locals.usuarioAdmin = req.session.admin
             }
+            res.locals.usuarioActivo = req.session.usuarioLogueado
             
             res.render("logeoExitoso", {usuarioLogueado})
        
