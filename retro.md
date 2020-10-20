@@ -14,7 +14,7 @@ sprint 2
 
 Start Doing: Definitvamente establecer un día fijo semanal para juntarnos y rever en el trello dónde estamos.
 
-More of: Usar más activamente y detalladamente el trello.
+More of: Usar más activamente y detalladamente el trello. Comentar el código para reforzar lo aprendido y ayudarnos entre nosotros.
 
 Keep Doing : Buena comunicación entre nosotros. Activar en cuanto se larga el sprint. De esta manera evitar el correr y hacer las cosas a las apuradas. Dividir las tareas y ayudarnos constantemente.
 
