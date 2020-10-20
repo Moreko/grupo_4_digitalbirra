@@ -4,7 +4,7 @@ var bcrypt = require("bcryptjs")
 
 const {value, validationResult} = require('express-validator');
 //que onda esto?
-const { isUndefined } = require('util');
+// const { isUndefined } = require('util');
 
 const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
