@@ -1,6 +1,6 @@
 # retrospectiva grupo_4_digitalbirra
 
-sprint 1
+## sprint 17 de septiembre
 
 Start Doing: Establecer un día fijo semanal para juntarnos y rever en el trello dónde estamos.
 
@@ -10,7 +10,7 @@ Keep Doing : Buena comunicación entre nosotros. Activar en cuanto se larga el s
 
 Less of/Stop doing: Definir ambiguamente las clases de la hoja de estilos.
 
-sprint 2
+## sprint 20 de octubre
 
 Start Doing: Definitvamente establecer un día fijo semanal para juntarnos y rever en el trello dónde estamos.
 
