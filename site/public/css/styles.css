@@ -756,6 +756,14 @@ modificar desde el contenedor, esta clase está por todos lados */
     text-align: center;
     font-size: 1.5rem;
     border: 1px solid grey;
+    background-color: rgb(63, 63, 63);
+}
+.detalle_birra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0.66vh;
+    margin-right: 0.66vh;
 }
 
 .precio--pp{
@@ -771,9 +779,17 @@ modificar desde el contenedor, esta clase está por todos lados */
     color: #a08268
 }
 
-.nombre--pp{
-    align-self: flex-start;
-    background-color: rgb(63, 63, 63);
+.nombre--ppp-ipa{
+   background-color:#61892F;
+}
+.nombre--ppp-rubia{
+    background-color: #a87b0a;
+}
+.nombre--ppp-negra{
+    background-color: #1a1a1a;
+}
+.nombre--ppp-roja{
+    background-color: #7b0b0b;
 }
 
 .descripcion--pp{
@@ -1816,6 +1832,7 @@ ojo con este que se usa en varios lados */
         justify-content: space-between;
         box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
         transition: .5s all;
+        padding-top: 0px;
     }
 
     .cont__titl__btn__agregar--pp:hover{
@@ -1859,11 +1876,11 @@ ojo con este que se usa en varios lados */
 
     .precio--pp {
         font-size: .7rem;
-        color:#97c264;
+        color:white;
         /* align-self: start; */
         /* margin-left: 5%; */
         padding:2%;
-        background-color: #a08268
+        background-color: #61892F
         /* height: 5vh; */
     }
 
