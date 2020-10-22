@@ -778,18 +778,29 @@ modificar desde el contenedor, esta clase está por todos lados */
     background-color: #6b6b6b;
     color: #a08268
 }
-
-.nombre--ppp-ipa{
-   background-color:#61892F;
+.color_estilo-ipa{
+  display:block;
+  width: 100%;
+  height:6vh;
+background-color:#61892F;
 }
-.nombre--ppp-rubia{
+.color_estilo-rubia{
     background-color: #a87b0a;
+    display:block;
+  width: 100%;
+  height:6vh;
 }
-.nombre--ppp-negra{
+.color_estilo-negra{
     background-color: #1a1a1a;
+    display:block;
+  width: 100%;
+  height:6vh;
 }
-.nombre--ppp-roja{
+.color_estilo-roja{
     background-color: #7b0b0b;
+    display:block;
+  width: 100%;
+  height:6vh;
 }
 
 .descripcion--pp{
