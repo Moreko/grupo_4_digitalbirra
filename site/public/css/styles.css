@@ -1179,6 +1179,8 @@ ojo con este que se usa en varios lados */
 }
 
 .elFormDelete{
+    display: flex;
+    justify-content: center;
     width: 90%;
 }
 
