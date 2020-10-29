@@ -30,7 +30,7 @@
             res.render("sumar_producto");
       }},
 
-      // Juan los nombre pitucos en ingles, son para vos
+      // Juan los nombre pitucos en ingles son para vos
       sumarProducto: (req, res) => {
         let errors = validationResult(req)
         let nameTocheck = req.body.nombre
@@ -61,6 +61,19 @@
             res.render("sumar_producto", {registerErrors:errors.errors, oldValues})
         }
 
+      },
+      borrar: (req,res) =>{
+        let elId = req.params.id
+        let exproducto = products.find(element=> element.id == elId)
+        let sinElProducto = products.filter(producto => producto.id != elId )
+		    fs.writeFileSync(productsFilePath, JSON.stringify(sinElProducto, null, 2));
+        res.render('borraste', {exproducto})
+      },
+      nborrar: (req,res)=>{
+        registerErrors = [{
+          msg:'no estarías borrando nada'
+      }]
+          res.render("sumar_producto",{registerErrors})
       },
       
       carrito: (req, res) =>{

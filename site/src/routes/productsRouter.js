@@ -52,9 +52,9 @@ router.get('/form/:id?', serAdminRouteMw, productsController.formProducto);
 router.post("/crear", upload.single('imagen'), sumarProductoMiddleware, productsController.sumarProducto)
 
 // Borrar producto
-router.delete("/form/:id/borrar", (req,res)=>{
-  res.send('soy delete')
-})
+router.delete("/form/:id/borrar", productsController.borrar )
+
+router.post("/form/nborrar", productsController.nborrar )
 
 // Panel admin
 router.get('/admin', productsController.admin)

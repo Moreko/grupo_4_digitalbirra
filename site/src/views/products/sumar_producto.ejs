@@ -44,10 +44,10 @@
             <input class="reg--input" type="number" name="precio" placeholder="PRECIO" id="precio" value="<%= typeof oldValues != "undefined" ? oldValues.precio : "" %>"autofocus required>
             
             <input class="reg--submit" type="submit" value="GUARDAR" autofocus>            
-           <form class="elFormDelete" action="/products/form/<%= typeof oldValues != "undefined" ? oldValues.id : "" %>/borrar?_method=DELETE" method="POST">
-            <input class="reg--submit--eliminar" type="submit" value="ELIMINAR" autofocus>
-        </form>
         
+        </form>
+        <form class="elFormDelete" action="/products/form/<%= typeof oldValues != "undefined" ? oldValues.id + "/borrar?_method=DELETE" : "nborrar" %>" method="POST">
+            <input class="reg--submit--eliminar" type="submit" value="ELIMINAR" autofocus>
         </form>
 
     </main>

@@ -83,6 +83,7 @@ module.exports = {
             if(req.session.admin) {
                 res.locals.usuarioAdmin = req.session.admin
             }
+            //habría que mandarle solo algunas cosas y no todo el usuario
             res.locals.usuarioActivo = req.session.usuarioLogueado
             
             res.render("logeoExitoso", {usuarioLogueado})
