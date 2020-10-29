@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+<body>
+    <section  class="contenedorApp">
+    <%-include('./partials/header.ejs')%>
+
+    <main class="contenedorMain">
+      
+        <section class= "registro">
+            <p class="registrate"><%=  usuarioActivo.nombre +" "+usuarioActivo.apellido%></p>
+            <a class="link_log" href="/users/login">Cambiar contraseña</a>
+        </section>
+
+        <% if(typeof Usererrors != "undefined") {%> 
+        <ul class="listadoErrores">
+            <% Usererrors.forEach(error => { %> 
+                <li>· <%= error.msg %> </li>
+            <% }); %> 
+        </ul>
+        <% } %> 
+        
+
+            <form action="/users/modificar" method="POST" class="reg__form">
+                <label for="regNombre">Nombre</label>
+                <input class="reg--input" type= "text" name="nombre" placeholder="NOMBRE" id="regNombre" value="<%= usuarioActivo.nombre %>" autofocus required>
+                <label for="regApellido">Apellido</label>
+                <input class="reg--input" type="text" name="apellido" placeholder="APELLIDO" id="regApellido" value="<%= usuarioActivo.apellido %>" autofocus required>
+                <label for="regMail">Mail</label>
+                <input class="reg--input" type="email" name="email" placeholder="doncerveza@dbirra.com.ar" id="logMail" value="<%= usuarioActivo.email%>" autofocus required>
+                
+
+                
+                <input class="reg--submit" type="submit" value=<%=typeof usuarioActivo.nombre != "undefined" ? "guardar" :  "Registrarme" %> autofocus>
+                
+               
+            </form>    
+
+           
+    </main>
+    
+    <%-include('./partials/footer.ejs')%>
+
+</section>
+</body>
+</html>

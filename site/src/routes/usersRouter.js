@@ -3,7 +3,7 @@ var router = express.Router();
 const usersController = require('../controllers/usersController')
 const registerMiddleware = require('../middleware/registerMiddleware')
 const loginMiddleware = require('../middleware/loginMiddleware')
-
+const ModifUserMiddleware = require('../middleware/ModifUserMiddleware')
 
 router.get('/registro', usersController.registro);
 
@@ -17,7 +17,9 @@ router.get('/perfil', usersController.perfil)
 
 router.get("/logout", usersController.logout)
 
+router.get('/modifUsuario',usersController.modificarUsuario)
+
+router.post('/modificar', ModifUserMiddleware,usersController.modificar)
+
+
 module.exports = router
-
-
-

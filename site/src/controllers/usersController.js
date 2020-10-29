@@ -20,17 +20,7 @@ module.exports = {
 
         // Si no tengo errores, registro, sino, mando vista de registro con errores
         if (errors.isEmpty()){
-            //modificar usuario
             
-            // if(typeof usuarioActivo.nombre!="undefined"){
-            //     let UserModif= users.find(element=>element.nombre==usuarioActivo.nombre)
-            //     let Modif={...UserModif, ...req.body}
-            //     let elIndex=user.indexOf(UserModif)
-            //     users[elIndex]=Modif
-            //     fs.writeFileSync(usersFilePath, JSON.stringify(users, null,2))
-            //     console.log(usuarioActivo)
-
-            // }else{
             // Creo usuario con contraseña encriptada
             let nuevoUsuario = {
                 "id": users[users.length-1].id+1,
@@ -60,9 +50,6 @@ module.exports = {
 
     login:(req,res)=>{
         res.render("login")
-    },
-    perfil:(req,res)=>{
-      res.render("perfilusuario")
     },
     
     loguear:(req,res)=>{
@@ -103,8 +90,30 @@ module.exports = {
         res.clearCookie("recordarme")
 
         res.render("deslogeoExitoso")
-    }  
-        
+    },  
+    perfil:(req,res)=>{
+        res.render("perfilusuario")
+      },
+    
+    modificarUsuario:(req,res)=>{
+            res.render('modifUsuario')
+        },
+     //modificar usuario
+    modificar:(req,res)=>{
+        let Usererrors= validationResult(req);
+        if (Usererrors.isEmpty()){
+           
+        let UserModif= users.find(element=>element.nombre==res.locals.usuarioActivo.nombre)
+        let Modif={...UserModif, ...req.body}
+        let elIndex=users.indexOf(UserModif)       
+        users[elIndex]=Modif
+         fs.writeFileSync(usersFilePath, JSON.stringify(users, null,2))
+        res.render('perfilUsuario')    
+        }else{
+            res.render('modifUsuario',{Usererrors:Usererrors.errors})
+        }
+    }           
+            
     }
     
 
