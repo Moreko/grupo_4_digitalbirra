@@ -20,6 +20,16 @@ Keep Doing : Buena comunicación entre nosotros. Activar en cuanto se larga el s
 
 Less of/Stop doing: Armar cosas sin avisar.
 
+## sprint 12 de noviembre
+
+Start Doing: Definitvamente establecer un día fijo semanal para juntarnos y rever en el trello dónde estamos.
+
+More of: Revisar el código y el estado del proyecto al menos una vez por semana.
+
+Keep Doing : Buena comunicación entre nosotros. Activar en cuanto se larga el sprint. De esta manera evitar el correr y hacer las cosas a las apuradas. Dividir las tareas y ayudarnos constantemente.
+
+Less of/Stop doing: Armar cosas sin avisar. Olvidarnos de la fecha de este sprint aunque ya tengamos las cosas hechas.
+
 
 
 
