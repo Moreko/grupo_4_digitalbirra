@@ -1,11 +1,11 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "digital_birra",
-    "host": "127.0.0.1",
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
     "dialect": "mysql",
-    "paranoid": true,
+    "paranoid":true,
     define:{
       underscored: true
     }
