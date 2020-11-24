@@ -1,18 +1,23 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models')
 
 
 const productsFilePath = path.join(__dirname, '../data/dbProducts.json')
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
+
+
 module.exports = {
-    index:(req,res)=>{
-        if(req.cookies.serMayor == undefined){
-            res.render('preindex')
-        } else{
-            res.render('index', { cervezas: products.slice(1,4) ,eleccion: 'DIGITAL BIRRA'})
-        }
+    index: async (req,res)=>{
+        const birras =  await db.Beers.findAll()
+        res.json(birras)
+        // if(req.cookies.serMayor == undefined){
+        //     res.render('preindex')
+        // } else{
+        //     res.render('index', { cervezas: products.slice(1,4) ,eleccion: 'DIGITAL BIRRA'})
+        // }
     },
     faq:(req,res)=>{
         res.render("faq")
