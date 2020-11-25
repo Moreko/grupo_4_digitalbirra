@@ -11,7 +11,14 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 module.exports = {
     index: async (req,res)=>{
-        const birras =  await db.Beers.findAll()
+        const birras =  await db.Beers.findAll({
+
+            include: 
+            [
+                { association: 'estilo'},
+            ]
+
+        })
         res.json(birras)
         // if(req.cookies.serMayor == undefined){
         //     res.render('preindex')

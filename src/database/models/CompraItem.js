@@ -25,11 +25,14 @@ let cols ={
     },
     deleted_at:{
         type: dataTypes.DATE
+    },
+    order_id:{
+        type: dataTypes.INTEGER
     }
 }
     let config = {
     tableName: 'compra_items',
-    // timestamps: false
+    timestamps: false
 }
 
 
@@ -40,6 +43,10 @@ CompraItem.associate = function(models){
       as: 'cerveza',
       foreignKey: 'cerveza_id',
     }),
+    CompraItem.belongsTo(models.Orders,{
+        as: 'order',
+        foreignKey: 'order_id',
+      }),
     CompraItem.belongsTo(models.Usuarios,{
         as: 'usuario',
         foreignKey: 'usuario_id',

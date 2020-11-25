@@ -20,7 +20,7 @@ let cols ={
 }
     let config = {
     tableName: 'estilos',
-    // timestamps: false
+    timestamps: false
 }
 
 
