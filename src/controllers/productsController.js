@@ -16,8 +16,9 @@
       },
 
       detalle: (req, res) =>{
+        let admin = req.session.admin
         let birra = products.find(unaBirra => unaBirra.nombre == req.params.nombre)
-        res.render('producto', { birra: birra })
+        res.render('producto', { birra: birra, admin })
       },
 
       formProducto: (req, res) =>{

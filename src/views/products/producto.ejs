@@ -35,15 +35,24 @@
                     
                 </article>
                 
-
+                <% if (!admin){ %> 
                 <section class="cont__btn__agregar--pp">
                     <section class="cont__cantidad--pp">
                         <button class="btn--cant">+</button>
                         <button class="btn--cant">x1</button>
                         <button class="btn--cant">-</button>
                     </section>
-                        <button class="btn--agregar">Agregar</button>
-                    </section>
+
+                    <button class="btn--agregar">Agregar</button>
+                     
+                </section>
+                     <%} else { %> 
+                     <section>
+                         <a class="btn--agregar" href="/products/form/<%= birra.id %>">Modificar</a>
+                   </section>
+                    <% } %> 
+
+
                 <p class="descripcion--pp">
                     <%= birra.descripcion%>
                 </p>
