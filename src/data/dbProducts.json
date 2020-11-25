@@ -1,17 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "ipa",
-    "tipo": "ipa",
-    "precio": 100,
-    "graduacion": 14,
-    "descripcion": "Nuestra primera cerveza! Elaborada con lupulos 100% americanos, sabores citricos que recuerdan la naranja y el maracuya. Refrescante y amarga, ideal para disfrutar con un buen asado.",
-    "mililitros": 500,
-    "ibu": 30,
-    "categoria": "mas-vendidas",
-    "imagen": "ipa.jpg"
-  },
-  {
     "id": 2,
     "nombre": "rubia",
     "tipo": "rubia",

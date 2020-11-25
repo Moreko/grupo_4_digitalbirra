@@ -1,8 +1,10 @@
   const fs = require('fs');
   const path = require('path');
+  const moment = require('moment')
 
   const {validationResult} = require('express-validator');
 
+  const db = require('../database/models')
 
   const productsFilePath = path.join(__dirname, '../data/dbProducts.json')
   const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -62,13 +64,17 @@
         }
 
       },
-      borrar: (req,res) =>{
-        let elId = req.params.id
-        let exproducto = products.find(element=> element.id == elId)
-        let sinElProducto = products.filter(producto => producto.id != elId )
-		    fs.writeFileSync(productsFilePath, JSON.stringify(sinElProducto, null, 2));
-        res.render('borraste', {exproducto})
-      },
+
+      
+      borrar: async(req,res) =>{
+          const birraBorrar = await db.Beers.findByPk(req.params.id)
+          console.log(birraBorrar)
+          // por ahora lo dejo con update, no me estaria tomando el paranoid
+          await birraBorrar.update({deleted_at: moment().format()})
+          res.render('borraste', {birraBorrar})
+        },
+
+
       nborrar: (req,res)=>{
         registerErrors = [{
           msg:'no estarías borrando nada'
