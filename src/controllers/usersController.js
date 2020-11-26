@@ -77,7 +77,8 @@ module.exports = {
                 res.locals.usuarioAdmin = req.session.admin
             }
             //habría que mandarle solo algunas cosas y no todo el usuario
-            res.locals.usuarioActivo = usuarioLogueado
+            req.session.usuarioLogueado = usuarioLogueado
+            res.locals.usuarioActivo =  usuarioLogueado
 
             res.render("logeoExitoso")
        

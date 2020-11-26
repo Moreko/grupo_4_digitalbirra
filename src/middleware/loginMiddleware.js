@@ -5,34 +5,30 @@ var bcrypt = require("bcryptjs")
 const {body, value, validationResult} = require('express-validator');
 const db = require('../database/models')
 
-const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 module.exports = [
     body('logMail')
         .isEmail()
         .withMessage('Debe ingresar un email válido').bail()
-        .custom(async function (value, {req}){
-
-            const usuarioALoguearse =  await db.Usuarios.findAll({ 
-                where: {
-                  email: value
-                }
-              })
-
-
-            if(usuarioALoguearse){
-                return true
-            } else {
-                return false
+        .custom(async (value, {req})=>{
+            
+            const usuarioALoguearse =  await db.Usuarios.findOne({ where:{
+                email : value
             }
-        }).withMessage('El email ingresado no es un usuario existente')
-        .bail(),
+                  
+              })
+          console.log(usuarioALoguearse)
+          if (usuarioALoguearse == null ) {
+            return Promise.reject('El email ingresado no es un usuario existente');
+          }
+        }).bail(),
 
     body('logPassword')
         .isLength({min:6})
         .withMessage('El password debe tener al menos 6 caracteres').bail()
-        .custom(async function (value, {req}){
+        .custom(async (value, {req}) =>{
 
             const elUsuario =  await db.Usuarios.findAll({ 
                 where: {
@@ -45,7 +41,7 @@ module.exports = [
                 if(elUsuario.admin == "1"){
                     req.session.admin = true;
                 }
-            
+                
                 req.session.usuarioLogueado = elUsuario
                  // //aunque sea hasheado lo saco de lo que se pasa a session
                 // delete elUsuario.password, lo intenté pero se rompe todo,  
