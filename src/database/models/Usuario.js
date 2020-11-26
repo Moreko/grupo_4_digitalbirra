@@ -15,16 +15,16 @@ let cols ={
         type: dataTypes.STRING
     },
     apellido:{
-        type: dataTypes.INTEGER
+        type: dataTypes.STRING
     },
-    mail:{
-        type: dataTypes.INTEGER
+    email:{
+        type: dataTypes.STRING
     },
-    passsword:{
-        type: dataTypes.INTEGER
+    password:{
+        type: dataTypes.STRING
     },
     admin:{
-        type: dataTypes.STRING
+        type: dataTypes.INTEGER
     },
     deleted_at:{
         type: dataTypes.DATE

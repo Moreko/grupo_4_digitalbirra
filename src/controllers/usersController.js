@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 var bcrypt = require("bcryptjs")
 
+const db = require('../database/models')
+
 const {value, validationResult} = require('express-validator');
-//que onda esto?
-// const { isUndefined } = require('util');
 
 const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -52,12 +52,18 @@ module.exports = {
         res.render("login")
     },
     
-    loguear:(req,res)=>{
+    loguear: async (req,res)=>{
 
         let loginErrors = validationResult(req)
 
         // Guardo usuario en una variable para el ejs
-        let usuarioLogueado = users.find(element => element.email == req.body.logMail);
+
+        let usuarioLogueado =  await db.Usuarios.findAll({ 
+            where: {
+              email: req.body.logMail
+            }
+          })
+
         
         // Si no tengo errores, mando logeoExitoso, sino, vuelve a vista login con los errores
         if (loginErrors.isEmpty()){
@@ -71,9 +77,9 @@ module.exports = {
                 res.locals.usuarioAdmin = req.session.admin
             }
             //habría que mandarle solo algunas cosas y no todo el usuario
-            res.locals.usuarioActivo = req.session.usuarioLogueado
-            
-            res.render("logeoExitoso", {usuarioLogueado})
+            res.locals.usuarioActivo = usuarioLogueado
+
+            res.render("logeoExitoso")
        
          } else {
              res.render("login", {loginErrors:loginErrors.errors})
@@ -99,15 +105,13 @@ module.exports = {
             res.render('modifUsuario')
         },
      //modificar usuario
-    modificar:(req,res)=>{
+    modificar: async (req,res)=>{
         let Usererrors= validationResult(req);
         if (Usererrors.isEmpty()){
            
-        let UserModif= users.find(element=>element.nombre==res.locals.usuarioActivo.nombre)
-        let Modif={...UserModif, ...req.body}
-        let elIndex=users.indexOf(UserModif)       
-        users[elIndex]=Modif
-         fs.writeFileSync(usersFilePath, JSON.stringify(users, null,2))
+        // let UserModif = await db.Usuarios.findByPk(1)
+        //actualizar los datos
+
         res.render('perfilUsuario')    
         }else{
             res.render('modifUsuario',{Usererrors:Usererrors.errors})

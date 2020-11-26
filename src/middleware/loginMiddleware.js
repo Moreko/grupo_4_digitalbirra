@@ -3,7 +3,7 @@ const path = require('path');
 var bcrypt = require("bcryptjs")
 
 const {body, value, validationResult} = require('express-validator');
-const e = require('express');
+const db = require('../database/models')
 
 const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -12,8 +12,14 @@ module.exports = [
     body('logMail')
         .isEmail()
         .withMessage('Debe ingresar un email válido').bail()
-        .custom(function (value, {req}){
-            let usuarioALoguearse = users.find(element => element.email == value) 
+        .custom(async function (value, {req}){
+
+            const usuarioALoguearse =  await db.Usuarios.findAll({ 
+                where: {
+                  email: value
+                }
+              })
+
 
             if(usuarioALoguearse){
                 return true
@@ -26,13 +32,17 @@ module.exports = [
     body('logPassword')
         .isLength({min:6})
         .withMessage('El password debe tener al menos 6 caracteres').bail()
-        .custom(function (value, {req}){
-            console.log(req.body.logMail)
-            let elUsuario = users.find(element => element.email == req.body.logMail )
+        .custom(async function (value, {req}){
+
+            const elUsuario =  await db.Usuarios.findAll({ 
+                where: {
+                  email: req.body.logMail
+                }
+              })
     
-            console.log(elUsuario)
-            if(bcrypt.compareSync(value, elUsuario.password)){
-                if(elUsuario.email == "bobisjapanese@gmail.com"){
+            // (bcrypt.compareSync(value, elUsuario.password))
+            if(elUsuario.password == "123456"){
+                if(elUsuario.admin == "1"){
                     req.session.admin = true;
                 }
             
