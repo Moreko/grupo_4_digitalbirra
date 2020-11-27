@@ -35,6 +35,9 @@ let cols ={
     stock:{
         type: dataTypes.STRING
     },
+    imagen:{
+        type: dataTypes.STRING
+    },
     deleted_at:{
         type: dataTypes.DATE
     }
