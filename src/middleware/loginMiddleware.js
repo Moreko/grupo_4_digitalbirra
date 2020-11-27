@@ -19,7 +19,6 @@ module.exports = [
             }
                   
               })
-          console.log(usuarioALoguearse)
           if (usuarioALoguearse == null ) {
             return Promise.reject('El email ingresado no es un usuario existente');
           }

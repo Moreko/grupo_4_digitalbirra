@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models')
 
 const {body, value, validationResult} = require('express-validator');
 
@@ -16,19 +17,20 @@ module.exports = [
     body('email')
         .isEmail()
         .withMessage('Debe ingresar un email válido')
-        .custom(function (value, {req}){
-            if(value== req.locals.usuarioActivo){
-                return false
+        .custom(async function (value, {req}){
+            if(value == req.session.usuarioLogueado.email){
+                return true
             }else{
 
-            let mailARegistrarse = users.find(element => element.email == value) 
+            let mailARegistrarse = await db.Usuarios.findOne({ where: {
+                    email: value
+                  }})
 
             if(mailARegistrarse != undefined){
-                return false
+                return Promise.reject('El email ingresado ya existe en la base de datos');
             } else{
                 return true
             };
 
         }})
-        .withMessage('El email ingresado ya existe en la base de datos')
 ]

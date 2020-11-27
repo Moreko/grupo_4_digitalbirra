@@ -108,11 +108,16 @@ module.exports = {
      //modificar usuario
     modificar: async (req,res)=>{
         let Usererrors= validationResult(req);
+        console.log( req.body)
         if (Usererrors.isEmpty()){
-           
-        // let UserModif = await db.Usuarios.findByPk(1)
-        //actualizar los datos
+             
+        let UserModif = await db.Usuarios.findOne({ where: {
+            email: req.session.usuarioLogueado.email
+          }})
 
+        await UserModif.update(req.body)
+
+        //actualizar los datos
         res.render('perfilUsuario')    
         }else{
             res.render('modifUsuario',{Usererrors:Usererrors.errors})
