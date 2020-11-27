@@ -30,14 +30,14 @@ module.exports = [
         .withMessage('El password debe tener al menos 6 caracteres').bail()
         .custom(async (value, {req}) =>{
 
-            const elUsuario =  await db.Usuarios.findAll({ 
+            const elUsuario =  await db.Usuarios.findOne({ 
                 where: {
                   email: req.body.logMail
                 }
               })
     
             // (bcrypt.compareSync(value, elUsuario.password))
-            if(elUsuario.password == "123456"){
+            if(elUsuario.password == value){
                 if(elUsuario.admin == "1"){
                     req.session.admin = true;
                 }
@@ -46,10 +46,9 @@ module.exports = [
                  // //aunque sea hasheado lo saco de lo que se pasa a session
                 // delete elUsuario.password, lo intenté pero se rompe todo,  
                 //illegal arguments string undefined bcrypt pareciería ser un tema de scopes
-
                 return true
             } else {
-                return false
+                return  Promise.reject('La contraseña es incorrectaaaa')
             }
-        }).withMessage('La contraseña es incorrecta'),
+        })
 ]
