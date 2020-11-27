@@ -48,7 +48,7 @@ module.exports = [
                 //illegal arguments string undefined bcrypt pareciería ser un tema de scopes
                 return true
             } else {
-                return  Promise.reject('La contraseña es incorrectaaaa')
+                return  Promise.reject('La contraseña es incorrecta')
             }
         })
 ]

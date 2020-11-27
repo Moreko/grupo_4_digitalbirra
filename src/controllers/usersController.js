@@ -58,7 +58,7 @@ module.exports = {
 
         // Guardo usuario en una variable para el ejs
 
-        let usuarioLogueado =  await db.Usuarios.findAll({ 
+        let usuarioLogueado =  await db.Usuarios.findOne({ 
             where: {
               email: req.body.logMail
             }
