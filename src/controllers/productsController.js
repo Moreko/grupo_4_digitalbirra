@@ -15,13 +15,18 @@
         res.render('producto', {birra : products[1]})
       },
 
-      detalle: (req, res) =>{
+      detalle: async (req, res) =>{
+        // let admin = req.session.admin
+        // let birra = products.find(unaBirra => unaBirra.nombre == req.params.nombre)
+        // res.render('producto', { birra: birra, admin })
+
         let admin = req.session.admin
-        let birra = products.find(unaBirra => unaBirra.nombre == req.params.nombre)
+
+        let birra = await db.Beers.findOne({ where: { nombre: req.params.nombre } }, {include:{all:true}})
         res.render('producto', { birra: birra, admin })
       },
 
-      formProducto: (req, res) =>{
+      createForm: (req, res) =>{
         if(typeof req.params.id != 'undefined'){
             let elId = req.params.id
             let elProducto  = products.find(element => element.id == elId)
@@ -33,7 +38,6 @@
             res.render("sumar_producto");
       }},
 
-      // Juan los nombre pitucos en ingles son para vos
       sumarProducto: (req, res) => {
         let errors = validationResult(req)
         let nameTocheck = req.body.nombre

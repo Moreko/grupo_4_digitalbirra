@@ -46,7 +46,7 @@ router.get('/', productsController.index);
 router.get('/carrito', productsController.carrito);
 
 // Acceder a agregar, modificar, borrar producto
-router.get('/form/:id?', serAdminRouteMw, productsController.formProducto);
+router.get('/createForm/:id?', serAdminRouteMw, productsController.createForm);
 
 // Crear o modificar producto
 router.post("/crear", upload.single('imagen'), sumarProductoMiddleware, productsController.sumarProducto)

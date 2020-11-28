@@ -14,20 +14,19 @@
                 
             <article class="cont__titl__btn__agregar--pp">
                 <article class="producto__titl--pp">
-                    <section class="color_estilo-<%=birra.tipo%>"></section>
-                    <p class="nombre--ppp"><%= birra.nombre%>
+                    <section class="color_estilo-<%= birra.tipo %>"></section>
+                    <p class="nombre--ppp"><%= birra.nombre %>
                     </p>
                     
                     <article class="detalle_birra">
-                    <p class="nombre--pp"><%=birra.tipo%>
-                    </p>
+                    <p class="nombre--pp"><%= birra.estilos %></p>
                     <p class="nombre--pp"><%= birra.ibu + " ibu"%>
                     </p>
                     </article>
                     <article class="detalle_birra">
-                    <p class="nombre--pp"><%= "Alc "+birra.graduacion + '%'%>
+                    <p class="nombre--pp"><%= "Alc "+ birra.alcohol + '%'%>
                     </p>
-                    <p class="nombre--pp"><%= birra.mililitros +' ml' %>
+                    <p class="nombre--pp"><%= birra.tamano +' ml' %>
                     </p>
                     </article>
                     <p class="precio--pp"><%= '$' + birra.precio %>

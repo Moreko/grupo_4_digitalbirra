@@ -28,17 +28,17 @@ let cols ={
 }
 
 
-const Order = sequelize.define(alias,cols,config);
+const Orders = sequelize.define(alias,cols,config);
 
-Order.associate = function(models){
-    Order.hasMany(models.CompraItems,{
-      as: 'order',
-      foreignKey: 'id',
-    })
-}
+// Order.associate = function(models){
+//     Order.hasMany(models.CompraItems,{
+//       as: 'order',
+//       foreignKey: 'id',
+//     })
+// }
 
 
 
-return Order
+return Orders
 
 }
