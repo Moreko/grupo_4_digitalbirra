@@ -8,7 +8,7 @@
 
     <main class="contenedorMain">
         <section class="cont__admin--titl">
-            <h1 class="titlG">CREAR PRODUCTO</h1>
+            <h1 class="titlG">MODIFICAR PRODUCTO</h1>
         </section>
 
         <% if(typeof registerErrors != "undefined") {%> 
@@ -19,7 +19,7 @@
             </ul>
         <% } %> 
 
-        <form action="/products/sumarProducto" method="POST" class="reg__form" enctype="multipart/form-data">
+        <form action="/products/crear" method="POST" class="reg__form" enctype="multipart/form-data">
             <label for="nombre">Nombre</label>
             <input class="reg--input" type= "text" name="nombre" placeholder="NOMBRE DEL PRODUCTO" value="<%= typeof oldValues != "undefined" ? oldValues.nombre : "" %>" autofocus required>
             <label for="tipo">Estilo</label>

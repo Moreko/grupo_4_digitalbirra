@@ -45,11 +45,20 @@ router.get('/', productsController.index);
 // Carrito
 router.get('/carrito', productsController.carrito);
 
-// Acceder a agregar, modificar, borrar producto
-router.get('/createForm/:id?', serAdminRouteMw, productsController.createForm);
 
-// Crear o modificar producto
-router.post("/crear", upload.single('imagen'), sumarProductoMiddleware, productsController.sumarProducto)
+// Formulario de creación de producto
+router.get('/createForm', serAdminRouteMw, productsController.createForm);
+
+// Crear producto
+router.post("/sumarProducto", upload.single('imagen'), sumarProductoMiddleware, productsController.sumarProducto)
+
+
+// Formulario de edición de producto
+router.get('/modificarForm/:id?', serAdminRouteMw, productsController.modificarForm);
+
+// Editar producto
+router.post("/modificarProducto", upload.single('imagen'), sumarProductoMiddleware, productsController.modificarProducto)
+
 
 // Borrar producto
 router.delete("/form/:id/borrar", productsController.borrar )

@@ -14,7 +14,7 @@
             <a class="linksMenu--a faq" href="/faq">+ Preguntas frecuentes</a>
             <a class="linksMenu--a login" href=<%=typeof usuarioActivo.nombre != "undefined" ?"/users/perfil" :"/users/login"%>><%= typeof usuarioActivo.nombre != "undefined" ?"+ Mi perfil":"+ Ingresá"%></a>
             <% if(usuarioAdmin){%>
-                <a class="linksMenu--a" href="/products/form"> + Crear producto</a>
+                <a class="linksMenu--a" href="/products/createForm"> + Crear producto</a>
             <%}%>
             <a class="linksMenu--a registro" href=<%=typeof usuarioActivo.nombre != "undefined" ?"/users/logout" :"/users/registro"%>><%= typeof usuarioActivo.nombre != "undefined" ?"+ Cerrar sesión" :"+ Registrate"%></a>
             <a class="linksMenu--a carrito" href="/products/carrito">+ Carrito</a>
