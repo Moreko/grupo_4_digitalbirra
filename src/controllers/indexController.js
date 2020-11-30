@@ -23,7 +23,8 @@ module.exports = {
         if(req.cookies.serMayor == undefined){
             res.render('preindex')
         } else{
-            res.render('index', { cervezas: products.slice(1,4) ,eleccion: 'DIGITAL BIRRA'})
+            let admin = req.session.admin
+            res.render('index', { cervezas: products.slice(1,4) ,eleccion: 'DIGITAL BIRRA', admin})
         }
     },
     faq:(req,res)=>{

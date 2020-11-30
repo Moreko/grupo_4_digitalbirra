@@ -47,14 +47,22 @@
                     </section>
                 </article>
                 
-                <article class="cont__cant__agregar">
-                    <section class="cont__cantidad">
-                        <button class="btn--cant">+</button>
-                        <button class="btn--cant">x1</button>
-                        <button class="btn--cant">-</button>
+                <% if (typeof admin == 'undefined'){ %> 
+                    <section class="cont__btn__agregar--pp">
+                        <section class="cont__cantidad--pp">
+                            <button class="btn--cant">+</button>
+                            <button class="btn--cant">x1</button>
+                            <button class="btn--cant">-</button>
+                        </section>
+    
+                        <button class="btn--agregar">Agregar</button>
+                         
                     </section>
-                    <button class="btn--agregar">Agregar</button>
-                </article>
+                         <%} else { %> 
+                         <section>
+                             <a class="btn--agregar" href="/products/modificarForm/1">Modificar</a>
+                       </section>
+                        <% } %> 
                 
             </article>
             
