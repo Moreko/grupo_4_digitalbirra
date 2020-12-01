@@ -39,7 +39,7 @@
                 <img class="producto--img" src="./img/products/<%= element.imagen %>" alt="birraA">
                 </a>
                 <article class="producto__info">
-                    <p><%= element.nombre + ' ' + element.graduacion %></p>
+                    <a href="/products/<%= element.nombre %>"><%= element.nombre + ' ' + element.graduacion %></a>
                     <section class="info--precioMl">
                     <p><%= element.mililitros %>ML</p>
                     <p>$<%= element.precio %></p>
