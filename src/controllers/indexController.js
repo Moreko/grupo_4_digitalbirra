@@ -11,20 +11,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 module.exports = {
     index: async (req,res)=>{
-        // const birras =  await db.Beers.findAll({
-
-        //     include: 
-        //     [
-        //         { association: 'estilo'},
-        //     ]
-
-        // })
-        // res.json(birras)
         if(req.cookies.serMayor == undefined){
             res.render('preindex')
         } else{
+            const estilos =  await db.Estilos.findAll()
             let admin = req.session.admin
-            res.render('index', { cervezas: products.slice(1,4) ,eleccion: 'DIGITAL BIRRA', admin})
+            res.render('index', { cervezas: products.slice(1,4) ,eleccion: 'DIGITAL BIRRA', admin, estilos})
         }
     },
     faq:(req,res)=>{
