@@ -38,8 +38,8 @@
         if (errors.isEmpty()){
             
           const newBeer = await Beers.create(req.body)
-          let birras = await Beers.findAll({include:{all:true}});
-          res.render("creacionExitosa", {birras, newBeer})  
+          console.log(req.body)
+          res.render("creacionExitosa", {newBeer})  
 
         } else{
             let oldValues = req.body
