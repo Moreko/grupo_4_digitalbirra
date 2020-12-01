@@ -9,7 +9,7 @@ module.exports = [
     .isLength({min:5, max:140})
     .withMessage("La descripción debe tener un mínimo de 5 caracteres y un máximo de 140"),
 
-    body("graduacion")
+    body("alcohol")
     .isLength({min:1})
     .withMessage("Debe ingresar un número en el campo graduación")
     .bail()
@@ -29,7 +29,7 @@ module.exports = [
     .isLength({max:3})
     .withMessage("El IBU debe tener un máximo de 3 dígitos"),
 
-    body("mililitros")
+    body("tamano")
     .isLength({min:1})
     .withMessage("Debe ingresar un número en el campo mililitros")
     .bail()

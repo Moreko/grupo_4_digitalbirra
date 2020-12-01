@@ -28,8 +28,10 @@
         res.render('producto', { birra: birra, admin })
       },
 
-      createForm: (req, res) =>{
-        res.render("sumar_producto");
+      createForm: async (req, res) =>{
+        const estilos =  await db.Estilos.findAll()
+        console.log(estilos);
+        res.render("sumar_producto", {estilos});
       },
 
       sumarProducto: async (req, res) => {
@@ -42,8 +44,9 @@
           res.render("creacionExitosa", {newBeer})  
 
         } else{
+          const estilos =  await db.Estilos.findAll()
             let oldValues = req.body
-            res.render("sumar_producto", {registerErrors:errors.errors, oldValues})
+            res.render("sumar_producto", {registerErrors:errors.errors, oldValues, estilos})
         }
 
       },
