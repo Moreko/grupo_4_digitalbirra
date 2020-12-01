@@ -49,7 +49,7 @@ router.get('/carrito', productsController.carrito);
 // Formulario de creación de producto
 router.get('/createForm', serAdminRouteMw, productsController.createForm);
 
-// Crear producto
+// Crear producto 
 router.post("/sumarProducto", upload.single('imagen'), sumarProductoMiddleware, productsController.sumarProducto)
 
 

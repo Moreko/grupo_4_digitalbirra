@@ -29,6 +29,9 @@ let cols ={
     tamano:{
         type: dataTypes.STRING
     },
+    categoria:{
+        type: dataTypes.STRING
+    },
     precio:{
         type: dataTypes.STRING
     },

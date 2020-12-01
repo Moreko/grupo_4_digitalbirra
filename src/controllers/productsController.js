@@ -36,11 +36,10 @@
 
       sumarProducto: async (req, res) => {
         let errors = validationResult(req)
-        let nameTocheck = req.body.nombre
+        console.log(req.body)
         if (errors.isEmpty()){
             
           const newBeer = await Beers.create(req.body)
-          console.log(req.body)
           res.render("creacionExitosa", {newBeer})  
 
         } else{
