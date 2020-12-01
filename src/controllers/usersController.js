@@ -116,7 +116,7 @@ module.exports = {
           }})
 
         await UserModif.update(req.body)
-
+        res.locals.usuarioActivo  = req.body
         //actualizar los datos
         res.render('perfilUsuario')    
         }else{

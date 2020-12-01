@@ -5,7 +5,6 @@
   const {validationResult} = require('express-validator');
 
   const db = require('../database/models')
-  const {Beers, Estilos, Usuarios} = require("../database/models")
 
 
   const productsFilePath = path.join(__dirname, '../data/dbProducts.json')
@@ -39,7 +38,7 @@
         console.log(req.body)
         if (errors.isEmpty()){
             
-          const newBeer = await Beers.create(req.body)
+          const newBeer = await db.Beers.create(req.body)
           res.render("creacionExitosa", {newBeer})  
 
         } else{
