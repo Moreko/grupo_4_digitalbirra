@@ -2,10 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const db = require('../database/models')
 
-
-const productsFilePath = path.join(__dirname, '../data/dbProducts.json')
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const { Op } = require("sequelize");
 
 
 
@@ -14,7 +11,12 @@ module.exports = {
         if(req.cookies.serMayor == undefined){
             res.render('preindex')
         } else{
-            let cervezas = await db.Beers.findAll({limit:8})
+            let cervezas = await db.Beers.findAll({ 
+                where: {
+                  deleted_at:{
+                    [Op.is]:null
+                  }
+                }, limit:8})
             const estilos =  await db.Estilos.findAll()
             let admin = req.session.admin
             res.render('index', { cervezas ,eleccion: 'DIGITAL BIRRA', admin, estilos})
