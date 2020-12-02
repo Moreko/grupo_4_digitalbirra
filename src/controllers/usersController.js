@@ -84,7 +84,7 @@ module.exports = {
      //modificar usuario
     modificar: async (req,res)=>{
         let Usererrors= validationResult(req);
-        console.log( req.body)
+
         if (Usererrors.isEmpty()){
              
         let UserModif = await db.Usuarios.findOne({ where: {
@@ -103,12 +103,17 @@ module.exports = {
         res.render("modifPass")
     },
     actualizarPass: async (req,res)=>{
-        let elUsuario = await db.Usuarios.findOne({ where: { email: req.session.usuarioLogueado.email} })
-        let nuevacont = bcrypt.hashSync(req.body.password, 10)
-        console.log(nuevacont)
-        await elUsuario.update({password: nuevacont})
-        res.redirect('/')
+        let Usererrors= validationResult(req);
 
+        if (Usererrors.isEmpty()){
+            let elUsuario = await db.Usuarios.findOne({ where: { email: req.session.usuarioLogueado.email} })
+            let nuevacont = bcrypt.hashSync(req.body.password, 10)
+            console.log(nuevacont)
+            await elUsuario.update({password: nuevacont})
+            res.redirect('/')
+        } else {
+            res.render('modifPass',{Usererrors:Usererrors.errors})
+        }
     }       
             
     }

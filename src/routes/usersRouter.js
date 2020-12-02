@@ -4,6 +4,7 @@ const usersController = require('../controllers/usersController')
 const registerMiddleware = require('../middleware/registerMiddleware')
 const loginMiddleware = require('../middleware/loginMiddleware')
 const ModifUserMiddleware = require('../middleware/ModifUserMiddleware')
+const passMiddleware = require('../middleware/passMiddleware')
 
 router.get('/registro', usersController.registro);
 
@@ -23,7 +24,7 @@ router.post('/modificar', ModifUserMiddleware,usersController.modificar)
 
 router.get('/cambiopass',usersController.modificarPass)
 
-router.put('/cambiopass',usersController.actualizarPass)
+router.put('/cambiopass',passMiddleware, usersController.actualizarPass)
 
 
 module.exports = router

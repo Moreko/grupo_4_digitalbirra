@@ -25,7 +25,7 @@ module.exports = [
         }).bail(),
 
     body('logPassword')
-        .isLength({min:4})
+        .isLength({min:1})
         .withMessage('El password debe tener al menos 4 caracteres').bail()
         .custom(async (value, {req}) =>{
 
