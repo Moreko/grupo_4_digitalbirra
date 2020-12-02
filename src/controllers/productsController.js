@@ -37,10 +37,10 @@
 
       sumarProducto: async (req, res) => {
         let errors = validationResult(req)
-        console.log(req.body)
         if (errors.isEmpty()){
-            
-          const newBeer = await db.Beers.create(req.body)
+          let infoApasar = req.body
+          infoApasar.imagen = req.file.filename
+          const newBeer = await db.Beers.create(infoApasar)
           res.render("creacionExitosa", {newBeer})  
 
         } else{
