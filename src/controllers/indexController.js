@@ -40,12 +40,11 @@ module.exports = {
                 res.render('index', {cervezas, eleccion: req.body.eleccion,estilos})
             }
 
-            if(req.body.tipoCerveza != undefined){
-                let tipoCerveza = req.body.tipoCerveza
+            if(req.body.estilo_id != undefined){
+                let tipoCerveza = req.body.estilo_id
                 let cervezas= await db.Beers.findAll({where:{estilo_id: tipoCerveza}}, {include:{all:true}})
-                
-                let cervezaFiltrada = products.filter(element => element.tipo == tipoCerveza)
-                res.render('index', {cervezas: cervezaFiltrada, eleccion: tipoCerveza})
+                let eleccion = await db.Estilos.findByPk(tipoCerveza)
+                res.render('index', {cervezas, eleccion: eleccion.nombre, estilos})
             }
 
         }

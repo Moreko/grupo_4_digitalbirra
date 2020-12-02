@@ -25,8 +25,12 @@
 
         let admin = req.session.admin
 
-        let birra = await db.Beers.findOne({ where: { nombre: req.params.nombre } }, {include:{all:true}})
-        res.render('producto', { birra: birra, admin })
+        let birra = await db.Beers.findOne({ where: { nombre: req.params.nombre } }, {include: 
+          [
+              { association: 'est'}
+          ]})
+        res.json(birra)
+        // res.render('producto', { birra: birra, admin })
       },
 
       createForm: async (req, res) =>{

@@ -24,10 +24,10 @@ let cols ={
 }
 
 
-const Estilos = sequelize.define(alias,cols,config);
+const Estilo = sequelize.define(alias,cols,config);
 
-Estilos.associate = function(models){
-    Estilos.hasMany(models.Beers,{
+Estilo.associate = function(models){
+    Estilo.hasMany(models.Beers,{
       as: 'estilo',
       foreignKey: 'id',
     })
@@ -35,6 +35,6 @@ Estilos.associate = function(models){
 
 
 
-return Estilos
+return Estilo
 
 }
