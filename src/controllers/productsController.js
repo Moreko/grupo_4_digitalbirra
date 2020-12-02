@@ -12,25 +12,23 @@
   
 
   module.exports = {
-      index: (req,res)=>{
-        // const birras= db.beers.findAll()
-        res.render('producto', {birra : products[1]})
-        // res.render('producto', {birras})
-      },
+      index:  (req,res)=>{
+
+        res.redirect('/')
+
+      },  
 
       detalle: async (req, res) =>{
-        // let admin = req.session.admin
-        // let birra = products.find(unaBirra => unaBirra.nombre == req.params.nombre)
-        // res.render('producto', { birra: birra, admin })
 
         let admin = req.session.admin
 
-        let birra = await db.Beers.findOne({ where: { nombre: req.params.nombre } }, {include: 
+        let birra = await db.Beers.findByPk(req.params.id, {
+          include: 
           [
-              { association: 'est'}
-          ]})
-        res.json(birra)
-        // res.render('producto', { birra: birra, admin })
+              { association: 'estilo'}
+          ]
+      })
+       res.render('producto', { birra, admin })
       },
 
       createForm: async (req, res) =>{
@@ -85,10 +83,11 @@
       
       borrar: async(req,res) =>{
           const birraBorrar = await db.Beers.findByPk(req.params.id)
+          const estilos =  await db.Estilos.findAll()
           console.log(birraBorrar)
           // por ahora lo dejo con update, no me estaria tomando el paranoid
           await birraBorrar.update({deleted_at: moment().format()})
-          res.render('borraste', {birraBorrar})
+          res.render('borraste', {birraBorrar, estilos})
         },
 
 

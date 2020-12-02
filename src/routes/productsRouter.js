@@ -69,7 +69,7 @@ router.post("/form/nborrar", productsController.nborrar )
 router.get('/admin', productsController.admin)
 
 // Detalle producto (comentario,detalle, este tipo de rutas nos conviene mandarlas al final)
-router.get('/:nombre', productsController.detalle);
+router.get('/:id', productsController.detalle);
 
 
 
