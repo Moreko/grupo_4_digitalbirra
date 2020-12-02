@@ -7,7 +7,6 @@ module.exports = {
     "dialect": "mysql",
     "paranoid":true,
     define:{
-      paranoid: true,
       underscored: true
     }
   },

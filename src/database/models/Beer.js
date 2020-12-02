@@ -51,21 +51,15 @@ let cols ={
 }
 
 
-const Beers = sequelize.define(alias,cols,config);
+const Beer = sequelize.define(alias,cols,config);
 
-Beers.associate = function(models){
-    Beers.belongsTo(models.Estilos,{
-      as: 'estilo',
-      foreignKey: 'estilo_id',
+Beer.associate = function(models){
+    Beer.belongsTo(models.Estilos,{
+        as: "estilo",
+        foreignKey: "estilo_id"
     })
-    // Beer.hasMany(models.CompraItems,{
-    //     as: 'compraItem',
-    //     foreignKey: 'id',
-    //   })
 }
 
-
-
-return Beers
+return Beer
 
 }

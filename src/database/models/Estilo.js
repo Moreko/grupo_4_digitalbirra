@@ -28,8 +28,8 @@ const Estilo = sequelize.define(alias,cols,config);
 
 Estilo.associate = function(models){
     Estilo.hasMany(models.Beers,{
-      as: 'estilo',
-      foreignKey: 'id',
+        as: "estilo",
+        foreignKey: "id",
     })
 }
 
