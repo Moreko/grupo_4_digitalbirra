@@ -30,6 +30,15 @@ Keep Doing : Buena comunicación entre nosotros. Activar en cuanto se larga el s
 
 Less of/Stop doing: Armar cosas sin avisar. Olvidarnos de la fecha de este sprint aunque ya tengamos las cosas hechas.
 
+## sprint 2 de diciembre
+
+Start Doing: Definitvamente establecer un día fijo semanal para juntarnos y rever en el trello dónde estamos.
+
+More of: Hacer comentarios en el código explicando un poco para los compañeros la lógica de lo que hizo cada uno.
+
+Keep Doing: Avanzar con detalles a optimizar por más que no sean requisitos del sprint.
+
+Less of/Stop doing: Dejar cosas en el "To do" del trello
 
 
 
