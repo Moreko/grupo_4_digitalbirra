@@ -39,9 +39,9 @@
                 <img class="producto--img" src="./img/products/<%= element.imagen %>" alt="birraA">
                 </a>
                 <article class="producto__info">
-                    <a href="/products/<%= element.nombre %>"><%= element.nombre + ' ' + element.graduacion %></a>
+                    <a href="/products/<%= element.nombre %>"><%= element.nombre + ' ' + element.alcohol +"%" %></a>
                     <section class="info--precioMl">
-                    <p><%= element.mililitros %>ML</p>
+                    <p><%= element.tamano %>ML</p>
                     <p>$<%= element.precio %></p>
                     </section>
                 </article>
@@ -59,7 +59,7 @@
                     </section>
                          <%} else { %> 
                          <section>
-                             <a class="btn--agregar" href="/products/modificarForm/2">Modificar</a>
+                             <a class="btn--agregar" href="/products/modificarForm/<%=element.id%> ">Modificar</a>
                        </section>
                         <% } %> 
                 

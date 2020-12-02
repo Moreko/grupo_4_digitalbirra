@@ -13,7 +13,7 @@ module.exports = {
     registro:(req,res)=>{
         res.render("registro")
     },
-    registrar:(req,res)=>{
+    registrar:async(req,res)=>{
 
         let errors = validationResult(req)
         let oldValues = req.body
@@ -21,26 +21,12 @@ module.exports = {
         // Si no tengo errores, registro, sino, mando vista de registro con errores
         if (errors.isEmpty()){
             
-            // Creo usuario con contraseña encriptada
-            let nuevoUsuario = {
-                "id": users[users.length-1].id+1,
-                "nombre": req.body.regNombre,
-                "apellido": req.body.regApellido,
-                "email": req.body.regMail,
-                "password": bcrypt.hashSync(req.body.regPassword, 10)
-            }
-
-            // Creo variable con base de datos vieja y le sumo el usuario nuevo
-            let newDB = [...users, nuevoUsuario]
-
-            // Lo hago Json
-            newDBJson = JSON.stringify(newDB, null, 2);
-
-            // Lo escribo en el json de base de datos
-            fs.writeFileSync(usersFilePath, newDBJson)
-
+            let NewUser = await db.Usuarios.create(req.body)
+             //     "password": bcrypt.hashSync(req.body.regPassword, 10)
+           
+            console.log(NewUser)
             res.render("registroExitoso")
-            // }
+           
 
         } else{
             res.render("registro", {registerErrors:errors.errors, oldValues})

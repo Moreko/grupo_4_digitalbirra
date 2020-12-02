@@ -14,9 +14,10 @@ module.exports = {
         if(req.cookies.serMayor == undefined){
             res.render('preindex')
         } else{
+            let cervezas = await db.Beers.findAll({limit:8})
             const estilos =  await db.Estilos.findAll()
             let admin = req.session.admin
-            res.render('index', { cervezas: products.slice(1,4) ,eleccion: 'DIGITAL BIRRA', admin, estilos})
+            res.render('index', { cervezas ,eleccion: 'DIGITAL BIRRA', admin, estilos})
         }
     },
     faq:(req,res)=>{
@@ -26,17 +27,23 @@ module.exports = {
         res.render('sobre_nosotros')
     },
 
-    filtroHome: (req,res)=>{
+    filtroHome:async(req,res)=>{
+        const estilos =  await db.Estilos.findAll()
             if(req.body.eleccion == 'mas-vendidas'){
-                let masVendidas = products.filter(element => element.categoria == req.body.eleccion);
-                console.log(masVendidas)
-                res.render('index', {cervezas: masVendidas, eleccion: req.body.eleccion})
+                let cervezas= await db.Beers.findAll({where:{categoria: 'mas-vendidas'}}, {include:{all:true}})
+                // let masVendidas = products.filter(element => element.categoria == req.body.eleccion);
+                // console.log(masVendidas)
+                 res.render('index', {cervezas, eleccion: req.body.eleccion,estilos})
             } else if (req.body.eleccion == 'todas'){
-                res.render('index', {cervezas: products, eleccion: req.body.eleccion})
+                let cervezas= await db.Beers.findAll()
+
+                res.render('index', {cervezas, eleccion: req.body.eleccion,estilos})
             }
 
             if(req.body.tipoCerveza != undefined){
                 let tipoCerveza = req.body.tipoCerveza
+                let cervezas= await db.Beers.findAll({where:{estilo_id: tipoCerveza}}, {include:{all:true}})
+                
                 let cervezaFiltrada = products.filter(element => element.tipo == tipoCerveza)
                 res.render('index', {cervezas: cervezaFiltrada, eleccion: tipoCerveza})
             }

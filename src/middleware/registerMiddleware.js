@@ -8,13 +8,13 @@ const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 module.exports = [
-    body('regNombre')
+    body('nombre')
         .isLength({min:2})
         .withMessage('El nombre debe tener al menos 2 caracteres'),
-    body('regApellido')
+    body('apellido')
         .isLength({min:2})
         .withMessage('El apellido debe tener al menos 2 caracteres'),
-    body('regMail')
+    body('email')
         .isEmail()
         .withMessage('Debe ingresar un email válido')
         .custom(function (value, {req}){
@@ -28,12 +28,12 @@ module.exports = [
             };
 
         }).withMessage('El email ingresado ya existe en la base de datos'),
-    body('regPassword')
+    body('password')
         .isLength({min:6})
         .withMessage('El password debe tener al menos 6 caracteres').bail(),
     body('regConfPassword')
         .custom(function (value, {req}){
-            if (req.body.regPassword == value){
+            if (req.body.password == value){
                 return true
             }
                 return false

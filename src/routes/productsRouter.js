@@ -54,10 +54,10 @@ router.post("/sumarProducto", upload.single('imagen'), sumarProductoMiddleware, 
 
 
 // Formulario de edición de producto
-router.get('/modificarForm/:id?', serAdminRouteMw, productsController.modificarProducto);
+router.get('/modificarForm/:id?', serAdminRouteMw, productsController.modificarForm);
 
 // Editar producto
-router.post("/modificarProducto", upload.single('imagen'), sumarProductoMiddleware, productsController.modificarProducto)
+router.post("/modificarProducto/:id", upload.single('imagen'), sumarProductoMiddleware, productsController.modificarProducto)
 
 
 // Borrar producto

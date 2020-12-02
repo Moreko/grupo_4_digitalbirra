@@ -13,7 +13,9 @@
 
   module.exports = {
       index: (req,res)=>{
+        // const birras= db.beers.findAll()
         res.render('producto', {birra : products[1]})
+        // res.render('producto', {birras})
       },
 
       detalle: async (req, res) =>{
@@ -49,21 +51,32 @@
 
       },
 
-      modificarForm: (req, res) =>{
-        res.render("modificar_producto");
+      modificarForm: async (req, res) =>{
+        const estilos =  await db.Estilos.findAll()
+        const birraId= req.params.id
+        const modifbirra= await db.Beers.findByPk(birraId,{include: {all:true}})
+
+        res.render("modificar_producto",{estilos,modifbirra});
       },
 
-      modificarProducto: (req, res) =>{
-        if(typeof req.params.id != 'undefined'){
-            let elId = req.params.id
-            let elProducto  = products.find(element => element.id == elId)
-            console.log(elProducto)
-            let oldValues = {...elProducto}
-
-            res.render("modificar_producto", {oldValues});
-      } else{
-            res.render("modificar_producto");
-      }},
+      modificarProducto: async (req, res) =>{
+        let errors = validationResult(req)
+        const estilos =  await db.Estilos.findAll()
+        if(errors.isEmpty()){
+          const birramodif= await db.Beers.findByPk(req.params.id)
+          
+          console.log(req.params.id)
+          console.log(birramodif)
+          await birramodif.update(req.body)
+            console.log(birramodif)
+      
+            res.redirect("/");
+           } else{
+            let oldValues = req.body
+            const modifbirra= await db.Beers.findByPk(req.params.id,{include: {all:true}})
+            res.render("modificar_producto",{registerErrors:errors.errors,oldValues,estilos,modifbirra});
+      }
+    },
 
       
       borrar: async(req,res) =>{
