@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 var bcrypt = require("bcryptjs")
 
-const {body, value, validationResult} = require('express-validator');
+const {body} = require('express-validator');
 const db = require('../database/models')
 
 // const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
@@ -25,8 +25,8 @@ module.exports = [
         }).bail(),
 
     body('logPassword')
-        .isLength({min:6})
-        .withMessage('El password debe tener al menos 6 caracteres').bail()
+        .isLength({min:4})
+        .withMessage('El password debe tener al menos 4 caracteres').bail()
         .custom(async (value, {req}) =>{
 
             const elUsuario =  await db.Usuarios.findOne({ 
@@ -34,13 +34,13 @@ module.exports = [
                   email: req.body.logMail
                 }
               })
-    
-            // (bcrypt.compareSync(value, elUsuario.password))
-            if(elUsuario.password == value){
+            
+            if(bcrypt.compareSync(value, elUsuario.password)){
                 if(elUsuario.admin == "1"){
                     req.session.admin = true;
                 }
-                
+                // delete elUsuario.password
+                // delete elUsuario.admin
                 req.session.usuarioLogueado = elUsuario
                  // //aunque sea hasheado lo saco de lo que se pasa a session
                 // delete elUsuario.password, lo intenté pero se rompe todo,  

@@ -4,10 +4,10 @@ var bcrypt = require("bcryptjs")
 
 const db = require('../database/models')
 
-const {value, validationResult} = require('express-validator');
+const {validationResult} = require('express-validator');
 
 const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 module.exports = {
     registro:(req,res)=>{
@@ -21,10 +21,10 @@ module.exports = {
         // Si no tengo errores, registro, sino, mando vista de registro con errores
         if (errors.isEmpty()){
             
-            let NewUser = await db.Usuarios.create(req.body)
-             //     "password": bcrypt.hashSync(req.body.regPassword, 10)
+            req.body.password = (bcrypt.hashSync(req.body.password, 10))
+
+            await db.Usuarios.create(req.body)
            
-            console.log(NewUser)
             res.render("registroExitoso")
            
 
@@ -44,11 +44,11 @@ module.exports = {
 
         // Guardo usuario en una variable para el ejs
 
-        let usuarioLogueado =  await db.Usuarios.findOne({ 
-            where: {
-              email: req.body.logMail
-            }
-          })
+        // let usuarioLogueado =  await db.Usuarios.findOne({ 
+        //     where: {
+        //       email: req.body.logMail
+        //     }
+        //   })
 
         
         // Si no tengo errores, mando logeoExitoso, sino, vuelve a vista login con los errores
@@ -63,8 +63,7 @@ module.exports = {
                 res.locals.usuarioAdmin = req.session.admin
             }
             //habría que mandarle solo algunas cosas y no todo el usuario
-            req.session.usuarioLogueado = usuarioLogueado
-            res.locals.usuarioActivo =  usuarioLogueado
+            res.locals.usuarioActivo =  req.session.usuarioLogueado
 
             res.render("logeoExitoso")
        
