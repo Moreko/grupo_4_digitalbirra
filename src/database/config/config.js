@@ -5,7 +5,7 @@ module.exports = {
     "database": "heroku_d8cd8055dc32488",
     "host": "us-cdbr-east-02.cleardb.com",
     "dialect": "mysql",
-    "paranoid":true,
+    "paranoid": true,
     define:{
       underscored: true
     }

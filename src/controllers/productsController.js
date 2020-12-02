@@ -83,10 +83,11 @@
       
       borrar: async(req,res) =>{
           const birraBorrar = await db.Beers.findByPk(req.params.id)
+          const estilos =  await db.Estilos.findAll()
           console.log(birraBorrar)
           // por ahora lo dejo con update, no me estaria tomando el paranoid
           await birraBorrar.update({deleted_at: moment().format()})
-          res.render('borraste', {birraBorrar})
+          res.render('borraste', {birraBorrar, estilos})
         },
 
 
