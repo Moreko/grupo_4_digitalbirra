@@ -35,6 +35,7 @@ Estilo.associate = function(models){
 
 
 
+
 return Estilo
 
 }
