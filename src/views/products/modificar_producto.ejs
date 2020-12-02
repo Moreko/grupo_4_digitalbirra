@@ -2,6 +2,7 @@
 <html lang="en">
 <%-include('./partials/head.ejs')%>
 <body>
+    <script src="/js/alertaBorrado.js" defer></script>
     <section  class="contenedorApp">
 
     <%-include('./partials/header.ejs')%>
@@ -65,11 +66,11 @@
             <label for="laimagen">Imagen</label>
             <input type="file" name="imagen" id="laimagen">
             <!-- Submit -->
-            <input class="reg--submit" type="submit" value="GUARDAR" autofocus>            
+            <input onclick="return confirm('¿Estás seguro que querés modificar este producto?');" class="reg--submit" type="submit" value="GUARDAR" autofocus>            
         
         </form>
         <form class="elFormDelete" action="/products/form/<%=modifbirra.id%>/borrar?_method=DELETE" method="POST">
-            <input class="reg--submit--eliminar" type="submit" value="ELIMINAR" autofocus>
+            <input onclick="return confirm('¿Estás seguro que querés borrar este producto?');" class="reg--submit--eliminar" type="submit" value="ELIMINAR" autofocus>
         </form>
 
     </main>
