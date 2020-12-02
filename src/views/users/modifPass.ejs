@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('./partials/head.ejs')%>
+<body>
+    <section  class="contenedorApp">
+    <%-include('./partials/header.ejs')%>
+
+    <main class="contenedorMain">
+
+
+        <% if(typeof Usererrors != "undefined") {%> 
+        <ul class="listadoErrores">
+            <% Usererrors.forEach(error => { %> 
+                <li>· <%= error.msg %> </li>
+            <% }); %> 
+        </ul>
+        <% } %> 
+        
+
+            <form action="/users/cambiopass?_method=PUT" method="POST" class="reg__form">
+                <label for="regPass">contraseña</label>
+                <input class="reg--input" type= "password" name="password" placeholder="contraseña" id="regPass" autofocus required>
+                <label for="regrePass">repetir contraseña</label>
+                <input class="reg--input" type="password" name="repassword" placeholder="contraseña" id="regrePass" autofocus required>
+
+                
+                <input class="reg--submit" type="submit" value=<%=typeof usuarioActivo.nombre != "undefined" ? "guardar" :  "Registrarme" %> autofocus>
+                
+               
+            </form>    
+
+           
+    </main>
+    
+    <%-include('./partials/footer.ejs')%>
+
+</section>
+</body>
+</html>

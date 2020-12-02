@@ -39,8 +39,8 @@ module.exports = [
                 if(elUsuario.admin == "1"){
                     req.session.admin = true;
                 }
-                // delete elUsuario.password
-                // delete elUsuario.admin
+                delete elUsuario.password
+                delete elUsuario.admin
                 req.session.usuarioLogueado = elUsuario
                  // //aunque sea hasheado lo saco de lo que se pasa a session
                 // delete elUsuario.password, lo intenté pero se rompe todo,  

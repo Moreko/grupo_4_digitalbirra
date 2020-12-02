@@ -21,5 +21,9 @@ router.get('/modifUsuario',usersController.modificarUsuario)
 
 router.post('/modificar', ModifUserMiddleware,usersController.modificar)
 
+router.get('/cambiopass',usersController.modificarPass)
+
+router.put('/cambiopass',usersController.actualizarPass)
+
 
 module.exports = router

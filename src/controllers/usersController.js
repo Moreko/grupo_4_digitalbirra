@@ -42,15 +42,6 @@ module.exports = {
 
         let loginErrors = validationResult(req)
 
-        // Guardo usuario en una variable para el ejs
-
-        // let usuarioLogueado =  await db.Usuarios.findOne({ 
-        //     where: {
-        //       email: req.body.logMail
-        //     }
-        //   })
-
-        
         // Si no tengo errores, mando logeoExitoso, sino, vuelve a vista login con los errores
         if (loginErrors.isEmpty()){
             
@@ -107,7 +98,18 @@ module.exports = {
         }else{
             res.render('modifUsuario',{Usererrors:Usererrors.errors})
         }
-    }           
+    },
+    modificarPass: (req,res) =>{
+        res.render("modifPass")
+    },
+    actualizarPass: async (req,res)=>{
+        let elUsuario = await db.Usuarios.findOne({ where: { email: req.session.usuarioLogueado.email} })
+        let nuevacont = bcrypt.hashSync(req.body.password, 10)
+        console.log(nuevacont)
+        await elUsuario.update({password: nuevacont})
+        res.redirect('/')
+
+    }       
             
     }
     
