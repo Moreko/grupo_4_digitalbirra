@@ -5,7 +5,6 @@ const sumarProductoMiddleware = require('../middleware/sumarProductoMiddleware')
 const serAdminRouteMw = require('../middleware/serAdminRouteMw');
 const multer = require('multer')
 const path = require('path')
-const { route } = require('./indexRouter');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -70,6 +69,8 @@ router.get('/admin', productsController.admin)
 
 // Detalle producto (comentario,detalle, este tipo de rutas nos conviene mandarlas al final)
 router.get('/:id', productsController.detalle);
+
+router.post('/lobuscado', productsController.labusqueda);
 
 
 

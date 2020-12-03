@@ -36,7 +36,7 @@
             <% cervezas.forEach(element =>{ %> 
             <article class="cont__producto">
                 <a href="/products/<%= element.id %>">
-                <img class="producto--img" src="./img/products/<%= element.imagen %>" alt="birraA">
+                <img class="producto--img" src="/img/products/<%= element.imagen %>" alt="birraA">
                 </a>
                 <article class="producto__info">
                     <a href="/products/<%= element.id %>"><%= element.nombre + ' ' + element.alcohol +"%" %></a>

@@ -1,16 +1,11 @@
-  const fs = require('fs');
-  const path = require('path');
   const moment = require('moment')
 
   const {validationResult} = require('express-validator');
 
   const db = require('../database/models')
 
+  const { Op } = require("sequelize");
 
-
-  const productsFilePath = path.join(__dirname, '../data/dbProducts.json')
-  const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-  
 
   module.exports = {
       index:  (req,res)=>{
@@ -105,6 +100,18 @@
 
       admin: (req,res)=>{
         res.render("admin_db")
+      },
+
+      labusqueda: async (req,res)=>{
+          const cervezas = await db.Beers.findAll({where:{
+            nombre : {
+              [Op.like]: '%' + req.body.labusqueda + '%'
+            }
+          } 
+          })
+          const estilos =  await db.Estilos.findAll()
+          let admin = req.session.admin
+          res.render('index', { cervezas ,eleccion: 'DIGITAL BIRRA', admin, estilos})
       }
 }
 

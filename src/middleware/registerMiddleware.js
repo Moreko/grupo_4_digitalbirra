@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 var bcrypt = require("bcryptjs")
 
-const {body, value, validationResult} = require('express-validator');
+const {body} = require('express-validator');
 
 const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
