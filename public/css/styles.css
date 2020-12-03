@@ -756,6 +756,7 @@ modificar desde el contenedor, esta clase está por todos lados */
     font-size: 1.5rem;
     border: 1px solid grey;
     background-color: rgb(63, 63, 63);
+    margin-bottom: 1vh;
 }
 .detalle_birra{
     display: flex;
@@ -807,6 +808,7 @@ background-color:#61892F;
     text-align: justify;
     padding:0 10% 10% 10%;
     font-family: 'Quicksand', sans-serif;
+    margin-top: 2vh;
 }
 
 
@@ -816,6 +818,7 @@ background-color:#61892F;
     display: flex;
     justify-content: space-between;
     padding-top: .3vh;
+    margin-bottom: 8%;
 }
 
 .cont__cant__agregar{
@@ -1146,6 +1149,7 @@ ojo con este que se usa en varios lados */
     border: none;
     cursor: pointer;
     transition: 0.4s all;
+    margin:5%;
 }
 
 .reg--submit:hover{
@@ -1165,7 +1169,6 @@ ojo con este que se usa en varios lados */
     font-size: 1.4rem;
     border: none;
     cursor: pointer;
-    margin-top: 10%;
     margin-bottom: 5%;
     transition: 0.4s all;
     
@@ -1775,8 +1778,9 @@ ojo con este que se usa en varios lados */
     }
 
     .reg--submit{
-        margin-top: 10%;
-        font-size: 0.9rem;
+        margin-top: 8%;
+        margin-bottom: -4%;
+        font-size: .9rem;
         height: 8vh;
         width: 65%;
     }
@@ -1784,6 +1788,7 @@ ojo con este que se usa en varios lados */
         font-size: 1rem;
         height: 8vh;
         width: 65%;
+        
     }
 
     .buscadorModif{
@@ -1892,8 +1897,9 @@ ojo con este que se usa en varios lados */
         /* align-self: start; */
         /* margin-left: 5%; */
         padding:2%;
-        background-color: #61892F
+        background-color: #61892F;
         /* height: 5vh; */
+        
     }
 
     /*responsive para carrito*/
@@ -2028,6 +2034,10 @@ ojo con este que se usa en varios lados */
         align-self:start;
         padding-left:30%;
         font-size:1rem;
+    }
+
+    .info--precioMl{
+        margin-bottom: 4%;
     }
 
 } 
