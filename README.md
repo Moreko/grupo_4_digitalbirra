@@ -5,6 +5,16 @@ Ofrecemos una amplia variedad de cervezas artesanales, a través nuestro de e-co
 Apuntamos a un público de entre 18 a 40 años.
 Ajustaremos nuestra oferta a ese público a través de un diseño gráfico moderno, y con la mayor fluidez posible en la navegación hasta llegar a la compra del producto.
 
+### Observaciones
+
+Para correr el proyecto:
+- Correr npm install para instalar las dependencias del proyecto
+- La base de datos esta disponible de manera online, no es necesario correr un servidor local.
+- El script de prueba es "npm test"
+- Contamos con un usuario "administrador" que puede crear, modificar, y eliminar productos.
+     - Mail: bobisjapanese@db.com
+     - Contraseña: 1234567
+- Disfrute de una buena cerveza mientras recorre la aplicación web
 
 ### El equipo de desarrollo de DigitalBirra está compuesto por:
 
@@ -38,8 +48,6 @@ De Beerhawk sacamos la manera de poder elejir la cantidad, y el botón de agrega
 
 
 -----------------------------------------------------------------------------
-
-Sprint 2:
 
 Página organización de trabajo:
 https://trello.com/b/PIOE5mgY/dh
