@@ -14,6 +14,7 @@ Para correr el proyecto:
 - Contamos con un usuario "administrador" que puede crear, modificar, y eliminar productos.
      - Mail: bobisjapanese@db.com
      - Contraseña: 1234567
+- Al crear una nueva cerveza, esta se listará en la página principal de la aplicación
 - Disfrute de una buena cerveza mientras recorre la aplicación web
 
 ### El equipo de desarrollo de DigitalBirra está compuesto por:
