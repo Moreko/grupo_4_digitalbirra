@@ -756,6 +756,7 @@ modificar desde el contenedor, esta clase está por todos lados */
     font-size: 1.5rem;
     border: 1px solid grey;
     background-color: rgb(63, 63, 63);
+    margin-bottom: 1vh;
 }
 .detalle_birra{
     display: flex;
@@ -807,6 +808,7 @@ background-color:#61892F;
     text-align: justify;
     padding:0 10% 10% 10%;
     font-family: 'Quicksand', sans-serif;
+    margin-top: 2vh;
 }
 
 
@@ -1895,8 +1897,9 @@ ojo con este que se usa en varios lados */
         /* align-self: start; */
         /* margin-left: 5%; */
         padding:2%;
-        background-color: #61892F
+        background-color: #61892F;
         /* height: 5vh; */
+        
     }
 
     /*responsive para carrito*/
