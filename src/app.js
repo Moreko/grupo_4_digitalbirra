@@ -5,7 +5,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session')
-var bcrypt = require("bcryptjs")
 const methodOverride = require('method-override')
 
 // Modulos propios

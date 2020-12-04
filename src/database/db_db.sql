@@ -1,1 +1,0 @@
-SELECT * FROM digital_birra.beers;

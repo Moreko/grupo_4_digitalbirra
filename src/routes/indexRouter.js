@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-
+const estilosMw = require('../middleware/estilosMw');
 
 const indexController = require("../controllers/indexController")
 
 /* GET home page. */
 
-router.get('/', indexController.index);
+router.get('/', estilosMw, indexController.index);
 
 router.post('/',indexController.filtroHome)
 

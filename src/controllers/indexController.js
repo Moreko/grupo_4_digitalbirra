@@ -16,10 +16,10 @@ module.exports = {
                   deleted_at:{
                     [Op.is]:null
                   }
-                }, limit:8})
-            const estilos =  await db.Estilos.findAll()
+                }})
+            let estilos = req.session.estilos
             let admin = req.session.admin
-            res.render('index', { cervezas ,eleccion: 'DIGITAL BIRRA', admin, estilos})
+            res.render('index', { cervezas, eleccion: 'DIGITAL BIRRA', estilos, admin})
         }
     },
     faq:(req,res)=>{
