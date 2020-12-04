@@ -31,7 +31,7 @@ module.exports = {
 
     filtroHome:async(req,res)=>{
         let admin = req.session.admin
-        const estilos =  await db.Estilos.findAll()
+        let estilos =  req.session.estilos
             if(req.body.eleccion == 'mas-vendidas'){
                 let cervezas= await db.Beers.findAll({where:
                     {categoria: 'mas-vendidas', 
@@ -48,7 +48,8 @@ module.exports = {
             if(req.body.estilo_id != undefined){
                 let tipoCerveza = req.body.estilo_id
                 let cervezas= await db.Beers.findAll({where:{estilo_id: tipoCerveza ,deleted_at: null }}, {include:{all:true}})
-                let eleccion = await db.Estilos.findByPk(tipoCerveza)
+                // let eleccion = await db.Estilos.findByPk(tipoCerveza)
+                let eleccion = req.session.estilos.find(element => element.id == tipoCerveza)
                 res.render('index', {admin, cervezas, eleccion: eleccion.nombre, estilos})
             }
 

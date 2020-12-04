@@ -28,8 +28,7 @@
       },
 
       createForm: async (req, res) =>{
-        const estilos =  await db.Estilos.findAll()
-        console.log(estilos);
+        let estilos =  req.session.estilos
         res.render("sumar_producto", {estilos});
       },
 
@@ -42,7 +41,7 @@
           res.render("creacionExitosa", {newBeer})  
 
         } else{
-          const estilos =  await db.Estilos.findAll()
+            let estilos =  req.session.estilos
             let oldValues = req.body
             res.render("sumar_producto", {registerErrors:errors.errors, oldValues, estilos})
         }
@@ -50,7 +49,7 @@
       },
 
       modificarForm: async (req, res) =>{
-        const estilos =  await db.Estilos.findAll()
+        let estilos =  req.session.estilos
         const birraId= req.params.id
         const modifbirra= await db.Beers.findByPk(birraId,{include: {all:true}})
 
@@ -59,7 +58,7 @@
 
       modificarProducto: async (req, res) =>{
         let errors = validationResult(req)
-        const estilos =  await db.Estilos.findAll()
+        let estilos =  req.session.estilos
         if(errors.isEmpty()){
           const birramodif= await db.Beers.findByPk(req.params.id)
           
@@ -79,8 +78,7 @@
       
       borrar: async(req,res) =>{
           const birraBorrar = await db.Beers.findByPk(req.params.id)
-          const estilos =  await db.Estilos.findAll()
-          console.log(birraBorrar)
+          let estilos =  req.session.estilos
           // por ahora lo dejo con update, no me estaria tomando el paranoid
           await birraBorrar.update({deleted_at: moment().format()})
           res.render('borraste', {birraBorrar, estilos})
@@ -109,7 +107,7 @@
             }
           } 
           })
-          const estilos =  await db.Estilos.findAll()
+          let estilos =  req.session.estilos
           let admin = req.session.admin
           res.render('index', { cervezas ,eleccion: 'DIGITAL BIRRA', admin, estilos})
       }
