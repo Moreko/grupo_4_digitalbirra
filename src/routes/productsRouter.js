@@ -71,7 +71,7 @@ router.get('/admin', productsController.admin)
 // Detalle producto (comentario,detalle, este tipo de rutas nos conviene mandarlas al final)
 router.get('/:id', productsController.detalle);
 
-router.post('/lobuscado', productsController.labusqueda);
+router.post('/lobuscado', estilosMw, productsController.labusqueda);
 
 
 

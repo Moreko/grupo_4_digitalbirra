@@ -101,13 +101,30 @@
       },
 
       labusqueda: async (req,res)=>{
-          const cervezas = await db.Beers.findAll({where:{
-            nombre : {
+        let estilos =  req.session.estilos
+        let elestilo = estilos.find(estilo => estilo.nombre == req.body.labusqueda)
+
+         let cervezas = await db.Beers.findAll({where:{
+            [Op.and]:[{nombre : {
               [Op.like]: '%' + req.body.labusqueda + '%'
-            }
-          } 
-          })
-          let estilos =  req.session.estilos
+            }}, {deleted_at:null}]}})
+
+          let nombresEstilos =[]
+          estilos.forEach(estilo =>{
+              nombresEstilos.push(estilo.nombre)
+              })
+
+            console.log(nombresEstilos)
+
+          if(nombresEstilos.includes(req.body.labusqueda)) {
+              let otracerveza = await db.Beers.findAll({where:{
+                [Op.and]:[{estilo_id : {
+                  [Op.like]: '%' + elestilo.id + '%'
+                }},{deleted_at:null}]}})
+                cervezas = [...cervezas, ...otracerveza]
+              }
+          
+
           let admin = req.session.admin
           res.render('index', { cervezas ,eleccion: 'DIGITAL BIRRA', admin, estilos})
       }
