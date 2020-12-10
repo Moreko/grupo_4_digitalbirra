@@ -102,31 +102,49 @@
 
       labusqueda: async (req,res)=>{
         let estilos =  req.session.estilos
+        let admin = req.session.admin
         let elestilo = estilos.find(estilo => estilo.nombre == req.body.labusqueda)
+        console.log(elestilo)
+        if(elestilo != undefined){
+          
+          let cervezas = await db.Beers.findAll({where:{
+             [Op.or]:[{nombre : {
+               [Op.like]: '%' + req.body.labusqueda + '%'
+             }}, {estilo_id : {
+               [Op.like]: '%' + elestilo.id + '%'
+             }}],
+             deleted_at:null
+            },
+             
+           })
 
-         let cervezas = await db.Beers.findAll({where:{
+           res.render('index', { cervezas ,eleccion: 'DIGITAL BIRRA', admin, estilos})
+        } else {
+          
+          let cervezas = await db.Beers.findAll({where:{
             [Op.and]:[{nombre : {
               [Op.like]: '%' + req.body.labusqueda + '%'
-            }}, {deleted_at:null}]}})
+            }}, {deleted_at:null}]
+          }})
+          res.render('index', { cervezas ,eleccion: 'DIGITAL BIRRA', admin, estilos})
 
-          let nombresEstilos =[]
-          estilos.forEach(estilo =>{
-              nombresEstilos.push(estilo.nombre)
-              })
+        }
+          // let nombresEstilos =[]
+          // estilos.forEach(estilo =>{
+          //     nombresEstilos.push(estilo.nombre)
+          //     })
 
-            console.log(nombresEstilos)
+          //   console.log(nombresEstilos)
 
-          if(nombresEstilos.includes(req.body.labusqueda)) {
-              let otracerveza = await db.Beers.findAll({where:{
-                [Op.and]:[{estilo_id : {
-                  [Op.like]: '%' + elestilo.id + '%'
-                }},{deleted_at:null}]}})
-                cervezas = [...cervezas, ...otracerveza]
-              }
+          // if(nombresEstilos.includes(req.body.labusqueda)) {
+          //     let otracerveza = await db.Beers.findAll({where:{
+          //       [Op.and]:[{estilo_id : {
+          //         [Op.like]: '%' + elestilo.id + '%'
+          //       }},{deleted_at:null}]}})
+          //       cervezas = [...cervezas, ...otracerveza]
+          //     }
           
 
-          let admin = req.session.admin
-          res.render('index', { cervezas ,eleccion: 'DIGITAL BIRRA', admin, estilos})
       }
 }
 
