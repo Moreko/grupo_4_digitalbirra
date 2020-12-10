@@ -3,6 +3,7 @@ const path = require('path');
 var bcrypt = require("bcryptjs")
 
 const {body} = require('express-validator');
+const db = require('../database/models')
 
 const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -17,17 +18,28 @@ module.exports = [
     body('email')
         .isEmail()
         .withMessage('Debe ingresar un email válido')
-        .custom(function (value, {req}){
+        .custom(async (value, {req})=>{
 
-            let mailARegistrarse = users.find(element => element.email == value) 
+            const usuarioARegistrarse =  await db.Usuarios.findOne({ where:{
+                email : value
+            }
+            
+        })
+        if (usuarioARegistrarse != null ) {
+            return Promise.reject('El email ingresado ya existe en la base de datos')
+        } else {
+            return true
+        }
 
-            if(mailARegistrarse != undefined){
-                return false
-            } else{
-                return true
-            };
+            // let mailARegistrarse = users.find(element => element.email == value) 
 
-        }).withMessage('El email ingresado ya existe en la base de datos'),
+            // if(mailARegistrarse != undefined){
+            //     return false
+            // } else{
+            //     return true
+            // };
+
+        }),
     body('password')
         .isLength({min:6})
         .withMessage('El password debe tener al menos 6 caracteres').bail(),
