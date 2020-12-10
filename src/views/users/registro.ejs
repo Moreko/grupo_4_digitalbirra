@@ -20,7 +20,7 @@
         </ul>
         <% } %> 
 
-            <form action="/users/registrar" method="POST" class="reg__form">
+            <form action="/users/registrar" method="POST" class="reg__form" enctype="multipart/form-data">
                 <label for="regNombre">Nombre</label>
                 <input class="reg--input" type= "text" name="nombre" placeholder="NOMBRE" id="regNombre" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.nombre :(typeof oldValues != "undefined" ? oldValues.regNombre : "") %>" autofocus required>
                 <label for="regApellido">Apellido</label>
@@ -31,8 +31,8 @@
                 <input class="reg--input" type="password" name="password" placeholder="*******" id="regPassword"  autofocus required>
                 <label for="regConfPassword">Repetir Contraseña</label>
                 <input class="reg--input" type="password" name="regConfPassword" placeholder="*******" id="regConfPassword"  autofocus required>
-                <label for="imagen">Avatar</label>
-                <input type="file" name="imagen" id="imagen">
+                <label for="laimagen">Avatar</label>
+                <input type="file" name="imagen" id="laimagen">
                 
                 <input class="reg--submit" type="submit" value=<%=typeof usuarioActivo.nombre != "undefined" ? "guardar" :  "Registrarme" %> autofocus>
                 

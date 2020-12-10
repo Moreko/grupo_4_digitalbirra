@@ -6,6 +6,8 @@ const loginMiddleware = require('../middleware/loginMiddleware')
 const ModifUserMiddleware = require('../middleware/ModifUserMiddleware')
 const passMiddleware = require('../middleware/passMiddleware')
 const multer = require('multer')
+const path = require('path')
+
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -25,7 +27,7 @@ var upload = multer({
        const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
  
        const ext = path.extname(file.originalname);
-       
+
        if (!acceptedExtensions.includes(ext)) {
           req.file = file;
        }

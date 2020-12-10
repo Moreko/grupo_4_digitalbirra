@@ -3,7 +3,6 @@ const path = require('path');
 var bcrypt = require("bcryptjs")
 const db = require('../database/models')
 const {validationResult} = require('express-validator');
-const multer = require('multer')
 
 
 // const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
@@ -24,7 +23,6 @@ module.exports = {
             req.body.password = (bcrypt.hashSync(req.body.password, 10))
             let usuarioACrear = req.body
             usuarioACrear.imagen = req.file.filename
-            console.log(req.file)
             await db.Usuarios.create(usuarioACrear)
            
             res.render("registroExitoso")
