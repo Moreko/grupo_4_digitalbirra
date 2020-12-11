@@ -129,21 +129,6 @@
           res.render('index', { cervezas ,eleccion: 'DIGITAL BIRRA', admin, estilos})
 
         }
-          // let nombresEstilos =[]
-          // estilos.forEach(estilo =>{
-          //     nombresEstilos.push(estilo.nombre)
-          //     })
-
-          //   console.log(nombresEstilos)
-
-          // if(nombresEstilos.includes(req.body.labusqueda)) {
-          //     let otracerveza = await db.Beers.findAll({where:{
-          //       [Op.and]:[{estilo_id : {
-          //         [Op.like]: '%' + elestilo.id + '%'
-          //       }},{deleted_at:null}]}})
-          //       cervezas = [...cervezas, ...otracerveza]
-          //     }
-          
 
       }
 }
