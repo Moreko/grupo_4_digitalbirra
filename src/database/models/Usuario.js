@@ -28,6 +28,9 @@ let cols ={
     },
     deleted_at:{
         type: dataTypes.DATE
+    },
+    imagen:{
+        type: dataTypes.STRING
     }
 }
     let config = {

@@ -23,6 +23,7 @@ module.exports = {
             req.body.password = (bcrypt.hashSync(req.body.password, 10))
             let usuarioACrear = req.body
             usuarioACrear.imagen = req.file.filename
+            console.log(usuarioACrear)
             await db.Usuarios.create(usuarioACrear)
            
             res.render("registroExitoso")
