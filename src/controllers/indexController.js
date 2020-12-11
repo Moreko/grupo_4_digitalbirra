@@ -31,7 +31,7 @@ module.exports = {
 
     filtroHome:async(req,res)=>{
         let admin = req.session.admin
-        let estilos =  req.session.estilos
+        let estilos = await req.session.estilos
             if(req.body.eleccion == 'mas-vendidas'){
                 let cervezas= await db.Beers.findAll({where:{
                     [Op.and]:[{categoria : 'mas-vendidas'},{deleted_at : null }]}
