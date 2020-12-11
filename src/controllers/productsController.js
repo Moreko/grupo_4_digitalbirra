@@ -1,9 +1,6 @@
   const moment = require('moment')
-
   const {validationResult} = require('express-validator');
-
   const db = require('../database/models')
-
   const { Op } = require("sequelize");
 
 
