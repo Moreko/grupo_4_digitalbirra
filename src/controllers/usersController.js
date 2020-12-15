@@ -48,6 +48,7 @@ module.exports = {
             
             // Si apretan checkbox recordame, crea una cookie que dura 1 año
             if(req.body.recordarme) {
+                let usuarioLogueado = await req.session.usuarioLogueado
                 res.cookie("recordarme", usuarioLogueado.email, {maxAge: 1000 * 60 * 60 * 24 * 365}) 
             }
             //todavia no entiendo por qué hay que mandarlo acá primero cuando tenemos el mw de apliación
