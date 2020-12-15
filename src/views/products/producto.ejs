@@ -2,6 +2,7 @@
 <html lang="en">
     <%-include('./partials/head.ejs')%>
 <body>
+<script src="/js/carrito.js" defer></script>
 <section class="contenedorApp">
     <%-include('./partials/header.ejs')%>
 
@@ -37,12 +38,12 @@
                 <% if (!admin){ %> 
                 <section class="cont__btn__agregar--pp">
                     <section class="cont__cantidad--pp">
-                        <button class="btn--cant">+</button>
-                        <button class="btn--cant">x1</button>
-                        <button class="btn--cant">-</button>
+                        <a class="btn--cant">+</a>
+                        <a class="btn--cant">x1</a>
+                        <a class="btn--cant">-</a>
                     </section>
 
-                    <button class="btn--agregar">Agregar</button>
+                    <a class="btn--agregar">Agregar</a>
                      
                 </section>
                      <%} else { %> 
