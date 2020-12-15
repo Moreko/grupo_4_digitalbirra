@@ -11,7 +11,8 @@ function loadStorage(){
 let storage = loadStorage()
 let container = document.querySelector('.carrito_productos')
 
+container.innerHTML += 'estos son los ids: '
 storage.forEach(id => {
-    container.innerHTML += id
+    container.innerHTML += ' '+ id
     
 });
