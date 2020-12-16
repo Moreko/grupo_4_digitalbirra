@@ -11,8 +11,14 @@ function loadStorage(){
 let storage = loadStorage()
 let container = document.querySelector('.carrito_productos')
 
-container.innerHTML += 'estos son los ids: '
+
 storage.forEach(id => {
-    container.innerHTML += ' '+ id
-    
+    let fetchUrl = 'http://localhost:3000/api/birras/' + id
+    fetch(fetchUrl)
+    .then(data => data.json())
+    .then(birra => 
+        container.innerHTML += '<article class="carrito__producto"><img class="carrito_producto--img" src=/img/products/'
+        + birra.data.imagen + '>'
+        )
+
 });

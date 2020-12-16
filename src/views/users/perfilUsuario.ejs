@@ -22,9 +22,10 @@
         <section>
            <p class=historialUsuario>Historial</p>
         </section>
+        <img src="./img/products/" alt="la imagen">
         <section class="bloque__productos">
         
-            <% if (typeof cervezas != 'undefined'){ %> 
+            <% if (typeof cervezasElegidas != 'undefined'){ %> 
                 <% cervezas.forEach(element =>{ %> 
                 <article class="cont__producto">
                     <img class="producto--img" src="./img/products/<%= element.imagen %>" alt="birraA">
@@ -44,6 +45,7 @@
                         </section>
                         <button class="btn--agregar">Agregar</button>
                     </article>
+                    
                     
                 </article>
                 <% })} else { %> <p>Todavia no compraste nada</p>

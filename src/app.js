@@ -18,6 +18,8 @@ let preindexRouter = require('./routes/preindexRouter');
 let productsRouter = require('./routes/productsRouter');
 let usersRouter = require('./routes/usersRouter');
 
+let apiBirraRouter = require('./routes/api/birra')
+
 
 var app = express();
 
@@ -49,6 +51,7 @@ app.use('/', indexRouter);
 app.use('/preindex', preindexRouter)
 app.use('/products', productsRouter)
 app.use('/users', usersRouter)
+app.use('/api/birras', apiBirraRouter)
 
 
 // catch 404 and forward to error handler
