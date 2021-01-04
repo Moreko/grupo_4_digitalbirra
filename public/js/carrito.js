@@ -13,6 +13,15 @@ function loadStorage(){
     return storage
 }
 
+function inicio(){
+    let storage = loadStorage()
+    if(storage.includes(elId)){
+        addButton.innerText = 'Remover'
+    } 
+}
+
+inicio()
+
 function addBirra(unId, e){
     let storage = loadStorage()
     if(!storage.includes(unId)){
@@ -26,6 +35,7 @@ function addBirra(unId, e){
         e.target.innerText = 'Agregar'
     }
 }
+
 
 addButton.addEventListener('click',function(e){
     e.preventDefault()
