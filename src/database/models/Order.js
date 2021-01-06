@@ -11,6 +11,9 @@ let cols ={
         primaryKey: true,
         autoIncrement: true,
     },
+    usuario_id:{
+        type: dataTypes.STRING
+    },
     fecha:{
         type: dataTypes.DATE
     },
