@@ -34,7 +34,7 @@ let cols ={
 const Order = sequelize.define(alias,cols,config);
 
 Order.associate = function(models){
-    Order.hasMany(models.ItemOrder,{
+    Order.hasMany(models.ItemOrders,{
       as: 'order',
       foreignKey: 'id',
     })

@@ -5,8 +5,8 @@ var bcrypt = require("bcryptjs")
 const {body} = require('express-validator');
 const db = require('../database/models')
 
-const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 module.exports = [
     body('nombre')

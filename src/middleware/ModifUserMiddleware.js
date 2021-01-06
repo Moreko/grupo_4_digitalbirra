@@ -4,8 +4,8 @@ const db = require('../database/models')
 
 const {body, value, validationResult} = require('express-validator');
 
-const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 module.exports = [
     body('nombre')

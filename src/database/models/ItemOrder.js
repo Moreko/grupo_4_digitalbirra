@@ -34,15 +34,15 @@ let cols ={
 const ItemOrder = sequelize.define(alias,cols,config);
 
 ItemOrder.associate = function(models){
-    ItemOrder.belongsTo(models.Order,{
+    ItemOrder.belongsTo(models.Orders,{
       as: 'order',
       foreignKey: 'order_id',
     }),
-    ItemOrder.belongsTo(models.Usuario,{
+    ItemOrder.belongsTo(models.Usuarios,{
         as: 'usuario',
         foreignKey: 'usuario_id',
       }),
-    ItemOrder.belongsTo(models.Beer,{
+    ItemOrder.belongsTo(models.Beers,{
         as: 'beer',
         foreignKey: 'beer_id',
       })
