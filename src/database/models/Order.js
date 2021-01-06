@@ -19,6 +19,9 @@ let cols ={
     },
     monto:{
         type: dataTypes.INTEGER
+    },
+    deleted_at:{
+        type: dataTypes.DATE
     }
 
 }
@@ -28,17 +31,17 @@ let cols ={
 }
 
 
-const Orders = sequelize.define(alias,cols,config);
+const Order = sequelize.define(alias,cols,config);
 
-// Order.associate = function(models){
-//     Order.hasMany(models.CompraItems,{
-//       as: 'order',
-//       foreignKey: 'id',
-//     })
-// }
+Order.associate = function(models){
+    Order.hasMany(models.ItemOrder,{
+      as: 'order',
+      foreignKey: 'id',
+    })
+}
 
 
 
-return Orders
+return Order
 
 }

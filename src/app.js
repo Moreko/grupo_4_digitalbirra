@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session')
 const methodOverride = require('method-override')
+var cors = require('cors')
 
 // Modulos propios
 const logAppMw = require("./middleware/aplicacion/logAppMw")
@@ -41,6 +42,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
 }))
+app.use(cors())
 
 // Mis Middlewares propios
 app.use(logAppMw)

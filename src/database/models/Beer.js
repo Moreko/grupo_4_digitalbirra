@@ -57,6 +57,10 @@ Beer.associate = function(models){
     Beer.belongsTo(models.Estilos,{
         as: "estilo",
         foreignKey: "estilo_id"
+    }),
+    Beer.hasMany(models.ItemOrders,{
+        as: 'beers',
+        foreignKey: "beer_id"
     })
 }
 

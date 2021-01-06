@@ -13,7 +13,7 @@ let container = document.querySelector('.carrito_productos')
 
 
 storage.forEach(id => {
-    let fetchUrl = 'http://localhost:3000/api/birras/' + id
+    let fetchUrl = 'http://localhost:4000/api/birras/' + id
     fetch(fetchUrl)
     .then(data => data.json())
     .then(birra => 
