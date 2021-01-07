@@ -59,7 +59,7 @@ Beer.associate = function(models){
         foreignKey: "estilo_id"
     }),
     Beer.hasMany(models.ItemOrders,{
-        as: 'beers',
+        as: 'beer',
         foreignKey: "beer_id"
     })
 }

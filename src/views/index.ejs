@@ -2,7 +2,7 @@
 <html lang="en">
 <%-include('./partials/head.ejs')%>
 <body>
-    <script src="/js/carrito.js" defer></script>
+    <!-- <script src="/js/carrito.js" defer></script> -->
     <section  class="contenedorApp">
 
     <%-include('./partials/header.ejs')%>
@@ -11,12 +11,12 @@
         <article class="cont__portada">
             <section class="cont__img__titl">
                 <img class="portada--titl" src="/img/dBirra-titl.svg" alt="digital birra">
-                <!-- <img class="portada--img" src="./img/fondoDB.jpg" alt="portada"> -->
+
             </section>
             <form class="formFiltroHome" action="/" method="POST">
             <section class="cont__select__venTodas"> 
             <select onchange="this.form.submit()" class="select--tcerveza" name="estilo_id">
-                <!-- hacer select dinamico -->
+          
                 <option class="select--option" value="" disabled selected>TIPO DE CERVEZA</option>
               <%estilos.forEach(element => { %>
                 <option class="select--option" value="<%= element.id %>"><%= element.nombre %></option>
@@ -48,16 +48,16 @@
                 </article>
                 
                 <% if (typeof admin == 'undefined'){ %> 
-                    <section class="cont__btn__agregar--pp">
+                    <form class="cont__btn__agregar--pp" action="/products/agregarcarrito" method="POST">
                         <section class="cont__cantidad--pp">
                             <a class="btn--cant">+</a>
                             <a class="btn--cant">x1</a>
                             <a class="btn--cant">-</a>
                         </section>
-    
-                        <a class="btn--agregar">Agregar</a>
+                        <input style="display: none;" type="number" value=<%= element.id %> name="id" id="">
+                        <input type="submit" value="Agregar" class="btn--agregar">
                          
-                    </section>
+                    </form>
                          <%} else { %> 
                          <section>
                              <a class="btn--agregar" href="/products/modificarForm/<%=element.id%> ">Modificar</a>

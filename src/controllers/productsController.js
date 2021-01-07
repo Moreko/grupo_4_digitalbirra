@@ -126,6 +126,10 @@
 
         }
 
+      },
+      agregarcarrito: (req,res)=>{
+        console.log(req.session.admin)
+        res.send(req.body)
       }
 }
 

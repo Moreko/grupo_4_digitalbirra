@@ -37,25 +37,25 @@ var storage = multer.diskStorage({
  });
 
 
-
-
-/* GET home page. */
-router.get('/', productsController.index);
-
-// Carrito
-router.get('/carrito', productsController.carrito);
-
-
-// Formulario de creación de producto
-router.get('/createForm', serAdminRouteMw, estilosMw, productsController.createForm);
-
-// Crear producto 
-router.post("/sumarProducto", upload.single('imagen'), sumarProductoMiddleware, productsController.sumarProducto)
-
-
-// Formulario de edición de producto
-router.get('/modificarForm/:id?', serAdminRouteMw, estilosMw, productsController.modificarForm);
-
+ 
+ 
+ /* GET home page. */
+ router.get('/', productsController.index);
+ 
+ // Carrito
+ router.get('/carrito', productsController.carrito);
+ 
+ 
+ // Formulario de creación de producto
+ router.get('/createForm', serAdminRouteMw, estilosMw, productsController.createForm);
+ 
+ // Crear producto 
+ router.post("/sumarProducto", upload.single('imagen'), sumarProductoMiddleware, productsController.sumarProducto)
+ 
+ 
+ // Formulario de edición de producto
+ router.get('/modificarForm/:id?', serAdminRouteMw, estilosMw, productsController.modificarForm);
+ 
 // Editar producto
 router.post("/modificarProducto/:id", upload.single('imagen'), sumarProductoMiddleware, productsController.modificarProducto)
 
@@ -72,6 +72,8 @@ router.get('/admin', productsController.admin)
 router.get('/:id', productsController.detalle);
 
 router.post('/lobuscado', estilosMw, productsController.labusqueda);
+
+router.post('/agregarcarrito', estilosMw, productsController.agregarcarrito);
 
 
 
