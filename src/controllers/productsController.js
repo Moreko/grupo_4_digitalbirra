@@ -128,8 +128,11 @@
 
       },
       agregarcarrito: (req,res)=>{
-        console.log(req.session.admin)
-        res.send(req.body)
+        if(req.session.usuarioLogueado != undefined){
+          res.send('agregar item a compraitem')
+        } else{
+          res.render('registro')
+        }
       }
 }
 

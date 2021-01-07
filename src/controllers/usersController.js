@@ -23,7 +23,6 @@ module.exports = {
             req.body.password = (bcrypt.hashSync(req.body.password, 10))
             let usuarioACrear = req.body
             usuarioACrear.imagen = req.file.filename
-            console.log(usuarioACrear)
             await db.Usuarios.create(usuarioACrear)
            
             res.render("registroExitoso")
@@ -51,13 +50,12 @@ module.exports = {
                 let usuarioLogueado = await req.session.usuarioLogueado
                 res.cookie("recordarme", usuarioLogueado.email, {maxAge: 1000 * 60 * 60 * 24 * 365}) 
             }
-            //todavia no entiendo por qué hay que mandarlo acá primero cuando tenemos el mw de apliación
+
             if(req.session.admin) {
                 res.locals.usuarioAdmin = req.session.admin
             }
             //habría que mandarle solo algunas cosas y no todo el usuario
             res.locals.usuarioActivo =  req.session.usuarioLogueado
-
             res.render("logeoExitoso")
        
          } else {
