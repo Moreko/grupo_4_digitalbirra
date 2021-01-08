@@ -127,11 +127,26 @@
         }
 
       },
-      agregarcarrito: (req,res)=>{
+      agregarcarrito: async (req,res)=>{
+        // pasar luego a middleware la parte del registro
         if(req.session.usuarioLogueado != undefined){
-          res.send('agregar item a compraitem')
+          console.log(req.body)
+          const producto = await db.Beers.findByPk(req.body.beer_id)
+          console.log(producto)
+
+          let usuario_id = req.session.usuarioLogueado.id
+          let item = {    precio: producto.precio,
+                          usuario_id:usuario_id,
+                          estado: 1,
+                          cantidad: req.body.cantidad,
+                          beer_id:producto.id,
+                          subtotal: this.precio*this.cantidad
+                         }
+
+          await db.Items.create(item)
+          res.send(item)
         } else{
-          res.render('registro')
+          res.render('login')
         }
       }
 }

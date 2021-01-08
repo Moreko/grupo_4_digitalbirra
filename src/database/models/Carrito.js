@@ -3,7 +3,7 @@ const moment = require('moment')
 
 module.exports = (sequelize, dataTypes) =>{
 
-let alias =  'Orders';
+let alias =  'Carritos';
 
 let cols ={
     id:{
@@ -11,40 +11,36 @@ let cols ={
         primaryKey: true,
         autoIncrement: true,
     },
-    usuario_id:{
-        type: dataTypes.STRING
-    },
     fecha:{
         type: dataTypes.DATE
     },
     cantidad_items:{
         type: dataTypes.INTEGER
     },
-    monto:{
+    usuaria_id:{
         type: dataTypes.INTEGER
     },
-    deleted_at:{
-        type: dataTypes.DATE
+    total:{
+        type: dataTypes.INTEGER
     }
 
 }
     let config = {
-    tableName: 'orders',
-    timestamps: false
+    tableName: 'carritos'
 }
 
 
-const Order = sequelize.define(alias,cols,config);
+const Carrito = sequelize.define(alias,cols,config);
 
-Order.associate = function(models){
-    Order.hasMany(models.ItemOrders,{
-      as: 'order',
+Carrito.associate = function(models){
+    Carrito.hasMany(models.Items,{
+      as: 'carrito',
       foreignKey: 'id',
     })
 }
 
 
 
-return Order
+return Carrito
 
 }

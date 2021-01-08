@@ -42,8 +42,12 @@ let cols ={
 const Usuario = sequelize.define(alias,cols,config);
 
 Usuario.associate = function(models){
-    Usuario.hasMany(models.ItemOrders,{
+    Usuario.hasMany(models.Items,{
         as: 'usuario',
+        foreignKey: "usuario_id"
+    }),
+    Usuario.hasMany(models.Carritos,{
+        as: 'usuarioCarrito',
         foreignKey: "usuario_id"
     })
 }
