@@ -97,11 +97,13 @@
       },{where:{
           [Op.and]:[{usuario_id : req.session.usuarioLogueado.id}, {estado:1}]
         }})
+        
         let itemsFiltro = []
         items.forEach(element => { 
         let des =  ((({ cantidad, subtotal, beer  }) => ({ cantidad, subtotal, beer }))(element))
           itemsFiltro.push(des)
         });
+        console.log(itemsFiltro)
         res.render("carrito",{itemsFiltro});
       },
 
@@ -151,9 +153,9 @@
                           estado: 1,
                           cantidad: req.body.cantidad,
                           beer_id:producto.id,
-                          subtotal: this.precio*this.cantidad
+                          subtotal: producto.precio*req.body.cantidad
                          }
-
+//habrá mejor manera de pasar el subtotal?
           await db.Items.create(item)
           res.send(item)
        
