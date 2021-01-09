@@ -4,6 +4,7 @@ const productsController = require('../controllers/productsController')
 const sumarProductoMiddleware = require('../middleware/sumarProductoMiddleware');
 const serAdminRouteMw = require('../middleware/serAdminRouteMw');
 const estilosMw = require('../middleware/estilosMw');
+const estarLog = require('../middleware/estarLog');
 const multer = require('multer')
 const path = require('path')
 
@@ -43,7 +44,7 @@ var storage = multer.diskStorage({
  router.get('/', productsController.index);
  
  // Carrito
- router.get('/carrito', productsController.carrito);
+ router.get('/carrito', estarLog, productsController.carrito);
  
  
  // Formulario de creación de producto

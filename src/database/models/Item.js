@@ -66,7 +66,6 @@ Item.associate = function(models){
 }
 
 
-
 return Item
 
 }

@@ -88,8 +88,21 @@
           res.render("sumar_producto",{registerErrors})
       },
       
-      carrito: (req, res) =>{
-        res.render("carrito");
+      carrito: async (req, res) =>{
+        let items = await db.Items.findAll({
+          include: 
+          [
+              { association: 'beer'}
+          ]
+      },{where:{
+          [Op.and]:[{usuario_id : req.session.usuarioLogueado.id}, {estado:1}]
+        }})
+        let itemsFiltro = []
+        items.forEach(element => { 
+        let des =  ((({ cantidad, subtotal, beer  }) => ({ cantidad, subtotal, beer }))(element))
+          itemsFiltro.push(des)
+        });
+        res.render("carrito",{itemsFiltro});
       },
 
       admin: (req,res)=>{
@@ -128,9 +141,7 @@
 
       },
       agregarcarrito: async (req,res)=>{
-        // pasar luego a middleware la parte del registro
-        if(req.session.usuarioLogueado != undefined){
-          console.log(req.body)
+ 
           const producto = await db.Beers.findByPk(req.body.beer_id)
           console.log(producto)
 
@@ -145,9 +156,7 @@
 
           await db.Items.create(item)
           res.send(item)
-        } else{
-          res.render('login')
-        }
+       
       }
 }
 
