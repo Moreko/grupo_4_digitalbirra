@@ -74,7 +74,7 @@ router.get('/:id', productsController.detalle);
 
 router.post('/lobuscado', estilosMw, productsController.labusqueda);
 
-router.post('/agregarcarrito', estilosMw, productsController.agregarcarrito);
+router.post('/agregarcarrito', estarLog,productsController.agregarcarrito);
 
 
 
