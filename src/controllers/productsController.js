@@ -157,7 +157,7 @@
                          }
 //habrá mejor manera de pasar el subtotal?
           await db.Items.create(item)
-          res.send(item)
+          res.redirect('/')
        
       }
 }

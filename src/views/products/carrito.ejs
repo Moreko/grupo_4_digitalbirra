@@ -11,11 +11,12 @@
 		<h2 class="mi_carrito">MI CARRITO</h2>
 		<article class="carrito_productos">
 				<%itemsFiltro.forEach(element => { %>
-					
 					<article class="carrito__producto">
+						<a href="/products/<%= element.beer.id %>">
 						<img class="carrito_producto--img" src="/img/products/<%= element.beer.imagen %>" alt="birraA">
+						</a>
 						<article class="carrito_producto__info">
-							<p class= carrito_descripcion_nombre><%= element.beer.ibu %>%</p>
+							<p class= carrito_descripcion_nombre><%= element.beer.nombre + " "+ element.beer.ibu %>%</p>
 							<p class= carrito_descripcion> <%= element.beer.tamano %>ML</p>
 							<section class="carrito_precio">
 								<p class= carrito_descripcion>Unidad: $<%= element.beer.precio %></p>
