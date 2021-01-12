@@ -74,7 +74,7 @@ module.exports = {
 
         res.render("deslogeoExitoso")
     },  
-    perfil:(req,res)=>{
+    perfil: async (req,res)=>{
         res.render("perfilusuario")
       },
     
