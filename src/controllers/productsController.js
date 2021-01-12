@@ -91,11 +91,11 @@
       carrito: async (req, res) =>{
         let items = await db.Items.findAll({
           include: 
-          [
+          
               { association: 'beer'}
-          ]
-      },{where:{
-          [Op.and]:[{usuario_id : req.session.usuarioLogueado.id}, {estado:1}]
+        
+      ,where:{
+          [Op.and]:[{usuario_id: req.session.usuarioLogueado.id}, {estado:1}]
         }})
         
         let itemsFiltro = []
