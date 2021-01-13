@@ -27,15 +27,16 @@
 					</article>
 				  <% }); %>
 				
-			</article>
-				
-				
-		<article class="carrito_total">
-			<p class="carrito_total_total">TOTAL</p>
-			<p class= "carrito_total_precio">$</p>
 		</article>
-		<button class="boton_comprar" type="submit">COMPRAR</button>
-				
+		
+		<article class="carrito_total">
+			<p class="carrito_total_total"><%= cantidad %></p>
+			<p class= "carrito_total_precio">$<%= total %></p>
+		</article>
+		<form action="/products/comprar" method="POST">
+			<input class="boton_comprar" value="COMPRAR" type="submit">
+		</form>
+		</section>		
 	<%-include('./partials/footer.ejs')%>
 			
 </section>

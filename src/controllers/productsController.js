@@ -103,8 +103,14 @@
         let des =  ((({ cantidad, subtotal, beer  }) => ({ cantidad, subtotal, beer }))(element))
           itemsFiltro.push(des)
         });
-        console.log(itemsFiltro)
-        res.render("carrito",{itemsFiltro});
+
+        let cantidad = 0
+        let total = 0
+        items.forEach(element => {
+          cantidad += element.cantidad
+          total += element.subtotal
+        });
+        res.render("carrito",{itemsFiltro, cantidad, total});
       },
 
       admin: (req,res)=>{
@@ -159,6 +165,41 @@
           await db.Items.create(item)
           res.redirect('/')
        
+      },
+    comprar: async(req,res)=>{
+      let items = await db.Items.findAll({
+        include: 
+        
+            { association: 'beer'}
+      
+        ,where:{
+        [Op.and]:[{usuario_id: req.session.usuarioLogueado.id}, {estado:1}]
+      }})
+
+      let cantidad = 0
+      let total = 0
+      items.forEach(element => {
+        cantidad += element.cantidad
+        total += element.subtotal
+      });
+
+      await db.Carritos.create({
+        cantidad_items:cantidad,
+        usuario_id: req.session.usuarioLogueado.id,
+        total:total
+      })
+      
+      let uCarrito = await db.Carritos.findOne({
+        limit: 1,
+        order: [ [ 'created_at', 'DESC' ]]
+      })
+        
+      console.log(uCarrito)
+      await items.forEach(element => {
+          element.update({estado:0})
+          element.update({carrito_id: uCarrito.id})
+        });
+        res.redirect('/')
       }
-}
+    }
 

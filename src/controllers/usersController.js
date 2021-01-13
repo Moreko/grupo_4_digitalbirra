@@ -3,6 +3,7 @@ const path = require('path');
 var bcrypt = require("bcryptjs")
 const db = require('../database/models')
 const {validationResult} = require('express-validator');
+const { Op } = require("sequelize");
 
 
 // const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
@@ -75,7 +76,12 @@ module.exports = {
         res.render("deslogeoExitoso")
     },  
     perfil: async (req,res)=>{
-        res.render("perfilusuario")
+        let compras = await db.Carritos.findAll({
+            where:{
+            [Op.and]:[{usuario_id: req.session.usuarioLogueado.id}]
+          }})
+          console.log(compras);
+        res.render("perfilusuario", {compras})
       },
     
     modificarUsuario:(req,res)=>{
