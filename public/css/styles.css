@@ -899,6 +899,7 @@ ojo con este que se usa en varios lados */
 
 
 .btn--cant{
+    all: unset;
     display: flex;
     justify-content: center;
     align-items: center;
