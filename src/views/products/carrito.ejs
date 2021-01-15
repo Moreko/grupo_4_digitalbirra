@@ -33,10 +33,17 @@
 			<p class="carrito_total_total"><%= cantidad %></p>
 			<p class= "carrito_total_precio">$<%= total %></p>
 		</article>
-		<form action="/products/comprar" method="POST">
-			<input class="boton_comprar" value="COMPRAR" type="submit">
-		</form>
-		</section>		
+		<% if(itemsFiltro.length != 0){%>
+			<form action="/products/comprar" method="POST">
+				<input class="boton_comprar" value="COMPRAR" type="submit">
+			</form>
+			<%} else {%>
+				<a class="btn--volver" href="/">Volver al inicio</a>
+				<% } %> 
+				
+	</section>
+	
+
 	<%-include('./partials/footer.ejs')%>
 			
 </section>

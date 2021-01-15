@@ -151,7 +151,7 @@
       agregarcarrito: async (req,res)=>{
  
           const producto = await db.Beers.findByPk(req.body.beer_id)
-          console.log(producto)
+         
 
           let usuario_id = req.session.usuarioLogueado.id
           let item = {    precio: producto.precio,

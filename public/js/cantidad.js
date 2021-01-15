@@ -5,3 +5,9 @@ document.querySelectorAll('.agregar').forEach(item => {
       alert('hola')
     })
   })
+
+  document.querySelectorAll('.menos').forEach(item => {
+    item.addEventListener('click', event => {
+      alert('adios')
+    })
+  })

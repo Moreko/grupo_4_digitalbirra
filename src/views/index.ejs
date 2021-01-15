@@ -51,8 +51,8 @@
                     <form class="cont__btn__agregar--pp" action="/products/agregarcarrito" method="POST">
                         <section class="cont__cantidad--pp">
                             <a class="agregar btn--cant">+</a>
-                            <input class="btn--cant" type="number" value=1 name="cantidad" id="<%= element.id %>">
-                            <a class="btn--cant">-</a>
+                            <input class="btn--cant" type="number" min="1" value=1 name="cantidad">
+                            <a class="menos btn--cant">-</a>
                         </section>
                         <input style="display: none;" type="number" value=<%=element.id%> name="beer_id">
                        
