@@ -58,10 +58,9 @@
         if(errors.isEmpty()){
           const birramodif= await db.Beers.findByPk(req.params.id)
           
-          console.log(req.params.id)
-          console.log(birramodif)
+     
           await birramodif.update(req.body)
-            console.log(birramodif)
+     
       
             res.redirect("/");
            } else{
@@ -120,7 +119,7 @@
         let estilos =  req.session.estilos
         let admin = req.session.admin
         let elestilo = estilos.find(estilo => estilo.nombre == req.body.labusqueda)
-        console.log(elestilo)
+        
         if(elestilo != undefined){
           
           let cervezas = await db.Beers.findAll({where:{
@@ -201,7 +200,6 @@
         res.redirect('/')
       },
       sacar: async (req,res)=>{
-        console.log(req.body)
         await db.Items.destroy({where: {id:req.body.id}})
         res.redirect('/products/carrito')
       }

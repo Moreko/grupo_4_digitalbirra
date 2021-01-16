@@ -1419,9 +1419,34 @@ ojo con este que se usa en varios lados */
     margin: 2vh;
     height: 5vh;
     font-size: 1rem;
+    cursor: pointer;
     color:#ffffff;
     transition: 0.3s all
 }
+
+.item_borrar{
+    font: "QuickSand";
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: grey solid .3vh;
+    padding:7%;
+    margin: 2vh;
+    height: 5vh;
+    font-size: 1rem;
+    opacity: .8;
+    cursor: pointer;
+    color:#ffffff;
+    transition: 0.3s all   
+}
+
+.item_borrar:hover{
+    opacity: 1;
+    color:#ac8d63;
+}
+
 .boton_comprar:hover{
     color:#86C232;
 }
@@ -2108,6 +2133,10 @@ ojo con este que se usa en varios lados */
         text-align: center;
         width: 10%;
         
+    }
+
+    .item_borrar{
+        font-size: .5rem;
     }
 } 
 
