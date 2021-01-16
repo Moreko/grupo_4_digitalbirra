@@ -75,8 +75,7 @@
       borrar: async(req,res) =>{
           const birraBorrar = await db.Beers.findByPk(req.params.id)
           let estilos =  req.session.estilos
-          // por ahora lo dejo con update, no me estaria tomando el paranoid
-          await birraBorrar.update({deleted_at: moment().format()})
+          await birraBorrar.destroy()
           res.render('borraste', {birraBorrar, estilos})
         },
 
@@ -100,7 +99,7 @@
         
         let itemsFiltro = []
         items.forEach(element => { 
-        let des =  ((({ cantidad, subtotal, beer  }) => ({ cantidad, subtotal, beer }))(element))
+        let des =  ((({ cantidad, subtotal, beer, id  }) => ({ cantidad, subtotal, beer, id }))(element))
           itemsFiltro.push(des)
         });
 
@@ -200,6 +199,11 @@
           element.update({carrito_id: uCarrito.id})
         });
         res.redirect('/')
+      },
+      sacar: async (req,res)=>{
+        console.log(req.body)
+        await db.Items.destroy({where: {id:req.body.id}})
+        res.redirect('/products/carrito')
       }
     }
 

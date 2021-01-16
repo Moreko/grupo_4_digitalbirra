@@ -20,9 +20,13 @@
 							<p class= carrito_descripcion> <%= element.beer.tamano %>ML</p>
 							<section class="carrito_precio">
 								<p class= carrito_descripcion>Unidad: $<%= element.beer.precio %></p>
+								<p class= carrito_descripcion>Cantidad: <%= element.cantidad %></p>
 								<p class= carrito_descripcion>Subtotal: $<%= element.subtotal %></p>
 							</section>
-								
+							<form action="/products/sacar?_method=DELETE" method="POST">
+								<input type="number" style="display: none;" name="id" value=<%= element.id %>>
+								<input type="submit" value="Borrar" class="boton_comprar">
+							</form>	
 						</article>
 					</article>
 				  <% }); %>
@@ -30,7 +34,7 @@
 		</article>
 		
 		<article class="carrito_total">
-			<p class="carrito_total_total"><%= cantidad %></p>
+			<p class="carrito_total_total">items: <%= cantidad %></p>
 			<p class= "carrito_total_precio">$<%= total %></p>
 		</article>
 		<% if(itemsFiltro.length != 0){%>
