@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%-include('./partials/head.ejs')%>
+    
 <body>
     <section  class="contenedorApp">
     <%-include('./partials/header.ejs')%>
@@ -21,19 +22,36 @@
         <% } %> 
 
             <form action="/users/registrar" method="POST" class="reg__form" enctype="multipart/form-data">
-                <label for="regNombre">Nombre</label>
-                <input class="reg--input" type= "text" name="nombre" placeholder="NOMBRE" id="regNombre" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.nombre :(typeof oldValues != "undefined" ? oldValues.regNombre : "") %>" autofocus required>
-                <label for="regApellido">Apellido</label>
-                <input class="reg--input" type="text" name="apellido" placeholder="APELLIDO" id="regApellido" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.apellido : (typeof oldValues != "undefined" ? oldValues.regApellido : "") %>" autofocus required>
-                <label for="regMail">Mail</label>
-                <input class="reg--input" type="email" name="email" placeholder="doncerveza@dbirra.com.ar" id="logMail" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.email :(typeof oldValues != "undefined" ? oldValues.regMail : "") %>" autofocus required>
-                <label for="regPassword">Contraseña</label>
-                <input class="reg--input" type="password" name="password" placeholder="*******" id="regPassword"  autofocus required>
-                <label for="regConfPassword">Repetir Contraseña</label>
-                <input class="reg--input" type="password" name="regConfPassword" placeholder="*******" id="regConfPassword"  autofocus required>
-                <label for="laimagen">Avatar</label>
-                <input type="file" name="imagen" id="laimagen">
-                
+                <div>
+                    <label for="regNombre">Nombre</label>
+                    <input class="reg--input" type= "text" name="nombre" placeholder="NOMBRE" id="regNombre" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.nombre :(typeof oldValues != "undefined" ? oldValues.regNombre : "") %>" autofocus required>
+                    <small></small>
+                </div>
+                <div>
+                    <label for="regApellido">Apellido</label>
+                    <input class="reg--input" type="text" name="apellido" placeholder="APELLIDO" id="regApellido" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.apellido : (typeof oldValues != "undefined" ? oldValues.regApellido : "") %>" autofocus required>
+                    <small></small>
+                </div>
+                <div>
+                    <label for="regMail">Mail</label>
+                    <input class="reg--input" type="email" name="email" placeholder="doncerveza@dbirra.com.ar" id="logMail" value="<%= typeof usuarioActivo.nombre != "undefined" ? usuarioActivo.email :(typeof oldValues != "undefined" ? oldValues.regMail : "") %>" autofocus required>
+                    <small></small>
+                </div>
+                <div>
+                    <label for="regPassword">Contraseña</label>
+                    <input class="reg--input" type="password" name="password" placeholder="*******" id="regPassword"  autofocus required>
+                    <small></small>
+                </div>
+                <div>
+                    <label for="regConfPassword">Repetir Contraseña</label>
+                    <input class="reg--input" type="password" name="regConfPassword" placeholder="*******" id="regConfPassword"  autofocus required>
+                    <small></small>
+                </div>
+                <div>
+                    <label for="laimagen">Avatar</label>
+                    <input type="file" name="imagen" id="laimagen">
+                    <small></small>
+                </div>
                 <input class="reg--submit" type="submit" value=<%=typeof usuarioActivo.nombre != "undefined" ? "guardar" :  "Registrarme" %> autofocus>
                 
                
@@ -42,8 +60,11 @@
            
     </main>
     
+   
+    
     <%-include('./partials/footer.ejs')%>
 
 </section>
+ <script src="registrofront.js"></script>
 </body>
 </html>

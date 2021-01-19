@@ -1,4 +1,5 @@
 const {body, validationResult} = require('express-validator');
+const db = require('../database/models');
 
 module.exports = [
     body('nombre')
@@ -39,7 +40,25 @@ module.exports = [
     .isLength({max:4})
     .withMessage("El IBU debe tener un máximo de 4 dígitos"),
 
-    // body("imagenProducto"),
+    // body("imagen")
+    // .notempty()
+    // .withMessage("debes cargar una imagen")
+    // // .custom(async(value,{req})=>{
+    // //     let producto = await db.Beers.findByPk(req.params.id)
+    // //     if(producto != undefined){
+    // //         return false
+    // //     }else{
+    // //     const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
+ 
+    // //     const ext = path.extname(value);
+        
+    // //     if (!acceptedExtensions.includes(ext)) {
+    // //        return false
+    // //     }else{
+    // //         return true
+    // //     }
+    // //     }   
+    // // }).withMessage("Debes subir una imagen en formato valido"),
 
     body("precio")
     .isLength({min:1})
