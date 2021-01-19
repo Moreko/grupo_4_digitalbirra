@@ -24,11 +24,41 @@ html {
  
  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
+.avatar{
+    margin: 5%;
+    width: 20%;
+}
+
+.historialUsuario{
+    font-family: 'Industry';
+    color:#86C232;
+    font-size: 1.5 rem;
+    padding: 4vh;
+}
+
+.bloque__compras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.compra__info{
+    width: 100%;
+    border: solid grey .07vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .contenedorApp{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 60vh;
     width: 100%;
     font-family: 'Quicksand', sans-serif;
     background-color:rgb(20, 20, 20);
@@ -869,6 +899,7 @@ ojo con este que se usa en varios lados */
 
 
 .btn--cant{
+    all: unset;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1045,9 +1076,13 @@ ojo con este que se usa en varios lados */
 .btn--volver{
     /* position: absolute;
     bottom: 10%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Industry';
     font-size: 1rem;
     height: 5vh;
+    text-align: center;
     width: 60%;
     color: #61892F;
     background-color: #222629;
@@ -1250,6 +1285,7 @@ ojo con este que se usa en varios lados */
     justify-content: center;
     align-items: center;
     padding-top: 2vh;
+    min-height: 60vh;
     flex-wrap: wrap;
     width: 100%;
 
@@ -1260,7 +1296,6 @@ ojo con este que se usa en varios lados */
     display: flex;
     flex-direction:row;
     margin-left: 5vh;
-    
     justify-content: space-between;
     padding-bottom: 5vh;
 }
@@ -1374,19 +1409,44 @@ ojo con este que se usa en varios lados */
 
 .boton_comprar{
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     font-family: 'Industry';
     background-color: black;
     border: grey solid .3vh;
-    padding:4%;
-    margin: 1vh;
-   
+    padding:7%;
+    margin: 2vh;
     height: 5vh;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
     color:#ffffff;
     transition: 0.3s all
 }
+
+.item_borrar{
+    font: "QuickSand";
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: grey solid .3vh;
+    padding:7%;
+    margin: 2vh;
+    height: 5vh;
+    font-size: 1rem;
+    opacity: .8;
+    cursor: pointer;
+    color:#ffffff;
+    transition: 0.3s all   
+}
+
+.item_borrar:hover{
+    opacity: 1;
+    color:#ac8d63;
+}
+
 .boton_comprar:hover{
     color:#86C232;
 }
@@ -1434,6 +1494,30 @@ ojo con este que se usa en varios lados */
 
 @media (min-width: 900px){
 
+    .avatar{
+        width: 10%;
+    }
+
+    .historialUsuario{
+        font-family: 'Industry';
+        align-self: flex-start;
+        margin-left: 5vh;
+        margin-bottom: 5vh;
+        color:#86C232;
+        font-size: 1.5 rem;
+        padding-top: 4vh;
+    }
+
+    .compra__info{
+        width: 100%;
+        display: flex;
+        font-size: 2vh;
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    
     /* ESTILOS RESPONSIVE DE NAVBAR */
 
     .navBar {
@@ -1945,8 +2029,10 @@ ojo con este que se usa en varios lados */
         font-size: .6rem;
     }
     .boton_comprar{
+        cursor: pointer;
+        text-align: center;
+        height: 10vh;
         padding: 2%;
-        margin-bottom:3vh; 
     }
     
 
@@ -2015,7 +2101,7 @@ ojo con este que se usa en varios lados */
         display: flex;
         flex-direction: column;
         justify-content:start;
-        align-items: start;
+        /* align-items: start; */
         background-color:rgb(20, 20, 20);
 
     }
@@ -2026,12 +2112,6 @@ ojo con este que se usa en varios lados */
         margin-left: 5vh;
         flex: 2;
 
-    }
-    .historialUsuario{
-        margin-left: 5vh;
-        color:#86C232;
-        font-size: 1.5 rem;
-        padding-top: 4vh;
     }
     .cont__form label{
         align-self:start;
@@ -2053,6 +2133,10 @@ ojo con este que se usa en varios lados */
         text-align: center;
         width: 10%;
         
+    }
+
+    .item_borrar{
+        font-size: .5rem;
     }
 } 
 

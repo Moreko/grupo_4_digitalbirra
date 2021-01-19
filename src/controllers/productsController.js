@@ -58,10 +58,9 @@
         if(errors.isEmpty()){
           const birramodif= await db.Beers.findByPk(req.params.id)
           
-          console.log(req.params.id)
-          console.log(birramodif)
+     
           await birramodif.update(req.body)
-            console.log(birramodif)
+     
       
             res.redirect("/");
            } else{
@@ -75,8 +74,7 @@
       borrar: async(req,res) =>{
           const birraBorrar = await db.Beers.findByPk(req.params.id)
           let estilos =  req.session.estilos
-          // por ahora lo dejo con update, no me estaria tomando el paranoid
-          await birraBorrar.update({deleted_at: moment().format()})
+          await birraBorrar.destroy()
           res.render('borraste', {birraBorrar, estilos})
         },
 
@@ -91,20 +89,26 @@
       carrito: async (req, res) =>{
         let items = await db.Items.findAll({
           include: 
-          [
+          
               { association: 'beer'}
-          ]
-      },{where:{
-          [Op.and]:[{usuario_id : req.session.usuarioLogueado.id}, {estado:1}]
+        
+      ,where:{
+          [Op.and]:[{usuario_id: req.session.usuarioLogueado.id}, {estado:1}]
         }})
         
         let itemsFiltro = []
         items.forEach(element => { 
-        let des =  ((({ cantidad, subtotal, beer  }) => ({ cantidad, subtotal, beer }))(element))
+        let des =  ((({ cantidad, subtotal, beer, id  }) => ({ cantidad, subtotal, beer, id }))(element))
           itemsFiltro.push(des)
         });
-        console.log(itemsFiltro)
-        res.render("carrito",{itemsFiltro});
+
+        let cantidad = 0
+        let total = 0
+        items.forEach(element => {
+          cantidad += element.cantidad
+          total += element.subtotal
+        });
+        res.render("carrito",{itemsFiltro, cantidad, total});
       },
 
       admin: (req,res)=>{
@@ -115,7 +119,7 @@
         let estilos =  req.session.estilos
         let admin = req.session.admin
         let elestilo = estilos.find(estilo => estilo.nombre == req.body.labusqueda)
-        console.log(elestilo)
+        
         if(elestilo != undefined){
           
           let cervezas = await db.Beers.findAll({where:{
@@ -145,7 +149,7 @@
       agregarcarrito: async (req,res)=>{
  
           const producto = await db.Beers.findByPk(req.body.beer_id)
-          console.log(producto)
+         
 
           let usuario_id = req.session.usuarioLogueado.id
           let item = {    precio: producto.precio,
@@ -159,6 +163,45 @@
           await db.Items.create(item)
           res.redirect('/')
        
+      },
+    comprar: async(req,res)=>{
+      let items = await db.Items.findAll({
+        include: 
+        
+            { association: 'beer'}
+      
+        ,where:{
+        [Op.and]:[{usuario_id: req.session.usuarioLogueado.id}, {estado:1}]
+      }})
+
+      let cantidad = 0
+      let total = 0
+      items.forEach(element => {
+        cantidad += element.cantidad
+        total += element.subtotal
+      });
+
+      await db.Carritos.create({
+        cantidad_items:cantidad,
+        usuario_id: req.session.usuarioLogueado.id,
+        total:total
+      })
+      
+      let uCarrito = await db.Carritos.findOne({
+        limit: 1,
+        order: [ [ 'created_at', 'DESC' ]]
+      })
+        
+      console.log(uCarrito)
+      await items.forEach(element => {
+          element.update({estado:0})
+          element.update({carrito_id: uCarrito.id})
+        });
+        res.redirect('/')
+      },
+      sacar: async (req,res)=>{
+        await db.Items.destroy({where: {id:req.body.id}})
+        res.redirect('/products/carrito')
       }
-}
+    }
 

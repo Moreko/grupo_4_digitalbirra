@@ -76,7 +76,9 @@ router.post('/lobuscado', estilosMw, productsController.labusqueda);
 
 router.post('/agregarcarrito', estarLog,productsController.agregarcarrito);
 
+router.post('/comprar', estarLog, productsController.comprar);
 
+router.delete('/sacar', productsController.sacar)
 
 
 module.exports = router;

@@ -11,13 +11,10 @@ let cols ={
         primaryKey: true,
         autoIncrement: true,
     },
-    fecha:{
-        type: dataTypes.DATE
-    },
     cantidad_items:{
         type: dataTypes.INTEGER
     },
-    usuaria_id:{
+    usuario_id:{
         type: dataTypes.INTEGER
     },
     total:{
