@@ -9,12 +9,14 @@ module.exports = {
     list: async (req,res)=>{
 
             let cervezas = await db.Beers.findAll(
-                {include: [{association:'estilo'}]},{ 
+                {include: [{association:'estilo'}],
                 where: {
-                  deleted_at:{
-                    [Op.is]:null
-                  }
-                }})
+                    deleted_at:{
+                      [Op.is]:null
+                    }
+                  } 
+                }
+                )
             
             
                 await cervezas.forEach(element => {
@@ -34,12 +36,9 @@ module.exports = {
     },
     find: async (req, res) =>{
 
-        let birra = await db.Beers.findByPk(req.params.id, {
-          include: 
-          [
-              { association: 'estilo'}
-          ]
-      })
+        let birra = await db.Beers.findByPk(req.params.id,
+            {include: [{association:'estilo'}]
+          })
 
       await birra.setDataValue('endpoint','/api/birras/'+birra.id)
 

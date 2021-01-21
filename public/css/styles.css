@@ -733,7 +733,7 @@ fin de base */
     justify-content: center;
     align-items: center;
     width: 45%;
-    padding:2% 2%;
+    padding:4% 4%;
 }
 
 .cont__img__producto--pp{
@@ -1726,7 +1726,7 @@ ojo con este que se usa en varios lados */
 
     /* ESTILOS PARA HOME */
     .cont__producto{
-        width: 22%;
+        width: 26%;
     }
 
     .bloque__productos{

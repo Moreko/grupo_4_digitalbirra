@@ -8,7 +8,7 @@
     <main class="contenedorPerfil">
       
         <section class="menuPerfil">
-            <p class="contenedorPerfil__saludo">Hola <%= usuarioActivo.nombre +" "+ usuarioActivo.apellido%> !! </p> 
+            <p class="contenedorPerfil__saludo">Hola <%= usuarioActivo.nombre.charAt(0).toUpperCase() + usuarioActivo.nombre.slice(1) +" "+ usuarioActivo.apellido.charAt(0).toUpperCase() + usuarioActivo.apellido.slice(1)%> !! </p> 
         
         
          

@@ -6,7 +6,7 @@ router.get('/', birraAPIController.list)
 
 router.get('/buscar', birraAPIController.findName)
 
-router.get('/:id', birraAPIController.find)
+router.get('/:id?', birraAPIController.find)
 
 
 
