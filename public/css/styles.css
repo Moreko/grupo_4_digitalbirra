@@ -18,6 +18,7 @@ sumar a la base */
     color:whitesmoke;
 }
 
+
 html {
     font-size: calc(12px + (24 - 12) * ((100vw - 200px) / (1024 - 200)));
  }
@@ -1358,7 +1359,12 @@ ojo con este que se usa en varios lados */
     justify-content: end;
 }
 
-.cont__btn__agregar--pp {
+.cont__btn__agregar--pp{
+    display: flex;
+    flex-direction: row;
+}
+
+.cont__btn__agregar--detalle{
     display: flex;
     flex-direction: column;
 }
@@ -1374,15 +1380,18 @@ ojo con este que se usa en varios lados */
     border: grey solid .3vh;
     padding:4%;
     margin: 0.4vh;
-    width:5vh;
+    width:7vh;
     height: 5vh;
-    font-size: 2rem;
+    font-size: 1.4rem;
     color:#ffffff;
     transition: 0.3s all;
+    cursor: pointer;
 }
+
 
 .btn--cant:nth-child(2){
     font-size: 1.2rem;
+    text-align: center;
 }
 
 

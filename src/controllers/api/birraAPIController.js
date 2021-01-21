@@ -21,18 +21,29 @@ module.exports = {
             
                 await cervezas.forEach(element => {
                     element.setDataValue('endpoint','/api/birras/'+element.id)
-                    
                 });
+
+                var valorTotal = 0
+
+                await cervezas.forEach(element =>{
+                    valorTotal += element.precio + element.stock
+                })
 
             let respuesta = {
                 meta:{
                     status:200,
-                    total: cervezas.length
+                    total: cervezas.length,
+                    valorTotal: valorTotal
                 },
                 data: cervezas
             }
             res.json(respuesta)
         
+    },
+
+    listEstilo: async(req,res)=>{
+        let estilos = await db.Estilos.findAll()
+        res.json(estilos)
     },
     find: async (req, res) =>{
 

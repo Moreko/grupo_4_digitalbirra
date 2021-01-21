@@ -1,13 +1,20 @@
-const sumarButton = document.querySelector('.agregar')
+const minusButton = document.getElementById('menos');
+const plusButton = document.getElementById('mas');
+const inputField = document.getElementById('input');
 
-document.querySelectorAll('.agregar').forEach(item => {
-    item.addEventListener('click', event => {
-      alert('hola')
-    })
-  })
+minusButton.addEventListener('click', event => {
+  event.preventDefault();
+  const currentValue = Number(inputField.value);
+  if (currentValue >1){
+    inputField.value = currentValue - 1;
+  }
+});
 
-  document.querySelectorAll('.menos').forEach(item => {
-    item.addEventListener('click', event => {
-      alert('adios')
-    })
-  })
+plusButton.addEventListener('click', event => {
+  event.preventDefault();
+  const currentValue = Number(inputField.value);
+  if (currentValue < 20){
+
+    inputField.value = currentValue + 1;
+  }
+});
