@@ -924,6 +924,14 @@ ojo con este que se usa en varios lados */
 .btn--cant:hover{
     color:#86C232;
 }
+.btn--cant:input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+  margin: 0;
+}
+.btn--cant{
+    -moz-appearance: textfield;
+    
+}
 
 
 .btn--agregar{
