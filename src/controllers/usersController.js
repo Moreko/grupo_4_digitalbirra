@@ -80,7 +80,7 @@ module.exports = {
             where:{
             [Op.and]:[{usuario_id: req.session.usuarioLogueado.id}]
           }})
-          console.log(compras);
+         
         res.render("perfilusuario", {compras})
       },
     

@@ -9,37 +9,47 @@ module.exports = {
     list: async (req,res)=>{
 
             let cervezas = await db.Beers.findAll(
-                {include: [{association:'estilo'}]},{ 
+                {include: [{association:'estilo'}],
                 where: {
-                  deleted_at:{
-                    [Op.is]:null
-                  }
-                }})
+                    deleted_at:{
+                      [Op.is]:null
+                    }
+                  } 
+                }
+                )
             
             
                 await cervezas.forEach(element => {
                     element.setDataValue('endpoint','/api/birras/'+element.id)
-                    
                 });
+
+                var valorTotal = 0
+
+                await cervezas.forEach(element =>{
+                    valorTotal += element.precio + element.stock
+                })
 
             let respuesta = {
                 meta:{
                     status:200,
-                    total: cervezas.length
+                    total: cervezas.length,
+                    valorTotal: valorTotal
                 },
                 data: cervezas
             }
             res.json(respuesta)
         
     },
+
+    listEstilo: async(req,res)=>{
+        let estilos = await db.Estilos.findAll()
+        res.json(estilos)
+    },
     find: async (req, res) =>{
 
-        let birra = await db.Beers.findByPk(req.params.id, {
-          include: 
-          [
-              { association: 'estilo'}
-          ]
-      })
+        let birra = await db.Beers.findByPk(req.params.id,
+            {include: [{association:'estilo'}]
+          })
 
       await birra.setDataValue('endpoint','/api/birras/'+birra.id)
 

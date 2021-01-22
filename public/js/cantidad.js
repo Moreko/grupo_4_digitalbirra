@@ -1,4 +1,6 @@
-const sumarButton = document.querySelector('.agregar')
+const minusButton = document.getElementById('menos');
+const plusButton = document.getElementById('mas');
+const inputField = document.getElementById('input');
 
 document.querySelectorAll('.agregar').forEach(item => {
     item.addEventListener('click', event => {
