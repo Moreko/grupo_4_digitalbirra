@@ -2,12 +2,8 @@
 <html lang="en">
     <%-include('./partials/head.ejs')%>
 <body>
-<<<<<<< HEAD
-<script src="/js/cantidad.js" defer></script>
-=======
      <script src="/js/cantidad.js" defer></script>
 <!-- <script src="/js/carrito.js" defer></script> -->
->>>>>>> 4f72dfeae087e03037ddaa7dd75c41c5c60373e4
 <section class="contenedorApp">
     <%-include('./partials/header.ejs')%>
 
@@ -41,20 +37,14 @@
                 </article>
                 
                 <% if (!admin){ %> 
-                <form class="cont__btn__agregar--pp--detalle"  action="/products/agregarcarrito" method="POST">
+                <form class="cont__btn__agregar--pp"  action="/products/agregarcarrito" method="POST">
                     <section class="cont__cantidad--pp">
-<<<<<<< HEAD
-                        <a class="mas btn--cant" id="mas">+</a>
-                        <input readonly class="input btn--cant detallesumar" type="number" min="1" max="20" value=1 name="cantidad" id="input">
-                        <a class="menos btn--cant" id="menos">-</a>
-=======
                         <a class="agregar btn--cant">+</a>
                         <input class="btn--cant" type="number" min="1" value=1 name="cantidad">
                         <a class="menos btn--cant">-</a>
->>>>>>> 4f72dfeae087e03037ddaa7dd75c41c5c60373e4
                     </section>
-                    <input type="hidden" value=1 name="cantidad">
-                    <input type="hidden" value=<%= birra.id %> name="beer_id">
+                    <input style="display: none;" type="number" value=1 name="cantidad">
+                    <input style="display: none;" type="number" value=<%= birra.id %> name="beer_id">
                     <input type="submit" value="Agregar" class="btn--agregar">
                      
                 </form>

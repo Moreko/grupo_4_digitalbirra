@@ -18,7 +18,6 @@ sumar a la base */
     color:whitesmoke;
 }
 
-
 html {
     font-size: calc(12px + (24 - 12) * ((100vw - 200px) / (1024 - 200)));
  }
@@ -734,7 +733,7 @@ fin de base */
     justify-content: center;
     align-items: center;
     width: 45%;
-    padding:4% 4%;
+    padding:2% 2%;
 }
 
 .cont__img__producto--pp{
@@ -923,14 +922,6 @@ ojo con este que se usa en varios lados */
 
 .btn--cant:hover{
     color:#86C232;
-}
-.btn--cant:input::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-  margin: 0;
-}
-.btn--cant{
-    -moz-appearance: textfield;
-    
 }
 
 
@@ -1367,12 +1358,7 @@ ojo con este que se usa en varios lados */
     justify-content: end;
 }
 
-.cont__btn__agregar--pp{
-    display: flex;
-    flex-direction: row;
-}
-
-.cont__btn__agregar--detalle{
+.cont__btn__agregar--pp {
     display: flex;
     flex-direction: column;
 }
@@ -1388,18 +1374,15 @@ ojo con este que se usa en varios lados */
     border: grey solid .3vh;
     padding:4%;
     margin: 0.4vh;
-    width:7vh;
+    width:5vh;
     height: 5vh;
-    font-size: 1.4rem;
+    font-size: 2rem;
     color:#ffffff;
     transition: 0.3s all;
-    cursor: pointer;
 }
-
 
 .btn--cant:nth-child(2){
     font-size: 1.2rem;
-    text-align: center;
 }
 
 
@@ -1743,7 +1726,7 @@ ojo con este que se usa en varios lados */
 
     /* ESTILOS PARA HOME */
     .cont__producto{
-        width: 26%;
+        width: 22%;
     }
 
     .bloque__productos{

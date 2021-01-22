@@ -2,6 +2,7 @@
 <html lang="en">
 <%-include('./partials/head.ejs')%>
 <body>
+    <script src="/js/cantidad.js" defer></script>
     <section  class="contenedorApp">
 
     <%-include('./partials/header.ejs')%>
@@ -48,10 +49,12 @@
                 
                 <% if (typeof admin == 'undefined'){ %> 
                     <form class="cont__btn__agregar--pp" action="/products/agregarcarrito" method="POST">
-                
-                        <input class="input btn--cant" type="number" min="1" max="20" value=1 name="cantidad">
-                      
-                        <input type="hidden" value=<%=element.id%> name="beer_id">
+                        <section class="cont__cantidad--pp">
+                            <a class="agregar btn--cant">+</a>
+                            <input class="btn--cant" type="number" min="1" value=1 name="cantidad">
+                            <a class="menos btn--cant">-</a>
+                        </section>
+                        <input style="display: none;" type="number" value=<%=element.id%> name="beer_id">
                        
                         <input type="submit" value="Agregar" class="btn--agregar">
                          
