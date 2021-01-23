@@ -1516,8 +1516,34 @@ ojo con este que se usa en varios lados */
 .intfoto:hover{
     filter: grayscale(0%);
 }
+.contErrores{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.contImgError{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto--err{
+    width: 25%;
+    transition: 0.5s all;
+    filter: saturate(0);
+}
+
+.producto--err:hover{
+    width: 24%;
+    filter: saturate(100);
+}
 
 @media (min-width: 900px){
+
 
     .avatar{
         width: 10%;
