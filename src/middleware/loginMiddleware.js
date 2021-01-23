@@ -17,7 +17,7 @@ module.exports = [
         
     })
     if (usuarioALoguearse == null ) {
-        return Promise.reject('El email ingresado no es un usuario existente')
+        // return Promise.reject('El email ingresado no es un usuario existente')
     } else {
         return true
     }
@@ -49,7 +49,7 @@ body('logPassword')
         } 
     } 
     
-    return Promise.reject('La contraseña ingresada no es correcta')
+    return Promise.reject('Las credenciales son incorrectas')
     
 })
 ]
