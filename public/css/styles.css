@@ -1159,6 +1159,7 @@ ojo con este que se usa en varios lados */
 }
 
 .reg--input{
+    /* all: unset; */
     background-color: #2b2b2b;
     font-family: 'Industry';
     border: none;
@@ -1541,6 +1542,7 @@ ojo con este que se usa en varios lados */
     width: 24%;
     filter: saturate(100);
 }
+
 
 @media (min-width: 900px){
 
