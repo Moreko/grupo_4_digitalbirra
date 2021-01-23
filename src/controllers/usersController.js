@@ -81,7 +81,8 @@ module.exports = {
             [Op.and]:[{usuario_id: req.session.usuarioLogueado.id}]
           }})
          
-        res.render("perfilusuario", {compras})
+          let usuario = await db.Usuarios.findOne({where:{id: req.session.usuarioLogueado.id} })
+        res.render("perfilusuario", {compras, usuario})
       },
     
     modificarUsuario:(req,res)=>{
@@ -98,9 +99,8 @@ module.exports = {
           }})
 
         await UserModif.update(req.body)
-        res.locals.usuarioActivo  = req.body
-        //actualizar los datos
-        res.render('perfilUsuario')    
+        req.session.usuarioLogueado = await {...res.locals.usuarioActivo, ...req.body}
+        res.redirect('/')   
         }else{
             res.render('modifUsuario',{Usererrors:Usererrors.errors})
         }

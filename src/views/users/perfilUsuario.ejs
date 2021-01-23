@@ -8,7 +8,7 @@
     <main class="contenedorPerfil">
       
         <section class="menuPerfil">
-            <p class="contenedorPerfil__saludo">Hola <%= usuarioActivo.nombre.charAt(0).toUpperCase() + usuarioActivo.nombre.slice(1) +" "+ usuarioActivo.apellido.charAt(0).toUpperCase() + usuarioActivo.apellido.slice(1)%> !! </p> 
+            <p class="contenedorPerfil__saludo">Hola <%= usuario.nombre.charAt(0).toUpperCase() + usuario.nombre.slice(1) +" "+ usuario.apellido.charAt(0).toUpperCase() + usuario.apellido.slice(1)%> !! </p> 
         
         
          
@@ -16,7 +16,7 @@
 
                 <a class="btn--volver" href="/">Volver al inicio</a>
 
-             <img src="/img/avatars/<%= usuarioActivo.imagen%>" alt="la imagen" class="avatar">
+             <img src="/img/avatars/<%= usuario.imagen%>" alt="la imagen" class="avatar">
         </section>   
     
            <p class=historialUsuario>Historial</p>

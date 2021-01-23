@@ -42,9 +42,6 @@ body('logPassword')
             delete elUsuario.password
             delete elUsuario.admin
             req.session.usuarioLogueado = elUsuario
-            // //aunque sea hasheado lo saco de lo que se pasa a session
-            // delete elUsuario.password, lo intenté pero se rompe todo,  
-            //illegal arguments string undefined bcrypt pareciería ser un tema de scopes
             return true
         } 
     } 
