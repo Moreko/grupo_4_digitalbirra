@@ -21,7 +21,7 @@ Para correr el proyecto:
 
 Juan Ignacio de San Martin: Realizador audiovisual, camarógrafo, fotógrafo y editor. Bartender y gran conocedor de vinos y cervezas.
 
-Juan José Moreno: Técnico de sonido de shows de música, en vivo y en estudio de grabación. También con experiencia, entre otras cosas, en producción de conciertos, y campañas de search/youtube en google ads.
+Juan José Moreno: Técnico de sonido de shows de música en vivo, y en estudio de grabación. Músico, DJ, y con experiencia en producción de conciertos y campañas de search/youtube en google ads.
 
 Rodrigo Toblli: diseñador de imagen y sonido, violinista y animador/editor audiovisual. A veces compositor de temas para instrumentos de cuerda. 
 
