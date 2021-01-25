@@ -43,7 +43,6 @@ let cols ={
     }
 }
     let config = {
-    paranoid:true,
     tableName: 'beers',
 }
 
