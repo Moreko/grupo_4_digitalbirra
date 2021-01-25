@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 var bcrypt = require("bcryptjs")
 
-const {body} = require('express-validator');
+const {body, check} = require('express-validator');
 const db = require('../database/models')
 
 // const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
@@ -49,13 +49,6 @@ module.exports = [
                 return true
             }
                 return false
-        }).withMessage('Los passwords deben coincidir'),
-    body('laimagen')
-        .custom(function (value, {req}){
-            if (req.body.laimagen == null){
-                return Promise.reject('Debes ingresar una imagen para tu perfil')
-        } else {
-            return true
-        }
-        })
+        }).withMessage('Los passwords deben coincidir')
+
 ]
