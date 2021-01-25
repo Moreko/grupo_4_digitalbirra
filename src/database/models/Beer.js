@@ -40,14 +40,10 @@ let cols ={
     },
     imagen:{
         type: dataTypes.STRING
-    },
-    deleted_at:{
-        type: dataTypes.DATE
     }
 }
     let config = {
-    paranoid: true,
-    timestamps:false,
+    paranoid:true,
     tableName: 'beers',
 }
 
