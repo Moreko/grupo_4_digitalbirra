@@ -49,5 +49,13 @@ module.exports = [
                 return true
             }
                 return false
-        }).withMessage('Los passwords deben coincidir')
+        }).withMessage('Los passwords deben coincidir'),
+    body('laimagen')
+        .custom(function (value, {req}){
+            if (req.body.laimagen == null){
+                return Promise.reject('Debes ingresar una imagen para tu perfil')
+        } else {
+            return true
+        }
+        })
 ]
