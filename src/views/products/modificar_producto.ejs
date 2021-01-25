@@ -2,6 +2,8 @@
 <html lang="en">
 <%-include('./partials/head.ejs')%>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="/js/modifAlerts.js" defer></script>
     <section  class="contenedorApp">
 
     <%-include('./partials/header.ejs')%>
@@ -66,10 +68,9 @@
             <input class="reg--input subirImg" type="file" name="imagen" id="laimagen" accept="image/*">
             <!-- Submit -->
             <input onclick="return confirm('¿Estás seguro que querés modificar este producto?');" class="reg--submit" type="submit" value="GUARDAR" autofocus>            
-        
         </form>
-        <form class="elFormDelete" action="/products/form/<%=modifbirra.id%>/borrar?_method=DELETE" method="POST">
-            <input onclick="return confirm('¿Estás seguro que querés borrar este producto?');" class="reg--submit--eliminar" type="submit" value="ELIMINAR" autofocus>
+        <form id='elFormDelete' class="elFormDelete" action="/products/form/<%=modifbirra.id%>/borrar?_method=DELETE" method="POST">
+            <input id="eliminar"  class="reg--submit--eliminar" type="submit" value="ELIMINAR" autofocus>
         </form>
 
     </main>
@@ -77,5 +78,6 @@
     <%-include('./partials/footer.ejs')%>
     
 </section>
+<!-- <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script> -->
 </body>
 </html>

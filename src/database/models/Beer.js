@@ -46,8 +46,9 @@ let cols ={
     }
 }
     let config = {
+    paranoid: true,
+    timestamps:false,
     tableName: 'beers',
-    timestamps: false
 }
 
 
