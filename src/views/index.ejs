@@ -2,7 +2,9 @@
 <html lang="en">
 <%-include('./partials/head.ejs')%>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="/js/cantidad.js" defer></script>
+    <script src="/js/haberAgregado.js" defer></script>
     <section  class="contenedorApp">
 
     <%-include('./partials/header.ejs')%>
@@ -56,13 +58,17 @@
                         </section>
                         <input style="display: none;" type="number" value=<%=element.id%> name="beer_id">
                        
-                        <input type="submit" value="Agregar" class="btn--agregar">
+                        <input type="submit" value="Agregar" class=<%=usuarioActivo ? "sarasa" : "btn--agregar"%>>
                          
                     </form>
                          <%} else { %> 
+
                          <section>
-                             <a class="btn--agregar" href="/products/modificarForm/<%=element.id%> ">Modificar</a>
+
+                             <a  class="btn--agregar" href="/products/modificarForm/<%=element.id%> ">Modificar</a>
                        </section>
+            
+
                         <% } %> 
                 
             </article>

@@ -9,13 +9,12 @@ const modifBirra = document.getElementById('modificar')
 eliminarBirra.addEventListener('click', (e)=>{
     e.preventDefault()
     Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        title: 'Estas seguro de que queres eliminar?',
         icon: 'question',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonColor: ' #61892F',
+        cancelButtonColor: ' #ff6347',
+        confirmButtonText: 'Sí, borrá nomás!'
       }).then((result) => {
         if (result.isConfirmed) {
          const elForm = document.getElementById('elFormDelete')
@@ -28,12 +27,11 @@ modifBirra.addEventListener('click', (e)=>{
   e.preventDefault()
   Swal.fire({
       title: 'Estas seguro de que queres modificar?',
-      text: "You won't be able to revert this!",
       icon: 'question',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Sí, desde ya!'
+      confirmButtonColor: ' #61892F',
+        cancelButtonColor: ' #ff6347',
+        confirmButtonText: 'Sí, modificá nomás!'
     }).then((result) => {
       if (result.isConfirmed) {
        const elForm = document.getElementById('elFormModif')

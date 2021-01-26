@@ -1364,6 +1364,22 @@ ojo con este que se usa en varios lados */
     flex-direction: column;
 }
 
+.sarasa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Industry';
+    background-color: black;
+    border: grey solid .3vh;
+    padding:4%;
+    margin: 0.4vh;
+    width:5vh;
+    height: 5vh;
+    font-size: 2rem;
+    color:#ffffff;
+    transition: 0.3s all;
+    cursor: pointer;
+}
 
 
 .btn--cant{
@@ -1380,12 +1396,19 @@ ojo con este que se usa en varios lados */
     font-size: 2rem;
     color:#ffffff;
     transition: 0.3s all;
+    cursor: pointer;
 }
 
 .btn--cant:nth-child(2){
     font-size: 1.2rem;
 }
+.sarasa:nth-child(2){
+    font-size: 1.2rem;
+}
 
+.sarasa:hover{
+    color:#86C232;
+}
 
 .btn--cant:hover{
     color:#86C232;
@@ -1805,6 +1828,11 @@ ojo con este que se usa en varios lados */
     .btn--agregar{
         font-size: .7rem;
     }
+    .sarasa{
+        font-size: .7rem;
+        width: 100%;
+    }
+
 
     .cont__select__venTodas{
         justify-content: center;

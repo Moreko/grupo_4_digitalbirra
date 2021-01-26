@@ -50,5 +50,4 @@ module.exports = [
             }
                 return false
         }).withMessage('Los passwords deben coincidir')
-
 ]
