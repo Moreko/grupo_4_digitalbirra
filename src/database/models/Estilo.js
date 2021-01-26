@@ -1,41 +1,40 @@
-
 const moment = require('moment')
 
-module.exports = (sequelize, dataTypes) =>{
+module.exports = (sequelize, dataTypes) => {
 
-let alias =  'Estilos';
+    let alias = 'Estilos';
 
-let cols ={
-    id:{
-        type: dataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-    },
-    nombre:{
-        type: dataTypes.STRING
-    },
-    deleted_at:{
-        type: dataTypes.DATE
+    let cols = {
+        id: {
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        nombre: {
+            type: dataTypes.STRING
+        },
+        deleted_at: {
+            type: dataTypes.DATE
+        }
     }
-}
     let config = {
-    tableName: 'estilos',
-    timestamps: false
-}
+        tableName: 'estilos',
+        timestamps: false
+    }
 
 
-const Estilo = sequelize.define(alias,cols,config);
+    const Estilo = sequelize.define(alias, cols, config);
 
-Estilo.associate = function(models){
-    Estilo.hasMany(models.Beers,{
-        as: "estilo",
-        foreignKey: "id",
-    })
-}
-
-
+    Estilo.associate = function(models) {
+        Estilo.hasMany(models.Beers, {
+            as: "estilo",
+            foreignKey: "id",
+        })
+    }
 
 
-return Estilo
+
+
+    return Estilo
 
 }

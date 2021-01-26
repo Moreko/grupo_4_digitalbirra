@@ -5,7 +5,7 @@ function submitForm(form) {
 
 document.querySelectorAll('.sarasa').forEach(item => {
     item.addEventListener('click', event => {
-   
+
         event.preventDefault()
         Swal.fire({
             html: '<pre class="elAlert">' + 'Sumado al carrito nomás' + '</pre>',
@@ -16,14 +16,14 @@ document.querySelectorAll('.sarasa').forEach(item => {
             confirmButtonColor: ' #61892F',
             confirmButtonText: 'Ok',
             customClass: {
-              popup: 'elAlert'
+                popup: 'elAlert'
             }
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-             const elForm= item.parentElement
-             submitForm(elForm)
+                const elForm = item.parentElement
+                submitForm(elForm)
             }
-          })
+        })
 
     })
-  })
+})

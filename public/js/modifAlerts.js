@@ -6,7 +6,7 @@ function submitForm(form) {
 const eliminarBirra = document.getElementById('eliminar')
 const modifBirra = document.getElementById('modificar')
 
-eliminarBirra.addEventListener('click', (e)=>{
+eliminarBirra.addEventListener('click', (e) => {
     e.preventDefault()
     Swal.fire({
         html: '<pre class="elAlert">' + '¿Estas seguro de que queres eliminar?' + '</pre>',
@@ -19,10 +19,10 @@ eliminarBirra.addEventListener('click', (e)=>{
         cancelButtonText: '<pre class="elAlert">' + 'No' + '</pre>'
       }).then((result) => {
         if (result.isConfirmed) {
-         const elForm = document.getElementById('elFormDelete')
-         submitForm(elForm)
+            const elForm = document.getElementById('elFormDelete')
+            submitForm(elForm)
         }
-      })
+    })
 })
 
 modifBirra.addEventListener('click', (e)=>{
@@ -38,9 +38,9 @@ modifBirra.addEventListener('click', (e)=>{
         confirmButtonText: '<pre class="elAlert">' + 'Sí, modificá nomás' + '</pre>',
         cancelButtonText: '<pre class="elAlert">' + 'No' + '</pre>'
     }).then((result) => {
-      if (result.isConfirmed) {
-       const elForm = document.getElementById('elFormModif')
-       submitForm(elForm)
-      }
+        if (result.isConfirmed) {
+            const elForm = document.getElementById('elFormModif')
+            submitForm(elForm)
+        }
     })
 })

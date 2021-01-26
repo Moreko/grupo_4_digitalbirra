@@ -5,6 +5,6 @@ const preindexController = require('../controllers/preindexController')
 
 router.get('/', preindexController.index)
 
-router.post('/',preindexController.mostrar)
+router.post('/', preindexController.mostrar)
 
 module.exports = router;

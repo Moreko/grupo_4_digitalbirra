@@ -1,56 +1,69 @@
-    <!DOCTYPE html>
-    <html lang="en">
-		<%-include('./partials/head.ejs')%>
+<!DOCTYPE html>
+<html lang="en">
+<%-include('./partials/head.ejs')%>
 
-	<body>
-	<section class="contenedorApp">
-		<!-- <script src="/js/carritoMostrar.js" defer></script> -->
-		<script src="/js/cantidad.js" defer></script>
+    <body>
+        <section class="contenedorApp">
+            <!-- <script src="/js/carritoMostrar.js" defer></script> -->
+            <script src="/js/cantidad.js" defer></script>
 
-		<%-include('./partials/header.ejs')%>
-		
-		<h2 class="mi_carrito">MI CARRITO</h2>
-		<article class="carrito_productos">
-				<%itemsFiltro.forEach(element => { %>
-					<article class="carrito__producto">
-						<a href="/products/<%= element.beer.id %>">
+            <%-include('./partials/header.ejs')%>
+
+                <h2 class="mi_carrito">MI CARRITO</h2>
+                <article class="carrito_productos">
+                    <%itemsFiltro.forEach(element => { %>
+                        <article class="carrito__producto">
+                            <a href="/products/<%= element.beer.id %>">
 						<img class="carrito_producto--img" src="/img/products/<%= element.beer.imagen %>" alt="birraA">
 						</a>
-						<article class="carrito_producto__info">
-							<p class= carrito_descripcion_nombre><%= element.beer.nombre + " "+ element.beer.ibu %>%</p>
-							<p class= carrito_descripcion> <%= element.beer.tamano %>ML</p>
-							<section class="carrito_precio">
-								<p class= carrito_descripcion>Unidad: $<%= element.beer.precio %></p>
-								<p class= carrito_descripcion>Cantidad: <%= element.cantidad %></p>
-								<p class= carrito_descripcion>Subtotal: $<%= element.subtotal %></p>
-							</section>
-							<form action="/products/sacar?_method=DELETE" method="POST">
-								<input type="number" style="display: none;" name="id" value=<%= element.id %>>
-								<input type="submit" value="borrar" class="item_borrar">
-							</form>	
-						</article>
-					</article>
-				  <% }); %>
-				
-		</article>
-		
-		<article class="carrito_total">
-			<p class="carrito_total_total">items: <%= cantidad %></p>
-			<p class= "carrito_total_precio">$<%= total %></p>
-		</article>
-		<% if(itemsFiltro.length != 0){%>
-			<form action="/products/comprar" method="POST">
-				<input class="boton_comprar" value="COMPRAR" type="submit">
-			</form>
-			<%} else {%>
-				<a class="btn--volver" href="/">Volver al inicio</a>
-				<% } %> 
-				
-	</section>
-	
+                            <article class="carrito_producto__info">
+                                <p class=c arrito_descripcion_nombre>
+                                    <%= element.beer.nombre + " "+ element.beer.ibu %>%</p>
+                                <p class=c arrito_descripcion>
+                                    <%= element.beer.tamano %>ML</p>
+                                <section class="carrito_precio">
+                                    <p class=c arrito_descripcion>Unidad: $
+                                        <%= element.beer.precio %>
+                                    </p>
+                                    <p class=c arrito_descripcion>Cantidad:
+                                        <%= element.cantidad %>
+                                    </p>
+                                    <p class=c arrito_descripcion>Subtotal: $
+                                        <%= element.subtotal %>
+                                    </p>
+                                </section>
+                                <form action="/products/sacar?_method=DELETE" method="POST">
+                                    <input type="number" style="display: none;" name="id" value=<%=e lement.id %>>
+                                    <input type="submit" value="borrar" class="item_borrar">
+                                </form>
+                            </article>
+                        </article>
+                        <% }); %>
 
-	<%-include('./partials/footer.ejs')%>
-			
-</section>
-</body>
+                </article>
+
+                <article class="carrito_total">
+                    <p class="carrito_total_total">items:
+                        <%= cantidad %>
+                    </p>
+                    <p class="carrito_total_precio">$
+                        <%= total %>
+                    </p>
+                </article>
+                <% if(itemsFiltro.length != 0){%>
+                    <form action="/products/comprar" method="POST">
+                        <input class="boton_comprar" value="COMPRAR" type="submit">
+                    </form>
+                    <%} else {%>
+                        <a class="btn--volver" href="/">Volver al inicio</a>
+                        <% } %>
+
+        </section>
+
+
+        <%-include('./partials/footer.ejs')%>
+
+            </section>
+    </body>
+
 </html>

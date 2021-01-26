@@ -12,18 +12,20 @@
             <a class="linksMenu--a home" href="/">+ Home</a>
             <a class="linksMenu--a sobre" href="/sobre_nosotros">+ Sobre nosotros</a>
             <a class="linksMenu--a faq" href="/faq">+ Preguntas frecuentes</a>
-            <a class="linksMenu--a login" href=<%=typeof usuarioActivo.nombre != "undefined" ?"/users/perfil" :"/users/login"%>><%= typeof usuarioActivo.nombre != "undefined" ?"+ Mi perfil":"+ Ingresá"%></a>
+            <a class="linksMenu--a login" href=<%=typeof usuarioActivo.nombre !="undefined" ? "/users/perfil" : "/users/login"%>><%= typeof usuarioActivo.nombre != "undefined" ?"+ Mi perfil":"+ Ingresá"%></a>
             <% if(usuarioAdmin){%>
                 <a class="linksMenu--a" href="/products/createForm"> + Crear producto</a>
-            <%}%>
-            <a class="linksMenu--a registro" href=<%=typeof usuarioActivo.nombre != "undefined" ?"/users/logout" :"/users/registro"%>><%= typeof usuarioActivo.nombre != "undefined" ?"+ Cerrar sesión" :"+ Registrate"%></a>
-            <a class="linksMenu--a carrito" href="/products/carrito">+ Carrito</a>
-            <img class="x_menu" src="/img/laX.svg" alt="laX" onclick="toggleClass()">
+                <%}%>
+                    <a class="linksMenu--a registro" href=<%=typeof usuarioActivo.nombre !="undefined" ? "/users/logout" : "/users/registro"%>><%= typeof usuarioActivo.nombre != "undefined" ?"+ Cerrar sesión" :"+ Registrate"%></a>
+                    <a class="linksMenu--a carrito" href="/products/carrito">+ Carrito</a>
+                    <img class="x_menu" src="/img/laX.svg" alt="laX" onclick="toggleClass()">
         </section>
 
-        
 
-        <section class="navBar__contenedor--logo"><a href="/"><img class="logo-navBar" src="/img/LogoA.svg" alt="Logo Digital Birra"></a></section>
+
+        <section class="navBar__contenedor--logo">
+            <a href="/"><img class="logo-navBar" src="/img/LogoA.svg" alt="Logo Digital Birra"></a>
+        </section>
         <section class="navBar__faq--carrito">
             <a href="/faq">
                 <img class="navBar--imagenes" src="/img/question.svg" alt="question">
@@ -33,7 +35,7 @@
             </a>
         </section>
     </nav>
-    
+
     <section class="buscador">
         <form class="buscador__formulario" action="/products/lobuscado" method="POST">
             <input name="labusqueda" class="buscador__formulario--input" type="text" placeholder="encontrá tu cerveza.." autofocus>

@@ -1,46 +1,46 @@
 /* 
 sumar a la base */
 
-
-@font-face{
+@font-face {
     font-family: 'Industry';
     src: url(".././fonts/Industry.ttf") format("truetype");
 }
 
-/* Base */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
+/* Base */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
-    color:whitesmoke;
+    color: whitesmoke;
 }
 
 html {
     font-size: calc(12px + (24 - 12) * ((100vw - 200px) / (1024 - 200)));
- }
- 
+}
 
-.avatar{
+.avatar {
     margin: 5%;
     width: 20%;
 }
-.elAlert{
+
+.elAlert {
     font-family: "Quicksand";
     font-size: 1rem;
 }
 
-.historialUsuario{
+.historialUsuario {
     font-family: 'Industry';
-    color:#86C232;
+    color: #86C232;
     font-size: 1.5 rem;
     padding: 4vh;
 }
 
-.bloque__compras{
+.bloque__compras {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +48,7 @@ html {
     width: 80%;
 }
 
-.compra__info{
+.compra__info {
     width: 100%;
     border: solid grey .07vh;
     display: flex;
@@ -57,7 +57,7 @@ html {
     justify-content: center;
 }
 
-.contenedorApp{
+.contenedorApp {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,11 +65,11 @@ html {
     min-height: 60vh;
     width: 100%;
     font-family: 'Quicksand', sans-serif;
-    background-color:rgb(20, 20, 20);
+    background-color: rgb(20, 20, 20);
     overflow-x: hidden;
 }
 
-.contenedorPreIntro{
+.contenedorPreIntro {
     background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
@@ -80,7 +80,7 @@ html {
     font-family: 'Industry';
 }
 
-.cont__intro--logo{
+.cont__intro--logo {
     position: relative;
     fill: transparent;
     cursor: pointer;
@@ -90,61 +90,63 @@ html {
     transform: translateX(-.7vw);
 }
 
-.st2l, .st2r, .st1, .st0{
+.st2l,
+.st2r,
+.st1,
+.st0 {
     stroke-dasharray: 500;
     stroke-dashoffset: 0;
     animation: intro 25s ease-in-out infinite;
 }
 
-.st1{
+.st1 {
     position: absolute;
     transition: .6s ease-in-out;
 }
 
-
-.cont__intro--logo:hover > .st1{
-    fill:  #60892f;
+.cont__intro--logo:hover>.st1 {
+    fill: #60892f;
     opacity: 1;
 }
 
-.lupuloAnim{
-    fill:  #60892f;
+.lupuloAnim {
+    fill: #60892f;
     opacity: 1;
 }
 
-.st2r, .st2l{
+.st2r,
+.st2l {
     transition: 1.4s ease-out;
-    transform: translate(40px,0px);
+    transform: translate(40px, 0px);
 }
 
-.st2r{
-    transform: translate(-40px,0px);
+.st2r {
+    transform: translate(-40px, 0px);
 }
 
-.formFiltroHome{
+.formFiltroHome {
     width: 100%;
 }
 
-
-.cont__intro--logo:hover .st2r{
-    fill:  grey;
-    transform: translate(0px,0px);
+.cont__intro--logo:hover .st2r {
+    fill: grey;
+    transform: translate(0px, 0px);
     opacity: .7;
 }
 
-.cont__intro--logo:hover .st2l{
-    fill:  grey;
-    transform: translate(0px,0px);
+.cont__intro--logo:hover .st2l {
+    fill: grey;
+    transform: translate(0px, 0px);
     opacity: .7;
 }
 
-.corchetes{
-    fill:  grey;
-    transform: translate(0px,0px);
+.corchetes {
+    fill: grey;
+    transform: translate(0px, 0px);
     opacity: .7;
 }
 
-.formSoyMayor{
+.formSoyMayor {
     display: flex;
     position: relative;
     width: 100%;
@@ -153,14 +155,14 @@ html {
     justify-content: center;
 }
 
-.soyMayor--input{
+.soyMayor--input {
     all: unset;
     /* height: 10%; */
     appearance: none;
     border: 1% solid #cacece;
     padding: 4%;
     opacity: .7;
-	border-radius: 3%;
+    border-radius: 3%;
     background-color: #86C232;
     transform: scale(1);
     position: absolute;
@@ -171,38 +173,36 @@ html {
     /* display: none; */
 }
 
-.soyMayor--input:hover{
+.soyMayor--input:hover {
     background-color: white;
 }
 
-.soyMayor--input:active, .soyMayor--input:checked:active {
-	opacity: 1;
-}
-
-.soyMayor--input:checked {
-	background-color: #e9ecee;
-	border: 1% solid #adb8c0;
-	color: #99a1a7;
-}
-
-.soyMayor--input:checked:after {
-	content: '\2714';
-	font-size: 2rem;
-    position: absolute;
-    right: 0%;
-	bottom: -15%;
-	color: #46853a;
-}
-
-
-.cont__intro--logo:active >.st1{
-    fill:  transparent;
+.soyMayor--input:active,
+.soyMayor--input:checked:active {
     opacity: 1;
 }
 
+.soyMayor--input:checked {
+    background-color: #e9ecee;
+    border: 1% solid #adb8c0;
+    color: #99a1a7;
+}
 
+.soyMayor--input:checked:after {
+    content: '\2714';
+    font-size: 2rem;
+    position: absolute;
+    right: 0%;
+    bottom: -15%;
+    color: #46853a;
+}
 
-.intro--respuesta{
+.cont__intro--logo:active>.st1 {
+    fill: transparent;
+    opacity: 1;
+}
+
+.intro--respuesta {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -210,8 +210,7 @@ html {
     width: 60%;
 }
 
-
-.titl__preindex{
+.titl__preindex {
     font-size: 1.4rem;
     padding: 1%;
     display: flex;
@@ -227,43 +226,44 @@ html {
     width: 60%;
 }
 
-.titl__preindex:hover{
+.titl__preindex:hover {
     opacity: 1;
-    color:#86C232;
+    color: #86C232;
 }
+
 
 /* .titl__preindex > *{
     margin-bottom: 10%;
 } */
 
-.laX--intro{
+.laX--intro {
     width: 20%;
     transform: rotate(45deg);
     transition: .6s all;
 }
 
-.laX--intro:hover{
+.laX--intro:hover {
     transform: rotate(90deg);
 }
 
-
-.ingreso{
-    color:#86C232;
+.ingreso {
+    color: #86C232;
     transition: .6s all;
     padding-top: 10%;
     font-size: 1.2rem;
 }
-.ingreso:hover{
+
+.ingreso:hover {
     color: white;
     opacity: .6;
 }
 
-
-@keyframes intro{
-    0%, 100%{
+@keyframes intro {
+    0%,
+    100% {
         stroke-dashoffset: 0%;
     }
-    50%{
+    50% {
         stroke-dashoffset: 100%;
     }
 }
@@ -271,7 +271,7 @@ html {
 
 /* EMPIEZA HEADER */
 
-.cabeza{
+.cabeza {
     width: 100%;
 }
 
@@ -284,14 +284,13 @@ html {
     position: relative;
 }
 
-
 .navBar__menu {
-flex:1;
+    flex: 1;
 }
 
 .navBar__contenedor--logo {
     align-items: center;
-    flex:2;
+    flex: 2;
     display: flex;
     justify-content: center;
 }
@@ -303,7 +302,7 @@ flex:1;
     transition: .4s all;
 }
 
-.logo-navBar:hover{
+.logo-navBar:hover {
     opacity: 1;
 }
 
@@ -316,27 +315,25 @@ flex:1;
 }
 
 .navBar__faq {
-    flex:1;
+    flex: 1;
 }
 
 .navBar__carrito {
-    flex:1;
+    flex: 1;
 }
 
-.navBar--imagenes{
+.navBar--imagenes {
     width: 6vh;
     opacity: .7;
     transition: .4s all;
     margin-left: 5%;
 }
 
-.navBar--imagenes:hover{
+.navBar--imagenes:hover {
     opacity: 1;
 }
 
-
-
-.navBar__linksMenu{
+.navBar__linksMenu {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -352,27 +349,28 @@ flex:1;
     transition: 1s all;
 }
 
+
 /* .navBar:hover > .navBar__linksMenu{
     left: 0%;
     opacity: 1;
 } */
 
-.navBar__linksMenu.toggleCls{
+.navBar__linksMenu.toggleCls {
     left: 0%;
     opacity: 1;
 }
 
-.linksMenu--a{
+.linksMenu--a {
     padding-bottom: 9%;
     transition: .3s all;
 }
 
-.linksMenu--a:hover{
+.linksMenu--a:hover {
     font-size: 2.05rem;
-    color:#86C232;
+    color: #86C232;
 }
 
-.x_menu{
+.x_menu {
     position: absolute;
     bottom: 10%;
     right: 10%;
@@ -381,7 +379,7 @@ flex:1;
     cursor: pointer;
 }
 
-.x_menu:hover{
+.x_menu:hover {
     filter: grayscale(0);
     transform: rotate(90deg);
     width: 14%;
@@ -393,45 +391,46 @@ flex:1;
     font-size: 2rem;
     height: 5vh;
     align-items: center;
-    background-color:#3a3d3f;
+    background-color: #3a3d3f;
 }
 
 .buscador__formulario {
-  border-block-end-style: none; 
-  width: 100%; 
-  display: flex;
-  justify-items: center;
+    border-block-end-style: none;
+    width: 100%;
+    display: flex;
+    justify-items: center;
 }
 
-.buscador__formulario--input{
+.buscador__formulario--input {
     font-size: 1.4rem;
     width: 90%;
     margin-left: 4%;
     color: white;
     text-align: left;
-    border:none;
-    background-image:none;
-    background-color:transparent;
+    border: none;
+    background-image: none;
+    background-color: transparent;
     box-shadow: none;
     transform: 0.4s all;
     border-bottom: white solid 1px;
 }
-.buscador__formulario--input::placeholder{
-    color:white;    
-    opacity:100%;
+
+.buscador__formulario--input::placeholder {
+    color: white;
+    opacity: 100%;
 }
 
-.buscador__formulario--input:focus{
-    all:unset;
+.buscador__formulario--input:focus {
+    all: unset;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.4rem;
     width: 90%;
     margin-left: 4%;
     color: white;
     text-align: left;
-    border:none;
-    background-image:none;
-    background-color:transparent;
+    border: none;
+    background-image: none;
+    background-color: transparent;
     box-shadow: none;
     transform: 0.4s all;
     border-bottom: white solid 1px;
@@ -441,28 +440,27 @@ flex:1;
     border: none;
 }
 
-
-.buscador__lupa{
+.buscador__lupa {
     width: 3vh;
     margin-right: 2vh;
     transition: .4s all;
 }
 
-.buscador__lupa:hover{
+.buscador__lupa:hover {
     width: 3.6vh;
 }
 
-
-.buscadorModif{
+.buscadorModif {
     align-self: flex-end;
     width: 100%;
     height: 6vh;
     display: flex;
 }
 
+
 /* MENU BURGUER*/
 
-.menuHamburguesa{
+.menuHamburguesa {
     display: flex;
     flex-direction: column;
     width: 10vh;
@@ -474,11 +472,11 @@ flex:1;
     transition: .5s all;
 }
 
-.menuHamburguesa:active{
-    background-color:#61892F;
+.menuHamburguesa:active {
+    background-color: #61892F;
 }
 
-.menuHamburguesa > *{
+.menuHamburguesa>* {
     width: 70%;
     height: 6%;
     background-color: honeydew;
@@ -486,19 +484,19 @@ flex:1;
     transition: 1s all;
 }
 
-.menuHamburguesa:hover .barrita1{
+.menuHamburguesa:hover .barrita1 {
     margin: 0.1vh;
 }
 
-.menuHamburguesa:hover .barrita2{
+.menuHamburguesa:hover .barrita2 {
     width: 30%;
 }
 
-.menuHamburguesa:hover .barrita3{
+.menuHamburguesa:hover .barrita3 {
     margin: 0.1vh;
 }
 
-.menuHamburguesa:active > *{
+.menuHamburguesa:active>* {
     background-color: black;
 }
 
@@ -506,7 +504,8 @@ flex:1;
 /* 
 FIN DEL MENU */
 
-    /* HASTA ACA ES EL header */
+
+/* HASTA ACA ES EL header */
 
 .contenedorMain {
     width: 100%;
@@ -515,7 +514,7 @@ FIN DEL MENU */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:rgb(20, 20, 20);
+    background-color: rgb(20, 20, 20);
 }
 
 
@@ -529,7 +528,7 @@ FIN DEL MENU */
     align-items: center;
     /* height: 17vh; */
     font-size: 2rem;
-    background-color:#222629;
+    background-color: #222629;
     border-top: grey solid 1px;
     font-family: 'Quicksand', sans-serif;
 }
@@ -541,11 +540,11 @@ FIN DEL MENU */
     transition: .4s all;
 }
 
-.imagenFooter:hover{
+.imagenFooter:hover {
     opacity: .9;
 }
 
-.imagenFooter:active{
+.imagenFooter:active {
     width: 11vh;
 }
 
@@ -561,10 +560,7 @@ FIN DEL MENU */
 /* 
 fin de base */
 
-
-
-
-.cont__portada{
+.cont__portada {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -573,7 +569,7 @@ fin de base */
     background-color: black;
 }
 
-.cont__img__titl{
+.cont__img__titl {
     width: 100%;
     height: 27vw;
     position: relative;
@@ -584,7 +580,7 @@ fin de base */
     background-position-y: 50%;
 }
 
-.portada--titl{
+.portada--titl {
     /* font-family: 'Industry';
     font-size: 1.6rem; */
     width: 30%;
@@ -592,7 +588,7 @@ fin de base */
     text-align: center;
     left: 50%;
     top: 28%;
-    transform:translate(-50%);
+    transform: translate(-50%);
     transition: .4s all;
 }
 
@@ -602,14 +598,15 @@ fin de base */
     opacity: .9;
 }
 
+
 /* .portada--img{
     width: 100%;
     object-fit: none;
     object-position: 64% 35%;
 } */
 
-.select--tcerveza{
-    all:unset;
+.select--tcerveza {
+    all: unset;
     width: 90%;
     height: 4vh;
     color: #222629;
@@ -618,31 +615,29 @@ fin de base */
     text-align-last: center;
     border-style: none;
     cursor: pointer;
-    -moz-appearance:none;
+    -moz-appearance: none;
     transition: .4s all;
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
-
-.select--tcerveza:hover{
+.select--tcerveza:hover {
     color: #61892F;
     background-color: rgb(32, 32, 32);
 }
 
-
-.select--option{
-    all:unset;
+.select--option {
+    all: unset;
     background-color: #222629;
     text-align: center;
     font-size: 1.2rem;
     color: #61892F;
     font-family: 'Industry';
-    flex:3;
+    flex: 3;
     text-align-last: center;
 }
 
-.cont__select__venTodas{
+.cont__select__venTodas {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -651,7 +646,7 @@ fin de base */
     padding: 2%;
 }
 
-.btn--vent{
+.btn--vent {
     font-family: 'Industry';
     font-size: .7rem;
     width: 40%;
@@ -664,31 +659,30 @@ fin de base */
     transition: 0.3s all;
 }
 
-.btn--vent:hover{
+.btn--vent:hover {
     color: white;
     background-color: #6B6E70;
 }
 
-.section--titl{
+.section--titl {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 4vh;
     color: rgba(247, 247, 247, 0.527);
-    background-color:  #363737;;
+    background-color: #363737;
+    ;
     font-family: 'Industry';
     font-size: 1rem;
     transition: .4s all;
 }
 
-.section--titl:hover{
+.section--titl:hover {
     color: white;
-
 }
 
-
-.bloque__productos{
+.bloque__productos {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -696,11 +690,9 @@ fin de base */
     padding-top: 2vh;
     flex-wrap: wrap;
     width: 100%;
-    
 }
 
-
-.bloque__producto{
+.bloque__producto {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -717,7 +709,7 @@ fin de base */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:rgb(20, 20, 20);
+    background-color: rgb(20, 20, 20);
     background-image: url('.././img/lupuloOscuro.jpg');
 }
 
@@ -728,39 +720,43 @@ fin de base */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:rgb(20, 20, 20);
+    background-color: rgb(20, 20, 20);
     background-image: url('.././img/lupuloOscuro.jpg');
 }
-.cont__producto{
+
+.cont__producto {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 45%;
-    padding:2% 2%;
+    padding: 2% 2%;
 }
 
-.cont__img__producto--pp{
+.cont__img__producto--pp {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 65vw;
-    padding:2% 2%;
+    padding: 2% 2%;
 }
+
+
 /* 
 modificar desde el contenedor, esta clase está por todos lados */
-.producto--img{
+
+.producto--img {
     width: 100%;
     border: solid grey .07vh;
     transition: .5s all;
 }
 
-.producto--img:hover{
+.producto--img:hover {
     filter: saturate(2);
 }
 
-.producto__info{
+.producto__info {
     font-family: 'Industry';
     font-size: 1rem;
     width: 100%;
@@ -771,7 +767,7 @@ modificar desde el contenedor, esta clase está por todos lados */
     padding-top: 1.5vh;
 }
 
-.cont__titl__btn__agregar--pp{
+.cont__titl__btn__agregar--pp {
     font-family: 'Industry';
     width: 100%;
     display: flex;
@@ -781,7 +777,7 @@ modificar desde el contenedor, esta clase está por todos lados */
     padding-top: 1.5vh;
 }
 
-.producto__titl--pp{
+.producto__titl--pp {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -792,7 +788,8 @@ modificar desde el contenedor, esta clase está por todos lados */
     background-color: rgb(63, 63, 63);
     margin-bottom: 1vh;
 }
-.detalle_birra{
+
+.detalle_birra {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -800,54 +797,56 @@ modificar desde el contenedor, esta clase está por todos lados */
     margin-right: 0.66vh;
 }
 
-.precio--pp{
-    padding:2%;
+.precio--pp {
+    padding: 2%;
     color: #ffffff;
     background-color: #a08268;
     transition: .4s all;
 }
 
-.precio--pp:hover{
-    padding:2%;
+.precio--pp:hover {
+    padding: 2%;
     background-color: #6b6b6b;
     color: #a08268
 }
-.color_estilo-ipa{
-  display:block;
-  width: 100%;
-  height:6vh;
-background-color:#61892F;
-}
-.color_estilo-rubia{
-    background-color: #a87b0a;
-    display:block;
-  width: 100%;
-  height:6vh;
-}
-.color_estilo-negra{
-    background-color: #1a1a1a;
-    display:block;
-  width: 100%;
-  height:6vh;
-}
-.color_estilo-roja{
-    background-color: #7b0b0b;
-    display:block;
-  width: 100%;
-  height:6vh;
+
+.color_estilo-ipa {
+    display: block;
+    width: 100%;
+    height: 6vh;
+    background-color: #61892F;
 }
 
-.descripcion--pp{
+.color_estilo-rubia {
+    background-color: #a87b0a;
+    display: block;
+    width: 100%;
+    height: 6vh;
+}
+
+.color_estilo-negra {
+    background-color: #1a1a1a;
+    display: block;
+    width: 100%;
+    height: 6vh;
+}
+
+.color_estilo-roja {
+    background-color: #7b0b0b;
+    display: block;
+    width: 100%;
+    height: 6vh;
+}
+
+.descripcion--pp {
     font-size: 1.2rem;
     text-align: justify;
-    padding:0 10% 10% 10%;
+    padding: 0 10% 10% 10%;
     font-family: 'Quicksand', sans-serif;
     margin-top: 2vh;
 }
 
-
-
-.info--precioMl{
+.info--precioMl {
     font-family: 'Industry';
     display: flex;
     justify-content: space-between;
@@ -855,7 +854,7 @@ background-color:#61892F;
     margin-bottom: 8%;
 }
 
-.cont__cant__agregar{
+.cont__cant__agregar {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -865,8 +864,7 @@ background-color:#61892F;
     padding-bottom: 2vh;
 }
 
-
-.cont__btn__agregar--pp{
+.cont__btn__agregar--pp {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -875,9 +873,12 @@ background-color:#61892F;
     padding-top: 1vh;
     padding-bottom: 2vh;
 }
+
+
 /* 
 ojo con este que se usa en varios lados */
-.cont__cantidad{
+
+.cont__cantidad {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -886,7 +887,7 @@ ojo con este que se usa en varios lados */
     width: 100%;
 }
 
-.cont__cantidad--pp{
+.cont__cantidad--pp {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -900,9 +901,7 @@ ojo con este que se usa en varios lados */
     flex-direction: column;
 }
 
-
-
-.btn--cant{
+.btn--cant {
     all: unset;
     display: flex;
     justify-content: center;
@@ -910,43 +909,41 @@ ojo con este que se usa en varios lados */
     font-family: 'Industry';
     background-color: black;
     border: grey solid .3vh;
-    padding:4%;
+    padding: 4%;
     margin: 0.4vh;
-    width:5vh;
+    width: 5vh;
     height: 5vh;
     font-size: 2rem;
-    color:#ffffff;
+    color: #ffffff;
     transition: 0.3s all;
 }
 
-.btn--cant:nth-child(2){
+.btn--cant:nth-child(2) {
     font-size: 1.2rem;
 }
 
-
-.btn--cant:hover{
-    color:#86C232;
+.btn--cant:hover {
+    color: #86C232;
 }
 
-
-.btn--agregar{
+.btn--agregar {
     width: 100%;
     font-family: 'Industry';
     font-size: 1.2rem;
     background-color: black;
     border: grey solid .3vh;
     padding: 4%;
-    color:#97c264;;
+    color: #97c264;
+    ;
     transition: 0.3s all;
     cursor: pointer;
 }
 
-.btn--agregar:hover{
+.btn--agregar:hover {
     color: white;
-    
 }
 
-.cont__form{
+.cont__form {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -956,7 +953,7 @@ ojo con este que se usa en varios lados */
     height: 60vh;
 }
 
-.log--input{
+.log--input {
     background-color: rgb(56, 56, 56);
     font-family: 'Industry';
     border: none;
@@ -967,12 +964,12 @@ ojo con este que se usa en varios lados */
     transition: 0.4s all;
 }
 
-.log--input:hover{
-    color:#D9B08C;
+.log--input:hover {
+    color: #D9B08C;
     background-color: rgb(80, 80, 80);
 }
 
-.log--submit{
+.log--submit {
     background-color: #61892F;
     width: 100%;
     height: 7vh;
@@ -986,28 +983,28 @@ ojo con este que se usa en varios lados */
     color: white
 }
 
-.log--submit:hover{
-    color:#61892F;
-    background-color:grey;
+.log--submit:hover {
+    color: #61892F;
+    background-color: grey;
 }
 
-.log--submit:active{
-    color:grey;
+.log--submit:active {
+    color: grey;
     background-color: #abca84;
 }
 
-.logLogo{
+.logLogo {
     opacity: .7;
     width: 50%;
     padding: 10%;
     transition: .6s all;
 }
 
-.logLogo:hover{
+.logLogo:hover {
     opacity: .9;
 }
 
-.cont__faq{
+.cont__faq {
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -1017,7 +1014,7 @@ ojo con este que se usa en varios lados */
     background-image: url('.././img/lupuloOscuro.jpg');
 }
 
-.cont__snos{
+.cont__snos {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -1028,56 +1025,54 @@ ojo con este que se usa en varios lados */
     padding: 2%;
 }
 
-
-.titl{
+.titl {
     font-family: 'Industry';
     font-size: 1.2rem;
     padding-top: 6%;
 }
-.titlG{
+
+.titlG {
     font-family: 'Industry';
     font-size: 2rem;
     padding: 2%;
     margin-top: 5%;
 }
 
-.parrafo{
+.parrafo {
     text-align: left;
     font-size: 1rem;
     padding: 2% 7% 2% 7%;
 }
 
-.parrafoG{
+.parrafoG {
     text-align: center;
     font-size: 1.2rem;
     padding: 2% 7% 2% 7%;
     line-height: 1.8rem;
-
 }
 
-.preguntasFAQ{
+.preguntasFAQ {
     text-align: center;
     font-size: 1.2rem;
     padding: 2% 7% 2% 7%;
     text-decoration: underline;
 }
 
-.parrafoFAQ{
+.parrafoFAQ {
     text-align: center;
     font-size: 1.1rem;
     padding: 2% 7% 2% 7%;
     line-height: 1.5rem;
 }
 
-.cont__btn--volver{
+.cont__btn--volver {
     display: flex;
     justify-content: center;
     padding-bottom: 10%;
     width: 80%;
-
 }
 
-.btn--volver{
+.btn--volver {
     /* position: absolute;
     bottom: 10%; */
     display: flex;
@@ -1096,20 +1091,19 @@ ojo con este que se usa en varios lados */
     margin: 1.5vh;
 }
 
-.btn--volver:hover{
+.btn--volver:hover {
     color: white;
     background-color: #6B6E70;
 }
 
-.cont__admin--titl{
+.cont__admin--titl {
     padding-top: 4vh;
     display: flex;
     justify-content: center;
     width: 90%;
-
 }
 
-.cont__admin--btn{
+.cont__admin--btn {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1118,37 +1112,38 @@ ojo con este que se usa en varios lados */
     padding-top: 10vh;
 }
 
-.cont__admin--btn{
+.cont__admin--btn {
     width: 100%;
-    font-size:2rem;
+    font-size: 2rem;
 }
 
-.btn--adm{
+.btn--adm {
     /* position: absolute;
     bottom: 10%; */
     font-family: 'Industry';
     font-size: 1.3rem;
     height: 10vh;
     width: 75%;
-    background-color:#cecece;
+    background-color: #cecece;
     border: none;
     cursor: pointer;
     transition: 0.3s all;
     margin: 1.5vh;
 }
 
-.btn--adm > *{
+.btn--adm>* {
     color: rgb(32, 32, 32);
 }
 
-.btn--adm:hover{
+.btn--adm:hover {
     background-color: grey;
 }
 
-.btn--adm:hover >*{
+.btn--adm:hover>* {
     color: white;
 }
-.reg__form{
+
+.reg__form {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1157,12 +1152,13 @@ ojo con este que se usa en varios lados */
     width: 90%;
     padding-bottom: 4%;
 }
-.reg__form label{
+
+.reg__form label {
     font-size: 1.2rem;
     align-self: start;
 }
 
-.reg--input{
+.reg--input {
     /* all: unset; */
     background-color: #2b2b2b;
     font-family: 'Industry';
@@ -1174,14 +1170,14 @@ ojo con este que se usa en varios lados */
     transition: 0.4s all;
 }
 
-.reg--input:hover{
-    color:#D9B08C;
+.reg--input:hover {
+    color: #D9B08C;
     background-color: rgb(80, 80, 80);
 }
 
-.reg--submit{
-    background-color:#61892F;
-    color:white;
+.reg--submit {
+    background-color: #61892F;
+    color: white;
     width: 100%;
     height: 7vh;
     font-family: 'Industry';
@@ -1189,20 +1185,21 @@ ojo con este que se usa en varios lados */
     border: none;
     cursor: pointer;
     transition: 0.4s all;
-    margin:5%;
+    margin: 5%;
 }
 
-.reg--submit:hover{
+.reg--submit:hover {
     color: #61892F;
     background-color: #222629;
 }
 
-.reg--submit:active{
-    color:white;
+.reg--submit:active {
+    color: white;
 }
-.reg--submit--eliminar{
+
+.reg--submit--eliminar {
     background-color: tomato;
-    color:white;
+    color: white;
     width: 100%;
     height: 7vh;
     font-family: 'Industry';
@@ -1211,37 +1208,39 @@ ojo con este que se usa en varios lados */
     cursor: pointer;
     margin-bottom: 5%;
     transition: 0.4s all;
-    
-}
-.reg--submit--eliminar:hover{
-    color:tomato;
-    background-color: #222629;
-}
-.reg--submit--eliminar:active{
-    color:white;
 }
 
-.elFormDelete{
+.reg--submit--eliminar:hover {
+    color: tomato;
+    background-color: #222629;
+}
+
+.reg--submit--eliminar:active {
+    color: white;
+}
+
+.elFormDelete {
     display: flex;
     justify-content: center;
     width: 90%;
 }
 
-.registro{
-    display:flex;
+.registro {
+    display: flex;
     width: 100%;
     padding-bottom: 12%;
     padding-top: 7%;
 }
-.registrate{
+
+.registrate {
     font-family: "industry";
     font-size: 1.9rem;
-    flex:1;
+    flex: 1;
     margin-left: 2%;
     color: #61892F
 }
 
-.listadoErrores{
+.listadoErrores {
     font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-direction: column;
@@ -1249,42 +1248,45 @@ ojo con este que se usa en varios lados */
     margin-bottom: 7%
 }
 
-.registroErorres li{
+.registroErorres li {
     text-transform: capitalize;
 }
 
-.link_log{
+.link_log {
     font-family: "industry";
     font-size: 1rem;
     padding-left: 20%;
-    flex:1;  
+    flex: 1;
 }
 
+
 /* aca esta el carrito*/
-.carrito_boton_eliminar{
+
+.carrito_boton_eliminar {
     width: 100%;
     font-family: 'Industry';
     font-size: 0.9rem;
     background-color: black;
     border: grey solid .3vh;
     padding: 4%;
-    color:white;
+    color: white;
     transition: 0.3s all;
     cursor: pointer;
     display: flex;
     justify-content: center;
 }
 
-
-.carrito_boton_eliminar:hover{
-    color:#61892F;
+.carrito_boton_eliminar:hover {
+    color: #61892F;
 }
-.mi_carrito{
+
+.mi_carrito {
     font-family: 'Industry';
     margin-top: 1.2vh;
     color: #61892F;
 }
-.carrito_productos{
+
+.carrito_productos {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1293,39 +1295,34 @@ ojo con este que se usa en varios lados */
     min-height: 60vh;
     flex-wrap: wrap;
     width: 100%;
-
 }
 
-
-.carrito__producto{
+.carrito__producto {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     margin-left: 5vh;
     justify-content: space-between;
     padding-bottom: 5vh;
 }
 
-.carrito_producto--img{
+.carrito_producto--img {
     width: 40%;
     border: solid grey .07vh;
 }
 
-.carrito_producto__info{
+.carrito_producto__info {
     font-family: 'Industry';
     font-size: 1rem;
     width: 100%;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     margin-left: 6vh;
     align-items: flex-end;
     padding-right: 10%;
-    
-    
-    
     padding-top: 1.5vh;
 }
 
-.carrito_precio{
+.carrito_precio {
     font-family: 'Industry';
     display: flex;
     flex-direction: column;
@@ -1334,7 +1331,7 @@ ojo con este que se usa en varios lados */
     align-items: flex-end;
 }
 
-.carrito__cant__agregar{
+.carrito__cant__agregar {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1344,8 +1341,7 @@ ojo con este que se usa en varios lados */
     padding-bottom: 2vh;
 }
 
-
-.cont__btn__agregar--pp{
+.cont__btn__agregar--pp {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1354,7 +1350,8 @@ ojo con este que se usa en varios lados */
     padding-top: 1vh;
     padding-bottom: 2vh;
 }
-.carrito__cantidad{
+
+.carrito__cantidad {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1368,74 +1365,75 @@ ojo con este que se usa en varios lados */
     flex-direction: column;
 }
 
-.sarasa{
+.sarasa {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Industry';
     background-color: black;
     border: grey solid .3vh;
-    padding:4%;
+    padding: 4%;
     margin: 0.4vh;
-    width:5vh;
+    width: 5vh;
     height: 5vh;
     font-size: 2rem;
-    color:#ffffff;
+    color: #ffffff;
     transition: 0.3s all;
     cursor: pointer;
 }
 
-
-.btn--cant{
+.btn--cant {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Industry';
     background-color: black;
     border: grey solid .3vh;
-    padding:4%;
+    padding: 4%;
     margin: 0.4vh;
-    width:5vh;
+    width: 5vh;
     height: 5vh;
     font-size: 2rem;
-    color:#ffffff;
+    color: #ffffff;
     transition: 0.3s all;
     cursor: pointer;
 }
 
-.btn--cant:nth-child(2){
-    font-size: 1.2rem;
-}
-.sarasa:nth-child(2){
+.btn--cant:nth-child(2) {
     font-size: 1.2rem;
 }
 
-.sarasa:hover{
-    color:#86C232;
+.sarasa:nth-child(2) {
+    font-size: 1.2rem;
 }
 
-.btn--cant:hover{
-    color:#86C232;
+.sarasa:hover {
+    color: #86C232;
 }
-.carrito_total{
-    display:flex;
+
+.btn--cant:hover {
+    color: #86C232;
+}
+
+.carrito_total {
+    display: flex;
     justify-content: space-evenly;
-    width:100%;
+    width: 100%;
+}
 
-    
-}
-.carrito_total_total{
+.carrito_total_total {
     font-family: 'Industry';
-    color:#86C232;
-    font-size: 1.8rem;
-}
-.carrito_total_precio{
-    font-family: 'Industry';
-    color:#ffffff;
+    color: #86C232;
     font-size: 1.8rem;
 }
 
-.boton_comprar{
+.carrito_total_precio {
+    font-family: 'Industry';
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.boton_comprar {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -1443,16 +1441,16 @@ ojo con este que se usa en varios lados */
     font-family: 'Industry';
     background-color: black;
     border: grey solid .3vh;
-    padding:7%;
+    padding: 7%;
     margin: 2vh;
     height: 5vh;
     font-size: 1rem;
     cursor: pointer;
-    color:#ffffff;
+    color: #ffffff;
     transition: 0.3s all
 }
 
-.item_borrar{
+.item_borrar {
     font: "QuickSand";
     display: flex;
     text-align: center;
@@ -1460,48 +1458,52 @@ ojo con este que se usa en varios lados */
     align-items: center;
     background-color: black;
     border: grey solid .3vh;
-    padding:7%;
+    padding: 7%;
     margin: 2vh;
     height: 5vh;
     font-size: 1rem;
     opacity: .8;
     cursor: pointer;
-    color:#ffffff;
-    transition: 0.3s all   
+    color: #ffffff;
+    transition: 0.3s all
 }
 
-.item_borrar:hover{
+.item_borrar:hover {
     opacity: 1;
-    color:#ac8d63;
+    color: #ac8d63;
 }
 
-.boton_comprar:hover{
-    color:#86C232;
+.boton_comprar:hover {
+    color: #86C232;
 }
-.carrito_descripcion_nombre{
+
+.carrito_descripcion_nombre {
     font-size: 1.1rem;
-    color:#86C232;
-
+    color: #86C232;
 }
-.recuerdame{
+
+.recuerdame {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
 }
-.recuerdame label{
+
+.recuerdame label {
     font-size: 1rem;
     padding-left: 1vh;
 }
 
-.cont__form label{
+.cont__form label {
     font-size: 1.2rem;
     align-self: start;
 }
-.log__info{
-    display:flex;
+
+.log__info {
+    display: flex;
     flex-direction: column;
 }
-.contenedorPerfil{
+
+.contenedorPerfil {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1509,23 +1511,23 @@ ojo con este que se usa en varios lados */
     min-height: 60vh;
 }
 
-.menuPerfil{
+.menuPerfil {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-}
-.buscador--submit{
-   display: none;
-    
 }
 
-.integrantes{
+.buscador--submit {
+    display: none;
+}
+
+.integrantes {
     display: flex;
     flex-direction: column;
     width: 70%;
 }
-.contFoto{
+
+.contFoto {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1533,19 +1535,21 @@ ojo con este que se usa en varios lados */
     padding: 14px;
 }
 
-.intfoto{
+.intfoto {
     width: 20vh;
     height: 20vh;
     border-radius: 50%;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
     transition: 1s all;
 }
 
-.intfoto:hover{
+.intfoto:hover {
     filter: grayscale(0%);
 }
-.contErrores{
+
+.contErrores {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1554,42 +1558,37 @@ ojo con este que se usa en varios lados */
     height: 70vh;
 }
 
-.contImgError{
+.contImgError {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.producto--err{
+.producto--err {
     width: 25%;
     transition: 0.5s all;
     filter: saturate(0);
 }
 
-.producto--err:hover{
+.producto--err:hover {
     width: 24%;
     filter: saturate(100);
 }
 
-
-@media (min-width: 900px){
-
-
-    .avatar{
+@media (min-width: 900px) {
+    .avatar {
         width: 10%;
     }
-
-    .historialUsuario{
+    .historialUsuario {
         font-family: 'Industry';
         align-self: flex-start;
         margin-left: 5vh;
         margin-bottom: 5vh;
-        color:#86C232;
+        color: #86C232;
         font-size: 1.5 rem;
         padding-top: 4vh;
     }
-
-    .compra__info{
+    .compra__info {
         width: 100%;
         display: flex;
         font-size: 2vh;
@@ -1597,29 +1596,24 @@ ojo con este que se usa en varios lados */
         flex-direction: row;
         justify-content: space-around;
     }
-
-    
     /* ESTILOS RESPONSIVE DE NAVBAR */
-
     .navBar {
         height: 8.5vh;
     }
-
-    .navBar__menu{
+    .navBar__menu {
         display: none;
     }
-
-    .navBar__linksMenu{
+    .navBar__linksMenu {
         display: flex;
         order: 1;
         position: relative;
-        flex-direction:row;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 90vw;
         left: 0;
         height: auto;
-        padding-top:0%;
+        padding-top: 0%;
         padding-bottom: 0%;
         padding-right: 10%;
         padding-left: 10%;
@@ -1627,15 +1621,13 @@ ojo con este que se usa en varios lados */
         opacity: 1;
         font-family: 'Industry';
         transition: none;
-        background-color: rgb(0, 0, 0,0);
-       
+        background-color: rgb(0, 0, 0, 0);
     }
-    .navBar:hover > .navBar__linksMenu{
+    .navBar:hover>.navBar__linksMenu {
         left: 0%;
         opacity: 1;
     }
-
-    .linksMenu--a{
+    .linksMenu--a {
         padding-bottom: 0%;
         width: 23%;
         transition: none;
@@ -1644,146 +1636,116 @@ ojo con este que se usa en varios lados */
         font-size: .7rem;
         transition: .4s font-size;
     }
- 
-    .linksMenu--a.home{
+    .linksMenu--a.home {
         display: none;
     }
-
-    .linksMenu--a.producto{
+    .linksMenu--a.producto {
         display: none;
     }
-
-    .linksMenu--a.faq{
+    .linksMenu--a.faq {
         display: none;
     }
-    .linksMenu--a.carrito{
+    .linksMenu--a.carrito {
         display: none;
     }
-
-    .linksMenu--a:hover{
+    .linksMenu--a:hover {
         font-size: 0.7rem;
-        color:#86C232;
+        color: #86C232;
     }
-    
-    .navBar__faq--carrito{
+    .navBar__faq--carrito {
         order: 2;
     }
-
-    .navBar--imagenes{
+    .navBar--imagenes {
         height: 4vh;
     }
-
-    .btn--vent{
+    .btn--vent {
         width: 19vw;
         padding: 1%;
     }
-
     .cont__venTodas {
         height: 24vh;
     }
-
-    .buscador__formulario--input{
+    .buscador__formulario--input {
         font-size: 0.7rem;
     }
-
-    .buscador__formulario--input:focus{
+    .buscador__formulario--input:focus {
         font-size: 0.7rem;
     }
-    .portada--titl{
+    .portada--titl {
         width: 22%;
     }
-    
-
     .cont__img__titl {
         height: 22vw;
         background-size: 135%;
         background-position-x: 87%;
         background-position-y: 48%;
-}
-
+    }
     .portada--titl:hover {
         width: 23%;
     }
-
     .imagenFooter {
         width: 10vh;
         padding-bottom: 2%;
         padding-top: 1%;
     }
-
     /* ESTILOS RESPONSIVE DE PÁG SOBRE NOSOTROS */
-
-    .parrafoG{
+    .parrafoG {
         font-size: 0.8rem;
         line-height: 1.7rem;
     }
-
-    .preguntasFAQ{
+    .preguntasFAQ {
         text-align: center;
         font-size: 0.9rem;
     }
-
-    .parrafoFAQ{
+    .parrafoFAQ {
         text-align: center;
         font-size: 0.8rem;
         line-height: 1.3rem;
     }
-
-    .titlG{
+    .titlG {
         font-family: 'Industry';
         font-size: 1.5rem;
         padding: 2%;
     }
-
     .volverInicio {
         font-size: 0.7rem;
     }
-
-    .btn--volver{
+    .btn--volver {
         height: 7vh;
         width: 30%;
         cursor: pointer;
     }
-
-    .navBar__faq--carrito a{
-        margin:5%
+    .navBar__faq--carrito a {
+        margin: 5%
     }
-
-    .navBar--imagenes{
+    .navBar--imagenes {
         width: 10vh;
         opacity: .7;
         transition: .4s all;
         margin-left: 5%;
-        height:5vh
+        height: 5vh
     }
-
-    .x_menu{
+    .x_menu {
         display: none;
     }
-
     /* ESTILOS RESPONSIVE DE PÁGINA LOGIN */
-
-    .logLogo{
+    .logLogo {
         width: 18%;
         padding: 4%;
     }
-
-    
     .log--input {
         padding: 3%;
         margin-bottom: 5%;
         width: 40%;
-        margin:1%;
-        font-size:0.6rem;
+        margin: 1%;
+        font-size: 0.6rem;
     }
-
     .log--submit {
         width: 25%;
         height: 8vh;
         font-size: 0.9rem;
     }
-
-    .cont__form{
+    .cont__form {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -1792,59 +1754,45 @@ ojo con este que se usa en varios lados */
         width: 85%;
         height: 75vh;
     }
-
     /* ESTILOS RESPONSIVE DE PÁGINA PRODUCTO */
-
-
     /* .producto--img {
         width: 30%;
     } */
-        .cont__producto--pp{
-            width: 50%;
-        }
+    .cont__producto--pp {
+        width: 50%;
+    }
     /* se podría modificar el contenedor de la imagen que
     es el padre cont__producto--pp recién lo probé y va */
-
-
     /* ESTILOS PARA HOME */
     .cont__producto{
         width: 18%;
     }
-
-    .bloque__productos{
+    .bloque__productos {
         justify-content: space-evenly;
     }
-
-    .producto__info{
+    .producto__info {
         font-size: 0.7rem;
     }
-
-    .btn--cant{
+    .btn--cant {
         font-size: 1.6rem;
         width: 100%;
         height: 80%;
     }
-
-    .btn--cant:nth-child(2){
+    .btn--cant:nth-child(2) {
         font-size: 1rem;
     }
-    
-
-    .btn--agregar{
+    .btn--agregar {
         font-size: .7rem;
     }
-    .sarasa{
+    .sarasa {
         font-size: .7rem;
         width: 100%;
     }
-
-
-    .cont__select__venTodas{
+    .cont__select__venTodas {
         justify-content: center;
         align-items: center;
     }
-
-    .btn--vent{
+    .btn--vent {
         /* width:16%; */
         margin-top: 0%;
         /* height: 5vh; */
@@ -1853,12 +1801,10 @@ ojo con este que se usa en varios lados */
         align-items: center;
         font-size: 0.6rem;
     }
-
-    .btn--vent:nth-child(3){
+    .btn--vent:nth-child(3) {
         order: 2;
     }
-
-    .select--tcerveza{
+    .select--tcerveza {
         font-family: "Industry";
         height: 5vh;
         font-size: .7rem;
@@ -1866,83 +1812,67 @@ ojo con este que se usa en varios lados */
         order: 2;
         margin: 1%;
     }
-
     .select--option {
         font-size: .8rem;
     }
-
-    .section--titl{
+    .section--titl {
         height: 5vh;
         font-size: .7rem;
     }
-
     .cont__cantidad {
         /* flex-wrap: wrap; */
         justify-content: space-evenly;
     }
-
     .btn--cant {
         font-size: 1.2rem;
         width: 5vh;
         height: 5vh;
-
     }
-
     .btn--agregar {
         font-size: 0.7rem;
         width: 80%;
     }
-
     .producto--desc {
         font-size: 0.7rem;
-        width:40%
+        width: 40%
     }
-
     .producto__info--pp {
         font-size: 0.9rem;
     }
-
-    .cont__cant__agregar{
+    .cont__cant__agregar {
         width: 100%;
     }
-
-    .registro{
+    .registro {
         padding-bottom: 4%;
         padding-top: 4%;
         justify-content: space-evenly;
         align-items: center;
     }
-    .registrate{
-        flex:1;
+    .registrate {
+        flex: 1;
         text-align: center;
         font-size: 1.6rem;
         padding-left: 12vh;
     }
-
-    .link_log{
+    .link_log {
         width: 20%;
         padding-left: 0%;
         padding-right: 17vh;
         flex: 1;
         text-align: center;
     }
-
-    .link_log:hover{
-
-    color:#86C232;
+    .link_log:hover {
+        color: #86C232;
     }
-
-    .reg__form{
+    .reg__form {
         width: 40%;
-        
     }
-    .reg__form label{
+    .reg__form label {
         font-size: 0.9rem;
         align-self: start;
         padding-left: 7.6%;
     }
-
-    .reg--input{
+    .reg--input {
         font-size: .6rem;
         padding: 2%;
         height: 9vh;
@@ -1950,214 +1880,180 @@ ojo con este que se usa en varios lados */
         margin-top: 2%;
         width: 85%;
     }
-
-    .reg--submit{
+    .reg--submit {
         margin-top: 8%;
         margin-bottom: -4%;
         font-size: .9rem;
         height: 8vh;
         width: 65%;
     }
-    .reg--submit--eliminar{
+    .reg--submit--eliminar {
         font-size: 1rem;
         height: 8vh;
         width: 65%;
-        
     }
-
-    .buscadorModif{
+    .buscadorModif {
         width: 50%;
     }
-    .cont__btn--volver{
+    .cont__btn--volver {
         padding-bottom: 0%;
         margin: 6.5vh;
     }
-
     .buscador {
         display: flex;
         justify-content: space-between;
         font-size: 2rem;
         flex-direction: row-reverse;
         align-items: center;
-        background-color:#3a3d3f;
+        background-color: #3a3d3f;
     }
-    .buscador__formulario{
+    .buscador__formulario {
         width: 90%;
     }
-   
-    .buscador__lupa{
+    .buscador__lupa {
         width: 4vh;
-        margin-right:0vh;
+        margin-right: 0vh;
         margin-left: 15vh;
     }
-
-    .textoFooter{
+    .textoFooter {
         font-size: .5rem;
     }
-
     /* RESPONSIVE PRODUCTO */
-
     .bloque__producto {
         flex-direction: row;
         width: 80%;
         justify-content: space-around;
         padding-bottom: 2%;
     }
-
     .cont__img__producto--pp {
         width: 46vh;
         padding: 0% 0%;
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
         transition: .5s all;
     }
-
-    .cont__img__producto--pp:hover{
-        box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    .cont__img__producto--pp:hover {
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
     }
-
     .cont__titl__btn__agregar--pp {
         width: 72vh;
         height: 68.5vh;
         border: grey 1px solid;
         align-items: center;
         justify-content: space-between;
-        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
         transition: .5s all;
         padding-top: 0px;
     }
-
-    .cont__titl__btn__agregar--pp:hover{
-        box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    .cont__titl__btn__agregar--pp:hover {
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
     }
-
     .cont__btn__agregar--pp {
         order: 1;
         width: 55%;
     }
-
     .descripcion--pp {
         padding-top: 2%;
         font-size: 0.7rem;
         text-align: left;
-        padding-right:5%;
+        padding-right: 5%;
         padding-bottom: 0%;
-        width:100%;
+        width: 100%;
         line-height: 1.0rem;
         height: 30vh;
     }
-
     .btn--agregar {
-        width:100%;
+        width: 100%;
     }
-
-    .producto__titl--pp{
+    .producto__titl--pp {
         width: 100%;
         /* padding:3%; */
     }
-
     .nombre--pp {
         align-self: flex-end;
         text-align: center;
         font-size: 0.7rem;
         width: 100%;
-        padding:2%;
+        padding: 2%;
         background-color: rgb(63, 63, 63);
         /* height: 10vh; */
     }
-
     .precio--pp {
         font-size: .7rem;
-        color:white;
+        color: white;
         /* align-self: start; */
         /* margin-left: 5%; */
-        padding:2%;
+        padding: 2%;
         background-color: #61892F;
         /* height: 5vh; */
-        
     }
-
     /*responsive para carrito*/
-    .carrito__producto{
+    .carrito__producto {
         justify-content: space-evenly;
         width: 40%;
-        
-
-
     }
-    .carrito_producto__info{
+    .carrito_producto__info {
         width: 80%;
         justify-content: space-evenly;
         font-size: 0.7rem;
         margin-left: 0%;
         padding-right: 0%;
     }
-    .carrito__cantidad{
+    .carrito__cantidad {
         justify-content: end;
     }
-
-    .carrito__cant__agregar{
+    .carrito__cant__agregar {
         align-items: end;
     }
-    .carrito_total{
+    .carrito_total {
         width: 50%;
     }
-    .carrito_total_total{
+    .carrito_total_total {
         font-size: 1.5rem;
     }
-    .carrito_total_precio{
+    .carrito_total_precio {
         font-size: 1.5rem
     }
-    .carrito_descripcion_nombre{
+    .carrito_descripcion_nombre {
         font-size: 1rem;
-
     }
-    .carrito_boton_eliminar{
+    .carrito_boton_eliminar {
         width: 17vh;
         font-size: .6rem;
     }
-    .boton_comprar{
+    .boton_comprar {
         cursor: pointer;
         text-align: center;
         height: 10vh;
         padding: 2%;
     }
-    
-
-    .cont__intro--logo{
+    .cont__intro--logo {
         width: 30%;
         transform: translateX(-.5vw);
     }
-
-    .intro--respuesta{
+    .intro--respuesta {
         position: relative;
         flex-direction: row;
         width: 60%;
     }
-
-    .titl__preindex{
+    .titl__preindex {
         font-size: 1rem;
         width: 54%;
         position: absolute;
         left: 15%;
     }
-    
     /* .laX--intro{
         width: 10%;
     } */
-
-
     .formSoyMayor {
-    width: 50%;
-    height: 10vh;
+        width: 50%;
+        height: 10vh;
     }
-
     /* .soyMayor--par{
         position: absolute;
         top: 27%;
         left: 35%;
     } */
-
-    .soyMayor--input{
+    .soyMayor--input {
         position: absolute;
         top: 2%;
         right: 27%;
@@ -2168,49 +2064,43 @@ ojo con este que se usa en varios lados */
     /* .titl__preindex > * {
         margin-bottom: 2%;
     } */
-    
-    .ingreso{
+    .ingreso {
         font-size: .8rem;
     }
-
-    .elFormDelete{
+    .elFormDelete {
         width: 40%;
     }
-    .menuPerfil{
+    .menuPerfil {
         display: flex;
         flex-direction: row;
-        width:100%;
+        width: 100%;
         justify-content: space-between;
     }
-    .contenedorPerfil{
+    .contenedorPerfil {
         width: 100%;
         min-height: 75vh;
         display: flex;
         flex-direction: column;
-        justify-content:start;
+        justify-content: start;
         /* align-items: start; */
-        background-color:rgb(20, 20, 20);
-
+        background-color: rgb(20, 20, 20);
     }
-    .contenedorPerfil__saludo{
+    .contenedorPerfil__saludo {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-left: 5vh;
         flex: 2;
-
     }
-    .cont__form label{
-        align-self:start;
-        padding-left:30%;
-        font-size:1rem;
+    .cont__form label {
+        align-self: start;
+        padding-left: 30%;
+        font-size: 1rem;
     }
-
-    .info--precioMl{
+    .info--precioMl {
         margin-bottom: 4%;
     }
-
-    .buscador--submit{
+    .buscador--submit {
         all: unset;
         cursor: pointer;
         background-color: #5c8620;
@@ -2219,17 +2109,15 @@ ojo con este que se usa en varios lados */
         font-family: 'Industry';
         text-align: center;
         width: 10%;
-        
     }
-
-    .item_borrar{
+    .item_borrar {
         font-size: .5rem;
     }
-    .integrantes{
+    .integrantes {
         flex-direction: row;
         justify-content: space-between;
     }
-} 
+}
 
 
- /* esta llave es clave */
+/* esta llave es clave */

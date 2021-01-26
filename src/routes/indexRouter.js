@@ -8,7 +8,7 @@ const indexController = require("../controllers/indexController")
 
 router.get('/', estilosMw, indexController.index);
 
-router.post('/',indexController.filtroHome)
+router.post('/', indexController.filtroHome)
 
 router.get('/faq', indexController.faq);
 
