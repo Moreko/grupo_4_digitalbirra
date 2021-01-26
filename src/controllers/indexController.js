@@ -11,11 +11,7 @@ module.exports = {
         if (req.cookies.serMayor == undefined) {
             res.render('preindex')
         } else {
-            let cervezas = await db.Beers.findAll({
-                where: {
-                    deleted_at: {}
-                }
-            })
+            let cervezas = await db.Beers.findAll()
             let estilos = req.session.estilos
             let admin = req.session.admin
             res.render('index', { cervezas, eleccion: 'DIGITAL BIRRA', estilos, admin })

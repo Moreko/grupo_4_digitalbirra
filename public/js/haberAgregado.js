@@ -14,7 +14,7 @@ document.querySelectorAll('.sarasa').forEach(item => {
             width:"50%",
             showCancelButton: false,
             confirmButtonColor: ' #61892F',
-            confirmButtonText: 'Ok',
+            confirmButtonText: '<pre class="elAlert">' + 'Ok' + '</pre>',
             customClass: {
                 popup: 'elAlert'
             }
