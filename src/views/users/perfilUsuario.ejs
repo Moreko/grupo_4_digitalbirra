@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head.ejs')%>
-<body>
-<section class="contenedorApp">
-    <%-include('./partials/header.ejs')%>
+<%-include('./partials/head.ejs')%>
 
-    <main class="contenedorPerfil">
-      
-        <section class="menuPerfil">
-            <p class="contenedorPerfil__saludo">Hola <%= usuario.nombre.charAt(0).toUpperCase() + usuario.nombre.slice(1) +" "+ usuario.apellido.charAt(0).toUpperCase() + usuario.apellido.slice(1)%> !! </p> 
-        
-        
-         
-                <a class="btn--volver" href="/users/modifUsuario">Editar perfil</a>
+    <body>
+        <section class="contenedorApp">
+            <%-include('./partials/header.ejs')%>
 
-                <a class="btn--volver" href="/">Volver al inicio</a>
+                <main class="contenedorPerfil">
 
-             <img src="/img/avatars/<%= usuario.imagen%>" alt="la imagen" class="avatar">
-        </section>   
-    
-           <p class=historialUsuario>Historial</p>
- 
-        <section class="bloque__compras">
-        
-            <% if (typeof compras != 'undefined'){ %> 
-                <% compras.forEach(element =>{ %> 
-                    <article class="compra__info info--precioMl">
-                        <p><%= element.createdAt.toLocaleString() %></p>
-                        <p>Cantidad de items:<%= element.cantidad_items %></p>
-                        <p>precio: $<%= element.total %></p>
-                    </article>
-        
-                    
-              
-                <% })} else { %> <p>Todavia no compraste nada</p>
-                 
-             
-                <%} %> 
-    
+                    <section class="menuPerfil">
+                        <p class="contenedorPerfil__saludo">Hola
+                            <%= usuario.nombre.charAt(0).toUpperCase() + usuario.nombre.slice(1) +" "+ usuario.apellido.charAt(0).toUpperCase() + usuario.apellido.slice(1)%> !! </p>
+
+
+
+                        <a class="btn--volver" href="/users/modifUsuario">Editar perfil</a>
+
+                        <a class="btn--volver" href="/">Volver al inicio</a>
+
+                        <img src="/img/avatars/<%= usuario.imagen%>" alt="la imagen" class="avatar">
+                    </section>
+
+                    <p class=historialUsuario>Historial</p>
+
+                    <section class="bloque__compras">
+
+                        <% if (typeof compras != 'undefined'){ %>
+                            <% compras.forEach(element =>{ %>
+                                <article class="compra__info info--precioMl">
+                                    <p>
+                                        <%= element.createdAt.toLocaleString() %>
+                                    </p>
+                                    <p>Cantidad de items:
+                                        <%= element.cantidad_items %>
+                                    </p>
+                                    <p>precio: $
+                                        <%= element.total %>
+                                    </p>
+                                </article>
+
+
+
+                                <% })} else { %>
+                                    <p>Todavia no compraste nada</p>
+
+
+                                    <%} %>
+
+                    </section>
+
+                </main>
+
+                <%-include('./partials/footer.ejs')%>
         </section>
 
-    </main>
-    
-    <%-include('./partials/footer.ejs')%>
-</section>
+    </body>
 
-</body>
 </html>

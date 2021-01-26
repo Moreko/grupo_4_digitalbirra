@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head.ejs')%>
-<body>
-<section class="contenedorApp">
-    <%-include('./partials/header.ejs')%>
+<%-include('./partials/head.ejs')%>
 
-    <main class="contenedorMain">
-      <p>¡Borraste la cerveza "<%= birraBorrar.nombre + ' ' + birraBorrar.tamano  %>ml" exitosamente! </p> 
+    <body>
+        <section class="contenedorApp">
+            <%-include('./partials/header.ejs')%>
 
-    </main>
-    
-    <%-include('./partials/footer.ejs')%>
-</section>
+                <main class="contenedorMain">
+                    <p>¡Borraste la cerveza "
+                        <%= birraBorrar.nombre + ' ' + birraBorrar.tamano  %>ml" exitosamente! </p>
 
-</body>
+                </main>
+
+                <%-include('./partials/footer.ejs')%>
+        </section>
+
+    </body>
+
 </html>

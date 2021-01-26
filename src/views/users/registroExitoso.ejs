@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head.ejs')%>
-<body>
-<section class="contenedorApp">
-    <%-include('./partials/header.ejs')%>
+<%-include('./partials/head.ejs')%>
 
-    <main class="contenedorMain">
-      
-        
-        <p class="contenedorMain__links">¡Registro exitoso!</p> 
-        <br>
+    <body>
+        <section class="contenedorApp">
+            <%-include('./partials/header.ejs')%>
 
-        <button href="/users/login" class="btn--volver">
+                <main class="contenedorMain">
+
+
+                    <p class="contenedorMain__links">¡Registro exitoso!</p>
+                    <br>
+
+                    <button href="/users/login" class="btn--volver">
             <a class="volverInicio" href="/users/login">Ingresar</a>
         </button></a>
 
-        <button href="index" class="btn--volver">
+                    <button href="index" class="btn--volver">
             <a class="volverInicio" href="/">Volver al inicio</a>
-        </button></a>            
+        </button></a>
 
-    </main>
-    
-    <%-include('./partials/footer.ejs')%>
-</section>
+                </main>
 
-</body>
+                <%-include('./partials/footer.ejs')%>
+        </section>
+
+    </body>
+
 </html>

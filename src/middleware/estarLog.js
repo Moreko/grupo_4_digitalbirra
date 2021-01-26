@@ -1,7 +1,7 @@
-module.exports = function(req, res, next){
-    if(req.session.usuarioLogueado != undefined){
+module.exports = function(req, res, next) {
+    if (req.session.usuarioLogueado != undefined) {
         next()
-    }else{
+    } else {
         res.render('login')
     }
 }

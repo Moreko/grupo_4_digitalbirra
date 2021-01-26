@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head.ejs')%>
-<body>
-<section class="contenedorApp">
-    <%-include('./partials/header.ejs')%>
+<%-include('./partials/head.ejs')%>
 
-    <main class="contenedorMain">
-        <article class="cont__snos">
-                 <h2 class="titlG">Sobre nosotros</h2>
-            
-                  <section class="integrantes">
+    <body>
+        <section class="contenedorApp">
+            <%-include('./partials/header.ejs')%>
 
-                    <article class="contFoto">
-                        <a href="https://github.com/Moreko" target="_blank">
-                            <img class="intfoto" src="img/avatars/moreko.jpeg" alt="Moreko">
-                        </a>    
-                        <label for="">Moreko</label>
-                    </article>
-                    <article  class="contFoto">
-                        <a href="" target="_blank">
-                            <img class="intfoto" src="img/avatars/imagen-1610422216948.jpg" alt="Pat">
-                        </a>
-                        <label for="">Patricio</label>
-                    </article>    
-                    <article  class="contFoto">
-                        <a href="https://github.com/rodtob" target="_blank">
-                            <img class="intfoto" src="img/avatars/rod.jpg" alt="Rod">
-                        </a>
-                        <label for="">Rod</label>
-                    </article>
+                <main class="contenedorMain">
+                    <article class="cont__snos">
+                        <h2 class="titlG">Sobre nosotros</h2>
 
-                   </section>
-            <p class="parrafoG">
-                     Digital Birra nació en el año 2020 como
-                     el sueño de un grupo de
-                     programadores de no solo desarrollar
-                     apps sino también cerveza.
-                     Hoy en día contamos con una variedad
-                     de cervezas a base de lúpulo. Entre ellas
-                     sus variantes de rubia, roja, negra e IPA.
-                     Siendo así la primera y única compañía
-                     de desarrollo y cerveza del país.
-             </p>
+                        <section class="integrantes">
 
-     
-        <section class="cont__btn--volver">
-            <button class="btn--volver">
+                            <article class="contFoto">
+                                <a href="https://github.com/Moreko" target="_blank">
+                                    <img class="intfoto" src="img/avatars/moreko.jpeg" alt="Moreko">
+                                </a>
+                                <label for="">Moreko</label>
+                            </article>
+                            <article class="contFoto">
+                                <a href="" target="_blank">
+                                    <img class="intfoto" src="img/avatars/imagen-1610422216948.jpg" alt="Pat">
+                                </a>
+                                <label for="">Patricio</label>
+                            </article>
+                            <article class="contFoto">
+                                <a href="https://github.com/rodtob" target="_blank">
+                                    <img class="intfoto" src="img/avatars/rod.jpg" alt="Rod">
+                                </a>
+                                <label for="">Rod</label>
+                            </article>
+
+                        </section>
+                        <p class="parrafoG">
+                            Digital Birra nació en el año 2020 como el sueño de un grupo de programadores de no solo desarrollar apps sino también cerveza. Hoy en día contamos con una variedad de cervezas a base de lúpulo. Entre ellas sus variantes de rubia, roja, negra e IPA. Siendo
+                            así la primera y única compañía de desarrollo y cerveza del país.
+                        </p>
+
+
+                        <section class="cont__btn--volver">
+                            <button class="btn--volver">
                 <a class="volverInicio" href="/">Volver al inicio</a>
             </button></a>
+                        </section>
+
+                    </article>
+
+
+                </main>
+
+                <%-include('./partials/footer.ejs')%>
         </section>
-        
-     </article> 
-        
+    </body>
 
-    </main>
-
-    <%-include('./partials/footer.ejs')%>
-</section>
-</body>
 </html>
