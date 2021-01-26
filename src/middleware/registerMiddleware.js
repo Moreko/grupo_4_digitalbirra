@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 var bcrypt = require("bcryptjs")
 
-const {body} = require('express-validator');
+const {body, check} = require('express-validator');
 const db = require('../database/models')
 
 // const usersFilePath = path.join(__dirname, '../data/dbUsers.json')
@@ -50,4 +50,5 @@ module.exports = [
             }
                 return false
         }).withMessage('Los passwords deben coincidir')
+
 ]
