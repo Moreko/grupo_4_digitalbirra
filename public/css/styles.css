@@ -1503,6 +1503,7 @@ ojo con este que se usa en varios lados */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 14px;
 }
 
 .intfoto{
