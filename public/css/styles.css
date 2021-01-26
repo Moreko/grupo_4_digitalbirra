@@ -30,6 +30,7 @@ html {
 }
 .elAlert{
     font-family: "Quicksand";
+    font-size: 1rem;
 }
 
 .historialUsuario{
@@ -1807,7 +1808,7 @@ ojo con este que se usa en varios lados */
 
     /* ESTILOS PARA HOME */
     .cont__producto{
-        width: 22%;
+        width: 18%;
     }
 
     .bloque__productos{

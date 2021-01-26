@@ -8,8 +8,10 @@ document.querySelectorAll('.sarasa').forEach(item => {
    
         event.preventDefault()
         Swal.fire({
-            html: '<pre class="elAlert">' + 'Al carrito nomás' + '</pre>',
+            html: '<pre class="elAlert">' + 'Sumado al carrito nomás' + '</pre>',
             icon: 'correct',
+            background: '#000',
+            width:"50%",
             showCancelButton: false,
             confirmButtonColor: ' #61892F',
             confirmButtonText: 'Ok',

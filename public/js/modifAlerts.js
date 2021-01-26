@@ -9,12 +9,14 @@ const modifBirra = document.getElementById('modificar')
 eliminarBirra.addEventListener('click', (e)=>{
     e.preventDefault()
     Swal.fire({
-        title: 'Estas seguro de que queres eliminar?',
+        html: '<pre class="elAlert">' + '¿Estas seguro de que queres eliminar?' + '</pre>',
         icon: 'question',
         showCancelButton: true,
+        background: '#000',
         confirmButtonColor: ' #61892F',
         cancelButtonColor: ' #ff6347',
-        confirmButtonText: 'Sí, borrá nomás!'
+        confirmButtonText: '<pre class="elAlert">' + 'Sí, desde ya' + '</pre>',
+        cancelButtonText: '<pre class="elAlert">' + 'No' + '</pre>'
       }).then((result) => {
         if (result.isConfirmed) {
          const elForm = document.getElementById('elFormDelete')
@@ -26,12 +28,15 @@ eliminarBirra.addEventListener('click', (e)=>{
 modifBirra.addEventListener('click', (e)=>{
   e.preventDefault()
   Swal.fire({
-      title: 'Estas seguro de que queres modificar?',
+      html: '<pre class="elAlert">' + '¿Estas seguro de que queres modificar?' + '</pre>',
       icon: 'question',
       showCancelButton: true,
+      background: '#000',
+      width:"50%",
       confirmButtonColor: ' #61892F',
         cancelButtonColor: ' #ff6347',
-        confirmButtonText: 'Sí, modificá nomás!'
+        confirmButtonText: '<pre class="elAlert">' + 'Sí, modificá nomás' + '</pre>',
+        cancelButtonText: '<pre class="elAlert">' + 'No' + '</pre>'
     }).then((result) => {
       if (result.isConfirmed) {
        const elForm = document.getElementById('elFormModif')
