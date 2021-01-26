@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head.ejs')%>
-<body>
-<section class="contenedorApp">
-    <%-include('./partials/header.ejs')%>
+<%-include('./partials/head.ejs')%>
 
-    <main class="contenedorMain">
-      
-        
-        <p class="contenedorMain__links">¡Cerraste sesión correctamente!</p> 
-        <br>
+    <body>
+        <section class="contenedorApp">
+            <%-include('./partials/header.ejs')%>
 
-        <button href="index" class="btn--volver">
-            <a class="volverInicio" href="/">Volver al inicio</a>
-        </button></a>
-            
+                <main class="contenedorMain">
 
-    </main>
-    
-    <%-include('./partials/footer.ejs')%>
-</section>
 
-</body>
+                    <p class="contenedorMain__links">¡Cerraste sesión correctamente!</p>
+
+
+
+                    <a href="/" class="btn--volver">Volver al inicio</a>
+
+
+                </main>
+
+                <%-include('./partials/footer.ejs')%>
+        </section>
+
+    </body>
+
 </html>

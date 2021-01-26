@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head.ejs')%>
-<body>
-<section class="contenedorApp">
-    <%-include('./partials/header.ejs')%>
+<%-include('./partials/head.ejs')%>
 
-    <main class="contenedorMain">
-      
-            <img class="logLogo" src="/img/logoLog.png" alt="logLogo">
+    <body>
+        <section class="contenedorApp">
+            <%-include('./partials/header.ejs')%>
 
-            <% if(typeof loginErrors != "undefined") {%> 
-                <ul class="listadoErrores">
-                    <% loginErrors.forEach(error => { %> 
-                        <li>· <%= error.msg %> </li>
-                    <% }); %> 
-                </ul>
-                <% } %> 
+                <main class="contenedorMain">
 
-            <form action="/users/loguear" method="POST" class="cont__form">
-                
-                    <label for="logMail">Mail</label>
-                    <input class="log--input" type="email" name="logMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" autofocus>
-                
-               
-                    <label for="logPassword">Password</label>
-                    <input class="log--input" type="password" name="logPassword" placeholder="******" id="logPassword">
-                
-                <section class="recuerdame">
-                    <label for="recordarme">Recordarme</label>
-                    <input type="checkbox" name="recordarme" id="recordarme" class="checkbox--recordarme">
-                </section>
-                <input class="log--submit" type="submit" value="Ingresar">
-            </form>    
-    </main>
-    
-    <%-include('./partials/footer.ejs')%>
-</section>
+                    <img class="logLogo" src="/img/logoLog.png" alt="logLogo">
 
-</body>
+                    <% if(typeof loginErrors != "undefined") {%>
+                        <ul class="listadoErrores">
+                            <% loginErrors.forEach(error => { %>
+                                <li>·
+                                    <%= error.msg %>
+                                </li>
+                                <% }); %>
+                        </ul>
+                        <% } %>
+
+                            <form action="/users/loguear" method="POST" class="cont__form">
+
+                                <label for="logMail">Mail</label>
+                                <input class="log--input" type="email" name="logMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" autofocus>
+
+
+                                <label for="logPassword">Password</label>
+                                <input class="log--input" type="password" name="logPassword" placeholder="******" id="logPassword">
+
+                                <section class="recuerdame">
+                                    <label for="recordarme">Recordarme</label>
+                                    <input type="checkbox" name="recordarme" id="recordarme" class="checkbox--recordarme">
+                                </section>
+                                <input class="log--submit" type="submit" value="Ingresar">
+                            </form>
+                </main>
+
+                <%-include('./partials/footer.ejs')%>
+        </section>
+
+    </body>
+
 </html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-	<%-include('./partials/head.ejs')%>
-<body>
-<section class="contenedorPreIntro">
-	<!-- <a href="index"> -->
-	<!-- <?xml version="1.0" encoding="utf-8"?> -->
-	<svg class="cont__intro--logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="412 -284 1024 768" style="enable-background:new 412 -284 1024 768;" xml:space="preserve">
+<%-include('./partials/head.ejs')%>
+
+    <body>
+        <section class="contenedorPreIntro">
+            <!-- <a href="index"> -->
+            <!-- <?xml version="1.0" encoding="utf-8"?> -->
+            <svg class="cont__intro--logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="412 -284 1024 768" style="enable-background:new 412 -284 1024 768;" xml:space="preserve">
 
 		
 			<!-- <path class="st0" d="M928.4,434.1c-136.2,0-272.5,0-408.7,0.2c-6.4,0-7.2-1.7-7.2-7.4c0.2-214.6,0.2-429.2,0-643.8
@@ -72,17 +72,18 @@
 			c-0.5-6.4,3-6.4,7.7-6.4c36.4,0.2,72.7,0.2,109.1-0.2c6.7,0,8.4,2,8.2,8.4C1258.4-43.6,1258.5,31.1,1258.5,105.8z"/>
 
 </svg>
-	
-	
-		<form class="formSoyMayor" action="/preindex" method="POST">
-			<label class="titl__preindex" for="soyMayor"> 
+
+
+            <form class="formSoyMayor" action="/preindex" method="POST">
+                <label class="titl__preindex" for="soyMayor"> 
 				<p class="soyMayor--par">soy mayor de 18</p> 
 			</label>
-			<input onChange="this.form.submit()" class="soyMayor--input" type="checkbox" name="soyMayor" id="soyMayor">
-		</form>
+                <input onChange="this.form.submit()" class="soyMayor--input" type="checkbox" name="soyMayor" id="soyMayor">
+            </form>
 
-	
-</section>
-<script src="js/preindex.js"></script>
-</body>
+
+        </section>
+        <script src="js/preindex.js"></script>
+    </body>
+
 </html>

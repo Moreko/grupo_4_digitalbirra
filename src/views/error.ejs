@@ -1,33 +1,34 @@
-    <!DOCTYPE html>
-    <html lang="en">
-	<%-include('./partials/head.ejs')%>
+<!DOCTYPE html>
+<html lang="en">
+<%-include('./partials/head.ejs')%>
 
-	<body>
-	<section class="contenedorApp">	
-		
-		<%-include('./partials/header.ejs')%>
-		
+    <body>
+        <section class="contenedorApp">
 
-		<main class="contenedorMain">
-		<section class="contErrores">
-			<p class="contenedorMain__links">Lamentablemente esa página no existe</p>
-			<a href="/" class="contImgError"><img class="producto--err" src="/img/errorBirra.png" alt="errorBirra"></a> 
-			
-			<button href="index" class="btn--volver">
+            <%-include('./partials/header.ejs')%>
+
+
+                <main class="contenedorMain">
+                    <section class="contErrores">
+                        <p class="contenedorMain__links">Lamentablemente esa página no existe</p>
+                        <a href="/" class="contImgError"><img class="producto--err" src="/img/errorBirra.png" alt="errorBirra"></a>
+
+                        <button href="index" class="btn--volver">
                 <a class="volverInicio" href="/">Volver al inicio</a>
 			</button>
-		</section>
-
-	
+                    </section>
 
 
-		</main>
-		
-		
-		
-		<%-include('./partials/footer.ejs')%>
-		
-		
-</section>
-</body>
+
+
+                </main>
+
+
+
+                <%-include('./partials/footer.ejs')%>
+
+
+        </section>
+    </body>
+
 </html>

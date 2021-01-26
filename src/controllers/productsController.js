@@ -108,6 +108,8 @@
           cantidad += element.cantidad
           total += element.subtotal
         });
+        
+        itemsFiltro.shift()
         res.render("carrito",{itemsFiltro, cantidad, total});
       },
 
