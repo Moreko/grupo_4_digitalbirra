@@ -8,11 +8,14 @@ document.querySelectorAll('.sarasa').forEach(item => {
    
         event.preventDefault()
         Swal.fire({
-            title: 'Agregaste al carrito',
+            html: '<pre class="elAlert">' + 'Al carrito nomás' + '</pre>',
             icon: 'correct',
             showCancelButton: false,
             confirmButtonColor: ' #61892F',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: {
+              popup: 'elAlert'
+            }
           }).then((result) => {
             if (result.isConfirmed) {
              const elForm= item.parentElement

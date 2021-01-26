@@ -8,6 +8,7 @@ sumar a la base */
 }
 
 /* Base */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -22,11 +23,13 @@ html {
     font-size: calc(12px + (24 - 12) * ((100vw - 200px) / (1024 - 200)));
  }
  
- @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 .avatar{
     margin: 5%;
     width: 20%;
+}
+.elAlert{
+    font-family: "Quicksand";
 }
 
 .historialUsuario{
