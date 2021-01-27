@@ -30,7 +30,7 @@ html {
 
 .elAlert {
     font-family: "Quicksand";
-    font-size: .5rem;
+    font-size: 1rem;
 }
 
 .historialUsuario {
@@ -1374,9 +1374,9 @@ ojo con este que se usa en varios lados */
     border: grey solid .3vh;
     padding: 4%;
     margin: 0.4vh;
-    width: 5vh;
+    width: 12vh;
     height: 5vh;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #ffffff;
     transition: 0.3s all;
     cursor: pointer;
@@ -1578,6 +1578,10 @@ ojo con este que se usa en varios lados */
 @media (min-width: 900px) {
     .avatar {
         width: 10%;
+    }
+    .elAlert {
+        font-family: "Quicksand";
+        font-size: .7rem;
     }
     .historialUsuario {
         font-family: 'Industry';
@@ -1785,7 +1789,7 @@ ojo con este que se usa en varios lados */
         font-size: .7rem;
     }
     .sarasa {
-        font-size: .7rem;
+        font-size: .6rem;
         width: 100%;
     }
     .cont__select__venTodas {
