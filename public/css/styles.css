@@ -952,7 +952,20 @@ ojo con este que se usa en varios lados */
     width: 90%;
     height: 60vh;
 }
+.formControl.error{
+    border-color: tomato
+}
+.formControl.succes{
+    border-color: #61892F
+}
+.cont__form div{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 
+}
 .log--input {
     background-color: rgb(56, 56, 56);
     font-family: 'Industry';
@@ -1872,6 +1885,8 @@ ojo con este que se usa en varios lados */
         align-self: start;
         padding-left: 7.6%;
     }
+
+   
     .reg--input {
         font-size: .6rem;
         padding: 2%;
