@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <%-include('./partials/head.ejs')%>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="/js/modifAlerts.js" defer></script>
+    <section  class="contenedorApp">
 
-    <body>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-        <script src="/js/modifAlerts.js" defer></script>
-        <section class="contenedorApp">
+    <%-include('./partials/header.ejs')%>
 
-            <%-include('./partials/header.ejs')%>
+    <main class="contenedorMain">
+        <section class="cont__admin--titl">
+            <h1 class="titlG">MODIFICAR PRODUCTO</h1>
+        </section>
 
-                <main class="contenedorMain">
-                    <section class="cont__admin--titl">
-                        <h1 class="titlG">MODIFICAR PRODUCTO</h1>
-                    </section>
+        <% if(typeof registerErrors != "undefined") {%> 
+            <ul class="listadoErrores">
+                <% registerErrors.forEach(error => { %> 
+                    <li>· <%= error.msg %> </li>
+                <% }); %> 
+            </ul>
+        <% } %> 
 
-                    <% if(typeof registerErrors != "undefined") {%>
-                        <ul class="listadoErrores">
-                            <% registerErrors.forEach(error => { %>
-                                <li>·
-                                    <%= error.msg %>
-                                </li>
-                                <% }); %>
-                        </ul>
-                        <% } %>
+        <form id="elFormModif" action="/products/modificarProducto/<%=modifbirra.id%>" method="POST" class="reg__form" enctype="multipart/form-data">
+            <label for="nombre">Nombre</label>
+            <input class="reg--input" type= "text" name="nombre" placeholder="NOMBRE DEL PRODUCTO" value="<%= typeof oldValues != "undefined" ? oldValues.nombre : modifbirra.nombre %>" autofocus required>
 
-                            <form id="elFormModif" action="/products/modificarProducto/<%=modifbirra.id%>" method="POST" class="reg__form" enctype="multipart/form-data">
-                                <label for="nombre">Nombre</label>
-                                <input class="reg--input" type="text" name="nombre" placeholder="NOMBRE DEL PRODUCTO" value="<%= typeof oldValues != " undefined " ? oldValues.nombre : modifbirra.nombre %>" autofocus required>
-
-                                <label for="tipo">Estilo</label>
-                                <select class="reg--input" name="estilo_id">
+            <label for="tipo">Estilo</label>
+            <select class="reg--input" name="estilo_id">
                 <!-- hacer select dinamico -->
                 <option class="select--option" value="" disabled selected>TIPO DE CERVEZA</option>
               <%estilos.forEach(element => { %>
@@ -40,47 +37,46 @@
               <% } %> 
               <%}); %>
             </select>
+                
 
+            <label for="ibu">IBU</label>
+            <input class="reg--input" type="number" name="ibu" placeholder="IBU"  value="<%= typeof oldValues != "undefined" ? oldValues.ibu :modifbirra.ibu %>" autofocus required>
+            
+            <label for="graduación">Graduacion</label>
+            <input class="reg--input" type="number" name="alcohol" placeholder="GRADUACIÓN" value="<%= typeof oldValues != "undefined" ? oldValues.alcohol : modifbirra.alcohol %>" autofocus required>
 
-                                <label for="ibu">IBU</label>
-                                <input class="reg--input" type="number" name="ibu" placeholder="IBU" value="<%= typeof oldValues != " undefined " ? oldValues.ibu :modifbirra.ibu %>" autofocus required>
+            <label for="descripción">Descripcion</label>
+            <input class="reg--input" type="textarea" name="descripcion" placeholder="DESCRIPCIÓN" value="<%= typeof oldValues != "undefined" ? oldValues.descripcion : modifbirra.descripcion %>" autofocus required>
 
-                                <label for="graduación">Graduacion</label>
-                                <input class="reg--input" type="number" name="alcohol" placeholder="GRADUACIÓN" value="<%= typeof oldValues != " undefined " ? oldValues.alcohol : modifbirra.alcohol %>" autofocus required>
+            <label for="mililitros">Militros</label>
+            <input class="reg--input" type="number" name="tamano" value="<%= typeof oldValues != "undefined" ? oldValues.tamano : modifbirra.tamano %>" placeholder="MILILITROS" autofocus required>
 
-                                <label for="descripción">Descripcion</label>
-                                <input class="reg--input" type="textarea" name="descripcion" placeholder="DESCRIPCIÓN" value="<%= typeof oldValues != " undefined " ? oldValues.descripcion : modifbirra.descripcion %>" autofocus required>
-
-                                <label for="mililitros">Militros</label>
-                                <input class="reg--input" type="number" name="tamano" value="<%= typeof oldValues != " undefined " ? oldValues.tamano : modifbirra.tamano %>" placeholder="MILILITROS" autofocus required>
-
-                                <label for="categoria">Categoria</label>
-                                <select class="reg--input" name="categoria" id="">
+            <label for="categoria">Categoria</label>
+            <select class="reg--input" name="categoria" id="">
                 <option class="select--option" value="" disabled selected>"<%= typeof oldValues != "undefined" ? oldValues.categoria : modifbirra.categoria%>"</option>
                 <option value="mas-vendidas">más-vendidas</option>
                 <option value="estandar">estándar</option>
             </select>
 
-                                <label for="precio">Precio</label>
-                                <input class="reg--input" type="number" name="precio" placeholder="PRECIO" id="precio" value="<%= typeof oldValues != " undefined " ? oldValues.precio : modifbirra.precio %>"autofocus required>
+            <label for="precio">Precio</label>
+            <input class="reg--input" type="number" name="precio" placeholder="PRECIO" id="precio" value="<%= typeof oldValues != "undefined" ? oldValues.precio : modifbirra.precio %>"autofocus required>
 
-                                <label for="stock">Stock</label>
-                                <input class="reg--input" type="number" name="stock" placeholder="STOCK" id="stock" value="<%= typeof oldValues != " undefined " ? oldValues.stock : modifbirra.stock %>"autofocus required>
+            <label for="stock">Stock</label>
+            <input class="reg--input" type="number" name="stock" placeholder="STOCK" id="stock" value="<%= typeof oldValues != "undefined" ? oldValues.stock : modifbirra.stock %>"autofocus required>
 
-                                <label for="laimagen">Imagen</label>
-                                <input class="reg--input subirImg" type="file" name="imagen" id="laimagen" accept="image/*">
-                                <!-- Submit -->
-                                <input id="modificar" class="reg--submit" type="submit" value="GUARDAR" autofocus>
-                            </form>
-                            <form id='elFormDelete' class="elFormDelete" action="/products/form/<%=modifbirra.id%>/borrar?_method=DELETE" method="POST">
-                                <input id="eliminar" class="reg--submit--eliminar" type="submit" value="ELIMINAR" autofocus>
-                            </form>
+            <label for="laimagen">Imagen</label>
+            <input class="reg--input subirImg" type="file" name="imagen" id="laimagen" accept="image/*">
+            <!-- Submit -->
+            <input id="modificar" class="reg--submit" type="submit" value="ACTUALIZAR" autofocus>            
+        </form>
+        <form id='elFormDelete' class="elFormDelete" action="/products/form/<%=modifbirra.id%>/borrar?_method=DELETE" method="POST">
+            <input id="eliminar"  class="reg--submit--eliminar" type="submit" value="ELIMINAR" autofocus>
+        </form>
 
-                </main>
-
-                <%-include('./partials/footer.ejs')%>
-
-        </section>
-    </body>
-
+    </main>
+    
+    <%-include('./partials/footer.ejs')%>
+    
+</section>
+</body>
 </html>

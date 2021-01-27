@@ -587,7 +587,7 @@ fin de base */
     position: absolute;
     text-align: center;
     left: 50%;
-    top: 28%;
+    top: 19%;
     transform: translate(-50%);
     transition: .4s all;
 }
@@ -1387,9 +1387,9 @@ ojo con este que se usa en varios lados */
     border: grey solid .3vh;
     padding: 4%;
     margin: 0.4vh;
-    width: 5vh;
+    width: 12vh;
     height: 5vh;
-    font-size: 2rem;
+    font-size: 1rem;
     color: #ffffff;
     transition: 0.3s all;
     cursor: pointer;
@@ -1592,6 +1592,10 @@ ojo con este que se usa en varios lados */
     .avatar {
         width: 10%;
     }
+    .elAlert {
+        font-family: "Quicksand";
+        font-size: .7rem;
+    }
     .historialUsuario {
         font-family: 'Industry';
         align-self: flex-start;
@@ -1688,7 +1692,7 @@ ojo con este que se usa en varios lados */
         width: 22%;
     }
     .cont__img__titl {
-        height: 22vw;
+        height: 18vw;
         background-size: 135%;
         background-position-x: 87%;
         background-position-y: 48%;
@@ -1798,7 +1802,7 @@ ojo con este que se usa en varios lados */
         font-size: .7rem;
     }
     .sarasa {
-        font-size: .7rem;
+        font-size: .6rem;
         width: 100%;
     }
     .cont__select__venTodas {
