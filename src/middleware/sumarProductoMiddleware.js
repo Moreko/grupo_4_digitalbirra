@@ -40,9 +40,23 @@ module.exports = [
     .isLength({ max: 4 })
     .withMessage("El IBU debe tener un máximo de 4 dígitos"),
 
-    // body("imagen")
-    // .notempty()
-    // .withMessage("debes cargar una imagen")
+    body("imagen")
+    
+    .custom(async(value,{req})=>{ 
+        if (value != null){
+        return true
+    }else{
+        let producto = await db.Beers.findByPk(req.params.id)
+        if (producto != undefined){
+            return true
+        }else{
+            return false
+        }
+    }
+    })
+    .withMessage('debes subir una imagen'),
+
+   
     // // .custom(async(value,{req})=>{
     // //     let producto = await db.Beers.findByPk(req.params.id)
     // //     if(producto != undefined){

@@ -3,6 +3,7 @@
 <%-include('./partials/head.ejs')%>
 
     <body>
+        <script src="/js/registrofront.js" defer></script>
         <section class="contenedorApp">
             <%-include('./partials/header.ejs')%>
 
@@ -21,14 +22,16 @@
                         <% } %>
 
                             <form action="/users/loguear" method="POST" class="cont__form">
-
-                                <label for="logMail">Mail</label>
-                                <input class="log--input" type="email" name="logMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" autofocus>
-
-
-                                <label for="logPassword">Password</label>
-                                <input class="log--input" type="password" name="logPassword" placeholder="******" id="logPassword">
-
+                                <div>
+                                    <label for="logMail">Mail</label>
+                                    <input class="log--input" type="email" name="logMail" placeholder="doncerveza@dbirra.com.ar" id="logMail" autofocus>
+                                    <small class ='formControl'></small>
+                                </div>
+                                <div>
+                                    <label for="logPassword">Password</label>
+                                    <input class="log--input" type="password" name="logPassword" placeholder="******" id="logPassword">
+                                    <small class ='formControl'></small>    
+                                </div>
                                 <section class="recuerdame">
                                     <label for="recordarme">Recordarme</label>
                                     <input type="checkbox" name="recordarme" id="recordarme" class="checkbox--recordarme">
