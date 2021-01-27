@@ -1410,7 +1410,13 @@ ojo con este que se usa en varios lados */
     color: #ffffff;
     transition: 0.3s all;
     cursor: pointer;
+    -moz-appearance: textfield;
+    
 }
+.btn--cant::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
 .btn--cant:nth-child(2) {
     font-size: 1.2rem;
