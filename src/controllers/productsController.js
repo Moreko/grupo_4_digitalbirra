@@ -48,7 +48,6 @@
         let estilos =  req.session.estilos
         const birraId= req.params.id
         const modifbirra= await db.Beers.findByPk(birraId,{include: {all:true}})
-
         res.render("modificar_producto",{estilos,modifbirra});
       },
 
