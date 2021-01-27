@@ -11,7 +11,7 @@ document.querySelectorAll('.sarasa').forEach(item => {
             html: '<pre class="elAlert">' + 'Sumado al carrito nomás' + '</pre>',
             icon: 'correct',
             background: '#000',
-            width:"50%",
+            width:"40%",
             showCancelButton: false,
             confirmButtonColor: ' #61892F',
             confirmButtonText: '<pre class="elAlert">' + 'Ok' + '</pre>',
