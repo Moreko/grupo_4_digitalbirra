@@ -33,6 +33,10 @@ html {
     font-size: 1rem;
 }
 
+.nombre:first-letter {
+    text-transform:capitalize;
+}
+
 .historialUsuario {
     font-family: 'Industry';
     color: #86C232;
