@@ -587,7 +587,7 @@ fin de base */
     position: absolute;
     text-align: center;
     left: 50%;
-    top: 28%;
+    top: 19%;
     transform: translate(-50%);
     transition: .4s all;
 }
@@ -1675,7 +1675,7 @@ ojo con este que se usa en varios lados */
         width: 22%;
     }
     .cont__img__titl {
-        height: 22vw;
+        height: 18vw;
         background-size: 135%;
         background-position-x: 87%;
         background-position-y: 48%;

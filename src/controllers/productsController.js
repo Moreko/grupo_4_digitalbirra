@@ -97,19 +97,19 @@
         }})
         
         let itemsFiltro = []
-        items.forEach(element => { 
+        await items.forEach(element => { 
         let des =  ((({ cantidad, subtotal, beer, id  }) => ({ cantidad, subtotal, beer, id }))(element))
           itemsFiltro.push(des)
         });
 
         let cantidad = 0
         let total = 0
-        items.forEach(element => {
+        await items.forEach(element => {
           cantidad += element.cantidad
           total += element.subtotal
         });
-        
-        itemsFiltro.shift()
+        // res.send(itemsFiltro)
+        // itemsFiltro.shift()
         res.render("carrito",{itemsFiltro, cantidad, total});
       },
 
