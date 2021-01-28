@@ -198,7 +198,7 @@
           element.update({estado:0})
           element.update({carrito_id: uCarrito.id})
         });
-        res.redirect('/')
+        res.render('compraExitosa')
       },
       sacar: async (req,res)=>{
         await db.Items.destroy({where: {id:req.body.id}})

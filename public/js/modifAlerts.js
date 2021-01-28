@@ -9,7 +9,7 @@ const modifBirra = document.getElementById('modificar')
 eliminarBirra.addEventListener('click', (e) => {
     e.preventDefault()
     Swal.fire({
-        html: '<pre class="elAlert">' + '¿Estas seguro de que queres eliminar?' + '</pre>',
+        html: '<pre class="elAlert">' + '¿Seguro de que queres eliminar?' + '</pre>',
         icon: 'question',
         showCancelButton: true,
         background: '#000',
