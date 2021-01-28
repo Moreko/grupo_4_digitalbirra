@@ -1271,6 +1271,12 @@ ojo con este que se usa en varios lados */
     padding-left: 20%;
     flex: 1;
 }
+.link_reg {
+    font-family: "industry";
+    font-size: 1rem;
+    margin-left: 60%;
+    flex: 1;
+}
 
 
 /* aca esta el carrito*/
@@ -1885,6 +1891,9 @@ ojo con este que se usa en varios lados */
         text-align: center;
     }
     .link_log:hover {
+        color: #86C232;
+    }
+    .link_reg:hover {
         color: #86C232;
     }
     .reg__form {
