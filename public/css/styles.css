@@ -956,12 +956,10 @@ ojo con este que se usa en varios lados */
     width: 90%;
     height: 60vh;
 }
-.formControl.error{
-    border-color: tomato
+.formControl{
+    color: tomato
 }
-.formControl.succes{
-    border-color: #61892F
-}
+
 .cont__form div{
     display: flex;
     flex-direction:column;
