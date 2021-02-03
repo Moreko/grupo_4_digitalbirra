@@ -7,6 +7,8 @@ var logger = require('morgan');
 const session = require('express-session')
 const methodOverride = require('method-override')
 var cors = require('cors')
+require('dotenv').config()
+
 
 // Modulos propios
 const logAppMw = require("./middleware/aplicacion/logAppMw")
@@ -74,4 +76,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+console.log(process.env.sarasa)
 module.exports = app;
