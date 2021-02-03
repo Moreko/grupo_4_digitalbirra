@@ -11,25 +11,25 @@ require('dotenv').config()
 
 
 // Modulos propios
-const logAppMw = require("./middleware/aplicacion/logAppMw")
-const serAdminMw = require("./middleware/aplicacion/serAdminMw")
+const logAppMw = require("./src/middleware/aplicacion/logAppMw")
+const serAdminMw = require("./src/middleware/aplicacion/serAdminMw")
 
 
 // Routers
-var indexRouter = require('./routes/indexRouter');
-let preindexRouter = require('./routes/preindexRouter');
-let productsRouter = require('./routes/productsRouter');
-let usersRouter = require('./routes/usersRouter');
+var indexRouter = require('./src/routes/indexRouter');
+let preindexRouter = require('./src/routes/preindexRouter');
+let productsRouter = require('./src/routes/productsRouter');
+let usersRouter = require('./src/routes/usersRouter');
 
-let apiBirraRouter = require('./routes/api/birra')
-let apiUsersRouter = require('./routes/api/user')
+let apiBirraRouter = require('./src/routes/api/birra')
+let apiUsersRouter = require('./src/routes/api/user')
 
 
 var app = express();
 
 
 // view engine setup
-app.set('views', [path.join(__dirname, 'views'), path.join(__dirname, 'views/users'), path.join(__dirname, 'views/products')]);
+app.set('views', [path.join(__dirname, 'src/views'), path.join(__dirname, 'src/views/users'), path.join(__dirname, 'src/views/products')]);
 
 app.set('view engine', 'ejs');
 
@@ -38,7 +38,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(methodOverride('_method'))
 app.use(session({
     secret: 'Secreto empresarial de Digital Birra',
@@ -76,5 +76,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-console.log(process.env.sarasa)
+
 module.exports = app;
