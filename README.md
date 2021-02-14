@@ -12,8 +12,6 @@ Para correr el proyecto:
 - La base de datos esta disponible de manera online, no es necesario correr un servidor local.
 - El script de prueba es "npm test"
 - Contamos con un usuario "administrador" que puede crear, modificar, y eliminar productos.
-     - Mail: bobisjapanese@db.com
-     - Contraseña: 1234567
 - Al crear una nueva cerveza, esta se listará en la página principal de la aplicación
 - Disfrute de una buena cerveza mientras recorre la aplicación web
 
